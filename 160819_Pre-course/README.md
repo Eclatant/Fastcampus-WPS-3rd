@@ -326,7 +326,9 @@ View는 애플리케이션의 "로직"을 담당합니다.
 
 이제 앞에서 작성한 **Model**의 내용을 **Template**으로 전달할 **View**를 작성합니다.
 
+
 ```blog/views.py```
+
 
 	from django.shortcuts import render
 	from blog.models import Post
@@ -334,6 +336,7 @@ View는 애플리케이션의 "로직"을 담당합니다.
 	def post_list(request):
 	    posts = Post.objects.all()
 	    return render(request, 'blog/post_list.html', {'posts': posts})
+
 
 -
 
