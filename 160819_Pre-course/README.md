@@ -279,17 +279,22 @@ Django admin site는 장고의 최대 장점 중 한 가지 입니다.
 	
 	admin.site.register(Post)
 	
+
 이제 테스트 서버로 관리자페이지에 로그인해보겠습니다
 
 	./manage.py runserver 0:8080
+
 
 테스트 서버가 실행되었습니다. 
 
 확인하기 위해 Preview -> Preview Running Application을 눌러줍니다
 
+
 ![C9Preview](Assets/c9_preview.png)
 
+
 주소 맨 뒤에 /admin을 추가하고 엔터를 누르시면 아래와 같은 로그인 화면이 나타납니다
+
 	
 ![DjangoAdminLogin](Assets/django_admin_login.png)
 
