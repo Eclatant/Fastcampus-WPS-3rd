@@ -266,3 +266,83 @@ fastcampus 프로젝트에 blog 애플리케이션을 추가해봅시다
 
 ### Django 관리자
 
+Django admin site는 장고의 최대 장점 중 한 가지 입니다.
+
+모델에 의해 자동으로 생성되는 관리자 페이지는 실제 프로젝트시에 할 일을 대폭 줄여줍니다.
+
+먼저 앞에서 생성한 Post모델을 관리자 페이지에서 사용하겠다고 등록해줍니다
+
+```blog/admin.py```
+
+	from django.contrib import admin
+	from blog.models import Post
+	
+	admin.site.register(Post)
+	
+이제 테스트 서버로 관리자페이지에 로그인해보겠습니다
+
+	./manage.py runserver 0:8080
+
+테스트 서버가 실행되었습니다. 
+
+확인하기 위해 Preview -> Preview Running Application을 눌러줍니다
+
+![C9Preview](Assets/c9_preview.png)
+
+주소 맨 뒤에 /admin을 추가하고 엔터를 누르시면 아래와 같은 로그인 화면이 나타납니다
+	
+![DjangoAdminLogin](Assets/django_admin_login.png)
+
+
+-
+
+#### 관리자계정 생성
+
+관리자 페이지에 로그인 하기위해서는 모든 권한을 가진 슈퍼유저(superuser)가 필요합니다.
+
+manage.py의 createsuperuser는 슈퍼유저를 만들어주는 커맨드입니다
+
+	./manage.py createsuperuser
+	^Cazelf:~/workspace $ ./manage.py createsuperuser
+	Username (leave blank to use 'ubuntu'): azelf
+	Email address: 
+	Password: 
+	Password (again): 
+	Superuser created successfully.
+
+-
+
+
+만들어진 계정으로 로그인 해줍니다
+
+![DjangoAdmin](Assets/django_admin.png)
+
+
+-
+
+### Django View
+
+View는 애플리케이션의 "로직"을 담당합니다.
+
+이제 앞에서 작성한 **Model**의 내용을 **Template**으로 전달할 **View**를 작성합니다.
+
+```blog/views.py```
+
+	from django.shortcuts import render
+	from blog.models import Post
+	
+	def post_list(request):
+	    posts = Post.objects.all()
+	    return render(request, 'blog/post_list.html', {'posts': posts})
+
+-
+
+
+### Django urls
+
+url은 웹 주소입니다
+
+Django의 urls.py는 URLconf(URL configuration)으로, URL과 일치하는 View를 찾기 위한 패턴들의 집합입니다.
+
+```fastcampus/urls.py```
+
