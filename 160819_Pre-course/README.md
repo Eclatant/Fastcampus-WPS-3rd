@@ -271,7 +271,8 @@ Django admin site는 장고의 최대 장점 중 한 가지 입니다.
 모델에 의해 자동으로 생성되는 관리자 페이지는 실제 프로젝트시에 할 일을 대폭 줄여줍니다.
 
 먼저 앞에서 생성한 Post모델을 관리자 페이지에서 사용하겠다고 등록해줍니다
-fastcampus/fastcampus/urls.py
+
+blog/admin.py
 
 
 	from django.contrib import admin
