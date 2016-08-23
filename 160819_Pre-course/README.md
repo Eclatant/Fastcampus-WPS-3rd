@@ -272,14 +272,14 @@ Django admin site는 장고의 최대 장점 중 한 가지 입니다.
 
 먼저 앞에서 생성한 Post모델을 관리자 페이지에서 사용하겠다고 등록해줍니다
 
-```blog/admin.py```
+blog/admin.py
+
 
 
 	from django.contrib import admin
 	from blog.models import Post
 	
 	admin.site.register(Post)
-
 
 
 이제 테스트 서버로 관리자페이지에 로그인해보겠습니다
@@ -334,7 +334,7 @@ View는 애플리케이션의 "로직"을 담당합니다.
 이제 앞에서 작성한 **Model**의 내용을 **Template**으로 전달할 **View**를 작성합니다.
 
 
-```blog/views.py```
+```blog/views.py```파일에 아래와 같이 작성합니다
 
 
 	from django.shortcuts import render
@@ -345,15 +345,43 @@ View는 애플리케이션의 "로직"을 담당합니다.
 	    return render(request, 'blog/post_list.html', {'posts': posts})
 
 
-
--
-
-
 ### Django urls
 
 url은 웹 주소입니다
 
 Django의 urls.py는 URLconf(URL configuration)으로, URL과 일치하는 View를 찾기 위한 패턴들의 집합입니다.
 
-```fastcampus/urls.py```
+```fastcampus/urls.py```파일에 아래와 같이 작성합니다
 
+
+	#-*- coding: utf-8 -*-
+	from django.conf.urls import url
+	from django.contrib import admin
+	from django.conf import settings
+	from django.conf.urls.static import static
+	from blog.views import post_list
+	
+	urlpatterns = [
+	    url(r'^admin/', admin.site.urls),
+	    url(r'^blog/post-list/$', post_list),
+	]
+
+
+우리의 사이트에 /blog/post-list/로 접속하는 사람들에게
+**blog.views**의 post_file 함수의 내용을 보여줄 것입니다
+
+-
+
+### Django ORM
+
+ORM은 Object-relational mapping의 약자로, 데이터베이스를 좀 더 쉽게 다룰 수 있도록 해주는 기술입니다
+
+```python manage.py shell```을 이용해서 Django shell을 실행합니다
+
+	from blog.models import Post
+	Post.objects.all()
+	[<Post: (1) 패스트캠퍼스 프리코스 강의>, <Post: (2) 안드로이드 개발 SCHOOl>, <Post: (3) 웹 프로그래밍 SCHOOL>, <Post: (4) iOS 개발 SCHOOL
+	
+Post.objects.all()은 모든 Post를 불러옵니다
+
+-
