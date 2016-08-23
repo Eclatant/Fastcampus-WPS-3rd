@@ -274,6 +274,7 @@ Django admin site는 장고의 최대 장점 중 한 가지 입니다.
 
 ```blog/admin.py```
 
+
 	from django.contrib import admin
 	from blog.models import Post
 	
@@ -342,6 +343,7 @@ View는 애플리케이션의 "로직"을 담당합니다.
 	def post_list(request):
 	    posts = Post.objects.all()
 	    return render(request, 'blog/post_list.html', {'posts': posts})
+
 
 
 -
