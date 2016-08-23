@@ -278,7 +278,8 @@ Django admin site는 장고의 최대 장점 중 한 가지 입니다.
 	from blog.models import Post
 	
 	admin.site.register(Post)
-	
+
+
 
 이제 테스트 서버로 관리자페이지에 로그인해보겠습니다
 
