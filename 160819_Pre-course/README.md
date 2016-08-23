@@ -333,7 +333,7 @@ View는 애플리케이션의 "로직"을 담당합니다.
 이제 앞에서 작성한 **Model**의 내용을 **Template**으로 전달할 **View**를 작성합니다.
 
 
-```blog/views.py```
+```blog/views.py```파일에 아래와 같이 작성합니다
 
 
 	from django.shortcuts import render
@@ -342,9 +342,7 @@ View는 애플리케이션의 "로직"을 담당합니다.
 	def post_list(request):
 	    posts = Post.objects.all()
 	    return render(request, 'blog/post_list.html', {'posts': posts})
-
-
--
+	    
 
 
 ### Django urls
@@ -353,5 +351,7 @@ url은 웹 주소입니다
 
 Django의 urls.py는 URLconf(URL configuration)으로, URL과 일치하는 View를 찾기 위한 패턴들의 집합입니다.
 
-```fastcampus/urls.py```
+```fastcampus/urls.py```파일에 아래와 같이 작성합니다
+
+
 
