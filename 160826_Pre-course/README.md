@@ -121,11 +121,28 @@ Top부분의 스타일
 
 ### 글 목록화면에 이미지 출력
 
-장고 템플릿태그중 'static'태그를 사용합니다
+-
+
+'url'태그는 urls.py에 정의된 뷰의 주소를 템플릿에서 사용하게 해줍니다
+
+{% url '해당 view이름' parameters %}
+
+-
+
+
+'static'태그는 STATIC_DIRS에 지정된 파일을 링크할 때 사용합니다
 
 {% static '해당경로' %}
 
-```templates/blog/post_list.html```을 수정
+-
+템플릿 변수에 적용하는 필터는 파이프라인( | )으로 사용합니다
+
+truncatechars는 해당 글자수 이후에는 ...으로 줄임을 나타냅니다
+
+linebreaksbr은 줄 나눔을 `<br>`태그를 사용하여 나타냅니다
+
+
+`templates/blog/post_list.html`을 수정
 
 	{% load staticfiles %}
 	<!DOCTYPE html>
