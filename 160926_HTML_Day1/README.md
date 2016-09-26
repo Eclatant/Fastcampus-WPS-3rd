@@ -49,9 +49,9 @@ emmet, less-than-slash 패키지 설치
 
 ### 페이스북 그룹
 
-[I Want You for Startups](https://www.facebook.com/groups/iwantyouforstartups/)
+[I Want You for Startups](https://www.facebook.com/groups/iwantyouforstartups/)
 
-[​프론트엔드개발그룹](https://www.facebook.com/groups/webfrontend/)
+[프론트엔드개발그룹](https://www.facebook.com/groups/webfrontend/)
 
 [Django](https://www.facebook.com/groups/django/)
 
