@@ -45,11 +45,12 @@ nav.custom-no-margin {
 
 .custom-main-container .custom-content .custom-theme-list .custom-theme-container {
   background-position: center center;
-  width: 100%;
   height: 200px; }
-  .custom-main-container .custom-content .custom-theme-list .custom-theme-container .custom-theme-image:hover {
-    transform: scale(1.1); }
-  .custom-main-container .custom-content .custom-theme-list .custom-theme-container .custom-theme-image.pet {
-    background-image: url(../images/theme/pet.jpg); }
+  .custom-main-container .custom-content .custom-theme-list .custom-theme-container .custom-theme-image {
+    height: 100%; }
+    .custom-main-container .custom-content .custom-theme-list .custom-theme-container .custom-theme-image:hover {
+      transform: scale(1.1); }
+    .custom-main-container .custom-content .custom-theme-list .custom-theme-container .custom-theme-image.pet {
+      background-image: url(../images/theme/pet.jpg); }
 
 /*# sourceMappingURL=index.nested.css.map */
