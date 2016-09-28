@@ -31,5 +31,9 @@ nav.custom-no-margin {
     background-color: rgba(0, 0, 0, 0.5); }
     .custom-main-container .custom-index-img-container .custom-search-container .custom-input-container {
       width: 350px; }
+      .custom-main-container .custom-index-img-container .custom-search-container .custom-input-container input {
+        width: 250px; }
+      .custom-main-container .custom-index-img-container .custom-search-container .custom-input-container button {
+        width: 100px; }
 
 /*# sourceMappingURL=index.nested.css.map */

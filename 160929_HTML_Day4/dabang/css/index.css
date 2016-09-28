@@ -46,4 +46,12 @@ nav.custom-no-margin {
   width: 350px;
 }
 
+.custom-main-container .custom-index-img-container .custom-search-container .custom-input-container input {
+  width: 250px;
+}
+
+.custom-main-container .custom-index-img-container .custom-search-container .custom-input-container button {
+  width: 100px;
+}
+
 /*# sourceMappingURL=index.css.map */
