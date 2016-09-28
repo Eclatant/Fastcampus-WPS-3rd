@@ -30,11 +30,14 @@ nav.custom-no-margin {
     height: 120px;
     background-color: rgba(0, 0, 0, 0.5); }
     .custom-main-container .custom-index-img-container .custom-search-container .custom-input-container {
-      width: 350px; }
+      width: 350px;
+      overflow: hidden;
+      margin: 0 auto; }
       .custom-main-container .custom-index-img-container .custom-search-container .custom-input-container input {
-        display: inline-block;
+        float: left;
         width: 70%; }
       .custom-main-container .custom-index-img-container .custom-search-container .custom-input-container button {
+        float: left;
         width: 30%; }
 
 /*# sourceMappingURL=index.nested.css.map */
