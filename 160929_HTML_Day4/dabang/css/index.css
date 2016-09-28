@@ -33,4 +33,11 @@ nav.custom-no-margin {
   font-size: 32px;
 }
 
+.custom-main-container .custom-index-img-container .custom-search-container {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+
 /*# sourceMappingURL=index.css.map */
