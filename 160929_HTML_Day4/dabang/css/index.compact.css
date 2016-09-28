@@ -18,4 +18,8 @@ nav.custom-no-margin { margin: 0; }
 
 .custom-main-container .custom-index-img-container .custom-search-container .custom-input-container button { float: left; width: 80px; }
 
+.custom-main-container .custom-content .custom-theme-list .theme-container { background-position: center center; }
+
+.custom-main-container .custom-content .custom-theme-list .theme-container.theme-pet { background-image: url(../images/theme/pet.jpg); }
+
 /*# sourceMappingURL=index.compact.css.map */

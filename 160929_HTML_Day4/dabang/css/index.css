@@ -61,4 +61,12 @@ nav.custom-no-margin {
   width: 80px;
 }
 
+.custom-main-container .custom-content .custom-theme-list .theme-container {
+  background-position: center center;
+}
+
+.custom-main-container .custom-content .custom-theme-list .theme-container.theme-pet {
+  background-image: url(../images/theme/pet.jpg);
+}
+
 /*# sourceMappingURL=index.css.map */
