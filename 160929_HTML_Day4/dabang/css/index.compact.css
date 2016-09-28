@@ -4,4 +4,8 @@ nav.custom-no-margin { margin: 0; }
 
 .custom-main-container .custom-index-img-container .custom-index-img-caption { position: absolute; color: white; text-align: right; top: 160px; left: 50%; margin-left: -330px; }
 
+.custom-main-container .custom-index-img-container .custom-index-img-caption .custom-caption-top { font-size: 20px; }
+
+.custom-main-container .custom-index-img-container .custom-index-img-caption .custom-caption-bottom { font-size: 35px; }
+
 /*# sourceMappingURL=index.compact.css.map */
