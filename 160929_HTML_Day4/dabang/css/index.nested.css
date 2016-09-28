@@ -49,4 +49,7 @@ nav.custom-no-margin {
 .custom-main-container .custom-content .custom-theme-list .custom-theme-item img {
   width: 100%; }
 
+.custom-main-container .custom-content .custom-theme-list .custom-theme-item .caption {
+  text-align: center; }
+
 /*# sourceMappingURL=index.nested.css.map */
