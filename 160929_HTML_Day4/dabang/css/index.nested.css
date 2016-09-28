@@ -44,7 +44,9 @@ nav.custom-no-margin {
         width: 80px; }
 
 .custom-main-container .custom-content .custom-theme-list .custom-theme-container {
-  background-position: center center; }
+  background-position: center center;
+  width: 100%;
+  height: auto; }
   .custom-main-container .custom-content .custom-theme-list .custom-theme-container .custom-theme-image:hover {
     transform: scale(1.1); }
   .custom-main-container .custom-content .custom-theme-list .custom-theme-container .custom-theme-image.pet {
