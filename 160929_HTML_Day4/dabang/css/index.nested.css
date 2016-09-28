@@ -11,6 +11,9 @@ nav.custom-no-margin {
   .custom-main-container .custom-index-img-container .custom-index-img-caption {
     position: absolute;
     color: white;
-    text-align: right; }
+    text-align: right;
+    top: 160px;
+    left: 50%;
+    margin-left: -330px; }
 
 /*# sourceMappingURL=index.nested.css.map */
