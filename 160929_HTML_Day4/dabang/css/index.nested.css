@@ -47,7 +47,8 @@ nav.custom-no-margin {
   margin-bottom: 50px; }
 
 .custom-main-container .custom-content .custom-theme-list .custom-theme-item {
-  position: relative; }
+  position: relative;
+  text-align: center; }
   .custom-main-container .custom-content .custom-theme-list .custom-theme-item .custom-theme-mask {
     position: absolute;
     top: 0;

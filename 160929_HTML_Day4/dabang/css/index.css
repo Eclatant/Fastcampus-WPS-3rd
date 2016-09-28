@@ -67,6 +67,7 @@ nav.custom-no-margin {
 
 .custom-main-container .custom-content .custom-theme-list .custom-theme-item {
   position: relative;
+  text-align: center;
 }
 
 .custom-main-container .custom-content .custom-theme-list .custom-theme-item .custom-theme-mask {
