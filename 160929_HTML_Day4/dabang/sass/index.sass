@@ -52,8 +52,11 @@ nav.custom-no-margin
 
   .custom-content
     .custom-theme-list
-      .theme-container
+      .custom-theme-container
         background-position: center center
 
-        &.theme-pet
-          background-image: url(../images/theme/pet.jpg)
+        .custom-theme-image
+          &:hover
+            transform: scale(1.1)
+          &.pet
+            background-image: url(../images/theme/pet.jpg)

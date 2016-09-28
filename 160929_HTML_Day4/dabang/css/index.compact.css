@@ -18,8 +18,10 @@ nav.custom-no-margin { margin: 0; }
 
 .custom-main-container .custom-index-img-container .custom-search-container .custom-input-container button { float: left; width: 80px; }
 
-.custom-main-container .custom-content .custom-theme-list .theme-container { background-position: center center; }
+.custom-main-container .custom-content .custom-theme-list .custom-theme-container { background-position: center center; }
 
-.custom-main-container .custom-content .custom-theme-list .theme-container.theme-pet { background-image: url(../images/theme/pet.jpg); }
+.custom-main-container .custom-content .custom-theme-list .custom-theme-container .custom-theme-image:hover { transform: scale(1.1); }
+
+.custom-main-container .custom-content .custom-theme-list .custom-theme-container .custom-theme-image.pet { background-image: url(../images/theme/pet.jpg); }
 
 /*# sourceMappingURL=index.compact.css.map */

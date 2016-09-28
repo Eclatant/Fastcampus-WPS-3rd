@@ -43,9 +43,11 @@ nav.custom-no-margin {
         float: left;
         width: 80px; }
 
-.custom-main-container .custom-content .custom-theme-list .theme-container {
+.custom-main-container .custom-content .custom-theme-list .custom-theme-container {
   background-position: center center; }
-  .custom-main-container .custom-content .custom-theme-list .theme-container.theme-pet {
+  .custom-main-container .custom-content .custom-theme-list .custom-theme-container .custom-theme-image:hover {
+    transform: scale(1.1); }
+  .custom-main-container .custom-content .custom-theme-list .custom-theme-container .custom-theme-image.pet {
     background-image: url(../images/theme/pet.jpg); }
 
 /*# sourceMappingURL=index.nested.css.map */
