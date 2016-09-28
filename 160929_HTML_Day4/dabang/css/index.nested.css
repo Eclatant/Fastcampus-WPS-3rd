@@ -1,2 +1,6 @@
+.main-container .index-img-container {
+  background-image: url(../images/index-bg.jpg);
+  background-repeat: no-repeat;
+  background-position: 50% top; }
 
 /*# sourceMappingURL=index.nested.css.map */
