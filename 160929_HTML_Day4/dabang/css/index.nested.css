@@ -46,15 +46,7 @@ nav.custom-no-margin {
 .custom-main-container .custom-content .custom-content-title-container {
   margin-bottom: 50px; }
 
-.custom-main-container .custom-content .custom-theme-list .custom-theme-item {
-  position: relative;
-  text-align: center; }
-  .custom-main-container .custom-content .custom-theme-list .custom-theme-item .custom-theme-mask {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.3); }
+.custom-main-container .custom-content .custom-theme-list .custom-theme-item img {
+  width: 100%; }
 
 /*# sourceMappingURL=index.nested.css.map */
