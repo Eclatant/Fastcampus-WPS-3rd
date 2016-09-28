@@ -12,4 +12,6 @@ nav.custom-no-margin { margin: 0; }
 
 .custom-main-container .custom-index-img-container .custom-search-container { position: absolute; bottom: 0; left: 0; width: 100%; height: 120px; background-color: rgba(0, 0, 0, 0.5); }
 
+.custom-main-container .custom-index-img-container .custom-search-container .custom-input-container { width: 350px; }
+
 /*# sourceMappingURL=index.compact.css.map */
