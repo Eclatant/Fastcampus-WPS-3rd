@@ -64,7 +64,7 @@ nav.custom-no-margin {
 .custom-main-container .custom-content .custom-theme-list .custom-theme-container {
   background-position: center center;
   width: 100%;
-  height: auto;
+  height: 200px;
 }
 
 .custom-main-container .custom-content .custom-theme-list .custom-theme-container .custom-theme-image:hover {
