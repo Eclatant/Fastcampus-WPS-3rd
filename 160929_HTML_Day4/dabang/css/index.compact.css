@@ -2,6 +2,6 @@ nav.custom-no-margin { margin: 0; }
 
 .custom-main-container .custom-index-img-container { background-image: url(../images/index-bg.jpg); background-repeat: no-repeat; background-position: 50% top; height: 680px; background-color: black; }
 
-.custom-main-container .custom-index-img-container .custom-index-img-caption { color: white; }
+.custom-main-container .custom-index-img-container .custom-index-img-caption { color: white; text-align: right; }
 
 /*# sourceMappingURL=index.compact.css.map */

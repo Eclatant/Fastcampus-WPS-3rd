@@ -8,6 +8,7 @@ nav.custom-no-margin {
   height: 680px;
   background-color: black; }
   .custom-main-container .custom-index-img-container .custom-index-img-caption {
-    color: white; }
+    color: white;
+    text-align: right; }
 
 /*# sourceMappingURL=index.nested.css.map */
