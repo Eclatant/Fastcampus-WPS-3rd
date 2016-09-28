@@ -6,6 +6,8 @@ nav.custom-no-margin { margin: 0; }
 
 .custom-main-container .custom-index-img-container .custom-index-img-caption .custom-caption-top { font-size: 20px; margin-bottom: 0px; }
 
+.custom-main-container .custom-index-img-container .custom-index-img-caption .custom-caption-top strong { font-size: 25px; }
+
 .custom-main-container .custom-index-img-container .custom-index-img-caption .custom-caption-bottom { font-size: 32px; }
 
 /*# sourceMappingURL=index.compact.css.map */
