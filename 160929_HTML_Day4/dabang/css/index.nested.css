@@ -30,14 +30,17 @@ nav.custom-no-margin {
     height: 120px;
     background-color: rgba(0, 0, 0, 0.5); }
     .custom-main-container .custom-index-img-container .custom-search-container .custom-input-container {
+      position: relative;
       width: 350px;
       overflow: hidden;
-      margin: 0 auto; }
+      margin: 0 auto;
+      top: 50%;
+      transform: translateY(-50%); }
       .custom-main-container .custom-index-img-container .custom-search-container .custom-input-container input {
         float: left;
-        width: 70%; }
+        width: 270px; }
       .custom-main-container .custom-index-img-container .custom-search-container .custom-input-container button {
         float: left;
-        width: 30%; }
+        width: 80px; }
 
 /*# sourceMappingURL=index.nested.css.map */
