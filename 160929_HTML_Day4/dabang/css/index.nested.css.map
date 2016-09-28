@@ -1,0 +1,9 @@
+{
+	"version": 3,
+	"file": "index.nested.css",
+	"sources": [
+		"../sass/index.sass"
+	],
+	"mappings": "",
+	"names": []
+}
