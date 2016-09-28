@@ -7,5 +7,7 @@ nav.custom-no-margin {
   background-position: 50% top;
   height: 680px;
   background-color: black; }
+  .custom-main-container .custom-index-img-container .custom-index-img-caption {
+    color: white; }
 
 /*# sourceMappingURL=index.nested.css.map */
