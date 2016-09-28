@@ -47,11 +47,12 @@ nav.custom-no-margin {
 }
 
 .custom-main-container .custom-index-img-container .custom-search-container .custom-input-container input {
-  width: 250px;
+  display: inline-block;
+  width: 70%;
 }
 
 .custom-main-container .custom-index-img-container .custom-search-container .custom-input-container button {
-  width: 100px;
+  width: 30%;
 }
 
 /*# sourceMappingURL=index.css.map */
