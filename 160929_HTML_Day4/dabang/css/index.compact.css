@@ -20,4 +20,8 @@ nav.custom-no-margin { margin: 0; }
 
 .custom-main-container .custom-content .custom-content-title-container { margin-bottom: 50px; }
 
+.custom-main-container .custom-content .custom-theme-list .custom-theme-item { position: relative; }
+
+.custom-main-container .custom-content .custom-theme-list .custom-theme-item .custom-theme-mask { position: absolute; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.3); }
+
 /*# sourceMappingURL=index.compact.css.map */
