@@ -61,29 +61,4 @@ nav.custom-no-margin {
   width: 80px;
 }
 
-.custom-main-container .custom-content .custom-theme-list {
-  width: 940px;
-  margin: 0 auto;
-}
-
-.custom-main-container .custom-content .custom-theme-list .custom-theme-container {
-  float: left;
-  background-position: center center;
-  width: 300px;
-  height: 300px;
-  position: relative;
-}
-
-.custom-main-container .custom-content .custom-theme-list .custom-theme-container .custom-theme-image {
-  height: 100%;
-}
-
-.custom-main-container .custom-content .custom-theme-list .custom-theme-container .custom-theme-image:hover {
-  transform: scale(1.1);
-}
-
-.custom-main-container .custom-content .custom-theme-list .custom-theme-container .custom-theme-image.pet {
-  background-image: url(../images/theme/pet.jpg);
-}
-
 /*# sourceMappingURL=index.css.map */
