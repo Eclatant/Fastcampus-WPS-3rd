@@ -43,4 +43,7 @@ nav.custom-no-margin {
         float: left;
         width: 80px; }
 
+.custom-main-container .custom-content .custom-content-title-container {
+  margin-bottom: 30px; }
+
 /*# sourceMappingURL=index.nested.css.map */
