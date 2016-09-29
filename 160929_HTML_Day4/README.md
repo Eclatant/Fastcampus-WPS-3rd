@@ -31,3 +31,9 @@ Homebrew설치 후
 이 후 node-sass npm패키지 설치
 
 `sudo npm install node-sass -g`
+
+-
+
+### Slack 모바일 / 데스크탑 APP설치 해주세요
+
+팀명 : fcprogschool163q
