@@ -1,3 +1,3 @@
-.index-content .index-image-container { background-image: url(../images/index-bg.jpg); background-position: 50% top; height: 678px; }
+.index-content .index-image-container { background-image: url(../images/index-bg.jpg); background-position: 50% top; background-repeat: no-repeat; height: 678px; }
 
 /*# sourceMappingURL=index.compact.css.map */
