@@ -18,13 +18,15 @@
 
     nav요소:
       이 요소가 네비게이션임을 알려줍니다.
-      .navbar:
+      .navbar
         네비게이션 바의 전체 형태를 나타내는 클래스입니다
-      .navbar-default:
+      .navbar-default
         네비게이션 바의 형태를 제외한 스타일(border, background)을 지정합니다
         .navbar-inverse로 바꾸면 색상이 반전됩니다
+      .navbar-no-margin
+        .navbar에 기본적으로 설정되어있는 margin-bottom값을 초기화해주기위해 설정
   -->
-  <nav class="navbar navbar-default">
+  <nav class="navbar navbar-default navbar-no-margin">
     <!--
       네비게이션 바의 내용을 넣는 block요소입니다.
       가로 너비 전체를 사용할 것이므로 .container-fluid클래스를 사용합니다
