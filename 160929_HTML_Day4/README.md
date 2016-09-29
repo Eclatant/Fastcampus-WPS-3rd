@@ -38,7 +38,6 @@ Homebrew설치 후
 
 팀명 : fcprogschool163q
 
-
 -
 
 ### 맥 쓰시는 분들
