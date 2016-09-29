@@ -18,4 +18,13 @@ nav.navbar-no-margin {
   color: white;
 }
 
+.index-content .index-image-container .caption-container .caption-top {
+  font-size: 22px;
+  margin-bottom: 0px;
+}
+
+.index-content .index-image-container .caption-container .caption-bottom {
+  font-size: 36px;
+}
+
 /*# sourceMappingURL=index.css.map */

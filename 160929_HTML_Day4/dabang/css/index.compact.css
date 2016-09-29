@@ -4,4 +4,8 @@ nav.navbar-no-margin { margin: 0; }
 
 .index-content .index-image-container .caption-container { position: absolute; left: 50%; top: 200px; color: white; }
 
+.index-content .index-image-container .caption-container .caption-top { font-size: 22px; margin-bottom: 0px; }
+
+.index-content .index-image-container .caption-container .caption-bottom { font-size: 36px; }
+
 /*# sourceMappingURL=index.compact.css.map */
