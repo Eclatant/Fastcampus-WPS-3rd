@@ -9,6 +9,9 @@ nav.navbar-no-margin {
   background-color: black;
   height: 678px; }
   .index-content .index-image-container .caption-container {
+    position: absolute;
+    left: 50%;
+    top: 200px;
     color: white; }
 
 /*# sourceMappingURL=index.nested.css.map */

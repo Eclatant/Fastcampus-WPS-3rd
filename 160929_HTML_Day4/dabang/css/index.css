@@ -12,6 +12,9 @@ nav.navbar-no-margin {
 }
 
 .index-content .index-image-container .caption-container {
+  position: absolute;
+  left: 50%;
+  top: 200px;
   color: white;
 }
 
