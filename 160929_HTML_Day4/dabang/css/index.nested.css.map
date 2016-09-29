@@ -4,6 +4,6 @@
 	"sources": [
 		"../sass/index.sass"
 	],
-	"mappings": "",
+	"mappings": "AAAA,AACE,cADY,CACZ,sBAAsB,CAAC;EACrB,gBAAgB,EAA4B,2BAAC,GAAG",
 	"names": []
 }
