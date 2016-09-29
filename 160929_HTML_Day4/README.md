@@ -37,3 +37,12 @@ Homebrew설치 후
 ### Slack 모바일 / 데스크탑 APP설치 해주세요
 
 팀명 : fcprogschool163q
+
+
+-
+
+### 맥 쓰시는 분들
+
+여기 좋습니다
+
+<http://macnews.tistory.com/>
