@@ -7,5 +7,7 @@ nav.navbar-no-margin {
   background-repeat: no-repeat;
   background-color: black;
   height: 678px; }
+  .index-content .index-image-container .caption-container {
+    color: white; }
 
 /*# sourceMappingURL=index.nested.css.map */
