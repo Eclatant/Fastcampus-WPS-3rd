@@ -3,6 +3,7 @@ nav.navbar-no-margin {
 }
 
 .index-content .index-image-container {
+  position: relative;
   background-image: url(../images/index-bg.jpg);
   background-position: 50% top;
   background-repeat: no-repeat;
