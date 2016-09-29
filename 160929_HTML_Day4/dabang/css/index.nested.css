@@ -12,7 +12,8 @@ nav.navbar-no-margin {
     position: absolute;
     left: 50%;
     top: 200px;
-    color: white; }
+    color: white;
+    text-align: right; }
     .index-content .index-image-container .caption-container .caption-top {
       font-size: 22px;
       margin-bottom: 0px; }
