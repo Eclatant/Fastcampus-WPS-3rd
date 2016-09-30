@@ -6,7 +6,7 @@ nav.navbar-no-margin { margin: 0; }
 
 .index-content .pet-list .pet.cat { background-color: green; }
 
-.index-content .pet-list .pet.monkey { background-color: blue; }
+.index-content .pet-list .pet .monkey { background-color: blue; }
 
 .index-content .index-image-container { display: none; position: relative; background-image: url(../images/index-bg.jpg); background-position: 50% top; background-repeat: no-repeat; background-color: black; height: 678px; }
 
