@@ -127,7 +127,10 @@ nav.navbar-no-margin {
 
 .index-content .theme-list .theme-item:hover .item-mask {
   opacity: 0.8;
-  transform: translateX(-30%);
+}
+
+.index-content .theme-list .theme-item:hover img {
+  width: 110%;
 }
 
 .index-content .theme-list .theme-item img {
