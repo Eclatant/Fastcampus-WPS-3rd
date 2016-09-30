@@ -41,10 +41,10 @@ nav.navbar-no-margin {
 .index-content .index-image-container .search-container .form-search {
   width: 400px;
   margin: 0 auto;
-  font-size: 40px;
 }
 
 .index-content .index-image-container .search-container .form-search div.form-group {
+  float: left;
   width: 300px;
 }
 
@@ -53,6 +53,7 @@ nav.navbar-no-margin {
 }
 
 .index-content .index-image-container .search-container .form-search button.btn {
+  float: left;
   width: 80px;
 }
 
