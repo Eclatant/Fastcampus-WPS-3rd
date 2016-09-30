@@ -20,7 +20,7 @@ nav.navbar-no-margin { margin: 0; }
 
 .index-content .theme-list .theme-item2 .item2-mask { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.5); }
 
-.index-content .theme-list .theme-item2 .item2-caption { color: white; text-align: center; position: absolute; }
+.index-content .theme-list .theme-item2 .item2-caption { color: white; text-align: center; top: 0; left: 0; width: 100%; position: absolute; }
 
 .index-content .theme-list div[class^=col-] img { width: 100%; }
 

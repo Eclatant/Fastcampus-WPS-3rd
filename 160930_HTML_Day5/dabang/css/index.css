@@ -75,6 +75,9 @@ nav.navbar-no-margin {
 .index-content .theme-list .theme-item2 .item2-caption {
   color: white;
   text-align: center;
+  top: 0;
+  left: 0;
+  width: 100%;
   position: absolute;
 }
 
