@@ -36,4 +36,7 @@ nav.navbar-no-margin {
 .index-content .index-content-title-container {
   text-align: center; }
 
+.index-content .theme-list div[class^=col-] {
+  border: 1px solid black; }
+
 /*# sourceMappingURL=index.nested.css.map */

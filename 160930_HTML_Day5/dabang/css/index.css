@@ -49,4 +49,8 @@ nav.navbar-no-margin {
   text-align: center;
 }
 
+.index-content .theme-list div[class^=col-] {
+  border: 1px solid black;
+}
+
 /*# sourceMappingURL=index.css.map */
