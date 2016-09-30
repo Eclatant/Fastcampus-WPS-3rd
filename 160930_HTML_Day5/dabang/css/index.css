@@ -2,6 +2,10 @@ nav.navbar-no-margin {
   margin: 0;
 }
 
+.index-content .pet-list {
+  display: none;
+}
+
 .index-content .pet-list .pet {
   height: 50px;
   border: 1px solid black;
@@ -15,7 +19,7 @@ nav.navbar-no-margin {
   background-color: green;
 }
 
-.index-content .pet-list .pet .monkey {
+.index-content .pet-list .pet.monkey {
   background-color: blue;
 }
 
