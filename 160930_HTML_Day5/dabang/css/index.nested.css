@@ -1,6 +1,9 @@
 nav.navbar-no-margin {
   margin: 0; }
 
+.index-content .per-list .pet {
+  height: 50px; }
+
 .index-content .index-image-container {
   display: none;
   position: relative;
@@ -76,8 +79,6 @@ nav.navbar-no-margin {
   position: relative;
   background-color: gray;
   margin-bottom: 30px; }
-  .index-content .theme-list .theme-item:hover {
-    margin-bottom: 40px; }
   .index-content .theme-list .theme-item img {
     width: 100%; }
   .index-content .theme-list .theme-item .item-mask {

@@ -1,5 +1,7 @@
 nav.navbar-no-margin { margin: 0; }
 
+.index-content .per-list .pet { height: 50px; }
+
 .index-content .index-image-container { display: none; position: relative; background-image: url(../images/index-bg.jpg); background-position: 50% top; background-repeat: no-repeat; background-color: black; height: 678px; }
 
 .index-content .index-image-container .caption-container { position: absolute; left: 50%; top: 160px; margin-left: -420px; color: white; text-align: right; }
@@ -29,8 +31,6 @@ nav.navbar-no-margin { margin: 0; }
 .index-content .theme-list .theme-item2 .item2-caption .caption-desc { font-size: 14px; }
 
 .index-content .theme-list .theme-item { position: relative; background-color: gray; margin-bottom: 30px; }
-
-.index-content .theme-list .theme-item:hover { margin-bottom: 40px; }
 
 .index-content .theme-list .theme-item img { width: 100%; }
 
