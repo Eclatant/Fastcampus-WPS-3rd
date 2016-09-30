@@ -45,4 +45,8 @@ nav.navbar-no-margin {
   transform: translate(-50%, -50%);
 }
 
+.index-content .index-content-title-container {
+  text-align: center;
+}
+
 /*# sourceMappingURL=index.css.map */
