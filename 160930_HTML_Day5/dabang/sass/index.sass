@@ -96,6 +96,12 @@ nav.navbar-no-margin
       margin-bottom: 30px
       overflow: hidden
 
+      // css-trick입니다
+      // 상위요소 (.theme-item)의 가상선택자로,
+      // 고정되어있지 않은 width값에 해당하는 padding값을
+      // 50%로 상하좌우에 적용함과 동시에
+      // display: block;속성으로 width/height값을 가질 수 있도록 합니다
+      //   결과적으로, .theme-item은 width와 동일한 height값을 지니게 됩니다
       &:before
         content: ''
         display: block
