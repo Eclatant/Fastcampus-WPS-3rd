@@ -55,7 +55,7 @@ nav.navbar-no-margin {
 }
 
 .index-content .theme-list div[class^=col-] .caption p {
-  white-space: pre-wrap;
+  height: 40px;
 }
 
 /*# sourceMappingURL=index.css.map */

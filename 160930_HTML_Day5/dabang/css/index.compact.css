@@ -16,6 +16,6 @@ nav.navbar-no-margin { margin: 0; }
 
 .index-content .theme-list div[class^=col-] img { width: 100%; }
 
-.index-content .theme-list div[class^=col-] .caption p { white-space: pre-wrap; }
+.index-content .theme-list div[class^=col-] .caption p { height: 40px; }
 
 /*# sourceMappingURL=index.compact.css.map */
