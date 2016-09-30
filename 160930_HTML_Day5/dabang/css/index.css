@@ -169,4 +169,8 @@ nav.navbar-no-margin {
   width: 100%;
 }
 
+.index-content .sitemap-container .sitemap-ul-con {
+  background-color: gray;
+}
+
 /*# sourceMappingURL=index.css.map */
