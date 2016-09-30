@@ -4,6 +4,7 @@ nav.navbar-no-margin {
 
 .index-content .pet-list .pet {
   height: 50px;
+  border: 1px solid black;
 }
 
 .index-content .index-image-container {
