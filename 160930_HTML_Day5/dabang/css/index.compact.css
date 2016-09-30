@@ -56,4 +56,6 @@ nav.navbar-no-margin { margin: 0; }
 
 .index-content .sitemap-container .sitemap-ul-con ul { line-height: 34px; }
 
+.index-content .sitemap-container .sitemap-ul-con ul .li-title { font-weight: bold; }
+
 /*# sourceMappingURL=index.compact.css.map */
