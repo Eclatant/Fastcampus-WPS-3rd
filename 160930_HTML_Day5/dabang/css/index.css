@@ -72,6 +72,10 @@ nav.navbar-no-margin {
   margin-bottom: 30px;
 }
 
+.index-content .theme-list {
+  display: none;
+}
+
 .index-content .theme-list .theme-item2 {
   position: relative;
   width: 300px;
@@ -171,6 +175,7 @@ nav.navbar-no-margin {
 
 .index-content .sitemap-container .sitemap-ul-con {
   background-color: gray;
+  height: 50px;
 }
 
 /*# sourceMappingURL=index.css.map */
