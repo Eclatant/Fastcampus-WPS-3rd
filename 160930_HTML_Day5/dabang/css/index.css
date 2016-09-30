@@ -38,4 +38,8 @@ nav.navbar-no-margin {
   background-color: rgba(0, 0, 0, 0.5);
 }
 
+.index-content .index-image-container .search-container .form-search {
+  text-align: center;
+}
+
 /*# sourceMappingURL=index.css.map */
