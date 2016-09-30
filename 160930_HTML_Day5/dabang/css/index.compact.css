@@ -30,4 +30,6 @@ nav.navbar-no-margin { margin: 0; }
 
 .index-content .theme-list .theme-item { background-color: gray; }
 
+.index-content .theme-list .theme-item img { width: 100%; }
+
 /*# sourceMappingURL=index.compact.css.map */
