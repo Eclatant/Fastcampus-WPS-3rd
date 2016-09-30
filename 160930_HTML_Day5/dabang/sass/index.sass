@@ -101,9 +101,12 @@ nav.navbar-no-margin
         display: block
         padding: 50%
 
+      // .theme-item요소에 마우스를 올렸을 때의 속성입니다
       &:hover
+        // 하위 .item-mask요소의 불투명도를 80%로 조절합니다
         .item-mask
           opacity: 0.8
+        // img요소를 중심을 기준으로 1.1배(10%증가) 키웁니다.
         img
           transform: scale(1.1)
 
