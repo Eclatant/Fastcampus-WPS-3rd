@@ -88,8 +88,11 @@ nav.navbar-no-margin {
   position: relative;
   background-color: gray;
   margin-bottom: 30px;
-  height: 100%;
   overflow: hidden; }
+  .index-content .theme-list .theme-item:before {
+    content: '';
+    display: block;
+    padding: 0 50%; }
   .index-content .theme-list .theme-item:hover .item-mask {
     opacity: 0.8; }
   .index-content .theme-list .theme-item:hover img {

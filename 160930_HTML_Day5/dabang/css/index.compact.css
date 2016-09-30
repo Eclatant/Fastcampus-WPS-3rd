@@ -38,7 +38,9 @@ nav.navbar-no-margin { margin: 0; }
 
 .index-content .theme-list .theme-item2 .item2-caption .caption-desc { font-size: 14px; }
 
-.index-content .theme-list .theme-item { position: relative; background-color: gray; margin-bottom: 30px; height: 100%; overflow: hidden; }
+.index-content .theme-list .theme-item { position: relative; background-color: gray; margin-bottom: 30px; overflow: hidden; }
+
+.index-content .theme-list .theme-item:before { content: ''; display: block; padding: 0 50%; }
 
 .index-content .theme-list .theme-item:hover .item-mask { opacity: 0.8; }
 
