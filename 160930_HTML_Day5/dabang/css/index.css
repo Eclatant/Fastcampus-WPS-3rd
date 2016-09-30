@@ -38,4 +38,9 @@ nav.navbar-no-margin {
   background-color: rgba(0, 0, 0, 0.5);
 }
 
+.index-content .index-image-container .search-container .form-search {
+  left: 50%;
+  transform: translateX(-50%);
+}
+
 /*# sourceMappingURL=index.css.map */
