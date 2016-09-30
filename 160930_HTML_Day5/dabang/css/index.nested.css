@@ -4,15 +4,12 @@ nav.navbar-no-margin {
 .index-content .pet-list .pet {
   height: 50px;
   border: 1px solid black; }
-
-.index-content .pet-list .pet.dog {
-  background-color: red; }
-
-.index-content .pet-list .pet.cat {
-  background-color: green; }
-
-.index-content .pet-list .pet.monkey {
-  background-color: blue; }
+  .index-content .pet-list .pet.dog {
+    background-color: red; }
+  .index-content .pet-list .pet.cat {
+    background-color: green; }
+  .index-content .pet-list .pet.monkey {
+    background-color: blue; }
 
 .index-content .index-image-container {
   display: none;
