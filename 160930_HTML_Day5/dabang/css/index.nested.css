@@ -87,7 +87,8 @@ nav.navbar-no-margin {
 .index-content .theme-list .theme-item {
   position: relative;
   background-color: gray;
-  margin-bottom: 30px; }
+  margin-bottom: 30px;
+  overflow: hidden; }
   .index-content .theme-list .theme-item:hover .item-mask {
     opacity: 0.8; }
   .index-content .theme-list .theme-item:hover img {
