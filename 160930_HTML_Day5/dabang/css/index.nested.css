@@ -28,6 +28,7 @@ nav.navbar-no-margin {
     height: 180px;
     background-color: rgba(0, 0, 0, 0.5); }
     .index-content .index-image-container .search-container .form-search {
+      position: relative;
       display: inline-block;
       margin: 0 auto; }
 
