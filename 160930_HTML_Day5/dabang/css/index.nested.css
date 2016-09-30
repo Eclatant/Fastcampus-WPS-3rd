@@ -67,7 +67,8 @@ nav.navbar-no-margin {
       width: 20%;
       height: 1px;
       background-color: white;
-      display: inline-block; }
+      display: inline-block;
+      margin-bottom: 10px; }
     .index-content .theme-list .theme-item2 .item2-caption .caption-desc {
       font-size: 14px; }
 

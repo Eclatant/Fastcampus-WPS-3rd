@@ -91,6 +91,7 @@ nav.navbar-no-margin {
   height: 1px;
   background-color: white;
   display: inline-block;
+  margin-bottom: 10px;
 }
 
 .index-content .theme-list .theme-item2 .item2-caption .caption-desc {
