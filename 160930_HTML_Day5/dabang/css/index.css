@@ -75,10 +75,19 @@ nav.navbar-no-margin {
 .index-content .theme-list .theme-item2 .item2-caption {
   color: white;
   text-align: center;
-  top: 0;
+  top: 50%;
+  transform: translateY(-50%);
   left: 0;
   width: 100%;
   position: absolute;
+}
+
+.index-content .theme-list .theme-item2 .item2-caption .caption-title {
+  font-size: 20px;
+}
+
+.index-content .theme-list .theme-item2 .item2-caption .caption-desc {
+  font-size: 14px;
 }
 
 .index-content .theme-list div[class^=col-] img {
