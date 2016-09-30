@@ -72,10 +72,6 @@ nav.navbar-no-margin {
   margin-bottom: 30px;
 }
 
-.index-content .theme-list {
-  display: none;
-}
-
 .index-content .theme-list .theme-item2 {
   position: relative;
   width: 300px;
