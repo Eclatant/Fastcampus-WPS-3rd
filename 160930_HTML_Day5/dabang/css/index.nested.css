@@ -29,7 +29,7 @@ nav.navbar-no-margin {
     background-color: rgba(0, 0, 0, 0.5); }
     .index-content .index-image-container .search-container .form-search {
       position: absolute;
-      margin-top: 30%;
+      top: 30%;
       left: 50%;
       transform: translateX(-50%); }
 
