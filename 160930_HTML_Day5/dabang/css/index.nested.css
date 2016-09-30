@@ -28,9 +28,7 @@ nav.navbar-no-margin {
     height: 180px;
     background-color: rgba(0, 0, 0, 0.5); }
     .index-content .index-image-container .search-container .form-search {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%); }
+      display: inline-block;
+      margin: 0 auto; }
 
 /*# sourceMappingURL=index.nested.css.map */
