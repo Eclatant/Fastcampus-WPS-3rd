@@ -47,8 +47,12 @@ nav.navbar-no-margin {
   width: 300px;
 }
 
+.index-content .index-image-container .search-container .form-search div.form-group input {
+  width: 100%;
+}
+
 .index-content .index-image-container .search-container .form-search button.btn {
-  width: 90px;
+  width: 100px;
 }
 
 /*# sourceMappingURL=index.css.map */
