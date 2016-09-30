@@ -76,5 +76,12 @@ nav.navbar-no-margin {
   background-color: gray; }
   .index-content .theme-list .theme-item img {
     width: 100%; }
+  .index-content .theme-list .theme-item .item-mask {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); }
 
 /*# sourceMappingURL=index.nested.css.map */
