@@ -48,6 +48,7 @@ nav.navbar-no-margin {
 
 .index-content .index-content-title-container {
   text-align: center;
+  margin-bottom: 30px;
 }
 
 .index-content .theme-list div[class^=col-] img {

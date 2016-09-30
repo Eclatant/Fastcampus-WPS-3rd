@@ -12,7 +12,7 @@ nav.navbar-no-margin { margin: 0; }
 
 .index-content .index-image-container .search-container .form-search { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); }
 
-.index-content .index-content-title-container { text-align: center; }
+.index-content .index-content-title-container { text-align: center; margin-bottom: 30px; }
 
 .index-content .theme-list div[class^=col-] img { width: 100%; }
 
