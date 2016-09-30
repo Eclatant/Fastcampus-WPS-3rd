@@ -8,6 +8,6 @@ nav.navbar-no-margin { margin: 0; }
 
 .index-content .index-image-container .caption-container .caption-bottom { font-size: 36px; }
 
-.index-content .index-image-container .search-container { position: absolute; bottom: 0; left: 0; width: 100%; }
+.index-content .index-image-container .search-container { position: absolute; bottom: 0; left: 0; width: 100%; background-color: rgba(0, 0, 0, 0.5); }
 
 /*# sourceMappingURL=index.compact.css.map */
