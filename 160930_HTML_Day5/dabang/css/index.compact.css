@@ -14,4 +14,6 @@ nav.navbar-no-margin { margin: 0; }
 
 .index-content .index-content-title-container { text-align: center; }
 
+.index-content .theme-list div[class^=col-] img { width: 100%; }
+
 /*# sourceMappingURL=index.compact.css.map */

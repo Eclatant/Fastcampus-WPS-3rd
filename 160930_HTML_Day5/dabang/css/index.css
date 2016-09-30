@@ -50,4 +50,8 @@ nav.navbar-no-margin {
   text-align: center;
 }
 
+.index-content .theme-list div[class^=col-] img {
+  width: 100%;
+}
+
 /*# sourceMappingURL=index.css.map */

@@ -37,4 +37,7 @@ nav.navbar-no-margin {
 .index-content .index-content-title-container {
   text-align: center; }
 
+.index-content .theme-list div[class^=col-] img {
+  width: 100%; }
+
 /*# sourceMappingURL=index.nested.css.map */
