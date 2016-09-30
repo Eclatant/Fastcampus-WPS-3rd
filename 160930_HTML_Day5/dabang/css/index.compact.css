@@ -28,10 +28,6 @@ nav.navbar-no-margin { margin: 0; }
 
 .index-content .theme-list .theme-item2 .item2-caption .caption-desc { font-size: 14px; }
 
-.index-content .theme-list div[class^=col-] img { width: 100%; }
-
-.index-content .theme-list div[class^=col-] .caption p { height: 40px; }
-
-.index-content .theme-list .custom-thumbnail .theme-mask { background-color: rgba(0, 0, 0, 0.5); width: 100%; height: 100%; }
+.index-content .theme-list .theme-item { background-color: gray; }
 
 /*# sourceMappingURL=index.compact.css.map */
