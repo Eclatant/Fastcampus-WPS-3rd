@@ -93,7 +93,8 @@ nav.navbar-no-margin {
   .index-content .theme-list .theme-item:hover img {
     width: 110%; }
   .index-content .theme-list .theme-item img {
-    width: 100%; }
+    width: 100%;
+    transition-duration: 0.3s; }
   .index-content .theme-list .theme-item .item-mask {
     transition-duration: 0.3s;
     position: absolute;

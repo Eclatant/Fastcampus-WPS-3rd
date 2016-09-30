@@ -135,6 +135,7 @@ nav.navbar-no-margin {
 
 .index-content .theme-list .theme-item img {
   width: 100%;
+  transition-duration: 0.3s;
 }
 
 .index-content .theme-list .theme-item .item-mask {
