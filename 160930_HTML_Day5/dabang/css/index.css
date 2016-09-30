@@ -86,6 +86,10 @@ nav.navbar-no-margin {
   font-size: 20px;
 }
 
+.index-content .theme-list .theme-item2 .item2-caption .caption-divider {
+  border: 0.5px solid white;
+}
+
 .index-content .theme-list .theme-item2 .item2-caption .caption-desc {
   font-size: 14px;
 }
