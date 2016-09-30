@@ -104,6 +104,10 @@ nav.navbar-no-margin {
   margin-bottom: 30px;
 }
 
+.index-content .theme-list .theme-item:hover {
+  margin-bottom: 40px;
+}
+
 .index-content .theme-list .theme-item img {
   width: 100%;
 }

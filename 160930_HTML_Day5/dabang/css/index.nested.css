@@ -76,6 +76,8 @@ nav.navbar-no-margin {
   position: relative;
   background-color: gray;
   margin-bottom: 30px; }
+  .index-content .theme-list .theme-item:hover {
+    margin-bottom: 40px; }
   .index-content .theme-list .theme-item img {
     width: 100%; }
   .index-content .theme-list .theme-item .item-mask {
