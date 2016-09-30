@@ -134,6 +134,7 @@ nav.navbar-no-margin {
 }
 
 .index-content .theme-list .theme-item .item-mask {
+  transition-duration: 0.3s;
   position: absolute;
   left: 0;
   top: 0;
