@@ -44,6 +44,7 @@ nav.navbar-no-margin {
 }
 
 .index-content .index-image-container .search-container .form-search div.form-group {
+  float: left;
   width: 300px;
 }
 
@@ -52,6 +53,7 @@ nav.navbar-no-margin {
 }
 
 .index-content .index-image-container .search-container .form-search button.btn {
+  float: left;
   width: 100px;
 }
 

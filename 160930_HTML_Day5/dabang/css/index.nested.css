@@ -31,10 +31,12 @@ nav.navbar-no-margin {
       width: 400px;
       margin: 0 auto; }
       .index-content .index-image-container .search-container .form-search div.form-group {
+        float: left;
         width: 300px; }
         .index-content .index-image-container .search-container .form-search div.form-group input {
           width: 100%; }
       .index-content .index-image-container .search-container .form-search button.btn {
+        float: left;
         width: 100px; }
 
 /*# sourceMappingURL=index.nested.css.map */
