@@ -29,4 +29,11 @@ nav.navbar-no-margin {
   font-size: 36px;
 }
 
+.index-content .index-image-container .search-container {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+
 /*# sourceMappingURL=index.css.map */
