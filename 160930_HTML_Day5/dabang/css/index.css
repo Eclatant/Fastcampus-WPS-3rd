@@ -99,6 +99,7 @@ nav.navbar-no-margin {
 }
 
 .index-content .theme-list .theme-item {
+  position: relative;
   background-color: gray;
 }
 

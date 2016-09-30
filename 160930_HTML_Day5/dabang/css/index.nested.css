@@ -73,6 +73,7 @@ nav.navbar-no-margin {
       font-size: 14px; }
 
 .index-content .theme-list .theme-item {
+  position: relative;
   background-color: gray; }
   .index-content .theme-list .theme-item img {
     width: 100%; }
