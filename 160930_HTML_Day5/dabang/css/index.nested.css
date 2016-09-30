@@ -30,5 +30,9 @@ nav.navbar-no-margin {
     .index-content .index-image-container .search-container .form-search {
       width: 400px;
       margin: 0 auto; }
+      .index-content .index-image-container .search-container .form-search div.form-group {
+        width: 300px; }
+      .index-content .index-image-container .search-container .form-search button.btn {
+        width: 100px; }
 
 /*# sourceMappingURL=index.nested.css.map */
