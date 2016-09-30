@@ -39,5 +39,12 @@ Moom
 
 >단축키로 창 크기 자동배열
 >
+><https://manytricks.com/moom/>
 >
+
+Back to the mac 블로그
+
+><http://macnews.tistory.com/>
+
+
 
