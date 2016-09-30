@@ -39,7 +39,7 @@ nav.navbar-no-margin {
 }
 
 .index-content .index-image-container .search-container .form-search {
-  text-align: center;
+  margin: 0 auto;
 }
 
 /*# sourceMappingURL=index.css.map */
