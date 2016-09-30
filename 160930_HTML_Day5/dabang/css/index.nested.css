@@ -29,14 +29,13 @@ nav.navbar-no-margin {
     background-color: rgba(0, 0, 0, 0.5); }
     .index-content .index-image-container .search-container .form-search {
       width: 400px;
-      margin: 0 auto; }
+      margin: 0 auto;
+      font-size: 100px; }
       .index-content .index-image-container .search-container .form-search div.form-group {
-        float: left;
         width: 300px; }
         .index-content .index-image-container .search-container .form-search div.form-group input {
           width: 100%; }
       .index-content .index-image-container .search-container .form-search button.btn {
-        float: left;
-        width: 100px; }
+        width: 90px; }
 
 /*# sourceMappingURL=index.nested.css.map */
