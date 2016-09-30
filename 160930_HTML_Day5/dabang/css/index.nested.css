@@ -90,7 +90,7 @@ nav.navbar-no-margin {
   margin-bottom: 30px; }
   .index-content .theme-list .theme-item:hover .item-mask {
     opacity: 0.8;
-    transform: translateX(30%); }
+    transform: translateX(-30%); }
   .index-content .theme-list .theme-item img {
     width: 100%; }
   .index-content .theme-list .theme-item .item-mask {
