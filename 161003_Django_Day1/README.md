@@ -168,6 +168,10 @@ URLConf는 Django로 들어온 URL요청을 View와 매핑해주는 `urls.py`파
 
 -
 
+#### post 애플리케이션 생성
+
+python manage.py 
+
 #### 데이터베이스 마이그레이션 생성  
 
 `python manage.py makemigrations`
