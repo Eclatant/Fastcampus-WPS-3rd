@@ -204,14 +204,18 @@ INSTALLED_APPS = [
 
 #### 테스트 서버 실행
 
-`python manage.py runserver`
+```
+python manage.py runserver
+```
 
 #### 슈퍼유저 계정 생성
 
-`python manage.py createsuperuser`
+```
+python manage.py createsuperuser
+```
 
-#### 필드 수정 (models.py)
+#### 필드 추가 (models.py)
 
 ```
-img_cover = models.ImageField(blank=True)
+view_count = models.IntegerField(default=0)
 ```
