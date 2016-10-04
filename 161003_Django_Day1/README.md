@@ -46,6 +46,7 @@ eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
 ```
 
+!!pyenv설정을 shell의 설정파일에 기록 후, 터미널을 재시작하거나 `source ~/.bashrc` 또는 `source ~/.bash_profile`을 실행
 
 
 #### 파이썬 3.4.3버전 설치  
