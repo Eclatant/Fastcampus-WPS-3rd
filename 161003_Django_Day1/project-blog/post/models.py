@@ -3,6 +3,9 @@ from django.db import models
 
 # Post 클래스
 # 데이터베이스에서 테이블이 됩니다
+
+# 추후 추가 필드
+#   해당 글을 본 유저 목록
 class Post(models.Model):
     # 글 제목
     title = models.CharField(max_length=40)
