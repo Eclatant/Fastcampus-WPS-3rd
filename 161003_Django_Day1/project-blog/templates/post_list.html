@@ -14,9 +14,9 @@
 	<!-- Django template language - for loop -->
 	{% for post in posts %}
 	<article>
-		<h4>Post title</h4>
-		<p>Post Content</p>
-		<p>Post Created</p>
+		<h4>{{ post.title }}</h4>
+		<p>{{ post.description }}</p>
+		<p>{{ post.created }}</p>
 	</article>
 	{% endfor %}
 </body>
