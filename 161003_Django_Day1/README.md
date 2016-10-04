@@ -26,10 +26,21 @@ virtualenv는 파이썬 개발환경을 프로젝트별로 분리해서 관리�
 	* 맥 `vi ~/.bash_profile`
 	* 리눅스 	`vi ~/.bashrc`
 
+
+> 리눅스
+> 
 ```
 export PATH="~/.pyenv/bin:$PATH"
 eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
+```
+
+> 맥
+> 
+```
+export PYENV_ROOT=/usr/local/var/pyenv
+if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
+if which pyenv-virtualenv-init > /dev/null; then eval "$(pyenv virtualenv-init -)"; fi
 ```
 
 #### 파이썬 3.4.3버전 설치  
