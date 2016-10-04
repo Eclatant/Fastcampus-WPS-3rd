@@ -90,6 +90,11 @@ pyenv 기본 루트폴더는 `~/.pyenv`
 프로젝트명과 프로젝트를 담고 있는 폴더명은 별개로 취급됩니다.  
 Django에서 프로젝트 생성 시 기본적으로 프로젝트명과 프로젝트를 담고 있는 폴더명을 일치하게 생성해주는데, 처음에는 헷갈릴 수 있으므로 프로젝트를 담고 있는 폴더명은 다르게 바꾸어줍니다.
 
+#### 가상환경을 Pycharm에 설정
+
+Preferences -> Project -> Project Interpreter  
+`/usr/local/var/pyenv/versions/fc-blog/bin/python`
+
 -
 
 ### MTV Structure
