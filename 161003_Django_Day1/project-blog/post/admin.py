@@ -1,4 +1,5 @@
 from django.contrib import admin
+# 현재위치 기준으로 models라는 모듈에서 Post클래스를 import해온다
 from .models import Post
 
 
