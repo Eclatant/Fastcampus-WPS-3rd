@@ -209,3 +209,6 @@ INSTALLED_APPS = [
 #### 슈퍼유저 계정 생성
 
 `python manage.py createsuperuser`
+
+#### 필드 수정 (models.py)
+
