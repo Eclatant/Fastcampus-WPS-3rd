@@ -238,3 +238,16 @@ print(BASE_DIR)
 
 <https://pyformat.info/>
 
+-
+
+#### Django template
+
+조건문 사용
+```
+{% 태그 %}
+```
+
+변수 사용
+```
+{{ 변수명 }}
+```
