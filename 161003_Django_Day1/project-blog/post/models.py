@@ -14,11 +14,14 @@ class Post(models.Model):
     description = models.CharField(max_length=100, blank=True)
 
     # 커버이미지
-    img_cover = models.ImageField(blank=True)
+    # img_cover = models.ImageField(blank=True)
 
     # 본문내용
     content = models.TextField(blank=True)
 
+    # 조회수
+    view_count = models.IntegerField(default=0)
+    
     # 좋아요 수
     like_count = models.IntegerField(default=0)
 
