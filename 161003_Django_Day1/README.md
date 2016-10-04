@@ -227,3 +227,9 @@ view_count = models.IntegerField(default=0)
 python manage.py shell
 ```
 
+#### BASE_DIR확인 (settings.py)
+
+```
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+print(BASE_DIR)
+```
