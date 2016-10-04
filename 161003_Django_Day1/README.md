@@ -212,3 +212,6 @@ INSTALLED_APPS = [
 
 #### 필드 수정 (models.py)
 
+```
+img_cover = models.ImageField(blank=True)
+```
