@@ -26,6 +26,14 @@ virtualenv는 파이썬 개발환경을 프로젝트별로 분리해서 관리�
 	* 맥 `vi ~/.bash_profile`
 	* 리눅스 	`vi ~/.bashrc`
 
+```
+export PATH="~/.pyenv/bin:$PATH"
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
+```
+
+-
+
 #### vi 단축키
 
 `shift + g` : 가장 아래로
