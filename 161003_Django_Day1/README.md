@@ -233,3 +233,8 @@ python manage.py shell
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 print(BASE_DIR)
 ```
+
+#### Python format string 사용법
+
+<https://pyformat.info/>
+
