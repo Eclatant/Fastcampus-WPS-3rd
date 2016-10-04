@@ -20,7 +20,7 @@ class Post(models.Model):
     like_count = models.IntegerField(default=0)
 
     # 작성자의 IP주소
-    ip_address = models.IPAddressField(blank=True)
+    # ip_address = models.IPAddressField(blank=True)
 
     # 생성일자
     created = models.DateTimeField(auto_now_add=True)
