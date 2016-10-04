@@ -32,5 +32,5 @@ class Post(models.Model):
     created = models.DateTimeField(auto_now_add=True)
 
     # 객체를 문자열로 표시
-    # def __str__(self):
-    #     return self.title
+    def __str__(self):
+        return '%s]%s' % (self.id, self.title)
