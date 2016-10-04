@@ -13,6 +13,9 @@ class Post(models.Model):
     # 간단설명
     description = models.CharField(max_length=100, blank=True)
 
+    # 커버이미지
+    img_cover = models.ImageField(blank=True)
+
     # 본문내용
     content = models.TextField(blank=True)
 
