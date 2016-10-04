@@ -36,8 +36,7 @@ eval "$(pyenv virtualenv-init -)"
 
 #### vi 단축키
 
-`shift + g` : 가장 아래로
-
+`shift + g` : 가장 아래로  
 `shift + a` : 현재 줄에서 가장 마지막으로
 
 
