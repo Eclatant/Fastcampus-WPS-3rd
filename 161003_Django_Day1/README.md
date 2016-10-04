@@ -21,6 +21,17 @@ virtualenv는 파이썬 개발환경을 프로젝트별로 분리해서 관리�
 <https://github.com/yyuu/pyenv-installer>
 `curl -L https://raw.githubusercontent.com/yyuu/pyenv-installer/master/bin/pyenv-installer | bash`
 
+* 설치 후 pyenv관련 설정을 shell설정에 추가  
+	* 맥 `vi ~/.bash_profile`
+	* 리눅스 	`vi ~/.bashrc`
+
+#### vi 단축키
+
+`shift + g` : 가장 아래로
+
+`shift + a` : 현재 줄에서 가장 마지막으로
+
+
 
 # Django
 
