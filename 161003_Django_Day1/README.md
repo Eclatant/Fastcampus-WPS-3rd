@@ -219,3 +219,11 @@ python manage.py createsuperuser
 ```
 view_count = models.IntegerField(default=0)
 ```
+이후 makemigrations -> migrate 실행
+
+#### Django shell 실행
+
+```
+python manage.py shell
+```
+
