@@ -32,6 +32,10 @@ eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
 ```
 
+#### 파이썬 3.4.3버전 설치  
+
+`pyenv install 3.4.3`
+
 -
 
 #### vi 단축키
