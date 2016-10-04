@@ -14,4 +14,6 @@ def post_list(request):
         'posts': posts
     }
     # 해당 템플릿('post_list.html')에 전달한 데이터로 render한 값을 response해줍니다
+    # render_to_string
+    # return HttpResponse
     return render_to_response('post_list.html', ret)
