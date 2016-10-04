@@ -181,3 +181,11 @@ URLConf는 Django로 들어온 URL요청을 View와 매핑해주는 `urls.py`파
 `cd post/migrations`
 
 `vi 0001_initials.py`
+
+#### 테스트 서버 실행
+
+`python manage.py runserver`
+
+#### 슈퍼유저 계정 생성
+
+`python manage.py createsuperuser`
