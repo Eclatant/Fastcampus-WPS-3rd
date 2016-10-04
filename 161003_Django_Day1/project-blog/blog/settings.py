@@ -20,6 +20,7 @@ print(os.path.abspath(__file__))
 print(os.path.dirname(os.path.abspath(__file__)))
 print(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 print('-')
+print('BASE_DIR : %s' % BASE_DIR)
 print('TEMPLATE_DIR : %s' % TEMPLATE_DIR)
 
 
