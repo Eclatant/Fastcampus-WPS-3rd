@@ -10,6 +10,8 @@ def post_list(request):
 
     # 템플릿에 전달할 dictionary객체
     ret = {
+        # 테스트용 전달 값
+        'title': '블로그 글 목록',
         # posts라는 key값에 posts(Queryset)을 지정
         'posts': posts
     }
