@@ -93,7 +93,7 @@ Django에서 프로젝트 생성 시 기본적으로 프로젝트명과 프로�
 #### 가상환경을 Pycharm에 설정
 
 Preferences -> Project -> Project Interpreter  
-`/usr/local/var/pyenv/versions/fc-blog/bin/python`
+`/usr/local/var/pyenv/versions/fc-blog/bin/python` 선택
 
 -
 
