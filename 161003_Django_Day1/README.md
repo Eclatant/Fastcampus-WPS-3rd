@@ -36,6 +36,11 @@ eval "$(pyenv virtualenv-init -)"
 
 `pyenv install 3.4.3`
 
+
+#### 가상환경 생성
+
+`pyenv virtualenv <version> <env name>`
+
 -
 
 #### vi 단축키
