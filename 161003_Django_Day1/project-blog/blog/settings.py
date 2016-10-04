@@ -133,6 +133,7 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.10/howto/static-files/
 
+# Static file이 들어있는 폴더목록입니다
 STATICFILES_DIRS = [
     STATIC_DIR,
 ]
