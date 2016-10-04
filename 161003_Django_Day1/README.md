@@ -41,6 +41,14 @@ eval "$(pyenv virtualenv-init -)"
 
 `pyenv virtualenv <version> <env name>`
 
+#### 사용할 폴더로 이동
+`cd projects/django/blog`
+
+#### local에 가상환경 지정
+`pyenv local 3.4.3 fc-blog`
+
+
+
 -
 
 #### vi 단축키
