@@ -19,7 +19,7 @@ virtualenv는 파이썬 개발환경을 프로젝트별로 분리해서 관리�
 * 맥 `brew install pyenv`
 * 리눅스  
 <https://github.com/yyuu/pyenv-installer>
-
+`curl -L https://raw.githubusercontent.com/yyuu/pyenv-installer/master/bin/pyenv-installer | bash`
 
 
 # Django
