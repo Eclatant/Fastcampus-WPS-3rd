@@ -175,3 +175,9 @@ URLConf는 Django로 들어온 URL요청을 View와 매핑해주는 `urls.py`파
 #### 해당 마이그레이션을 적용
 
 `python manage.py migrate`
+
+#### 마이그레이션의 내용을 확인
+
+`cd post/migrations`
+
+`vi 0001_initials.py`
