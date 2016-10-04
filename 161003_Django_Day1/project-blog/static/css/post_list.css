@@ -3,4 +3,8 @@ article {
   border-bottom: 1px solid #ccc;
 }
 
+article .post-created {
+  text-align: right;
+}
+
 /*# sourceMappingURL=post_list.css.map */

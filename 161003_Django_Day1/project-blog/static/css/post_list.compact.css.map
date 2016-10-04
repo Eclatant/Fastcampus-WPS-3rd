@@ -4,6 +4,6 @@
 	"sources": [
 		"../sass/post_list.sass"
 	],
-	"mappings": "AAAA,AAAA,OAAO,CAAC,EACN,aAAa,EAAE,IAAK,EACpB,aAAa,EAAE,cAAe,GAAG",
+	"mappings": "AAAA,AAAA,OAAO,CAAC,EACN,aAAa,EAAE,IAAK,EACpB,aAAa,EAAE,cAAe,GAKL;;AAP3B,AAME,OANK,CAML,aAAa,CAAC,EACZ,UAAU,EAAE,KAAM,GAAG",
 	"names": []
 }
