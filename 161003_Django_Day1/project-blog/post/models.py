@@ -21,7 +21,7 @@ class Post(models.Model):
 
     # 조회수
     view_count = models.IntegerField(default=0)
-    
+
     # 좋아요 수
     like_count = models.IntegerField(default=0)
 
