@@ -170,7 +170,23 @@ URLConf는 Django로 들어온 URL요청을 View와 매핑해주는 `urls.py`파
 
 #### post 애플리케이션 생성
 
-python manage.py 
+`python manage.py startapp post`
+
+#### settings.py에 해당 애플리케이션 등록
+
+```
+INSTALLED_APPS = [
+    'django.contrib.admin',
+    'django.contrib.auth',
+    'django.contrib.contenttypes',
+    'django.contrib.sessions',
+    'django.contrib.messages',
+    'django.contrib.staticfiles',
+
+    # post 애플리케이션을 사용하겠다고 선언
+    'post',
+]
+```
 
 #### 데이터베이스 마이그레이션 생성  
 
