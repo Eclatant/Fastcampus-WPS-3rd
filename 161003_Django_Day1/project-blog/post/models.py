@@ -11,10 +11,10 @@ class Post(models.Model):
     title = models.CharField(max_length=40)
 
     # 간단설명
-    description = models.CharField(max_length=100)
+    description = models.CharField(max_length=100, blank=True)
 
     # 본문내용
-    content = models.TextField()
+    content = models.TextField(blank=True)
 
     # 좋아요 수
     like_count = models.IntegerField(default=0)
