@@ -253,3 +253,8 @@ print(BASE_DIR)
 ```
 {{ 변수명 }}
 ```
+
+#### Static files의 경로 지정
+
+`settings.py`
+
