@@ -37,6 +37,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
+    # post 애플리케이션을 사용하겠다고 선언
+    'post',
 ]
 
 MIDDLEWARE = [
