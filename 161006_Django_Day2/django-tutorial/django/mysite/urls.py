@@ -19,5 +19,5 @@ from django.contrib import admin
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     # polls.urls모듈을 include해서 polls/로 시작하는 URL요청에 매핑합니다.
-    url(r'^polls/', include('polls.urls')),
+    url(r'^$/', include('polls.urls')),
 ]
