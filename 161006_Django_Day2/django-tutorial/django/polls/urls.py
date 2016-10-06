@@ -2,10 +2,10 @@ from django.conf.urls import url
 from . import views
 
 urlpatterns = [
-    # /votes/
+    # /polls/
     url(r'^$', views.index, name='index'),
 
-    # /votes/5/
+    # /polls/5/
     url(r'^(?P<question_id>[0-9]+)/$', views.detail, name='detail'),
 
     # /polls/5/results/
