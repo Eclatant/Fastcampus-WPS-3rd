@@ -1,7 +1,9 @@
 import datetime
+from django.utils import timezone
+
 
 from django.db import models
-from django.utils import timezone
+
 
 
 class Question(models.Model):
@@ -12,6 +14,7 @@ class Question(models.Model):
         return '질문(%s)' % self.question_text
 
     def was_published_recently(self):
+        # 자신의 pub_date가 timezone.now() [현재시간] 에서 1일을 마이너스 한 값보다 큰지?
         return self.pub_date >= timezone.now() - datetime.timedelta(days=1)
 
 
