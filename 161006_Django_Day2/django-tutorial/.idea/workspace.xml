@@ -25,13 +25,13 @@
           <file leaf-file-name="views.py" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/django/polls/views.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="136">
-                  <caret line="58" column="34" selection-start-line="58" selection-start-column="34" selection-end-line="58" selection-end-column="34" />
+                <state relative-caret-position="170">
+                  <caret line="52" column="0" selection-start-line="52" selection-start-column="0" selection-end-line="52" selection-end-column="0" />
                   <folding>
                     <element signature="e#0#54#0" expanded="true" />
                     <element signature="e#253#439#0" expanded="false" />
                     <element signature="e#473#896#0" expanded="false" />
-                    <element signature="e#1104#1706#0" expanded="false" />
+                    <element signature="e#1105#1707#0" expanded="false" />
                   </folding>
                 </state>
               </provider>
@@ -523,13 +523,13 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/django/polls/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="58" column="34" selection-start-line="58" selection-start-column="34" selection-end-line="58" selection-end-column="34" />
+        <state relative-caret-position="170">
+          <caret line="52" column="0" selection-start-line="52" selection-start-column="0" selection-end-line="52" selection-end-column="0" />
           <folding>
             <element signature="e#0#54#0" expanded="true" />
             <element signature="e#253#439#0" expanded="false" />
             <element signature="e#473#896#0" expanded="false" />
-            <element signature="e#1104#1706#0" expanded="false" />
+            <element signature="e#1105#1707#0" expanded="false" />
           </folding>
         </state>
       </provider>

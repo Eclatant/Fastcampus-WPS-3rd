@@ -30,6 +30,7 @@ def detail(request, question_id):
     question = get_object_or_404(Question, pk=question_id)
     return render(request, 'detail.html', {'question': question})
 
+
 def detail_backup(request, question_id):
     # print(request)
     # print(dir(request))
@@ -48,9 +49,11 @@ def detail_backup(request, question_id):
     # 발생하지 않으면 except구문이 실행되지않고, detail.html을 render해서 보여줍니다
     return render(request, 'detail.html', {'question': question})
 
+
 def results(request, question_id):
     response = "You're looking at the results of question %s"
     return HttpResponse(response % question_id)
+
 
 def vote(request, question_id):
     question = get_object_or_404(Question, pk=question_id)
