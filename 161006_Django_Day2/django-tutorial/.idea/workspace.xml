@@ -68,7 +68,7 @@
             <entry file="file://$PROJECT_DIR$/django/polls/urls.py">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="137">
-                  <caret line="17" column="4" selection-start-line="17" selection-start-column="4" selection-end-line="17" selection-end-column="4" />
+                  <caret line="17" column="22" selection-start-line="17" selection-start-column="22" selection-end-line="17" selection-end-column="22" />
                   <folding>
                     <element signature="e#0#32#0" expanded="true" />
                   </folding>
@@ -106,8 +106,8 @@
         <option value="$PROJECT_DIR$/django/mysite/settings.py" />
         <option value="$PROJECT_DIR$/django/polls/templates/detail.html" />
         <option value="$PROJECT_DIR$/django/mysite/urls.py" />
-        <option value="$PROJECT_DIR$/django/polls/urls.py" />
         <option value="$PROJECT_DIR$/django/polls/views.py" />
+        <option value="$PROJECT_DIR$/django/polls/urls.py" />
       </list>
     </option>
   </component>
@@ -501,16 +501,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/django/polls/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="137">
-          <caret line="17" column="4" selection-start-line="17" selection-start-column="4" selection-end-line="17" selection-end-column="4" />
-          <folding>
-            <element signature="e#0#32#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/django/polls/models.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
@@ -529,6 +519,16 @@
             <element signature="e#0#54#0" expanded="true" />
             <element signature="e#191#377#0" expanded="false" />
             <element signature="e#411#834#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/django/polls/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="137">
+          <caret line="17" column="22" selection-start-line="17" selection-start-column="22" selection-end-line="17" selection-end-column="22" />
+          <folding>
+            <element signature="e#0#32#0" expanded="true" />
           </folding>
         </state>
       </provider>
