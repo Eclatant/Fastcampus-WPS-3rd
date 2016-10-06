@@ -15,7 +15,10 @@ class Question(models.Model):
 
     def was_published_recently(self):
         # 자신의 pub_date가 timezone.now() [현재시간] 에서 1일을 마이너스 한 값보다 큰지?
-        return self.pub_date >= timezone.now() - datetime.timedelta(days=1)
+        # return self.pub_date >= timezone.now() - datetime.timedelta(days=1)
+
+        is_recently = self.pub_date >= timezone.now() - datetime.timedelta(days=1)
+        return is_recently
 
 
 class Choice(models.Model):
