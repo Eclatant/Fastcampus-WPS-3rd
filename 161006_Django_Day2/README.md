@@ -32,3 +32,6 @@ pip (8.1.2)
 setuptools (12.0.5)
 ```
 
+> 오래된 django버전 업그레이드  
+> pip install django --upgrade
+
