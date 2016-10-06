@@ -51,4 +51,5 @@ Preferences -> Project interpreter -> Add local -> /usr/local/var/pyenv/versions
 
 1. detail View의 아래에 form을 만들고 form내부에 input과 button요소를 추가합니다.
 2. form의 action="polls/{{ question.id }}/add-choice/" method="POST" 이 되도록 만듭니다 (action부분은 URL태그를 사용해서 동적으로 구현!)
-3. submit으로 POST요청을 보낸 후, 
+3. submit으로 POST요청을 보낸 후, input요소의 value로 받은 값을 이용해 해당하는 Question의 Choice인스턴스를 만들어줍니다.
+4. 만든 후에는 다시 detail페이지로 HttpResponseRedirect함수를 사용해 돌아옵니다.
