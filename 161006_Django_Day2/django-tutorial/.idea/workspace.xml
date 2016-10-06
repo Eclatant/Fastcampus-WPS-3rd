@@ -22,11 +22,11 @@
     <splitter split-orientation="vertical" split-proportion="0.59455127">
       <split-first>
         <leaf>
-          <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
+          <file leaf-file-name="views.py" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/django/polls/views.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="90">
-                  <caret line="5" column="7" selection-start-line="5" selection-start-column="7" selection-end-line="5" selection-end-column="7" />
+                <state relative-caret-position="270">
+                  <caret line="15" column="70" selection-start-line="15" selection-start-column="70" selection-end-line="15" selection-end-column="70" />
                   <folding>
                     <element signature="e#0#35#0" expanded="true" />
                   </folding>
@@ -58,11 +58,11 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="settings.py" pinned="false" current-in-tab="true">
+          <file leaf-file-name="settings.py" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/django/mysite/settings.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="198">
-                  <caret line="22" column="65" selection-start-line="22" selection-start-column="65" selection-end-line="22" selection-end-column="65" />
+                <state relative-caret-position="180">
+                  <caret line="21" column="9" selection-start-line="21" selection-start-column="9" selection-end-line="21" selection-end-column="9" />
                   <folding />
                 </state>
               </provider>
@@ -123,12 +123,12 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/django/polls/views.py" />
         <option value="$PROJECT_DIR$/django/mysite/settings.py" />
         <option value="$PROJECT_DIR$/django/mysite/urls.py" />
         <option value="$PROJECT_DIR$/django/polls/urls.py" />
         <option value="$PROJECT_DIR$/django/polls/models.py" />
         <option value="$PROJECT_DIR$/django/polls/admin.py" />
+        <option value="$PROJECT_DIR$/django/polls/views.py" />
       </list>
     </option>
   </component>
@@ -434,16 +434,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/django/polls/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="5" column="7" selection-start-line="5" selection-start-column="7" selection-end-line="5" selection-end-column="7" />
-          <folding>
-            <element signature="e#0#35#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file:///usr/local/var/pyenv/versions/tutorial/lib/python3.4/site-packages/django/db/models/base.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="132">
@@ -480,19 +470,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/django/mysite/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="22" column="65" selection-start-line="22" selection-start-column="65" selection-end-line="22" selection-end-column="65" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/django/polls/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="18">
-          <caret line="1" column="9" selection-start-line="1" selection-start-column="9" selection-end-line="1" selection-end-column="9" />
-          <folding />
+        <state relative-caret-position="90">
+          <caret line="5" column="1" selection-start-line="5" selection-start-column="1" selection-end-line="5" selection-end-column="1" />
+          <folding>
+            <element signature="e#0#32#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -502,6 +486,24 @@
           <caret line="4" column="29" selection-start-line="4" selection-start-column="29" selection-end-line="4" selection-end-column="29" />
           <folding>
             <element signature="e#0#32#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/django/mysite/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="21" column="9" selection-start-line="21" selection-start-column="9" selection-end-line="21" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/django/polls/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="15" column="70" selection-start-line="15" selection-start-column="70" selection-end-line="15" selection-end-column="70" />
+          <folding>
+            <element signature="e#0#35#0" expanded="true" />
           </folding>
         </state>
       </provider>
