@@ -28,7 +28,8 @@ def index_backup(request):
 
 def detail(request, question_id):
     question = get_object_or_404(Question, pk=question_id)
-    return render(request, 'detail.html', {'question': question})
+    # return render(request, 'detail.html', {'question': question})
+    return render(request, 'detail.html', question)
 
 
 def detail_backup(request, question_id):
