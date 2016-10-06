@@ -27,11 +27,15 @@ def index_backup(request):
 
 def detail(request, question_id):
     # try-except : 예외처리 구문입니다
+    # 시도해봅니다!
     try:
         # 전달되어온 question_id가 pk인 Question인스턴스를 가져옵니다
         question = Question.objects.get(pk=question_id)
+    # 만약 에러가 발생할경우(근데 DoesNotExist일 경우)
     except Question.DoesNotExist:
+        # raise로 에러를 띄워줍니다. 띄워줄 에러는 Http404
         raise Http404('Question does not exist')
+    # 발생하지 않으면 except구문이 실행되지않고, detail.html을 render해서 보여줍니다
     return render(request, 'detail.html', {'question': question})
 
 def results(request, question_id):
