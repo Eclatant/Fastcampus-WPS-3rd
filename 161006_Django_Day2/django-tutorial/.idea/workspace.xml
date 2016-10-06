@@ -19,18 +19,19 @@
     <favorites_list name="django-tutorial" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="vertical" split-proportion="0.59455127">
+    <splitter split-orientation="vertical" split-proportion="0.80448717">
       <split-first>
         <leaf>
           <file leaf-file-name="views.py" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/django/polls/views.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="119">
-                  <caret line="57" column="8" selection-start-line="57" selection-start-column="8" selection-end-line="57" selection-end-column="8" />
+                <state relative-caret-position="100">
+                  <caret line="28" column="9" selection-start-line="28" selection-start-column="9" selection-end-line="28" selection-end-column="9" />
                   <folding>
                     <element signature="e#0#54#0" expanded="true" />
                     <element signature="e#253#439#0" expanded="false" />
                     <element signature="e#473#896#0" expanded="false" />
+                    <element signature="e#1104#1706#0" expanded="false" />
                   </folding>
                 </state>
               </provider>
@@ -522,12 +523,13 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/django/polls/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="57" column="8" selection-start-line="57" selection-start-column="8" selection-end-line="57" selection-end-column="8" />
+        <state relative-caret-position="100">
+          <caret line="28" column="9" selection-start-line="28" selection-start-column="9" selection-end-line="28" selection-end-column="9" />
           <folding>
             <element signature="e#0#54#0" expanded="true" />
             <element signature="e#253#439#0" expanded="false" />
             <element signature="e#473#896#0" expanded="false" />
+            <element signature="e#1104#1706#0" expanded="false" />
           </folding>
         </state>
       </provider>
