@@ -5,6 +5,9 @@ class Question(models.Model):
     question_text = models.CharField('질문 내용', max_length=200)
     pub_date = models.DateTimeField('date published')
 
+    def __str__(self):
+        return '질문(%s)' % self.question_text
+
 
 class Choice(models.Model):
     question = models.ForeignKey(Question, on_delete=models.CASCADE)
