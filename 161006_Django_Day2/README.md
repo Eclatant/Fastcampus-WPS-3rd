@@ -19,3 +19,16 @@
 장고 설치  
 `pip install django`
 
+> 선택사항 (pip 업그레이드)  
+> pip install --upgrade pip
+
+설치된 패키지 확인
+`pip list`
+
+```
+(tutorial) ➜  django-tutorial git:(master) pip list
+Django (1.10.2)
+pip (8.1.2)
+setuptools (12.0.5)
+```
+
