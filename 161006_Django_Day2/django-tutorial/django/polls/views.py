@@ -53,3 +53,7 @@ def results(request, question_id):
 
 def vote(request, question_id):
     return HttpResponse("You're voting on question %s." % question_id)
+
+def test_text(request, question_id, text):
+    question = get_object_or_404(Question, pk=question_id)
+    return render(request, 'detail.html', {'question': question})
