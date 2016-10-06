@@ -5,6 +5,13 @@ from .models import Question
 
 
 def index(request):
+    latest_question_list = Question.objects.order_by('-pub_date')
+    context = {
+        'latest_question_list': latest_question_list
+    }
+    return render(request, 'index.html', context)
+
+def index_backup(request):
     # 가장 최근의 Question 5개를 가져온다
     latest_question_list = Question.objects.order_by('-pub_date')[:5]
     # 장고 템플릿 폴더에서 index.html파일을 가져온다
