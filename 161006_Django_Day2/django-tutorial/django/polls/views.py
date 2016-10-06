@@ -64,11 +64,11 @@ def vote(request, question_id):
     else:
         selected_choice.votes += 1
         selected_choice.save()
-        # redirect_url = reverse('polls:results', args=(question.id,))
-        redirect_url = reverse('polls:detail', args=(question.id,))
+        redirect_url = reverse('polls:results', args=(question.id,))
+        # redirect_url = reverse('polls:detail', args=(question.id,))
         print('redirect_url : %s' % redirect_url)
         # redirect_url = '/polls/%s/results/' % question.id
-        # return HttpResponseRedirect(redirect_url)
+        return HttpResponseRedirect(redirect_url)
 
 # def test_text(request, text=''):
 #     question = get_object_or_404(Question, pk=question_id)
