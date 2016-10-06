@@ -29,7 +29,7 @@ def detail(request, question_id):
     print(request)
     print(dir(request))
     meta_dict = request.META
-    for k, v in meta_dict:
+    for k, v in meta_dict.items():
         print('%s : %s' % (k, v))
     # try-except : 예외처리 구문입니다
     # 시도해봅니다!
