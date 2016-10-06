@@ -26,11 +26,10 @@
             <entry file="file://$PROJECT_DIR$/django/polls/views.py">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="51">
-                  <caret line="3" column="36" selection-start-line="3" selection-start-column="36" selection-end-line="3" selection-end-column="36" />
+                  <caret line="3" column="31" selection-start-line="3" selection-start-column="31" selection-end-line="3" selection-end-column="31" />
                   <folding>
-                    <element signature="e#0#54#0" expanded="true" />
-                    <element signature="e#199#385#0" expanded="false" />
-                    <element signature="e#419#842#0" expanded="false" />
+                    <element signature="e#253#439#0" expanded="false" />
+                    <element signature="e#473#896#0" expanded="false" />
                   </folding>
                 </state>
               </provider>
@@ -524,11 +523,10 @@
     <entry file="file://$PROJECT_DIR$/django/polls/views.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
-          <caret line="3" column="36" selection-start-line="3" selection-start-column="36" selection-end-line="3" selection-end-column="36" />
+          <caret line="3" column="31" selection-start-line="3" selection-start-column="31" selection-end-line="3" selection-end-column="31" />
           <folding>
-            <element signature="e#0#54#0" expanded="true" />
-            <element signature="e#199#385#0" expanded="false" />
-            <element signature="e#419#842#0" expanded="false" />
+            <element signature="e#253#439#0" expanded="false" />
+            <element signature="e#473#896#0" expanded="false" />
           </folding>
         </state>
       </provider>
