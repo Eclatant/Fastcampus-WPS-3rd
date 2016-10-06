@@ -26,6 +26,8 @@ def index_backup(request):
 
 
 def detail(request, question_id):
+    print(request)
+    print(dir(request))
     # try-except : 예외처리 구문입니다
     # 시도해봅니다!
     try:
