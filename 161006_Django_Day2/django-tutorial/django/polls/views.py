@@ -65,8 +65,9 @@ def vote(request, question_id):
         selected_choice.votes += 1
         selected_choice.save()
         redirect_url = reverse('polls:results', args=(question.id,))
-        redirect_url = '/polls/%s/results/' % question.id
-        return HttpResponseRedirect(redirect_url)
+        print(redirect_url)
+        # redirect_url = '/polls/%s/results/' % question.id
+        # return HttpResponseRedirect(redirect_url)
 
 # def test_text(request, text=''):
 #     question = get_object_or_404(Question, pk=question_id)
