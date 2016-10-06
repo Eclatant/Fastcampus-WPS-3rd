@@ -36,3 +36,11 @@ setuptools (12.0.5)
 > pip install django --upgrade  
 > **(성환님 지적) --upgrade의 위치는 상관없다**
 
+polls 애플리케이션 생성  
+`python manage.py startapp polls`
+
+Pycharm에 가상환경 세팅  
+Preferences -> Project interpreter -> Add local -> /usr/local/var/pyenv/versions/tutorial
+
+> 리눅스는 ~/.pyenv/versions/tutorial
+
