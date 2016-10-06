@@ -33,5 +33,6 @@ setuptools (12.0.5)
 ```
 
 > 오래된 django버전 업그레이드  
-> pip install django --upgrade
+> pip install django --upgrade  
+> **(성환님 지적) --upgrade의 위치는 상관없다**
 
