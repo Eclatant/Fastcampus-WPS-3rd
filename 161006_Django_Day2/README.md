@@ -16,3 +16,6 @@
 가상환경을 적용 (django-tutorial폴더 내에서)  
 `pyenv local tutorial`
 
+장고 설치  
+`pip install django`
+
