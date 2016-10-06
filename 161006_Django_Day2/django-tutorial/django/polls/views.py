@@ -16,6 +16,7 @@ def index(request):
     # Http형식으로 응답을 돌려준다. 내용은 template을 context와 request를 사용해서 렌더링한 결과
     return HttpResponse(template.render(context, request))
 
+
 def detail(request, question_id):
     return HttpResponse("You're looking at question %s." % question_id)
 
