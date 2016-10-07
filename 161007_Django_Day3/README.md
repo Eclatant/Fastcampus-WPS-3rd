@@ -128,12 +128,15 @@ ID | 소속사ID | 그룹ID | 이름 | 출생연도
 
 -
 
-# Sqlite browser
+# Sqlite browser (리눅스)
 
 ```
 sudo add-apt-repository -y ppa:linuxgndu/sqlitebrowser
 sudo apt-get update
+sudo apt-get install sqlitebrowser
+```
 
+-
 
 # 프로젝트 세팅 순서
 
