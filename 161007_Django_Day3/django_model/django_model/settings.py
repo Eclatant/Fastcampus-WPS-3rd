@@ -40,6 +40,7 @@ INSTALLED_APPS = [
 
     'person',
     'music',
+    'person2',
 ]
 
 MIDDLEWARE = [
