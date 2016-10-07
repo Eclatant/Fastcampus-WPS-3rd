@@ -7,5 +7,10 @@ class Person(models.Model):
         ('M', 'Medium'),
         ('L', 'Large'),
     )
+    GENDER = (
+        ('m', '남성'),
+        ('f', '여성'),
+    )
     name = models.CharField(max_length=60)
     shirt_size = models.CharField(max_length=1, choices=SHIRT_SIZE)
+    gender = models.CharField(max_length=1, choices=GENDER)
