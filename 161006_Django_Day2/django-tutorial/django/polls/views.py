@@ -103,5 +103,5 @@ def add_choice(request, question_id):
 
     redirect_url = reverse('polls:detail', args=(question_id,))
     # /polls/{{ question.id }}/
-    # return HttpResponseRedirect(redirect_url)
-    return render(request, 'detail.html', {'question': question})
+    return HttpResponseRedirect(redirect_url)
+    # return render(request, 'detail.html', {'question': question})
