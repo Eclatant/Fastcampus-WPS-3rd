@@ -14,6 +14,6 @@ class Major(models.Model):
     title = models.CharField(max_length=50)
 
 
-class Coffee(models.Model):
-    num = models.IntegerField(primary_key=True)
+# class Coffee(models.Model):
+    num = models.AutoField(primary_key=True)
     title = models.CharField(max_length=30)
