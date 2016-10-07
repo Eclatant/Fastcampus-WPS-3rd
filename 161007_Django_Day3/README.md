@@ -46,8 +46,10 @@ chsh -s `which zsh`
 ```
 brew install zsh zsh-completions
 curl -L http://install.ohmyz.sh | sh
-
 ```
+
+> **확인법**  
+> echo $SHELL
 
 ## 리눅스 기본 터미널 변경
 
