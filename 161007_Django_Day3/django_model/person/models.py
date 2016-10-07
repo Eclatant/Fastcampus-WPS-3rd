@@ -16,4 +16,4 @@ class Major(models.Model):
 
 # class Coffee(models.Model):
     num = models.AutoField(primary_key=True)
-    title = models.CharField(max_length=30)
+    # title = models.CharField(max_length=30)
