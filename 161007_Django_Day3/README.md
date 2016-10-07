@@ -33,6 +33,17 @@ pyenv virtualenv 3.4.3 <가상환경이름>
 ### zsh<http://theyearlyprophet.com/love-your-terminal.html>  
 bash와 비슷하게 동작하는 셸로, 사용성이 좋습니다.
 
+#### 리눅스
+
+```
+apt-get install zsh
+curl -L http://install.ohmyz.sh | sh
+```
+
+#### 맥
+
+
+
 ## 리눅스 기본 터미널 변경
 
 **Terminator**
