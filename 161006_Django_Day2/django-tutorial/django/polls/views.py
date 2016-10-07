@@ -29,7 +29,7 @@ def index_backup(request):
 def detail(request, question_id):
     question = get_object_or_404(Question, pk=question_id)
     # return render(request, 'detail.html', {'question': question})
-    return render(request, 'detail.html', question)
+    return render(request, 'detail.html', [question, ])
 
 
 def detail_backup(request, question_id):
@@ -38,6 +38,8 @@ def detail_backup(request, question_id):
     # meta_dict = request.META
     # for k, v in meta_dict.items():
     #     print('%s : %s' % (k, v))
+
+
     # try-except : 예외처리 구문입니다
     # 시도해봅니다!
     try:
@@ -77,7 +79,3 @@ def vote(request, question_id):
         print('redirect_url : %s' % redirect_url)
         # redirect_url = '/polls/%s/results/' % question.id
         return HttpResponseRedirect(redirect_url)
-
-# def test_text(request, text=''):
-#     question = get_object_or_404(Question, pk=question_id)
-#     return render(request, 'detail.html', {'question': question})
