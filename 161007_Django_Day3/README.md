@@ -51,12 +51,27 @@ curl -L http://install.ohmyz.sh | sh
 > **확인법**  
 > echo $SHELL
 
+-
 
 ##### 기존 ~/.bashrc설정을 ~/.zshrc로 복사
 
-```
+리눅스
 
 ```
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
+```
+
+맥
+
+```
+export PYENV_ROOT=/usr/local/var/pyenv
+if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
+if which pyenv-virtualenv-init > /dev/null; then eval "$(pyenv virtualenv-init -)"; fi
+```
+
 
 ## 리눅스 기본 터미널 변경
 
