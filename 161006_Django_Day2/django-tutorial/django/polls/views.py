@@ -87,7 +87,7 @@ def add_choice(request, question_id):
     try:
         choice_name = request.POST['choice_name']
 
-        if Choice.objects.filter(question=question, choice_text=choice_name).exists():
+        if Choice.objects.filter(question=question, choice_text__iexact=choice_name).exists():
             return HttpResponse('Choice [%s] is exist' % choice_name)
         elif choice_name == '':
             return HttpResponse('choice_name is required')
