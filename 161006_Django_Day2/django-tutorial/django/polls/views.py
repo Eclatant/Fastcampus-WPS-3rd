@@ -87,7 +87,9 @@ def add_choice(request, question_id):
     try:
         choice_name = request.POST['choice_name']
         if choice_name == '':
-            return HttpResponseRedirect('choice_name is required')
+            return HttpResponse('choice_name is required')
+        elif len(choice_name) < 3:
+            return HttpResponse('choice_name is too short')
     except KeyError:
         return HttpResponse('choice_name key does not exist')
 
