@@ -13,4 +13,4 @@ class Person(models.Model):
     )
     name = models.CharField(max_length=60)
     shirt_size = models.CharField(max_length=1, choices=SHIRT_SIZE)
-    gender = models.CharField(max_length=1, choices=GENDER)
+    gender = models.CharField(max_length=1, choices=GENDER, blank=True)
