@@ -16,3 +16,4 @@ class Major(models.Model):
 
 class Coffee(models.Model):
     num = models.IntegerField(primary_key=True)
+    title = models.CharField(max_length=30)
