@@ -12,3 +12,7 @@ class School(models.Model):
 
 class Major(models.Model):
     title = models.CharField(max_length=50)
+
+
+class Coffee(models.Model):
+    num = models.IntegerField(primary_key=True)
