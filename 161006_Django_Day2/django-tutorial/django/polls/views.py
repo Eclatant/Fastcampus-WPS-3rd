@@ -102,4 +102,6 @@ def add_choice(request, question_id):
     # choice.save()
 
     redirect_url = reverse('polls:detail', args=(question_id,))
-    return HttpResponseRedirect(redirect_url)
+    # /polls/{{ question.id }}/
+    # return HttpResponseRedirect(redirect_url)
+    return render(request, 'detail.html', {'question': question})
