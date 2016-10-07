@@ -86,7 +86,9 @@ def add_choice(request, question_id):
     print(request.POST)
     try:
         choice_name = request.POST['choice_name']
-        if choice_name == '':
+        if Choice.objects.filter(question=question, choice_text=choice_name).exists():
+            return HttpResponse('Choice [%s] is exist' % choice_name)
+        elif choice_name == '':
             return HttpResponse('choice_name is required')
         elif len(choice_name) < 3:
             return HttpResponse('choice_name is too short')
