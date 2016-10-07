@@ -86,7 +86,7 @@ def add_choice(request, question_id):
     try:
         choice_name = request.POST['choice_name']
     except KeyError:
-        raise HttpResponse('choice_name key does not exist')
+        return HttpResponse('choice_name key does not exist')
 
     question.choice_set.create(choice_text=choice_name)
 
