@@ -39,7 +39,9 @@ def detail_backup(request, question_id):
         'gender': 'male',
     }
 
-    example_dict['name']
+    example_dict['hobby']
+
+
     example_dict.get('name')
     example_dict.get('name', '이름없음')
 
