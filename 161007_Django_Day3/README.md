@@ -130,6 +130,11 @@ ID | 소속사ID | 그룹ID | 이름 | 출생연도
 
 # Sqlite browser
 
+```
+sudo add-apt-repository -y ppa:linuxgndu/sqlitebrowser
+sudo apt-get update
+
+
 # 프로젝트 세팅 순서
 
 1. pyenv 가상환경 생성
