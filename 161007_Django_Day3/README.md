@@ -58,7 +58,7 @@ curl -L http://install.ohmyz.sh | sh
 `vi ~/.bashrc​`로 파일 연 후, 복사하고  
 `vi ~/.zshrc`로 파일 연 후 `shift + g`로 맨 밑으로 이동하고 `shift + a`로 줄 맨 뒤로 이동, `a`또는 `i`눌러 입력모드 전환 후 엔터 몇 번 치고 붙여넣기! 하시면 쉽습니다.
 
-리눅스
+**리눅스**
 
 ```
 export PYENV_ROOT="$HOME/.pyenv"
@@ -67,7 +67,7 @@ eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
 ```
 
-맥
+**맥**
 
 ```
 export PYENV_ROOT=/usr/local/var/pyenv
