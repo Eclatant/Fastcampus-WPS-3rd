@@ -17,3 +17,8 @@ class Major(models.Model):
 # class Coffee(models.Model):
     num = models.AutoField(primary_key=True)
     # title = models.CharField(max_length=30)
+
+
+class Computer(models.Model):
+    num = models.AutoField(primary_key=True)
+    title = models.CharField(max_length=30)
