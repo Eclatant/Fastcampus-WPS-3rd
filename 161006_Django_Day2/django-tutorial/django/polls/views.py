@@ -33,6 +33,17 @@ def detail(request, question_id):
 
 
 def detail_backup(request, question_id):
+    example_dict = {
+        'name': '이한영',
+        'age': '29',
+        'gender': 'male',
+    }
+
+    example_dict['name']
+    example_dict.get('name')
+    example_dict.get('name', '이름없음')
+
+
     # print(request)
     # print(dir(request))
     # meta_dict = request.META
