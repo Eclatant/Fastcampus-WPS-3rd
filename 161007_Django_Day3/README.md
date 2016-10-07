@@ -42,7 +42,10 @@ curl -L http://install.ohmyz.sh | sh
 
 #### 맥
 
+```
+brew install zsh zsh-completions
 
+```
 
 ## 리눅스 기본 터미널 변경
 
