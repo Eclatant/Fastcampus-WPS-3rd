@@ -136,6 +136,8 @@ sudo apt-get update
 sudo apt-get install sqlitebrowser
 ```
 
+설치 다 되면 좌측 위 검색부분에 sqlite치면 프로그램 뜨는거 실행
+
 -
 
 # 프로젝트 세팅 순서
