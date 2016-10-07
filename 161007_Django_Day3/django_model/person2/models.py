@@ -8,6 +8,7 @@ class Person(models.Model):
         ('L', 'Large'),
     )
     GENDER = (
+        ('', '모름'),
         ('m', '남성'),
         ('f', '여성'),
     )
