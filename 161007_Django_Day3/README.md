@@ -55,6 +55,9 @@ curl -L http://install.ohmyz.sh | sh
 
 ##### 기존 ~/.bashrc설정(맥은 ~/.bash_profile)을 ~/.zshrc로 복사
 
+`vi ~/.bashrc​`로 파일 연 후, 복사하고  
+`vi ~/.zshrc`로 파일 연 후 `shift + g`로 맨 밑으로 이동하고 `shift + a`로 줄 맨 뒤로 이동, `a`또는 `i`눌러 입력모드 전환 후 엔터 몇 번 치고 붙여넣기! 하시면 쉽습니다.
+
 리눅스
 
 ```
