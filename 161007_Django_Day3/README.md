@@ -136,3 +136,19 @@ ID | 소속사ID | 그룹ID | 이름 | 출생연도
 4. 생성한 프로젝트 폴더를 Pycharm에서 열기
 5. Pycharm에서 Interpreter를 생성한 가상환경으로 설정
 
+-
+
+**Person모델**
+
+```python
+class Person(models.Model):
+    first_name = models.CharField(max_length=30)
+    last_name = models.CharField(max_length=30)
+```
+
+위 모델은 아래와 같은 표를 만듭니다.
+
+ID | first_name | last_name
+--- | --- | ---
+ID값 | 이름 | 성
+
