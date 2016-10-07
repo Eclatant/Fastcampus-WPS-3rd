@@ -83,6 +83,7 @@ def vote(request, question_id):
 
 def add_choice(request, question_id):
     question = get_object_or_404(Question, pk=question_id)
+    print(request.POST)
     try:
         choice_name = request.POST['choice_name']
     except KeyError:

@@ -13,6 +13,7 @@
 
 <h5>Add choice</h5>
 <form action="{% url 'polls:add_choice' question.id %}">
+  {% csrf_token %}
   <input type="text" name="choice_name">
   <button type="submit">등록하기</button>
 </form>
