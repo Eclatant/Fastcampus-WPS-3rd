@@ -37,7 +37,7 @@ bash와 비슷하게 동작하는 셸로, 사용성이 좋습니다.
 
 ```
 sudo apt-get install zsh
-curl -L http://install.ohmyz.sh | sh
+sudo curl -L http://install.ohmyz.sh | sh
 sudo chsh -s `which zsh`
 ```
 
