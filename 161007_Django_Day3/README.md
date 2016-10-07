@@ -1,3 +1,8 @@
+# Django girls
+
+<https://tutorial.djangogirls.org/ko/>
+
+
 # 파이썬 셸 관련 설정
 
 ## 셸에서 방향키 누르면 특수문자 나오며 인식되지 않을 때
