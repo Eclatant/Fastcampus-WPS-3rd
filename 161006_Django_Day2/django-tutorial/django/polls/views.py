@@ -79,3 +79,18 @@ def vote(request, question_id):
         print('redirect_url : %s' % redirect_url)
         # redirect_url = '/polls/%s/results/' % question.id
         return HttpResponseRedirect(redirect_url)
+
+def add_choice(request, question_id):
+    question = get_object_or_404(Question, pk=question_id)
+    try:
+        choice_name = request.POST['choice_name']
+    except KeyError:
+        raise HttpResponse('choice_name key does not exist')
+
+    question.choice_set.create(choice_text=choice_name)
+
+    # choice = Choice(question=question, choice_text=choice_name)
+    # choice.save()
+    
+    redirect_url = reverse('polls:detail', args=(question_id,))
+    return HttpResponseRedirect(redirect_url)
