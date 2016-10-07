@@ -86,6 +86,7 @@ def add_choice(request, question_id):
     print(request.POST)
     try:
         choice_name = request.POST['choice_name']
+        print('choice_name : %s' % choice_name)
 
         if Choice.objects.filter(question=question, choice_text__iexact=choice_name).exists():
             return HttpResponse('Choice [%s] is exist' % choice_name)
