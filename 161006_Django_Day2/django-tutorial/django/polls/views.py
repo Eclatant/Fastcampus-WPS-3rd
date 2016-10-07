@@ -80,6 +80,7 @@ def vote(request, question_id):
         # redirect_url = '/polls/%s/results/' % question.id
         return HttpResponseRedirect(redirect_url)
 
+
 def add_choice(request, question_id):
     question = get_object_or_404(Question, pk=question_id)
     try:
@@ -91,6 +92,6 @@ def add_choice(request, question_id):
 
     # choice = Choice(question=question, choice_text=choice_name)
     # choice.save()
-    
+
     redirect_url = reverse('polls:detail', args=(question_id,))
     return HttpResponseRedirect(redirect_url)
