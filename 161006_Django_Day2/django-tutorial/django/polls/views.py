@@ -86,6 +86,8 @@ def add_choice(request, question_id):
     print(request.POST)
     try:
         choice_name = request.POST['choice_name']
+        if choice_name == '':
+            return HttpResponseRedirect('choice_name is required')
     except KeyError:
         return HttpResponse('choice_name key does not exist')
 
