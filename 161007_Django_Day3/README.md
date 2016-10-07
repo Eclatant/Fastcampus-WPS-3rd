@@ -53,7 +53,7 @@ curl -L http://install.ohmyz.sh | sh
 
 -
 
-##### 기존 ~/.bashrc설정을 ~/.zshrc로 복사
+##### 기존 ~/.bashrc설정(맥은 ~/.bash_profile)을 ~/.zshrc로 복사
 
 리눅스
 
