@@ -102,8 +102,8 @@ def add_choice(request, question_id):
     # choice = Choice(question=question, choice_text=choice_name)
     # choice.save()
 
-    # redirect_url = reverse('polls:detail', args=(question_id,))
+    redirect_url = reverse('polls:detail', args=(question_id,))
     # /polls/{{ question.id }}/
-    redirect_url = 'http://naver.com'
+    # redirect_url = 'http://naver.com'
     return HttpResponseRedirect(redirect_url)
     # return render(request, 'detail.html', {'question': question})
