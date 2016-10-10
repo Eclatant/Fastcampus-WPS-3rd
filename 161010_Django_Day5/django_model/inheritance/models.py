@@ -10,6 +10,7 @@ class CommonInfo(models.Model):
 
     class Meta:
         abstract = True
+        ordering = ('-age', )
 
 
 class Student(CommonInfo):
