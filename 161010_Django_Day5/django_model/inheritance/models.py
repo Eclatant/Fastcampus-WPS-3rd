@@ -16,6 +16,9 @@ class CommonInfo(models.Model):
 class Student(CommonInfo):
     home_group = models.CharField(max_length=5)
 
+    class Meta:
+        ordering = ('age', )
+
 
 class Teacher(CommonInfo):
     year = models.CharField(max_length=10)
