@@ -33,3 +33,9 @@ class Entry(models.Model):
 
     # class Meta:
     #     orering = ('headline', )
+
+
+class EntryDetail(models.Model):
+    entry = models.OneToOneField(Entry)
+    details = models.TextField(blank=True)
+    
