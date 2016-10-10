@@ -10,9 +10,19 @@ class Person(models.Model):
         return '%s%s' % (self.last_name, self.first_name)
 
 
+
+
 # Person클래스를 상속받음
 class Student(Person):
     year = models.CharField(max_length=20)
+
+
+class MyStudent(Student):
+    class Meta:
+        ordering = ('-year')
+
+    def get_year_string(self):
+        return self.year
 
 
 class School(models.Model):
