@@ -1,8 +1,5 @@
 from django.shortcuts import render, HttpResponse
 
 
-def test(request, post_id):
-    return HttpResponse('Test! %s' % post_id)
-
-# def test(request):
-#     return HttpResponse('Test!')
+def post_list(request):
+    return render(request, 'blog/post_list.html', {})
