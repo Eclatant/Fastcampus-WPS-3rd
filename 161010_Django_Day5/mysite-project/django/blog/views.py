@@ -1,4 +1,5 @@
 from django.shortcuts import render, HttpResponse
+from django.utils import timezone
 from .models import Post
 
 # 같은 의미
