@@ -11,4 +11,4 @@ class Topping(models.Model):
 
 class Pizza(models.Model):
     title = models.CharField(max_length=30)
-    toppings = models.ManyToManyField(Topping, symmetrical=False)
+    toppings = models.ManyToManyField(Topping, symmetrical=True)
