@@ -19,6 +19,6 @@ RELATIONSHIP_STATUSES = (
 
 
 class Relationship(models.Model):
-    from_person = models.ForeignKey(Person)
-    to_person = models.ForeignKey(Person)
+    from_person = models.ForeignKey(Person, related_name='from_people')
+    to_person = models.ForeignKey(Person, related_name='to_people')
     status = models.IntegerField(choices=RELATIONSHIP_STATUSES)
