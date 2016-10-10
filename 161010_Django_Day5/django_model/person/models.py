@@ -18,11 +18,11 @@ class Student(Person):
 
 
 class MyStudent(Student):
-    add_field = models.CharField(max_length=30)
-    
+    # add_field = models.CharField(max_length=30)
+
     class Meta:
         proxy = True
-        ordering = ('-year')
+        ordering = ('-year', )
 
     def get_year_string(self):
         return self.year
