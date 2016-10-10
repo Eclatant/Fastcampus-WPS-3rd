@@ -38,4 +38,3 @@ class Entry(models.Model):
 class EntryDetail(models.Model):
     entry = models.OneToOneField(Entry)
     details = models.TextField(blank=True)
-    
