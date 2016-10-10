@@ -6,7 +6,7 @@ class Person(models.Model):
     relationships = models.ManyToManyField(
         'self',
         through='Relationship',
-        # symmetrical=False,
+        symmetrical=False,
         related_name='related_to+'
     )
 
@@ -19,6 +19,6 @@ RELATIONSHIP_STATUSES = (
 
 
 class Relationship(models.Model):
-    from_person = models.ForeignKey(Person, related_name='from_people')
-    to_person = models.ForeignKey(Person, related_name='to_people')
+    from_person = models.ForeignKey(Person)
+    to_person = models.ForeignKey(Person)
     status = models.IntegerField(choices=RELATIONSHIP_STATUSES)
