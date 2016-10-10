@@ -15,8 +15,14 @@ Including another URLconf
 """
 from django.conf.urls import url, include
 from django.contrib import admin
+from blog import views as blog_views
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
+
+    # blog/urls.py를 사용하지 않고 루트 urls.py를 사용할 경우
+    # url(r'^$', blog_views.post_list, name='post_list'),
+
+    # blog/urls.py의 내용을 사용할 경우
     url(r'', include('blog.urls')),
 ]
