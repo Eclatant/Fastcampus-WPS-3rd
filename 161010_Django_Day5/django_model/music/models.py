@@ -15,6 +15,10 @@ from person.models import Major, School
 #     num_stars = models.IntegerField()
 
 
+class NoField(models.Model):
+    pass
+
+
 class Person(models.Model):
     name = models.CharField(max_length=128)
 

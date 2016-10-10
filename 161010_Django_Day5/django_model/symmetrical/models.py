@@ -6,7 +6,7 @@ class Person(models.Model):
     relationships = models.ManyToManyField(
         'self',
         through='Relationship',
-        symmetrical=False,
+        # symmetrical=False,
         related_name='related_to+'
     )
 
