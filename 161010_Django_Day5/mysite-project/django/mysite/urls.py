@@ -19,5 +19,5 @@ from blog.views import test
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
 
-    url(r'^post/\d+/$', test)
+    url(r'^post/(\d+)/$', test)
 ]
