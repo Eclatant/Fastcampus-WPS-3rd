@@ -30,3 +30,6 @@ class Entry(models.Model):
 
     def __str__(self):
         return self.headline
+
+    # class Meta:
+    #     orering = ('headline', )
