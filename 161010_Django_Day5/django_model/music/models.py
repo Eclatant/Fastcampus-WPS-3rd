@@ -1,4 +1,5 @@
 from django.db import models
+from person.models import Major, School
 
 
 # class Musician(models.Model):
