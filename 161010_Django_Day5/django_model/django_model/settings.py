@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     'car',
     'symmetrical',
     'inheritance',
+    'queries',
 ]
 
 MIDDLEWARE = [
