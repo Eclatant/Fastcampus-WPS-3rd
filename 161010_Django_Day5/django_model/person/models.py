@@ -9,6 +9,10 @@ class Person(models.Model):
     def full_name(self):
         return '%s%s' % (self.last_name, self.first_name)
 
+# Person클래스를 상속받음
+class Student(Person):
+    grade = models.CharField(max_length=20)
+
 
 class School(models.Model):
     title = models.CharField(max_length=30)
