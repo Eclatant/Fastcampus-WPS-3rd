@@ -17,7 +17,7 @@ class Student(CommonInfo):
     home_group = models.CharField(max_length=5)
 
     class Meta:
-        ordering = ('age', )
+        ordering = ('id', )
 
 
 class Teacher(CommonInfo):
