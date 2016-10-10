@@ -9,18 +9,13 @@
 <body>
   <h1>Django girls tutorial Blog</h1>
 
-
+  {% for post in post_list %}
   <div>
-    <h2><a href="#">Post title</a></h2>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus, ipsum. Eum voluptate nostrum numquam velit. Ipsum asperiores aspernatur laborum incidunt, voluptatibus corporis neque aliquid architecto quidem doloremque temporibus veritatis illum.</p>
-    <p>published : 2016.10.10, 16:54</p>
+    <h2><a href="#">{{ post.title }}</a></h2>
+    <p>{{ post.text }}</p>
+    <p>published : {{ post.published_date }}</p>
   </div>
-
-  <div>
-    <h2><a href="#">Post title</a></h2>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus, ipsum. Eum voluptate nostrum numquam velit. Ipsum asperiores aspernatur laborum incidunt, voluptatibus corporis neque aliquid architecto quidem doloremque temporibus veritatis illum.</p>
-    <p>published : 2016.10.10, 16:54</p>
-  </div>
+  {% endfor %}
 
 </body>
 </html>
