@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'food',
     'car',
     'symmetrical',
+    'inheritance',
 ]
 
 MIDDLEWARE = [
