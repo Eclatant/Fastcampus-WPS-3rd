@@ -12,6 +12,7 @@ def post_list(request):
     #     # .filter(published_date__lte=timezone.now())\
     #     .order_by('published_date')
 
+    # published_date의 값이 데이터베이스에서 NULL일 경우
     posts = Post.objects \
         .filter(
             Q(published_date__lte=timezone.now()) |
