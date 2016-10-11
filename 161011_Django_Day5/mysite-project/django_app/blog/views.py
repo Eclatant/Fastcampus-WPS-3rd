@@ -46,6 +46,8 @@ from .forms import PostForm
 from django.http import HttpResponse
 from django.shortcuts import redirect
 def post_new(request):
+    user = request.user
+    
     if request.method == 'POST':
         form = PostForm(request.POST)
         if form.is_valid():
