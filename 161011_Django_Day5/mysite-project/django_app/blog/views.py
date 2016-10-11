@@ -55,6 +55,7 @@ def post_new(request):
             post.save()
             # 앞의 blog는 mysite/urls.py의 include('blog.urls')의 namespace
             return redirect('blog:post_detail', pk=post.pk)
+        
         # 테스트용
         # data_form_is_valid = form.is_valid()
         # data_title = request.POST['title']
