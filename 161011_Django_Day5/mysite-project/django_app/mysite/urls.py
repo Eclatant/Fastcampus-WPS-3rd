@@ -24,5 +24,5 @@ urlpatterns = [
     # url(r'^$', blog_views.post_list, name='post_list'),
 
     # blog/urls.py의 내용을 사용할 경우
-    url(r'', include('blog.urls')),
+    url(r'', include('blog.urls', namespace='blog')),
 ]
