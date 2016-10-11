@@ -83,6 +83,7 @@ def post_edit(request, pk):
         print(form.is_valid())
         print(form2.is_valid())
         print(form3.is_valid())
+        print(form3.cleaned_data)
         if form.is_valid():
             post = form.save(commit=False)
             post.author = request.user
@@ -91,4 +92,5 @@ def post_edit(request, pk):
             return redirect('blog:post_detail', pk=post.pk)
     else:
         form = PostForm(instance=post)
+
     return render(request, 'blog/post_edit.html', {'form': form})
