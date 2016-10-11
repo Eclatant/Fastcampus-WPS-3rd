@@ -75,6 +75,7 @@ def post_edit(request, pk):
     post = get_object_or_404(Post, pk=pk)
     if request.method == 'POST':
         form = PostForm(request.POST, instance=post)
+
         form2 = PostForm(request.POST)
         form3 = PostForm(instance=post)
         print(form.data)
@@ -84,6 +85,7 @@ def post_edit(request, pk):
         print(form2.is_valid())
         print(form3.is_valid())
         print(form3.initial)
+
         if form.is_valid():
             post = form.save(commit=False)
             post.author = request.user
