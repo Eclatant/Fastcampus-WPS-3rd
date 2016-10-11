@@ -44,14 +44,23 @@ def login(request):
         
         
 ```
+
+### urls.py작성 및 프로젝트 urls.py와 연결
+
 `member/urls.py`
 
-```
+```python
 from django.conf.urls import url
 from .views import login
 
 urlpatterns = [
     url(r'^login/$', login, name='login'),
 ]
+```
+
+`mysite/urls.py`
+
+```python
+url(r'^member/', include('member.urls', namespace='member')),
 ```
 
