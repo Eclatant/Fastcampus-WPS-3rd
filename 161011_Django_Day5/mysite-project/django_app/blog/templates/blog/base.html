@@ -16,9 +16,12 @@
 </head>
 <body>
   <div class="container">
+
+    {% if user.is_authenticated %}
     <a href="{% url 'blog:post_new' %}" class="top-menu">
       <span class="glyphicon glyphicon-plus"></span>새 글 추가하기
     </a>
+    {% endif %}
 
     <h1 class="blog-title">{% block title %}Django girls tutorial Blog{% endblock %}</h1>
 
