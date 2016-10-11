@@ -3,6 +3,7 @@ from django.utils import timezone
 from django.db.models import Q
 from .models import Post
 
+
 # 같은 의미
 # from blog.models import Post
 
