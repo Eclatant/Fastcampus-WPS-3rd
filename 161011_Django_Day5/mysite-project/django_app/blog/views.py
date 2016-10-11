@@ -53,7 +53,7 @@ def post_new(request):
             post.author = request.user
             post.published_date = timezone.now()
             post.save()
-            return redirect('post_detail', pk=post.pk)
+            return redirect('views.post_detail')
         # 테스트용
         # data_form_is_valid = form.is_valid()
         # data_title = request.POST['title']
