@@ -46,10 +46,9 @@ from .forms import PostForm
 from django.http import HttpResponse
 def post_new(request):
     if request.method == 'POST':
+        form = PostForm(request.POST)
         data_title = request.POST['title']
         data_text = request.POST['text']
-        print(data_title)
-        print(data_text)
         data_str = '%s : %s' % (data_title, data_text)
         return HttpResponse(data_str)
     else:
