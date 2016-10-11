@@ -6,4 +6,5 @@
 
 # 로그인/로그아웃 구현
 
-[Using the Django ](https://docs.djangoproject.com/en/1.10/topics/auth/default/#auth-web-requests)
+[Using the Django authentication system - Auth web requests](https://docs.djangoproject.com/en/1.10/topics/auth/default/#auth-web-requests)  
+login
