@@ -14,7 +14,7 @@ def login(request):
     )
 
     if user is not None:
-        login(request, user)
+        auth_login(request, user)
         pass
     else:
         pass
