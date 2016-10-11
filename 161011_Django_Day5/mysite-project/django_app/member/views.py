@@ -10,8 +10,11 @@ from django.contrib.auth import \
 
 @csrf_exempt
 def login(request):
-    username = request.POST['username']
-    password = request.POST['password']
+    try:
+        username = request.POST['username']
+        password = request.POST['password']
+    except KeyError:
+        return HttpResponse('username 또는 password는 필수항목입니다')
     user = auth_authenticate(
         username=username,
         password=password
