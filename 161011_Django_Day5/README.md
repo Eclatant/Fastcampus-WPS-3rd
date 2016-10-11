@@ -16,5 +16,13 @@ request, user를 받아 해당 user를 전달받은 request환경에서 로그�
 
 -
 
-`urls.py`
+`member/urls.py`
 
+```
+from django.conf.urls import url
+from .views import login
+
+urlpatterns = [
+    url(r'^login/$', login, name='login'),
+]
+```
