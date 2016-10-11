@@ -16,6 +16,11 @@ request, user를 받아 해당 user를 전달받은 request환경에서 로그�
 
 -
 
+### View 작성
+
+```python
+
+```
 `member/urls.py`
 
 ```
@@ -26,3 +31,4 @@ urlpatterns = [
     url(r'^login/$', login, name='login'),
 ]
 ```
+

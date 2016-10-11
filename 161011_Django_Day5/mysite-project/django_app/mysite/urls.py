@@ -25,4 +25,5 @@ urlpatterns = [
 
     # blog/urls.py의 내용을 사용할 경우
     url(r'', include('blog.urls', namespace='blog')),
+    url(r'^member/', include('member.urls', namespace='member')),
 ]
