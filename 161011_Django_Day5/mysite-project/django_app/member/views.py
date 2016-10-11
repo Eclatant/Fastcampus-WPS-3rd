@@ -11,6 +11,7 @@ from django.contrib.auth import \
 @csrf_exempt
 def login(request):
     if request.method == 'POST':
+        print(request.session)
         try:
             username = request.POST['username']
             password = request.POST['password']
