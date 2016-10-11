@@ -85,12 +85,12 @@ def post_edit(request, pk):
         # print(form3.is_valid())
         # print(form3.initial)
 
-        # if form.is_valid():
-        #     post = form.save(commit=False)
-        #     post.author = request.user
-        #     post.published_date = timezone.now()
-        #     post.save()
-        #     return redirect('blog:post_detail', pk=post.pk)
+        if form.is_valid():
+            post = form.save(commit=False)
+            post.author = request.user
+            post.published_date = timezone.now()
+            post.save()
+            return redirect('blog:post_detail', pk=post.pk)
     else:
         form = PostForm(instance=post)
 
