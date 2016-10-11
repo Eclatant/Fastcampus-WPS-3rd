@@ -47,7 +47,8 @@ from django.http import HttpResponse
 from django.shortcuts import redirect
 def post_new(request):
     user = request.user
-    
+    if not user.is_authenticated():
+        return HttpResponse('로그인하세요!')
     if request.method == 'POST':
         form = PostForm(request.POST)
         if form.is_valid():
