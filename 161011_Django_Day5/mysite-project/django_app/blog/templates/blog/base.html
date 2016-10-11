@@ -21,6 +21,8 @@
     <a href="{% url 'blog:post_new' %}" class="top-menu">
       <span class="glyphicon glyphicon-plus"></span>새 글 추가하기
     </a>
+    {% else %}
+    <div>그럼 로그인하세요</div>
     {% endif %}
 
     <h1 class="blog-title">{% block title %}Django girls tutorial Blog{% endblock %}</h1>
