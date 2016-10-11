@@ -79,7 +79,7 @@ def post_edit(request, pk):
         form3 = PostForm(instance=post)
         print(form.data)
         print(form2.data)
-        print(form2.data)
+        print(form3.data)
         print(form.is_valid())
         print(form2.is_valid())
         print(form3.is_valid())
