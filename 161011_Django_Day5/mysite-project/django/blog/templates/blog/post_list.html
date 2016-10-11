@@ -1,0 +1,15 @@
+{% extends 'blog/base.html' %}
+
+{% block title %}{% endblock %}
+
+
+{% block content %}
+{% for post in post_list %}
+<div>
+  <h4><a href="#">{{ post.title }}</a></h4>
+  <p>{{ post.text|linebreaksbr }}</p>
+  <p>published : {{ post.published_date|default:"모름" }}</p>
+</div>
+<hr>
+{% endfor %}
+{% endblock %}
