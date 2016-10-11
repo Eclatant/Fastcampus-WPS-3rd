@@ -27,7 +27,7 @@ def post_detail(request, pk):
     pk값(id값)이 전달받은 pk인 Post객체를 Query하여 post라는 변수에 할당
     해당 변수를 render함수를 이용, post_detail.html템플릿을 이용해 리턴 (post변수는 'post'키로 전달되도록 한다)
     """
-    post = Post.objects.get(id=pk)
+    post = Post.objects.get(pk=pk)
     context = {
         'post': post,
     }
