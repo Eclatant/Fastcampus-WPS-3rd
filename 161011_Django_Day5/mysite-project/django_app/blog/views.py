@@ -47,9 +47,14 @@ from django.http import HttpResponse
 def post_new(request):
     if request.method == 'POST':
         form = PostForm(request.POST)
+        data_form_is_valid = form.is_valid()
         data_title = request.POST['title']
         data_text = request.POST['text']
-        data_str = '%s : %s' % (data_title, data_text)
+        data_str = '%s : %s (유효검사:%s)' % (
+            data_title,
+            data_text,
+            data_form_is_valid
+        )
         return HttpResponse(data_str)
     else:
         form = PostForm()
