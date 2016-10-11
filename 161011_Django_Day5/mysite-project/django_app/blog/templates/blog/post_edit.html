@@ -1,9 +1,11 @@
 {% extends 'blog/base.html' %}
 
 {% block content %}
-<h1>New post</h1>
-<form action="" method="POST">
-  {{ form.as_p }}
-  <button type="submit" class="save btn btn-default">Save</button>
-</form>
+<div class="form-edit">
+  <h1>New post</h1>
+  <form action="" method="POST">
+    {{ form.as_p }}
+    <button type="submit" class="save btn btn-default">Save</button>
+  </form>
+</div>
 {% endblock %}
