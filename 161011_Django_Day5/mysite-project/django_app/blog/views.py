@@ -43,9 +43,15 @@ def post_detail(request, pk):
 
 
 from .forms import PostForm
+from django.http import HttpResponse
 def post_new(request):
     if request.method == 'POST':
-        pass
+        data_title = request.POST['title']
+        data_text = request.POST['text']
+        print(data_title)
+        print(data_text)
+        data_str = '%s : %s' % (data_title, data_text)
+        return HttpResponse(data_str)
     else:
         form = PostForm()
         return render(request, 'blog/post_edit.html', {'form': form})
