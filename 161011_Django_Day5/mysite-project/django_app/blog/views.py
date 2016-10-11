@@ -75,23 +75,22 @@ def post_edit(request, pk):
     post = get_object_or_404(Post, pk=pk)
     if request.method == 'POST':
         form = PostForm(request.POST, instance=post)
-
         form2 = PostForm(request.POST)
         form3 = PostForm(instance=post)
         print(form.data)
         print(form2.data)
         print(form3.data)
-        print(form.is_valid())
-        print(form2.is_valid())
-        print(form3.is_valid())
-        print(form3.initial)
+        # print(form.is_valid())
+        # print(form2.is_valid())
+        # print(form3.is_valid())
+        # print(form3.initial)
 
-        if form.is_valid():
-            post = form.save(commit=False)
-            post.author = request.user
-            post.published_date = timezone.now()
-            post.save()
-            return redirect('blog:post_detail', pk=post.pk)
+        # if form.is_valid():
+        #     post = form.save(commit=False)
+        #     post.author = request.user
+        #     post.published_date = timezone.now()
+        #     post.save()
+        #     return redirect('blog:post_detail', pk=post.pk)
     else:
         form = PostForm(instance=post)
 
