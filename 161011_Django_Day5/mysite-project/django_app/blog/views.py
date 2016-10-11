@@ -83,7 +83,7 @@ def post_edit(request, pk):
         # print(form.is_valid())
         # print(form2.is_valid())
         # print(form3.is_valid())
-        # print(form3.initial)
+        print(form3.initial)
 
         # if form.is_valid():
         #     post = form.save(commit=False)
