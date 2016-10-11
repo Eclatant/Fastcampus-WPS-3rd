@@ -10,18 +10,21 @@ from django.contrib.auth import \
 
 @csrf_exempt
 def login(request):
-    try:
-        username = request.POST['username']
-        password = request.POST['password']
-    except KeyError:
-        return HttpResponse('username 또는 password는 필수항목입니다')
-    user = auth_authenticate(
-        username=username,
-        password=password
-    )
+    if request.method == 'POST':
+        try:
+            username = request.POST['username']
+            password = request.POST['password']
+        except KeyError:
+            return HttpResponse('username 또는 password는 필수항목입니다')
+        user = auth_authenticate(
+            username=username,
+            password=password
+        )
 
-    if user is not None:
-        auth_login(request, user)
-        return HttpResponse('로그인 되었습니다')
+        if user is not None:
+            auth_login(request, user)
+            return HttpResponse('로그인 되었습니다')
+        else:
+            return HttpResponse('로그인에 실패하였습니다')
     else:
-        return HttpResponse('로그인에 실패하였습니다')
+        pass
