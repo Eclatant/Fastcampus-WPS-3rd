@@ -44,10 +44,16 @@ def post_detail(request, pk):
 
 from .forms import PostForm
 from django.http import HttpResponse
+from django.shortcuts import redirect
 def post_new(request):
     if request.method == 'POST':
         form = PostForm(request.POST)
-
+        if form.is_valid():
+            post = form.save(commit=False)
+            post.author = request.user
+            post.published_date = timezone.now()
+            post.save()
+            return redirect('post_detail', pk=post.pk)
         # 테스트용
         # data_form_is_valid = form.is_valid()
         # data_title = request.POST['title']
@@ -57,7 +63,7 @@ def post_new(request):
         #     data_text,
         #     data_form_is_valid
         # )
-        return HttpResponse(data_str)
+        # return HttpResponse(data_str)
     else:
         form = PostForm()
         return render(request, 'blog/post_edit.html', {'form': form})
