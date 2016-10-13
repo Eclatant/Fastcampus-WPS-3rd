@@ -10,5 +10,7 @@ class MyUser(AbstractBaseUser):
     date_joined = models.DateTimeField(auto_now_add=True)
 
     USERNAME_FIELD = 'email'
-    REQUIRED_FIELDS = ('email', )
+    # REQUIRED_FIELDS = ('email', )
+
+
 

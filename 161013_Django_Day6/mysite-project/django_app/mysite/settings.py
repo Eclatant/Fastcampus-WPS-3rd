@@ -25,7 +25,7 @@ STATICFILES_DIRS = [
     STATIC_DIR,
 ]
 
-# AUTH_USER_MODEL = 'auth.User'
+AUTH_USER_MODEL = 'member.MyUser'
 # AUTH_USER_MODEL = 'django.contrib.auth.models.User'
 
 
