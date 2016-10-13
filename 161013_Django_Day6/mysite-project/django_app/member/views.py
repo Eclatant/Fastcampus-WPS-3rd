@@ -27,7 +27,7 @@ def login(request):
         else:
             return HttpResponse('로그인에 실패하였습니다')
     else:
-        pass
+        return render(request, 'member/login.html', {})
 
 
 
