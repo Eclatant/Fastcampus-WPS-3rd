@@ -56,7 +56,8 @@
           {% elif message.level == DEFAULT_MESSAGE_LEVELS.SUCCESS %}alert-success
           {% elif message.level == DEFAULT_MESSAGE_LEVELS.WARNING %}alert-warning
           {% elif message.level == DEFAULT_MESSAGE_LEVELS.DEBUG %}alert-error
-          {% endif %}" role="alert">{{ message }}
+          {% endif %}" role="alert">
+          <span>{{ message }}</span>
         </div>
       {% endfor %}
     </div>
