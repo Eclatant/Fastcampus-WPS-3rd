@@ -16,6 +16,7 @@ Including another URLconf
 from django.conf.urls import url, include
 from django.contrib import admin
 # from blog import views as blog_views
+from mysite.views import test
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
@@ -26,4 +27,6 @@ urlpatterns = [
     # blog/urls.py의 내용을 사용할 경우
     url(r'', include('blog.urls', namespace='blog')),
     url(r'^member/', include('member.urls', namespace='member')),
+
+    url(r'^test/(?P<pk1>[0-9])/(?P<pk2>[0-9])/$', test)
 ]
