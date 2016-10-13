@@ -31,7 +31,8 @@ def login(request):
         return render(request, 'member/login.html', {})
 
 
-
+def logout(request):
+    
 
 
 
