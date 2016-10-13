@@ -46,6 +46,7 @@ class MyUser(AbstractBaseUser, PermissionsMixin):
     first_name = models.CharField(max_length=20)
     nickname = models.CharField(max_length=24, unique=True)
     date_joined = models.DateTimeField(auto_now_add=True)
+    is_staff = models.BooleanField(default=False)
 
     USERNAME_FIELD = 'email'
     REQUIRED_FIELDS = ('last_name', 'first_name', 'nickname', )
