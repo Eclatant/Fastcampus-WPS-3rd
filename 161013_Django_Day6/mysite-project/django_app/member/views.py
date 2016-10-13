@@ -37,6 +37,7 @@ def login(request):
 
 def logout(request):
     auth_logout(request)
+    messages.info(request, '로그아웃 되었습니다')
     return redirect('blog:post_list')
 
 
