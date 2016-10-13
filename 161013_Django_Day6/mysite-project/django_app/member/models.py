@@ -9,4 +9,3 @@ class MyUser(AbstractBaseUser):
     nickname = models.CharField(max_length=24)
     date_joined = models.DateTimeField(auto_now_add=True)
 
-    
