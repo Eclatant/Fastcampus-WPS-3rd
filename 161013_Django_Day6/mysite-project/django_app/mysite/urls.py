@@ -28,5 +28,5 @@ urlpatterns = [
     url(r'', include('blog.urls', namespace='blog')),
     url(r'^member/', include('member.urls', namespace='member')),
 
-    url(r'^test/(?P<pk1>[0-9]+)/(?P<pk2>[0-9]+)/$', test, name='test')
+    url(r'^test/(?P<pk1>[0-9])(?P<pk2>[0-9])/$', test, name='test')
 ]
