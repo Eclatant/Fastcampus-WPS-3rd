@@ -11,6 +11,7 @@ from django.contrib.auth import \
 
 
 def login(request):
+    next = request.GET.get('next')
     if request.method == 'POST':
         try:
             username = request.POST['username']
