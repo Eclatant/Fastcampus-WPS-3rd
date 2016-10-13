@@ -26,7 +26,7 @@ STATICFILES_DIRS = [
 ]
 
 # AUTH_USER_MODEL = 'auth.User'
-AUTH_USER_MODEL = 'django.contrib.auth.models.User'
+# AUTH_USER_MODEL = 'django.contrib.auth.models.User'
 
 
 # Quick-start development settings - unsuitable for production
