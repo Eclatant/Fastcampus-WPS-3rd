@@ -36,6 +36,8 @@ class MyUserManager(BaseUserManager):
             nickname=nickname
         )
         user.set_password(password)
+        user.is_staff = True
+        user.is_superuser = True
         user.save()
         return user
 
