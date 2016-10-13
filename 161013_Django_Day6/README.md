@@ -12,3 +12,5 @@ source ~/.bash_profile
 
 중 맞는것을 사용
 
+### 디버거 실행
+
