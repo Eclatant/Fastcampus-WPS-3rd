@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from django.views.decorators.csrf import csrf_exempt
+from django.contrib import messages
 from django.contrib.auth import \
     authenticate as auth_authenticate, \
     login as auth_login, \
@@ -25,9 +26,11 @@ def login(request):
 
         if user is not None:
             auth_login(request, user)
+            messages.success(request, '로그인에 성공하였습니다')
             return redirect(next)
         else:
-            return HttpResponse('로그인에 실패하였습니다')
+            messages.error(request, '로그인에 실패하였습니다')
+            return render(request, 'member/login.html', {})
     else:
         return render(request, 'member/login.html', {})
 

@@ -16,7 +16,7 @@ Including another URLconf
 from django.conf.urls import url, include
 from django.contrib import admin
 # from blog import views as blog_views
-from mysite.views import test
+from mysite import views
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
@@ -28,5 +28,7 @@ urlpatterns = [
     url(r'', include('blog.urls', namespace='blog')),
     url(r'^member/', include('member.urls', namespace='member')),
 
-    url(r'^test/(?P<pk1>[0-9]+)/(?P<pk2>[0-9]+)/$', test, name='test')
+    # Common
+    url(r'^error/$', views.error, name='error'),
+    url(r'^test/(?P<pk1>[0-9]+)/(?P<pk2>[0-9]+)/$', views.test, name='test')
 ]

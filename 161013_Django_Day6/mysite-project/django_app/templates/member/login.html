@@ -1,6 +1,12 @@
 {% extends 'common/base.html' %}
 
 {% block content %}
+
+{% if error_message %}
+<div>
+  <h4>{{ error_message }}</h4>
+</div>
+{% endif %}
 <form action="" method="POST">{% csrf_token %}
   <!--
     input type="text"로 username
