@@ -9,3 +9,6 @@ class MyUser(AbstractBaseUser):
     nickname = models.CharField(max_length=24, unique=True)
     date_joined = models.DateTimeField(auto_now_add=True)
 
+    USERNAME_FIELD = 'email'
+    REQUIRED_FIELDS = ('email', )
+
