@@ -23,8 +23,6 @@ class MyUserManager(BaseUserManager):
         return user
 
 
-
-
 class MyUser(AbstractBaseUser):
     email = models.EmailField(max_length=100, unique=True)
     last_name = models.CharField(max_length=20)
@@ -34,6 +32,8 @@ class MyUser(AbstractBaseUser):
 
     USERNAME_FIELD = 'email'
     # REQUIRED_FIELDS = ('email', )
+
+    objects = MyUserManager()
 
 
 
