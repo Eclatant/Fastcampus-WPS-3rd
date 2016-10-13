@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from django.views.decorators.csrf import csrf_exempt
 from django.contrib.auth import \
@@ -32,7 +32,8 @@ def login(request):
 
 
 def logout(request):
-    
+    auth_logout(request)
+    return redirect('blog:post_list')
 
 
 
