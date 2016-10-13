@@ -2,5 +2,5 @@
 
 ### alias  
 alias <사용할 명령어> <명령어 내용>  
-ex) alias cd-proejct "cd /Users/lhy/projects"
+ex) alias cd-project "cd /Users/lhy/projects"
 
