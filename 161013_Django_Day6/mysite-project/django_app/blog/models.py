@@ -5,7 +5,7 @@ from django.conf import settings
 
 
 class Post(models.Model):
-    # author = models.ForeignKey(settings.AUTH_USER_MODEL)
+    author = models.ForeignKey(settings.AUTH_USER_MODEL)
     title = models.CharField(max_length=50)
     text = models.TextField()
     created_date = models.DateTimeField(auto_now_add=True)
