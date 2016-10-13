@@ -25,7 +25,7 @@ def login(request):
 
         if user is not None:
             auth_login(request, user)
-            return HttpResponse('로그인 되었습니다')
+            return redirect(next)
         else:
             return HttpResponse('로그인에 실패하였습니다')
     else:
