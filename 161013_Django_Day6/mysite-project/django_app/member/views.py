@@ -8,7 +8,6 @@ from django.contrib.auth import \
 # topics/auth/default/#auth-web-requests
 
 
-@csrf_exempt
 def login(request):
     if request.method == 'POST':
         try:
