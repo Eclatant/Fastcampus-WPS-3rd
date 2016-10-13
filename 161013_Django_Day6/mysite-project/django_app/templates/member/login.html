@@ -7,7 +7,9 @@
   <h4>{{ error_message }}</h4>
 </div>
 {% endif %}
-<h3>Login</h3>
+<div class="col-sm-8 col-sm-offset-2">
+<h3 class="text-center">Login</h3>
+<hr>
 <form action="" method="POST" class="form-horizontal">{% csrf_token %}
   <div class="form-group">
     <label for="input-username" class="col-sm-2 control-label">아이디</label>
@@ -25,4 +27,5 @@
 
   <button type="submit" class="btn btn-primary btn-block">로그인</button>
 </form>
+</div>
 {% endblock %}
