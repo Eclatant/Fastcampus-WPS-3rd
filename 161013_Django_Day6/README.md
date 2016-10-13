@@ -1,0 +1,6 @@
+# 자주 사용하는 명령어는 Shell 설정에!
+
+### alias  
+alias <사용할 명령어> <명령어 내용>  
+ex) alias cd-proejct "cd /Users/lhy/projects"
+
