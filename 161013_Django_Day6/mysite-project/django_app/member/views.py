@@ -3,7 +3,9 @@ from django.http import HttpResponse
 from django.views.decorators.csrf import csrf_exempt
 from django.contrib.auth import \
     authenticate as auth_authenticate, \
-    login as auth_login
+    login as auth_login, \
+    logout as auth_logout
+
 # https://docs.djangoproject.com/en/1.10/
 # topics/auth/default/#auth-web-requests
 
