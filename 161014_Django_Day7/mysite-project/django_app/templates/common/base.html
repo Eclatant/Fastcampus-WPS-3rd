@@ -40,6 +40,9 @@
           <li>
             <a href="{% url 'member:login' %}?next={{ request.path }}">Login</a>
           </li>
+          <li>
+            <a href="{% url 'member:signup' %}?next={{ request.path }}">Signup</a>
+          </li>
           {% endif %}
         </ul>
       </div>
