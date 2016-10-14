@@ -47,10 +47,10 @@ class SignupModelForm(forms.ModelForm):
                 code='password_mismatch',
             )
         password_validation.validate_password(
-            self.cleaned_data['password1'],
+            self.cleaned_data['password2'],
             self.instance
         )
-        
+        return password2
 
     def save(self, commit=True):
         user = super(SignupModelForm, self).save(commit=False)
