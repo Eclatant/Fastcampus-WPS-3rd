@@ -24,7 +24,8 @@ class SignupModelForm(forms.ModelForm):
         model = MyUser
         fields = (
             'email',
-            # 'password',
+            'password1',
+            'password2',
             'last_name',
             'first_name',
             'nickname',
