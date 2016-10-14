@@ -73,6 +73,7 @@ def signup(request):
         # 데이터를 꺼낼때는
         # request.POST['key']
         # request.POST.get('key')
+        # print(request.POST['email'])
         pass
     else:
         # member/signup.html 파일을 render
