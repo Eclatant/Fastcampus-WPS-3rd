@@ -6,7 +6,9 @@ class SignupForm(forms.Form):
     email = forms.EmailField(
         max_length=100,
         widget=forms.TextInput(
-            attrs={'class': 'form-control'}
+            attrs={
+                'class': 'form-control',
+            }
         )
     )
     password1 = forms.CharField(
