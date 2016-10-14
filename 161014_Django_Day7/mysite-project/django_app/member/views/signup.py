@@ -64,10 +64,12 @@ def signup(request):
 from member.forms import SignupForm
 def signup2(request):
     if request.method == 'POST':
-        pass
+        form = SignupForm(request.POST)
+        if form.is_valid():
+            
     else:
         form = SignupForm()
         context = {
             'form': form,
         }
-        return render(request, 'member/signup2.html', context)
+    return render(request, 'member/signup2.html', context)
