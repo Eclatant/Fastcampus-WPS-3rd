@@ -38,7 +38,6 @@ class SignupModelForm(forms.ModelForm):
             'nickname': forms.TextInput(attrs={'class': 'form-control'}),
         }
 
-
     def clean_password2(self):
         password1 = self.cleaned_data.get('password1')
         password2 = self.cleaned_data.get('password2')
@@ -47,7 +46,11 @@ class SignupModelForm(forms.ModelForm):
                 self.error_messages['password_mismatch'],
                 code='password_mismatch',
             )
-        passwo
+        password_validation.validate_password(
+            self.cleaned_data['password1'],
+            self.instance
+        )
+        
 
     def save(self, commit=True):
         user = super(SignupModelForm, self).save(commit=False)
