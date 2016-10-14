@@ -41,8 +41,10 @@ class SignupModelForm(forms.ModelForm):
     def clean_password2(self):
         password1 = self.cleaned_data.get('password1')
         password2 = self.cleaned_data.get('password2')
-        # if password1 != password2:
-        #     raise forms.ValidationError()
+
+        # 여기 이해 안하셔도 됩니다
+        # 비밀번호 같은지 & 비밀번호만의 유효성검사 루틴
+        # https://docs.djangoproject.com/en/1.10/topics/auth/passwords/
         if password1 and password2 and password1 != password2:
             raise forms.ValidationError(
                 self.error_messages['password_mismatch'],
