@@ -1,5 +1,6 @@
 from django.shortcuts import render, redirect
 from django.http import HttpResponse
+from django.contrib.auth import login
 from member.forms import SignupForm
 from member.models import MyUser
 
@@ -25,6 +26,9 @@ def signup2(request):
                 nickname=nickname,
                 password=password1,
             )
+
+            login(request, user)
+
             return redirect('blog:post_list')
         else:
             context['form'] = form
