@@ -52,6 +52,7 @@ def signup(request):
     3. 사용할 템플릿 구성 (form)
     4. form요소에 회원가입에 필요한 필드 구현 (email, password, nickname, last_name, first_name)
     5. views.py에서 POST요청을 받아 확인
+        5-1.
     6. views.py에서 받은 값들을 사용해 MyUser모델 생성
     7. 생성 완료 후 해당 User로 로그인
     8. message.info(request, '메세지내용')으로 request에 메세지 전달
@@ -64,6 +65,14 @@ def signup(request):
     - ModelForm을 사용, 또는 Form을 사용
     - form에 Bootstrap 클래스를 적용 (form-group, form-control)
     """
+
+    if request.method == 'POST':
+        # 전달받은 POST데이터를 가지고 회원가입을 진행
+        pass
+    else:
+        # member/signup.html 파일을 render
+        pass
+
     return redirect('blog:post_list')
 
 
