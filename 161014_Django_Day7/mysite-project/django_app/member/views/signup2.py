@@ -19,7 +19,7 @@ def signup2(request):
 
             if password1 != password2:
                 return HttpResponse('패스워드가 서로 다릅니다')
-
+            
             user = MyUser.objects.create_user(
                 email=email,
                 last_name=last_name,
