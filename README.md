@@ -51,8 +51,8 @@
 	- [x] Template inheritance
 - Form
 	- [x] POST데이터 다루기
-	- [ ] Django Form클래스를 사용한 Form생성
-	- [ ] Django ModelForm클래스를 사용한 Form생성, 모델 인스턴스 생성
+	- [x] Django Form클래스를 사용한 Form생성
+	- [x] Django ModelForm클래스를 사용한 Form생성, 모델 인스턴스 생성
 - Auth
 	- [x] Authentication / Login
 	- [x] Session middleware
@@ -61,7 +61,7 @@
 		- [x] BaseUserManager
 		- [ ] Django admin사용 권한
 	- [x] 로그인 구현
-	- [ ] 회원가입 구현
+	- [x] 회원가입 구현
 	- [ ] OAuth2.0
 		- [ ] 페이스북 로그인/회원가입 구현
 - Admin
