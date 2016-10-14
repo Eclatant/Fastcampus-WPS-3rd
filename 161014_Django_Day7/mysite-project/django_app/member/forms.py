@@ -5,6 +5,13 @@ from member.models import MyUser
 class SignupModelForm(forms.ModelForm):
     class Meta:
         model = MyUser
+        fields = (
+            'email',
+            'password',
+            'last_name',
+            'first_name',
+            'nickname',
+        )
 
 
 class SignupForm(forms.Form):
