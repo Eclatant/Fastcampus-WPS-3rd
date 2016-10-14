@@ -7,6 +7,8 @@ from django.contrib.auth import \
     login as auth_login, \
     logout as auth_logout
 
+from member.models import MyUser
+
 # https://docs.djangoproject.com/en/1.10/
 # topics/auth/default/#auth-web-requests
 
@@ -75,10 +77,17 @@ def signup(request):
             nickname = request.POST['nickname']
         except KeyError:
             return HttpResponse('Form필드에 없는 키 값이 있습니다')
-        
 
+        if password1 != password2:
+            return HttpResponse('패스워드가 일치하지 않습니다')
 
-        pass
+        MyUser.objects.create_user(
+            email=email,
+            last_name=last_name,
+            first_name=first_name,
+            nickname=nickname,
+            password=password1
+        )
     else:
         # member/signup.html 파일을 render
         return render(request, 'member/signup.html')
