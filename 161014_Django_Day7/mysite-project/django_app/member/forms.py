@@ -1,4 +1,10 @@
 from django import forms
+from member.models import MyUser
+
+
+class SignupModelForm(forms.ModelForm):
+    class Meta:
+        model = MyUser
 
 
 class SignupForm(forms.Form):
