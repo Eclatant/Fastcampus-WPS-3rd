@@ -68,6 +68,11 @@ def signup(request):
 
     if request.method == 'POST':
         # 전달받은 POST데이터를 가지고 회원가입을 진행
+        # request.POST (dict type)
+
+        # 데이터를 꺼낼때는
+        # request.POST['key']
+        # request.POST.get('key')
         pass
     else:
         # member/signup.html 파일을 render
