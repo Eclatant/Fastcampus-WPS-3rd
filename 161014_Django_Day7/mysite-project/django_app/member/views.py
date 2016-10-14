@@ -91,7 +91,7 @@ def signup(request):
             nickname=nickname,
             password=password1
         )
-        
+
         # 생성한 유저 로그인
         auth_login(request, user)
         return redirect('blog:post_list')
