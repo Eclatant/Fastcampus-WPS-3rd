@@ -7,11 +7,11 @@
 ### HTML/CSS
 
 - HTML
-	- HTML기본
+	- [x] HTML기본
 - CSS
-	- CSS 기본
-	- Sass
-	- Bootstrap
+	- [x] CSS 기본
+	- [x] Sass
+	- [x] Bootstrap
 
 
 ### 개발환경 세팅
@@ -51,15 +51,15 @@
 	- [x] Template inheritance
 - Form
 	- [x] POST데이터 다루기
-	- Django Form클래스를 사용한 Form생성
-	- Django ModelForm클래스를 사용한 Form생성, 모델 인스턴스 생성
+	- [ ] Django Form클래스를 사용한 Form생성
+	- [ ] Django ModelForm클래스를 사용한 Form생성, 모델 인스턴스 생성
 - Auth
 	- [x] Authentication / Login
 	- [x] Session middleware
 	- Custom user
 		- [x] AbstractBaseUser
 		- [x] BaseUserManager
-		- Django admin사용 권한
+		- [ ] Django admin사용 권한
 	- [x] 로그인 구현
 	- [ ] 회원가입 구현
 	- [ ] OAuth2.0
