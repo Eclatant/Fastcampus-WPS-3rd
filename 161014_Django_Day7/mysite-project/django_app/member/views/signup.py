@@ -63,6 +63,7 @@ def signup(request):
 
 from member.forms import SignupForm
 def signup2(request):
+    context = {}
     if request.method == 'POST':
         form = SignupForm(request.POST)
         if form.is_valid():
@@ -73,12 +74,8 @@ def signup2(request):
             first_name = form.cleaned_data['first_name']
             nickname = form.cleaned_data['nickname']
         else:
-            context = {
-                'form': form,
-            }
+            context['form'] = form
     else:
         form = SignupForm()
-        context = {
-            'form': form,
-        }
+        context['form'] = form
     return render(request, 'member/signup2.html', context)
