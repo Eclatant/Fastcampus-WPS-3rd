@@ -20,6 +20,9 @@ class SignupModelForm(forms.ModelForm):
             'nickname': forms.TextInput(attrs={'class': 'form-control'}),
         }
 
+    def save(self, commit=True):
+        user = super(SignupModelForm, self).save(commit=False)
+
 
 class SignupForm(forms.Form):
     # https://docs.djangoproject.com/en/1.10/topics/forms/modelforms/
