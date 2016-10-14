@@ -80,6 +80,9 @@
 - Cache
 	- memcached설치
 	- Cache사용 예제
+- Email
+- Pagination
+- Logging
 - Class-Based View
 	- PBV -> CBV 리펙토링
 	- Generic View

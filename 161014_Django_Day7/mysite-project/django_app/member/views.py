@@ -41,6 +41,13 @@ def logout(request):
     return redirect('blog:post_list')
 
 
+def signup(request):
+    """
+    회원가입을 만들어주세요
+    가입후에 message에 info tag로 '%s님 %s아이디로 회원가입 되었습니다'
+    """
+    return redirect('blog:post_list')
+
 
 # def signUp(request):
 #     # from IPython import embed; embed()
