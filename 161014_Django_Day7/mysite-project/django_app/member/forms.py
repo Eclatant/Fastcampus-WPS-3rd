@@ -3,18 +3,32 @@ from member.models import MyUser
 
 
 class SignupModelForm(forms.ModelForm):
+    password1 = forms.CharField(
+        label='Password',
+        widget=forms.PasswordInput(
+            attrs={
+                'class': 'form-control',
+            }
+        )
+    )
+    password2 = forms.CharField(
+        label='Password confirmation',
+        widget=forms.PasswordInput(
+            attrs={
+                'class': 'form-control',
+            }
+        )
+    )
     class Meta:
         model = MyUser
         fields = (
             'email',
-            'password',
             'last_name',
             'first_name',
             'nickname',
         )
         widgets = {
             'email': forms.EmailInput(attrs={'class': 'form-control'}),
-            'password': forms.PasswordInput(attrs={'class': 'form-control'}),
             'last_name': forms.TextInput(attrs={'class': 'form-control'}),
             'first_name': forms.TextInput(attrs={'class': 'form-control'}),
             'nickname': forms.TextInput(attrs={'class': 'form-control'}),
