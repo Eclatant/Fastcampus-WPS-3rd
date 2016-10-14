@@ -68,6 +68,7 @@ def signup(request):
     """
 
     if request.method == 'POST':
+        # 키 값 존재하는지 검사
         try:
             email = request.POST['email']
             password1 = request.POST['password1']
@@ -78,16 +79,24 @@ def signup(request):
         except KeyError:
             return HttpResponse('Form필드에 없는 키 값이 있습니다')
 
+        # 패스워드 일치 검사
         if password1 != password2:
             return HttpResponse('패스워드가 일치하지 않습니다')
 
-        MyUser.objects.create_user(
+        # CustomUserManager를 통해 유저 생성
+        user = MyUser.objects.create_user(
             email=email,
             last_name=last_name,
             first_name=first_name,
             nickname=nickname,
             password=password1
         )
+
+        # 생성한 유저 로그인
+        auth_login(request, user)
+        return redirect('blog:post_list')
+
+
     else:
         # member/signup.html 파일을 render
         return render(request, 'member/signup.html')
