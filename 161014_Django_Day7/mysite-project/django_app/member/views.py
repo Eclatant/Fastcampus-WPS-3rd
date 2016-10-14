@@ -46,6 +46,7 @@ def signup(request):
     회원가입을 만들어주세요
     가입후에 message에 info tag로 '%s님 %s아이디로 회원가입 되었습니다'
 
+    0. base.html에 signup링크 연결되는 a태그 구현 (로그인 안 되어있을 때만)
     1. views.py에 위 함수 추가 (빈 내용)
     2. urls.py에 연결 (signup/)
     3. 사용할 템플릿 구성 (form)
