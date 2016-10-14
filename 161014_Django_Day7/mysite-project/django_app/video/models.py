@@ -7,6 +7,7 @@ class Channel(models.Model):
 
 
 class Video(models.Model):
+    kind = models.CharField(max_length=100)
     youtube_id = models.CharField(max_length=100)
     title = models.CharField(max_length=100)
     description = models.CharField(max_length=200)
