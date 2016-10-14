@@ -11,7 +11,7 @@ class SignupForm(forms.Form):
     )
     email = forms.EmailField(
         max_length=100,
-        widget=forms.TextInput(
+        widget=forms.EmailInput(
             attrs={
                 'class': 'form-control',
             }
