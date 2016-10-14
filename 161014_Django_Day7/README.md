@@ -6,7 +6,9 @@
 	- 가상환경 세팅
 	- 장고 설치
 	- video 앱 생성
-- 
+- 각종 세팅
+	- STATIC DIR
+	- TEMPLATE DIR
 - 모델 구현
 - 템플릿 구현
 - 뷰 구현
