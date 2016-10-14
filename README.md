@@ -73,7 +73,7 @@
 	- [ ] actions
 	- [ ] fieldsets
 - Image, File
-        - [ ] MEDIA_ROOT, MEDIA_URL, staticfiles serve
+	- [ ] MEDIA_ROOT, MEDIA_URL, staticfiles serve
 	- [ ] ImageField, FileField
 	- [ ] Pillow
 - Message
