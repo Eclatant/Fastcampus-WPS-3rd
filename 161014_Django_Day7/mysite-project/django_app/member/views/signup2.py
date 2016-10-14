@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from django.contrib.auth import login
+from django.contrib import messages
 from member.forms import SignupForm
 from member.models import MyUser
 
@@ -28,7 +29,7 @@ def signup2(request):
             )
 
             login(request, user)
-
+            messages.info(request, '회원가입 되었습니다')
             return redirect('blog:post_list')
         else:
             context['form'] = form
