@@ -61,6 +61,7 @@ def signup(request):
     - Signup으로 오기 이전 URL로 redirect
     - login을 통해서 signup으로 온 경우에도 login이전에 있던 페이지로 redirect
     - MyUserManager의 create_user메서드를 사용
+    - ModelForm을 사용, 또는 Form을 사용
     - form에 Bootstrap 클래스를 적용 (form-group, form-control)
     """
     return redirect('blog:post_list')
