@@ -66,18 +66,19 @@ def signup(request):
     """
 
     if request.method == 'POST':
-        # 전달받은 POST데이터를 가지고 회원가입을 진행
-        # request.POST (dict type)
+        try:
+            email = request.POST['email']
+            password1 = request.POST['password1']
+            password2 = request.POST['password2']
+            last_name = request.POST['last_name']
+            first_name = request.POST['first_name']
+            nickname = request.POST['nickname']
+        except KeyError:
+            return HttpResponse('Form필드에 없는 키 값이 있습니다')
+        
 
-        # 데이터를 꺼낼때는
-        # request.POST['key']
-        # request.POST.get('key')
-        # print(request.POST['email'])
-        ret = ''
-        for key in request.POST:
-            cur_ret = '%s : %s<br>' % (key, request.POST[key])
-            ret += cur_ret
-        return HttpResponse(ret)
+
+        pass
     else:
         # member/signup.html 파일을 render
         return render(request, 'member/signup.html')
