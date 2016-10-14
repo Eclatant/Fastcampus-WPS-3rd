@@ -9,3 +9,4 @@ class SignupForm(forms.Form):
     last_name = forms.CharField(max_length=20)
     first_name = forms.CharField(max_length=20)
     nickname = forms.CharField(max_length=24)
+    
