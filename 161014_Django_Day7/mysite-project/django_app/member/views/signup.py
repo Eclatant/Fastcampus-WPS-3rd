@@ -66,7 +66,7 @@ def signup2(request):
     if request.method == 'POST':
         form = SignupForm(request.POST)
         if form.is_valid():
-            
+            pass
     else:
         form = SignupForm()
         context = {
