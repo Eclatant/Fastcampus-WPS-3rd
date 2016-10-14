@@ -73,7 +73,11 @@ def signup(request):
         # request.POST['key']
         # request.POST.get('key')
         # print(request.POST['email'])
-        return HttpResponse(request.POST)
+        ret = ''
+        for key in request.POST:
+            cur_ret = '%s : %s<br>' % (key, request.POST[key])
+            ret += cur_ret
+        return HttpResponse(ret)
     else:
         # member/signup.html 파일을 render
         return render(request, 'member/signup.html')
