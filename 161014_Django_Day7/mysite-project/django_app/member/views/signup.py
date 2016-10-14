@@ -66,8 +66,12 @@ def signup2(request):
     if request.method == 'POST':
         form = SignupForm(request.POST)
         if form.is_valid():
-            pass
-            abc = 'abc'
+            email = form.cleaned_data['email']
+            password1 = form.cleaned_data['password1']
+            password2 = form.cleaned_data['password2']
+            last_name = form.cleaned_data['last_name']
+            first_name = form.cleaned_data['first_name']
+            nickname = form.cleaned_data['nickname']
     else:
         form = SignupForm()
         context = {
