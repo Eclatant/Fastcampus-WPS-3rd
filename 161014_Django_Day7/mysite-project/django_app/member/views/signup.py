@@ -72,10 +72,13 @@ def signup2(request):
             last_name = form.cleaned_data['last_name']
             first_name = form.cleaned_data['first_name']
             nickname = form.cleaned_data['nickname']
-
+        else:
+            context = {
+                'form': form,
+            }
     else:
         form = SignupForm()
         context = {
             'form': form,
         }
-        return render(request, 'member/signup2.html', context)
+    return render(request, 'member/signup2.html', context)
