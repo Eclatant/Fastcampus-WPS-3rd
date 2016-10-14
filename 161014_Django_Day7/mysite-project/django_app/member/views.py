@@ -95,8 +95,6 @@ def signup(request):
         # 생성한 유저 로그인
         auth_login(request, user)
         return redirect('blog:post_list')
-
-
     else:
         # member/signup.html 파일을 render
         return render(request, 'member/signup.html')
