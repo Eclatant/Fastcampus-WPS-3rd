@@ -4,7 +4,7 @@ from django.contrib.auth import password_validation
 
 
 class SignupModelForm(forms.ModelForm):
-    password1 = forms.CharField(
+    password = forms.CharField(
         label='Password',
         widget=forms.PasswordInput(
             attrs={
@@ -25,7 +25,7 @@ class SignupModelForm(forms.ModelForm):
         model = MyUser
         fields = (
             'email',
-            'password1',
+            'password',
             'password2',
             'last_name',
             'first_name',
