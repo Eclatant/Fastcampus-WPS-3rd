@@ -19,6 +19,7 @@ class SignupModelForm(forms.ModelForm):
             }
         )
     )
+    
     class Meta:
         model = MyUser
         fields = (
