@@ -8,3 +8,4 @@ def signup3(request):
         pass
     else:
         return render(request, 'member/signup2.html', context)
+    
