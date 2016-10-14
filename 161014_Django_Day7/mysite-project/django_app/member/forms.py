@@ -4,7 +4,12 @@ from django import forms
 class SignupForm(forms.Form):
     # https://docs.djangoproject.com/en/1.10/topics/forms/modelforms/
     abcd = forms.ChoiceField(
-        
+        widget=forms.Select(
+            choices=(
+                ('A', 'Apple'),
+                ('B', 'Banana'),
+            )
+        )
     )
     email = forms.EmailField(
         max_length=100,
