@@ -73,7 +73,7 @@ def signup(request):
         # request.POST['key']
         # request.POST.get('key')
         # print(request.POST['email'])
-        pass
+        return HttpResponse('POST요청')
     else:
         # member/signup.html 파일을 render
         return render(request, 'member/signup.html')
