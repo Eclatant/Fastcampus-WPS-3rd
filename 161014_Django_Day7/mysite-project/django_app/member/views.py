@@ -76,9 +76,7 @@ def signup(request):
         pass
     else:
         # member/signup.html 파일을 render
-        pass
-
-    return redirect('blog:post_list')
+        return render(request, 'member/signup.html')
 
 
 # def signUp(request):
