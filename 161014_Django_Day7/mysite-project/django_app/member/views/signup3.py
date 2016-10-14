@@ -7,4 +7,6 @@ def signup3(request):
     if request.method == 'POST':
         pass
     else:
+        form = SignupModelForm()
+        context['form'] = form
         return render(request, 'member/signup2.html', context)
