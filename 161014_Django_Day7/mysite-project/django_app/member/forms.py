@@ -11,6 +11,9 @@ class SignupForm(forms.Form):
     # )
     email = forms.EmailField(
         max_length=100,
+        error_messages={
+            'invalid': '이메일 형식이 아닙니다',
+        },
         widget=forms.EmailInput(
             attrs={
                 'class': 'form-control',
