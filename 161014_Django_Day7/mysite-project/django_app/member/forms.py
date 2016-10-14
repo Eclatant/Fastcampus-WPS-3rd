@@ -1,5 +1,6 @@
 from django import forms
 from member.models import MyUser
+from django.contrib.auth import password_validation
 
 
 class SignupModelForm(forms.ModelForm):
@@ -36,6 +37,17 @@ class SignupModelForm(forms.ModelForm):
             'first_name': forms.TextInput(attrs={'class': 'form-control'}),
             'nickname': forms.TextInput(attrs={'class': 'form-control'}),
         }
+
+
+    def clean_password2(self):
+        password1 = self.cleaned_data.get('password1')
+        password2 = self.cleaned_data.get('password2')
+        if password1 and password2 and password1 != password2:
+            raise forms.ValidationError(
+                self.error_messages['password_mismatch'],
+                code='password_mismatch',
+            )
+        passwo
 
     def save(self, commit=True):
         user = super(SignupModelForm, self).save(commit=False)
