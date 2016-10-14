@@ -8,7 +8,7 @@ class SignupModelForm(forms.ModelForm):
         label='Password',
         widget=forms.PasswordInput(
             attrs={
-                'class': 'form-control form-lg',
+                'class': 'form-control form-control-lg',
                 'style': 'color: red;',
             }
         )
