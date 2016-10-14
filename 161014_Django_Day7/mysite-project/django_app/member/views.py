@@ -47,7 +47,7 @@ def signup(request):
     가입후에 message에 info tag로 '%s님 %s아이디로 회원가입 되었습니다'
 
     1. views.py에 위 함수 추가 (빈 내용)
-    2. urls.py에 연결
+    2. urls.py에 연결 (signup/)
     3. 사용할 템플릿 구성 (form)
     4. form요소에 회원가입에 필요한 필드 구현 (email, password, nickname, last_name, first_name)
     5. views.py에서 POST요청을 받아 확인
@@ -55,6 +55,11 @@ def signup(request):
     7. 생성 완료 후 해당 User로 로그인
     8. message.info(request, '메세지내용')으로 request에 메세지 전달
     9. 모든 과정 완료 후 'blog:post_list'로 redirect
+
+    # Extra
+    - Signup으로 오기 이전 URL로 redirect
+    - login을 통해서 signup으로 온 경우에도 login이전에 있던 페이지로 redirect
+    - MyUserManager의 create_user메서드를 사용
     """
     return redirect('blog:post_list')
 
