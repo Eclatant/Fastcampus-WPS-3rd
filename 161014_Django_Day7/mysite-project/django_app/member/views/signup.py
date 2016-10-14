@@ -61,8 +61,13 @@ def signup(request):
         return render(request, 'member/signup.html')
 
 
+from member.forms import SignupForm
 def signup2(request):
     if request.method == 'POST':
         pass
     else:
-        return render(request, 'member/signup2.html')
+        form = SignupForm()
+        context = {
+            'form': form,
+        }
+        return render(request, 'member/signup2.html', context)
