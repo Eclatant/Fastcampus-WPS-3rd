@@ -59,3 +59,10 @@ def signup(request):
     else:
         # member/signup.html 파일을 render
         return render(request, 'member/signup.html')
+
+
+def signup2(request):
+    if request.method == 'POST':
+        pass
+    else:
+        return render(request, 'member/signup2.html')
