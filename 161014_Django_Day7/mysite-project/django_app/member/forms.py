@@ -22,6 +22,11 @@ class SignupModelForm(forms.ModelForm):
 
     def save(self, commit=True):
         user = super(SignupModelForm, self).save(commit=False)
+        user.set_password(self.cleaned_data['password'])
+        user.save()
+        return user
+
+
 
 
 class SignupForm(forms.Form):
