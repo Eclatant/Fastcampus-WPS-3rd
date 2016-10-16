@@ -77,7 +77,7 @@
 	- [ ] ImageField, FileField
 	- [ ] Pillow
 - Message
-	- [ ] request에 message전송
+	- [x] request에 message전송
 - Email
 - Pagination
 - Logging
