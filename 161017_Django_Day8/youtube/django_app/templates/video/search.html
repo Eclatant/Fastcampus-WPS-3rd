@@ -20,7 +20,7 @@
 			<img src="{{ item.snippet.thumbnails.medium.url }}" alt="">
 			<p>{{ item.snippet.title }}</p>
 			<p>{{ item.snippet.description }}</p>
-			<p>{{ item.snippet.publishedAt|string_to_date }}</p>
+			<p>{{ item.snippet.publishedAt|string_to_date|date:"Y.m.d" }}</p>
 		</li>
 		{% endfor %}
 	</ul>
