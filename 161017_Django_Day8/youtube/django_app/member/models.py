@@ -8,6 +8,7 @@ class YoutubeUserManager(UserManager):
 
 
 class YoutubeUser(AbstractUser):
+    username = models.CharField(max_length=10)
     email = models.EmailField(unique=True)
     nickname = models.CharField(max_length=24)
 
