@@ -50,6 +50,8 @@ pip install --upgrade google-api-python-client
 APIs Explorer로 가상요청 보내기 (Execute without OAuth선택)  
 <https://developers.google.com/apis-explorer/>
 
+[Youtube Search API Test](https://developers.google.com/apis-explorer/#p/youtube/v3/youtube.search.list)
+
 Request의 URL과 Response데이터 확인
 
 
