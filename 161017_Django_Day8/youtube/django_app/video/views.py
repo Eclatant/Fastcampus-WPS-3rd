@@ -52,6 +52,7 @@ def search(request):
     # GET paramter에서 keyword값을 가져옵니다
     context = {}
     keyword = request.GET.get('keyword')
+    page_token = request.GET.get('page_token')
     if keyword:
         response = youtube_search(keyword)
         context['keyword'] = keyword
