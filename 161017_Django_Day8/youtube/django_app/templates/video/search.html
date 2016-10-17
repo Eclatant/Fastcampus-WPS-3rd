@@ -33,6 +33,11 @@
 		<a href="{% url 'video:search' %}?keyword={{ keyword }}&page_token={{ response.prevPageToken }}">이전페이지</a>
 		{% endif %}
 
+		<!--
+			첫 페이지로 가기 버튼 만들어보세요
+		-->
+		
+
 		{% if response.nextPageToken %}
 		<a href="{% url 'video:search' %}?keyword={{ keyword }}&page_token={{ response.nextPageToken }}">다음페이지</a>
 		{% endif %}
