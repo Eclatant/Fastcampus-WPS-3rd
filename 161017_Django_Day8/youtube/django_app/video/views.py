@@ -25,3 +25,9 @@ def youtube_search(keyword, max_results=10):
     return search_response
 
 
+def search(request):
+    # Template : 'video/search.html'
+    # URL : 'video/search/'
+    # view : search
+    # Static, Templates 디렉토리 설정
+    pass
