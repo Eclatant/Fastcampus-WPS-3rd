@@ -16,9 +16,10 @@
 	<ul>
 		{% for item in response.items %}
 		<li>
-			<p>{{ forloop.counter }} 제목</p>
-			<p>내용</p>
-			<p>게시일</p>
+			<p>{{ item.kind }}</p>
+			<p>{{ item.etag }}</p>
+			<p>{{ item.id }}</p>
+			<p>{[ item.snippet }}</p>
 		</li>
 		{% endfor %}
 	</ul>
