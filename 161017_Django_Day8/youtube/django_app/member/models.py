@@ -9,4 +9,3 @@ class YoutubeUserManager(UserManager):
 
 class YoutubeUser(AbstractUser):
     pass
-
