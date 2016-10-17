@@ -16,11 +16,11 @@
 	<ul>
 		{% for item in response.items %}
 		<li>
-			<p>{{ item.kind }}</p>
-			<p>{{ item.etag }}</p>
-			<p>{{ item.id.kind }}</p>
-			<p>{{ item.id.videoId }}</p>
-			<p>{{ item.snippet }}</p>
+			<p>item.kind : {{ item.kind }}</p>
+			<p>item.etag : {{ item.etag }}</p>
+			<p>item.id.kind : {{ item.id.kind }}</p>
+			<p>item.id.videoId : {{ item.id.videoId }}</p>
+			<p>item.snippet : {{ item.snippet }}</p>
 		</li>
 		{% endfor %}
 	</ul>
