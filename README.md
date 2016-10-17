@@ -87,9 +87,9 @@
 - Class-Based View
 	- [ ] PBV -> CBV 리펙토링
 	- [ ] Generic View
-- Crawling
-	- [ ] requests, BeautifulSoup
-	- [ ] **크롤링 프로젝트**
+- Using API
+	- [ ] Youtube API (북마크 프로젝트)
+	- [ ] Facebook API (페이스북 앱 프로젝트)
 	- [ ] crontab
 - Background tasks
 	- [ ] Celery
