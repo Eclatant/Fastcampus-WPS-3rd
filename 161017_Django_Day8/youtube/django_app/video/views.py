@@ -46,6 +46,8 @@ def search(request):
     json_str = json.dumps(response, indent=2, sort_keys=True)
     print(json_str)
     print(type(json_str))
+    json_object = json.loads(json_str)
+    print(type(json_object))
 
     context = {
         'response': response,
