@@ -30,4 +30,14 @@ def search(request):
     # URL : 'video/search/'
     # view : search
     # Static, Templates 디렉토리 설정
-    pass
+    """
+    1. STATICFILES_DIRS 설정
+    2. templates폴더 생성 후 TEMPLATE의 DIRS안에 설정
+    3. video/search.html파일 생성
+    4. search.html내부 내용
+        input
+        ul > li (img, p*3)
+    5. urls.py에 view연결
+    6. view에서 video/search.html파일 render
+    """
+    
