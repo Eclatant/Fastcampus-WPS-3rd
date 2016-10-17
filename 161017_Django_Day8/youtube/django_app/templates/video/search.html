@@ -13,24 +13,14 @@
 		<button type="submit">검색</button>
 	</form>
 
-	<div>{{ response }}</div>
-
 	<ul>
+		{% for item in response.items %}
 		<li>
 			<p>제목</p>
 			<p>내용</p>
 			<p>게시일</p>
 		</li>
-		<li>
-			<p>제목</p>
-			<p>내용</p>
-			<p>게시일</p>
-		</li>
-		<li>
-			<p>제목</p>
-			<p>내용</p>
-			<p>게시일</p>
-		</li>
+		{% endfor %}
 	</ul>
 </body>
 </html>
