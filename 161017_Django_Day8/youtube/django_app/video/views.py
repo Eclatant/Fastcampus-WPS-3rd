@@ -76,3 +76,11 @@ def add_bookmark(request):
         받았던 페이지로 돌아가기
         request.path값을 POST안에 받아서 돌아와야 됨
     """
+    pass
+
+
+def bookmark_list(request):
+    """
+    추가한 Video인스턴스 목록을 보여주는 페이지
+    """
+    pass
