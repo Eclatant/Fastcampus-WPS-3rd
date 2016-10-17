@@ -40,4 +40,3 @@ def search(request):
     5. urls.py에 view연결
     6. view에서 video/search.html파일 render
     """
-    
