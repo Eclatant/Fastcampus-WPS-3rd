@@ -10,18 +10,18 @@ YOUTUBE_API_VERSION = "v3"
 
 
 def youtube_search(keyword, max_results=10):
-  youtube = build(
-      YOUTUBE_API_SERVICE_NAME,
-      YOUTUBE_API_VERSION,
-      developerKey=DEVELOPER_KEY
-  )
+    youtube = build(
+        YOUTUBE_API_SERVICE_NAME,
+        YOUTUBE_API_VERSION,
+        developerKey=DEVELOPER_KEY
+    )
 
-  search_response = youtube.search().list(
-    q=keyword,
-    part="id,snippet",
-    maxResults=max_results
-  ).execute()
+    search_response = youtube.search().list(
+        q=keyword,
+        part="id,snippet",
+        maxResults=max_results
+    ).execute()
 
-  return search_response
+    return search_response
 
 
