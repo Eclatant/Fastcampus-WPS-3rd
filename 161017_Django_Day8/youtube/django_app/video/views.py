@@ -50,13 +50,21 @@ def search(request):
     6. view에서 video/search.html파일 render
     """
     # GET paramter에서 keyword값을 가져옵니다
+
+    # 빈 dict요소 생성
     context = {}
+
+    # request.GET의 parameter에서 keyword, page_token값을 가져옴
     keyword = request.GET.get('keyword')
     page_token = request.GET.get('page_token')
+
+    # 만약 keyword값이 존재할 경우 (request.GET의 keyword키로 값이 넘어올 경우)
+    # context dict에 keyword, response에 값 할당해줌
     if keyword:
         response = youtube_search(keyword, page_token)
         context['keyword'] = keyword
         context['response'] = response
+    # 검색을 안 할 경우 빈 dict요소만 가지고 렌더링
     return render(request, 'video/search.html', context)
 
 
