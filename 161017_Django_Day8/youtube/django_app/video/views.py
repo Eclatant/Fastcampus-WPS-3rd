@@ -40,5 +40,7 @@ def search(request):
     5. urls.py에 view연결
     6. view에서 video/search.html파일 render
     """
+    keyword = request.GET.get('keyword')
+
     context = {}
     return render(request, 'video/search.html', context)
