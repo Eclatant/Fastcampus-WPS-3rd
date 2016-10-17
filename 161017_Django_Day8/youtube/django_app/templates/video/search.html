@@ -18,7 +18,8 @@
 		<li>
 			<p>{{ item.kind }}</p>
 			<p>{{ item.etag }}</p>
-			<p>{{ item.id }}</p>
+			<p>{{ item.id.kind }}</p>
+			<p>{{ item.id.videoId }}</p>
 			<p>{{ item.snippet }}</p>
 		</li>
 		{% endfor %}
