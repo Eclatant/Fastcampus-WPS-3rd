@@ -12,6 +12,7 @@ class YoutubeUser(AbstractUser):
     nickname = models.CharField(max_length=24)
 
     USERNAME_FIELD = 'email'
+    REQUIRED_FIELDS = ()
 
     class Meta:
         verbose_name = '사용자'
