@@ -24,7 +24,7 @@ def youtube_search(keyword, max_results=10):
 
     return search_response
 
-
+import json
 def search(request):
     # Template : 'video/search.html'
     # URL : 'video/search/'
@@ -43,6 +43,7 @@ def search(request):
     # GET paramter에서 keyword값을 가져옵니다
     keyword = request.GET.get('keyword')
     response = youtube_search(keyword)
+    print(json.dumps(response, indent=2, sort_keys=True))
 
     context = {
         'response': response,
