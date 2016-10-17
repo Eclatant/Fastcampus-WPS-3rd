@@ -50,6 +50,7 @@ def search(request):
     print(type(json_object))
 
     context = {
+        'keyword': keyword,
         'response': response,
     }
     return render(request, 'video/search.html', context)
