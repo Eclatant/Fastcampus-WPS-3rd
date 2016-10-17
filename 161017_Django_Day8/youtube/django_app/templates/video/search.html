@@ -32,7 +32,7 @@
 		{% endif %}
 
 		{% if response.nextPageToken %}
-		<a href="{% url 'video:search' %}">다음페이지</a>
+		<a href="{% url 'video:search' %}?key=value">다음페이지</a>
 		{% endif %}
 	</ul>
 </body>
