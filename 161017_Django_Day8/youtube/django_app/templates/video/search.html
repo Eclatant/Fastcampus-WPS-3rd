@@ -16,13 +16,9 @@
 	<ul>
 		{% for item in response.items %}
 		<li>
-			<p>item.kind : {{ item.kind }}</p>
-			<p>item.etag : {{ item.etag }}</p>
-			<p>item.id.kind : {{ item.id.kind }}</p>
-			<p>item.id.videoId : {{ item.id.videoId }}</p>
-			<p>item.snippet.title : {{ item.snippet.title }}</p>
-			<p>item.snippet.description : {{ item.snippet.description }}</p>
-			<p>item.snippet.publishedAt : {{ item.snippet.publishedAt }}</p>
+			<p>{{ item.snippet.title }}</p>
+			<p>{{ item.snippet.description }}</p>
+			<p>{{ item.snippet.publishedAt }}</p>
 		</li>
 		{% endfor %}
 	</ul>
