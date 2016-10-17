@@ -64,5 +64,13 @@ def add_bookmark(request):
     """
     POST요청을 받음
 
-    ​
+    kind
+    videoId
+    title
+    description
+    publishedAt
+    thumbnails
+
+    요소들을 사용해서​
+    Video 인스턴스 생성
     """
