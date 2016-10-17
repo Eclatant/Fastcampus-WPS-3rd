@@ -43,7 +43,9 @@ def search(request):
     # GET paramter에서 keyword값을 가져옵니다
     keyword = request.GET.get('keyword')
     response = youtube_search(keyword)
-    print(json.dumps(response, indent=2, sort_keys=True))
+    json_str = json.dumps(response, indent=2, sort_keys=True)
+    print(json_str)
+    print(type(json_str))
 
     context = {
         'response': response,
