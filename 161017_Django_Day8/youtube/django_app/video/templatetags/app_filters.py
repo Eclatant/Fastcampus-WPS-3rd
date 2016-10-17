@@ -4,4 +4,4 @@ register = template.Library()
 
 
 def string_to_date(value):
-    
+    return parse_datetime(value)
