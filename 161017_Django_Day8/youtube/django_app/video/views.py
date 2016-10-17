@@ -40,7 +40,11 @@ def search(request):
     5. urls.py에 view연결
     6. view에서 video/search.html파일 render
     """
+    # GET paramter에서 keyword값을 가져옵니다
     keyword = request.GET.get('keyword')
+    response = youtube_search(keyword)
 
-    context = {}
+    context = {
+        'response': response,
+    }
     return render(request, 'video/search.html', context)
