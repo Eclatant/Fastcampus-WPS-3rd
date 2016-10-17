@@ -8,6 +8,10 @@ alias py="open -a /Applications/PyCharm\ CE.app/Contents/MacOS/pycharm"
 ```
 -
 
+# PyCharm Multi selection
+
+Preferences -> Keymap -> (검색어)multi -> Add Selection for Next Occurrence의 단축키값 변경
+
 
 # YouTube 앱을 만들어봅시다!
 
