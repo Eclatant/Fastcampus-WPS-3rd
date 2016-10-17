@@ -28,6 +28,7 @@ def youtube_search(keyword, page_token, max_results=10):
         q=keyword,
         part="id,snippet",
         maxResults=max_results,
+        pageToken=page_token
     ).execute()
 
     return search_response
