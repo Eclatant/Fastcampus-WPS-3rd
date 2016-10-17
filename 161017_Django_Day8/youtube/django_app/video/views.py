@@ -9,7 +9,7 @@ YOUTUBE_API_SERVICE_NAME = "youtube"
 YOUTUBE_API_VERSION = "v3"
 
 
-def youtube_search(keyword, max_results=10):
+def youtube_search(keyword, page_token, max_results=10):
     """
     youtube_search함수 개선
 
