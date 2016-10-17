@@ -16,7 +16,7 @@
 	<ul>
 		{% for item in response.items %}
 		<li>
-			<p>제목</p>
+			<p>{{ forloop.counter }} 제목</p>
 			<p>내용</p>
 			<p>게시일</p>
 		</li>
