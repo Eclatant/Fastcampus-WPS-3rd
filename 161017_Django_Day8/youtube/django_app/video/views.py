@@ -58,3 +58,11 @@ def search(request):
         context['keyword'] = keyword
         context['response'] = response
     return render(request, 'video/search.html', context)
+
+
+def add_bookmark(request):
+    """
+    POST요청을 받음
+
+    ​
+    """
