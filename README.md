@@ -90,6 +90,7 @@
 - Using API
 	- [ ] Youtube API (북마크 프로젝트)
 	- [ ] Facebook API (페이스북 앱 프로젝트)
+	- [ ] SMS API (문자메시지 연동 구현)
 	- [ ] crontab
 - Background tasks
 	- [ ] Celery
