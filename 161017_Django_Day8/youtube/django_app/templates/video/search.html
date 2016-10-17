@@ -28,11 +28,11 @@
 			이전페이지/다음페이지 버튼을 만들어보세요
 		-->
 		{% if response.prevPageToken %}
-		<a>이전페이지</a>
+		<a href="{% url 'video:search' %}">이전페이지</a>
 		{% endif %}
 
 		{% if response.nextPageToken %}
-		<a>다음페이지</a>
+		<a href="{% url 'video:search' %}">다음페이지</a>
 		{% endif %}
 	</ul>
 </body>
