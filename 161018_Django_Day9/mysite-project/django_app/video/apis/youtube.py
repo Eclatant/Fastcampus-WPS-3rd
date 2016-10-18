@@ -33,17 +33,20 @@ def youtube_search(keyword, page_token, max_results=10):
 
     # video.search 뷰에서
     # search_response의 items를 반복하며
+    # 반복하고있는 item의 'videoId'값이 이미 갖고있는 Video인스턴스의 youtube_id에 해당하는지 파악
+    # 이미 Video인스턴스에 존재하는 video_id일 경우, is_exist에 True대입
     for item in search_response['items']:
         cur_video_id = item['id']['videoId']
         if Video.objects.filter(youtube_id=cur_video_id).exists():
            item['is_exist'] = True
 
-    # video_id_list = [item['id']['videoId'] for item in search_response['items']]
-    # exist_list = Video.objects.filter(youtube_id__in=video_id_list)
-    # exist_id_list = [video.youtube_id for video in exist_list]
-    # for item in search_response['items']:
-    #     cur_video_id = item['id']['videoId']
-    #     if cur_video_id in exist_id_list:
-    #         item['is_exist'] = True
+    #
+    video_id_list = [item['id']['videoId'] for item in search_response['items']]
+    exist_list = Video.objects.filter(youtube_id__in=video_id_list)
+    exist_id_list = [video.youtube_id for video in exist_list]
+    for item in search_response['items']:
+        cur_video_id = item['id']['videoId']
+        if cur_video_id in exist_id_list:
+            item['is_exist'] = True
 
     return search_response
