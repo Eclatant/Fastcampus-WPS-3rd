@@ -27,8 +27,7 @@ def youtube_search(keyword, page_token, max_results=10):
     3. 요청시에 part에 'id,snippet,statistics,contentDetails' 지정
         id에 video의 id 리스트
     4. 받아온 결과를 리턴하고 youtube_search함수를 사용하는 view의 template을 보완
-        
-
+    5. 보완할 항목은 '조회수, 좋아요수, 댓글수'와 'TAG목록'
     """
     youtube = build(
         YOUTUBE_API_SERVICE_NAME,
