@@ -22,6 +22,9 @@
 				요청하는 name은 view에서 참조
 				각 input에 value에 값을 지정
 			-->
+			{% if item.is_exist %}
+			<button>Already added</button>
+			{% else %}
 			<form action="{% url 'video:bookmark_add' %}" method="POST">{% csrf_token %}
 				<input type="text" name="kind" value="{{ item.id.kind }}">
 				<input type="text" name="video_id" value="{{ item.id.videoId }}">
@@ -32,6 +35,7 @@
 				<input type="text" name="path" value="{{ request.get_full_path }}">
 				<button type="submit">Add bookmark</button>
 			</form>
+			{% endif %}
 		</li>
 		{% endfor %}
 		<!--
