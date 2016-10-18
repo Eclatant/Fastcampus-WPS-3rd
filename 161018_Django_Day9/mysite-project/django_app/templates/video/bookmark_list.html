@@ -6,7 +6,9 @@
 <ul>
 	{% for video in videos %}
 	<li>
-		<img src="{{ video.thumbnail }}" alt="">
+		<a href="{% url 'video:bookmark_detail' pk=video.pk %}">
+			<img src="{{ video.thumbnail }}" alt="">
+		</a>
 		<p>Title : {{ video.title }}</p>
 		<p>Description : {{ video.description }}</p>
 		<p>Published : {{ video.published_date|date:"Y.m.d" }}</p>
