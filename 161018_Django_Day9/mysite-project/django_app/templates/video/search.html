@@ -2,6 +2,7 @@
 {% load app_filters %}
 
 {% block content %}
+	<h5>{{ response.pageInfo.totalResults }}</h5>
 	<form action="">
 		<input type="text" name="keyword" placeholder="{{ keyword }}">
 		<button type="submit">검색</button>
