@@ -55,7 +55,7 @@ def youtube_search(keyword, page_token, max_results=10):
     videos_response = youtube.videos().list(
         #parameters
     ).execute()
-    
+
 
     # 어떤작업을 한 뒤에는 위의 video_id_list에
     # 검색한 결과의 videoId값이 리스트로 들어가있어야 합니다.
