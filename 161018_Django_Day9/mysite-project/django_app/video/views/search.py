@@ -1,5 +1,7 @@
 from django.shortcuts import render
 
+__all__ = ['search']
+
 
 def search(request):
     # Template : 'video/search.html'
