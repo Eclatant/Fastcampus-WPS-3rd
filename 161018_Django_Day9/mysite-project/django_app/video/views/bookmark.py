@@ -15,7 +15,7 @@ def bookmark_add(request):
         published_date = request.POST['published_date']
         thumbnail_url = request.POST['thumbnail_url']
 
-        Video.objects.create(
+        video = Video.objects.create(
             kind=kind,
             youtube_id=video_id,
             title=title,
@@ -23,7 +23,9 @@ def bookmark_add(request):
             published_date=published_date,
             thumbnail=thumbnail_url
         )
-        msg = '북마크 등록에 성공했습니다'
+        msg = '%s 영상을 북마크에 등록했습니다' % (
+            video.title
+        )
     except Exception as e:
         msg = 'Exception! %s (%s)' % (e, e.args)
 
