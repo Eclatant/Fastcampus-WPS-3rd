@@ -29,4 +29,4 @@ def bookmark_list(request):
     context = {
         'videos': videos,
     }
-    return rend
+    return render(request, 'video/bookmark_list.html', context)
