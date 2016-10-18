@@ -19,12 +19,22 @@ def add_bookmark(request):
         받았던 페이지로 돌아가기
         request.path값을 POST안에 받아서 돌아와야 됨
     """
-    kind = request.POST['kind']
-    video_id = request.POST['video_id']
-    title = request.POST['title']
-    description = request.POST['description']
-    published_date = request.POST['published_date']
-    thumbnail_url = request.POST['thumbnail_url']
+    try:
+        kind = request.POST['kind']
+        video_id = request.POST['video_id']
+        title = request.POST['title']
+        description = request.POST['description']
+        published_date = request.POST['published_date']
+        thumbnail_url = request.POST['thumbnail_url']
+
+        Video.objects.create(
+            kind=kind,
+            youtube_id=video_id,
+            title=title,
+            description=description,
+            published_date=published_date,
+            thumbnail=thumbnail_url
+        )
 
 
 
