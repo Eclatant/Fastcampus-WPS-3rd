@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from video.apis.youtube import youtube_search
 
 # 이 모듈을 import시킬 때
 # from views.search import *
