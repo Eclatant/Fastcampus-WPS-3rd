@@ -51,6 +51,10 @@ def youtube_search(keyword, page_token, max_results=10):
         pass
     print(video_id_list)
     str_id_list = ','.join(video_id_list)
+
+    videos_response = youtube.videos().list(
+        #parameters
+    ).execute()
     
 
     # 어떤작업을 한 뒤에는 위의 video_id_list에
