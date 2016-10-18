@@ -27,8 +27,5 @@ urlpatterns = [
     # blog/urls.py의 내용을 사용할 경우
     url(r'', include('blog.urls', namespace='blog')),
     url(r'^member/', include('member.urls', namespace='member')),
-
-    # Common
-    url(r'^error/$', views.error, name='error'),
-    url(r'^test/(?P<pk1>[0-9]+)/(?P<pk2>[0-9]+)/$', views.test, name='test')
+    url(r'^video/', include('video.urls', namespace='video')),
 ]
