@@ -23,7 +23,7 @@ def bookmark_add(request):
         )
         return HttpResponse('Success')
     except Exception as e:
-        return HttpResponse('Exception! %s' % e.args)
+        return HttpResponse('Exception! %s (%s)' % (e, e.args))
 
 
 def bookmark_list(request):

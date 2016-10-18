@@ -28,7 +28,7 @@
 				<input type="text" name="title" value="{{ item.snippet.title }}">
 				<input type="text" name="description" value="{{ item.snippet.description }}">
 				<input type="text" name="published_date" value="{{ item.snippet.publishedAt|string_to_date }}">
-				<input type="text" name="thumbnail_url" value="{{ item.snippet.thumbnails.high.url }}">
+				<input type="text" name="thumbnail" value="{{ item.snippet.thumbnails.high.url }}">
 				<button type="submit">Add bookmark</button>
 			</form>
 		</li>
