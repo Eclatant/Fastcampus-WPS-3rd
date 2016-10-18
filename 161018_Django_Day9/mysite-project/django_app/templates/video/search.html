@@ -1,5 +1,6 @@
 {% extends 'common/base.html' %}
 {% load app_filters %}
+{% load humanize %}
 
 {% block content %}
 	<h5>"{{ keyword }}"로 검색 (총 {{ response.pageInfo.totalResults }}건의 검색결과)</h5>
