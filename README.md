@@ -48,6 +48,7 @@
 	- [x] Variables
 	- [x] Tags
 	- [x] Filters
+	- [x] Custom filters
 	- [x] Template inheritance
 - Form
 	- [x] POST데이터 다루기
@@ -87,9 +88,10 @@
 - Class-Based View
 	- [ ] PBV -> CBV 리펙토링
 	- [ ] Generic View
-- Crawling
-	- [ ] requests, BeautifulSoup
-	- [ ] **크롤링 프로젝트**
+- Using API
+	- [ ] Youtube API (북마크 프로젝트)
+	- [ ] Facebook API (페이스북 앱 프로젝트)
+	- [ ] SMS API (문자메시지 연동 구현)
 	- [ ] crontab
 - Background tasks
 	- [ ] Celery
