@@ -6,8 +6,10 @@
 <ul>
 	{% for video in videos %}
 	<li>
-		<p>{{ video.title }}</p>
-		
+		<img src="{{ video.thumbnail }}" alt="">
+		<p>Title : {{ video.title }}</p>
+		<p>Description : {{ video.description }}</p>
+		<p>Published : {{ video.published_date|date:"Y.m.d" }}</p>
 	</li>
 	{% endfor %}
 </ul>
