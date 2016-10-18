@@ -26,13 +26,13 @@
 			<button>Already added</button>
 			{% else %}
 			<form action="{% url 'video:bookmark_add' %}" method="POST">{% csrf_token %}
-				<input type="text" name="kind" value="{{ item.id.kind }}">
-				<input type="text" name="video_id" value="{{ item.id.videoId }}">
-				<input type="text" name="title" value="{{ item.snippet.title }}">
-				<input type="text" name="description" value="{{ item.snippet.description }}">
-				<input type="text" name="published_date" value="{{ item.snippet.publishedAt }}">
-				<input type="text" name="thumbnail_url" value="{{ item.snippet.thumbnails.high.url }}">
-				<input type="text" name="path" value="{{ request.get_full_path }}">
+				<input type="hidden" name="kind" value="{{ item.id.kind }}">
+				<input type="hidden" name="video_id" value="{{ item.id.videoId }}">
+				<input type="hidden" name="title" value="{{ item.snippet.title }}">
+				<input type="hidden" name="description" value="{{ item.snippet.description }}">
+				<input type="hidden" name="published_date" value="{{ item.snippet.publishedAt }}">
+				<input type="hidden" name="thumbnail_url" value="{{ item.snippet.thumbnails.high.url }}">
+				<input type="hidden" name="path" value="{{ request.get_full_path }}">
 				<button type="submit">Add bookmark</button>
 			</form>
 			{% endif %}
