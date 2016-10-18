@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from django.http import HttpResponse
 from video.models import Video
 __all__ = ['add_bookmark', 'bookmark_list']
 
@@ -35,6 +36,8 @@ def add_bookmark(request):
             published_date=published_date,
             thumbnail=thumbnail_url
         )
+    except:
+        return HttpResponse('Exception!')
 
 
 
