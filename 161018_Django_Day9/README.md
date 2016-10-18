@@ -7,3 +7,6 @@
 
 # pip freeze
 
+현재 설치된 파이썬 패키지와 버전정보를 출력  
+**pip freeze > requirements.txt**  
+입력시 해당 정보를 requirements.txt파일에 저장
