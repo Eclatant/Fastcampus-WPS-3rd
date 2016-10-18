@@ -45,10 +45,13 @@ def youtube_search(keyword, page_token, max_results=10):
 
     video_id_list = []
     # ',' (쉼표)로 리스트 각 아이템을 구분한 문자열 생성
-    str_id_list = ','.join(video_id_list)
+
     for item in search_response['items']:
         # 나머지 처리
         pass
+    print(video_id_list)
+    str_id_list = ','.join(video_id_list)
+    
 
     # 어떤작업을 한 뒤에는 위의 video_id_list에
     # 검색한 결과의 videoId값이 리스트로 들어가있어야 합니다.
