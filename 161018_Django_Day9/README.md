@@ -20,3 +20,9 @@
 	- django_app폴더
 	- requirements.txt
 	- .python-version
+
+	
+# PyCharm Terminal
+
+`alt + F12`
+
