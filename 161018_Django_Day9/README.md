@@ -12,3 +12,11 @@
 입력시 해당 정보를 requirements.txt파일에 저장
 
 **pip install -r requirements.txt**
+
+
+# 폴더구조는
+
+- 프로젝트폴더
+	- django_app폴더
+	- requirements.txt
+	- .python-version
