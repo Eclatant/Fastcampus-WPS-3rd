@@ -1,3 +1,5 @@
+__all__ = ['add_bookmark', 'bookmark_list']
+
 def add_bookmark(request):
     """
     POST요청을 받음
