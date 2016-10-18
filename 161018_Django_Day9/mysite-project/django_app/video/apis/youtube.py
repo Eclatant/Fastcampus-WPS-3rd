@@ -1,6 +1,7 @@
 from googleapiclient.discovery import build
 from googleapiclient.errors import HttpError
 from oauth2client.tools import argparser
+from video.models import Video
 
 
 DEVELOPER_KEY = "AIzaSyDiarbwPOxSkXmNPfdv8UtHcZM6KySpk34"
@@ -29,5 +30,10 @@ def youtube_search(keyword, page_token, max_results=10):
         maxResults=max_results,
         pageToken=page_token
     ).execute()
+
+    for item in search_response['items']:
+        cur_video_id = item['id']['videoId']
+        if Video.objects.filter(youtube_id=cur_video_id).exists():
+           item['is_exist'] = True
 
     return search_response
