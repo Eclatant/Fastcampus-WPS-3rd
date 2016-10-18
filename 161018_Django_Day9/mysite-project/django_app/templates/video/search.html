@@ -1,14 +1,7 @@
+{% extends 'common/base.html' %}
 {% load app_filters %}
-<!doctype html>
-<html lang="ko">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport"
-	      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<title>Youtube bookmark</title>
-</head>
-<body>
+
+{% block content %}
 	<form action="">
 		<input type="text" name="keyword" placeholder="{{ keyword }}">
 		<button type="submit">검색</button>
@@ -46,5 +39,4 @@
 		<a href="{% url 'video:search' %}?keyword={{ keyword }}&page_token={{ response.nextPageToken }}">다음페이지</a>
 		{% endif %}
 	</ul>
-</body>
-</html>
+{% endblock %}
