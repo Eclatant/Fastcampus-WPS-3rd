@@ -1,3 +1,5 @@
+from django.shortcuts import render
+from video.models import Video
 __all__ = ['add_bookmark', 'bookmark_list']
 
 def add_bookmark(request):
@@ -23,4 +25,8 @@ def bookmark_list(request):
     """
     추가한 Video인스턴스 목록을 보여주는 페이지
     """
-    pass
+    videos = Video.objects.all()
+    context = {
+        'videos': videos,
+    }
+    return rend
