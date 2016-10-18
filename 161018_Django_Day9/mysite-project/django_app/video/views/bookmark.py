@@ -27,7 +27,7 @@ def bookmark_add(request):
     except Exception as e:
         msg = 'Exception! %s (%s)' % (e, e.args)
 
-    # messages.success(request, msg)
+    messages.success(request, msg)
     if path:
         return redirect(path)
     else:
