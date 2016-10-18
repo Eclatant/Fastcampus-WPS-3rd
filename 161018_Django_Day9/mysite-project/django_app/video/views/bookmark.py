@@ -36,8 +36,9 @@ def add_bookmark(request):
             published_date=published_date,
             thumbnail=thumbnail_url
         )
-    except:
-        return HttpResponse('Exception!')
+        return HttpResponse('Success')
+    except Exception as e:
+        return HttpResponse('Exception! %s' % e.args)
 
 
 
