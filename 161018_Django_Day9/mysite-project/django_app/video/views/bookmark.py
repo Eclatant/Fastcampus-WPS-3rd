@@ -36,7 +36,6 @@ def bookmark_add(request):
         return redirect('video:bookmark_list')
 
 
-
 def bookmark_list(request):
     """
     추가한 Video인스턴스 목록을 보여주는 페이지
