@@ -2,8 +2,15 @@
 
 {% block content %}
 
-{% for video in videos %}
-<div>{{ video }}</div>
-{% endfor %}
+
+<ul>
+	{% for video in videos %}
+	<li>
+		<p>{{ video.title }}</p>
+		
+	</li>
+	{% endfor %}
+</ul>
+
 
 {% endblock %}
