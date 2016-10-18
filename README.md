@@ -48,6 +48,7 @@
 	- [x] Variables
 	- [x] Tags
 	- [x] Filters
+	- [x] Custom filters
 	- [x] Template inheritance
 - Form
 	- [x] POST데이터 다루기
