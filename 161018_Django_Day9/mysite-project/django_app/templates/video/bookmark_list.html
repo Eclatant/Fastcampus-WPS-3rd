@@ -3,7 +3,7 @@
 {% block content %}
 
 <!-- 검색화면으로 가기 버튼 구현 -->
-
+<a href="{% url 'video:search' %}" class="btn btn-primary">Search videos...</a>
 
 <ul>
 	{% for video in videos %}
