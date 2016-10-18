@@ -14,8 +14,6 @@ response = {
         },
     ]
 }
-
 id_list = []
-
 for item in response['items']:
     print(item)
