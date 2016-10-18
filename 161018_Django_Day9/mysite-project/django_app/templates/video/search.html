@@ -23,7 +23,8 @@
 				각 input에 value에 값을 지정
 			-->
 			<form action="{% url 'video:bookmark_add' %}" method="POST">
-				<input type="text" name="kind" value="{{ item.">
+				<input type="text" name="kind" value="{{ item.id.kind }}">
+				<input type="text" name="video_id" value="{{ item.id. }}">
 
 			</form>
 		</li>
