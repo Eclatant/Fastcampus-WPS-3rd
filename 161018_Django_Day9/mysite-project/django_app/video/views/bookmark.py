@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 from video.models import Video
-__all__ = ['add_bookmark', 'bookmark_list']
+__all__ = ['bookmark_add', 'bookmark_list']
 
 
 def bookmark_add(request):
