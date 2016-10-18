@@ -29,7 +29,7 @@
         <ul class="nav navbar-nav navbar-right">
           {% if user.is_authenticated %}
           <li>
-            <p class="text">{{ user.email }}</p>
+            <p class="nav-text">{{ user.email }}</p>
           </li>
           <li>
             <a href="{% url 'blog:post_list' %}">Blog</a>
