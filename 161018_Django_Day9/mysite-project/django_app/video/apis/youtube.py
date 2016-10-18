@@ -21,8 +21,12 @@ def youtube_search(keyword, page_token, max_results=10):
     youtube_search함수 개선2
     1. search_response에서 video의 id 리스트만 가져온다음에
     2. 해당 리스트로 videos/list에 요청
-        https://www.googleapis.com/youtube/v3/videos
-        https://developers.google.com/youtube/v3/docs/videos/list
+        요청시 : youtube.videos().list(arguments)
+            https://www.googleapis.com/youtube/v3/videos
+            https://developers.google.com/youtube/v3/docs/videos/list
+    3. 요청시에 part에 'id,snippets,statistics' 지정
+    4. 받아온 결과를 리턴하고 youtube_search함수를 사용하는 view의 template을 보완
+
     """
     youtube = build(
         YOUTUBE_API_SERVICE_NAME,
