@@ -16,6 +16,15 @@
 			<p>{{ item.snippet.title }}</p>
 			<p>{{ item.snippet.description }}</p>
 			<p>{{ item.snippet.publishedAt|string_to_date|date:"Y.m.d h:i" }}</p>
+
+			<!--
+				form에서 video:bookmark_add URL에 POST요청
+				요청하는 name은 view에서 참조
+				각 input에 value에 값을 지정
+			-->
+			<form action="">
+
+			</form>
 		</li>
 		{% endfor %}
 		<!--
