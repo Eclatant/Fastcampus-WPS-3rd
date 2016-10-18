@@ -24,7 +24,11 @@
 			-->
 			<form action="{% url 'video:bookmark_add' %}" method="POST">
 				<input type="text" name="kind" value="{{ item.id.kind }}">
-				<input type="text" name="video_id" value="{{ item.id. }}">
+				<input type="text" name="video_id" value="{{ item.id.videoId }}">
+				<input type="text" name="title" value="{{ item.snippet.title }}">
+				<input type="text" name="description" value="{{ item.snippet.description }}">
+				<input type="text" name="published_date" value="{{ item.snippet.publishedAt|string_to_date }}">
+				<input type="text" name="thumbnail" value="{{ item.snippet.thumbnails.high. }}">
 
 			</form>
 		</li>
