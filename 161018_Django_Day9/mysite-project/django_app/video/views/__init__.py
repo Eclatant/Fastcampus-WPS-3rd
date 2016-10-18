@@ -1,2 +1,2 @@
-# from .bookmark import *
-# from .search import *
+from .bookmark import *
+from .search import *
