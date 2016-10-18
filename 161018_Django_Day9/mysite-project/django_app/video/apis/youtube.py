@@ -38,7 +38,7 @@ def youtube_search(keyword, page_token, max_results=10):
     exist_list = Video.objects.filter(youtube_id=video_id_list)
     for item in search_response['items']:
         cur_video_id = item['id']['videoId']
-        if exist_list.filter(youtube_id=cur_video_id).exists():
+        if cur_video_id
            item['is_exist'] = True
 
     return search_response
