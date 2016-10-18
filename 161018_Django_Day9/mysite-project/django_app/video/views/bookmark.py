@@ -2,7 +2,11 @@ from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from django.contrib import messages
 from video.models import Video
-__all__ = ['bookmark_add', 'bookmark_list']
+__all__ = [
+    'bookmark_add',
+    'bookmark_list',
+    'bookmark_detail',
+]
 
 
 def bookmark_add(request):
