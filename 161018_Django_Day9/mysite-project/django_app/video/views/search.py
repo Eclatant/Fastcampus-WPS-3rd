@@ -1,5 +1,8 @@
 from django.shortcuts import render
 
+# 이 모듈을 import시킬 때
+# from views.search import *
+# 을 입력해도 search함수만 import하게된다
 __all__ = ['search']
 
 
