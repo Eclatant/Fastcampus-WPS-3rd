@@ -45,3 +45,10 @@ def bookmark_list(request):
         'videos': videos,
     }
     return render(request, 'video/bookmark_list.html', context)
+
+
+def bookmark_detail(request, pk):
+    """
+    pk에 해당하는 Video 인스턴스를 리턴
+    템플릿은 video/bookmark_detail.html사용
+    """
