@@ -54,4 +54,8 @@ def bookmark_detail(request, pk):
     extra
         get_object_or_404를 써봅니다
     """
-
+    video = Video.objects.get(pk=pk)
+    context = {
+        'video': video
+    }
+    return render(request, 'video/bookmark_detail.html', context)
