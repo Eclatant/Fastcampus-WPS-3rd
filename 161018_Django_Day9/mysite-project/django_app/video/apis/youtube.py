@@ -43,7 +43,7 @@ def youtube_search(keyword, page_token, max_results=10):
     ).execute()
     print(search_response)
     for item in search_response['items']:
-        print(item)
+        print(item['kind'])
 
     video_id_list = []
     # 어떤작업을 한 뒤에는 위의 video_id_list에
