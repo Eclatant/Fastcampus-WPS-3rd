@@ -32,14 +32,18 @@ def youtube_search(keyword, page_token, max_results=10):
     ).execute()
 
     # video.search 뷰에서
-    # search_response의 items를 반복하며 출력
-    #
-    video_id_list = [item['id']['videoId'] for item in search_response['items']]
-    exist_list = Video.objects.filter(youtube_id__in=video_id_list)
-    exist_id_list = [video.youtube_id for video in exist_list]
+    # search_response의 items를 반복하며
     for item in search_response['items']:
         cur_video_id = item['id']['videoId']
-        if cur_video_id in exist_id_list:
+        if Video.objects.filter(youtube_id=cur_video_id).exists():
            item['is_exist'] = True
+
+    # video_id_list = [item['id']['videoId'] for item in search_response['items']]
+    # exist_list = Video.objects.filter(youtube_id__in=video_id_list)
+    # exist_id_list = [video.youtube_id for video in exist_list]
+    # for item in search_response['items']:
+    #     cur_video_id = item['id']['videoId']
+    #     if cur_video_id in exist_id_list:
+    #         item['is_exist'] = True
 
     return search_response
