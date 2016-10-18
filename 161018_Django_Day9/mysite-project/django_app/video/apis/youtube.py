@@ -41,11 +41,14 @@ def youtube_search(keyword, page_token, max_results=10):
         maxResults=max_results,
         pageToken=page_token
     ).execute()
+    print(search_response)
+    for item in search_response['items']:
+        print(item)
 
     video_id_list = []
     # 어떤작업을 한 뒤에는 위의 video_id_list에
     # 검색한 결과의 videoId값이 리스트로 들어가있어야 합니다.
-    
+
 
     # video.search 뷰에서
     # search_response의 items를 반복하며
