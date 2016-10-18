@@ -22,13 +22,13 @@
 				요청하는 name은 view에서 참조
 				각 input에 value에 값을 지정
 			-->
-			<form action="{% url 'video:bookmark_add' %}" method="POST">
+			<form action="{% url 'video:bookmark_add' %}" method="POST">{% csrf_token %}
 				<input type="text" name="kind" value="{{ item.id.kind }}">
 				<input type="text" name="video_id" value="{{ item.id.videoId }}">
 				<input type="text" name="title" value="{{ item.snippet.title }}">
 				<input type="text" name="description" value="{{ item.snippet.description }}">
 				<input type="text" name="published_date" value="{{ item.snippet.publishedAt|string_to_date }}">
-				<input type="text" name="thumbnail" value="{{ item.snippet.thumbnails.high.url }}">
+				<input type="text" name="thumbnail_url" value="{{ item.snippet.thumbnails.high.url }}">
 				<button type="submit">Add bookmark</button>
 			</form>
 		</li>
