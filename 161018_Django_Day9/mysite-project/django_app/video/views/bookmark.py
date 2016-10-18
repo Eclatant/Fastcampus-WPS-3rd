@@ -1,10 +1,12 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.http import HttpResponse
+from django.contrib import messages
 from video.models import Video
 __all__ = ['bookmark_add', 'bookmark_list']
 
 
 def bookmark_add(request):
+    path = request.POST.get('path')
     try:
         kind = request.POST['kind']
         video_id = request.POST['video_id']
@@ -21,9 +23,16 @@ def bookmark_add(request):
             published_date=published_date,
             thumbnail=thumbnail_url
         )
-        return HttpResponse('Success')
+        msg = '북마크 등록에 성공했습니다'
     except Exception as e:
-        return HttpResponse('Exception! %s (%s)' % (e, e.args))
+        msg = 'Exception! %s (%s)' % (e, e.args)
+
+    # messages.success(request, msg)
+    if path:
+        return redirect(path)
+    else:
+        return redirect('video:bookmark_list')
+
 
 
 def bookmark_list(request):
