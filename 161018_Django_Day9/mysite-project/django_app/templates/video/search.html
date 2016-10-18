@@ -2,7 +2,7 @@
 {% load app_filters %}
 
 {% block content %}
-	<h5>{{ response.pageInfo.totalResults }}</h5>
+	<h5>"{{ keyword }}"로 검색 (총 {{ response.pageInfo.totalResults }}건의 검색결과)</h5>
 	<form action="">
 		<input type="text" name="keyword" placeholder="{{ keyword }}">
 		<button type="submit">검색</button>
