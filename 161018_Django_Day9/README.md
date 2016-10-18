@@ -26,3 +26,7 @@
 
 `alt + F12`
 
+
+# PyCharm Multi selection
+
+Preferences -> Keymap -> 검색(multi) -> Add Selection for Next Occurrence
