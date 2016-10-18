@@ -35,10 +35,11 @@ def youtube_search(keyword, page_token, max_results=10):
     # search_response의 items를 반복하며 출력
     #
     video_id_list = [item['id']['videoId'] for item in search_response['items']]
-    exist_list = Video.objects.filter(youtube_id=video_id_list)
+    exist_list = Video.objects.filter(youtube_id__in=video_id_list)
+    exist_id_list = [video.youtube_id for video in exist_list]
     for item in search_response['items']:
         cur_video_id = item['id']['videoId']
-        if cur_video_id
+        if cur_video_id in exist_id_list:
            item['is_exist'] = True
 
     return search_response
