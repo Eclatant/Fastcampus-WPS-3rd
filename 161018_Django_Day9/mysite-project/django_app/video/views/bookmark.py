@@ -41,7 +41,6 @@ def add_bookmark(request):
         return HttpResponse('Exception! %s' % e.args)
 
 
-
 def bookmark_list(request):
     """
     추가한 Video인스턴스 목록을 보여주는 페이지
