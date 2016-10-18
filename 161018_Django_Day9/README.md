@@ -29,4 +29,5 @@
 
 # PyCharm Multi selection
 
-Preferences -> Keymap -> 검색(multi) -> Add Selection for Next Occurrence
+Preferences -> Keymap -> 검색(multi) -> Add Selection for Next Occurrence  
+`Cmd+D`를 주로 사용 
