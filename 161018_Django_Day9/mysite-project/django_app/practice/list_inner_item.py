@@ -3,4 +3,7 @@ response = {
 }
 id_list = []
 for item in response['items']:
-    print(item)
+    cur_id = item['id']
+    id_list.append(cur_id)
+
+print(id_list)
