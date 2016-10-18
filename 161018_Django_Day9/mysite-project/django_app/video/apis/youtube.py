@@ -17,6 +17,12 @@ def youtube_search(keyword, page_token, max_results=10):
     2. 받은 pageToken값을 youtube.search()실행 시 list의 인자로 추가
     3. search뷰에서 request.GET에 pageToken값을 받아오도록 설정
     4. template에서 이전페이지/다음페이지 a태그 href에 GET parameter가 추가되도록 설정
+
+    youtube_search함수 개선2
+    1. search_response에서 video의 id 리스트만 가져온다음에
+    2. 해당 리스트로 videos/list에 요청
+        https://www.googleapis.com/youtube/v3/videos
+        https://developers.google.com/youtube/v3/docs/videos/list
     """
     youtube = build(
         YOUTUBE_API_SERVICE_NAME,
