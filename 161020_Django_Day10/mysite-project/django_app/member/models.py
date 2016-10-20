@@ -41,6 +41,17 @@ class MyUserManager(BaseUserManager):
         user.save()
         return user
 
+    def create_facebook_user(self, user_info):
+        user = self.model(
+            email=user_info['email'],
+            last_name=user_info.get('last_name', ''),
+            first_name=user_info.get('first_name', ''),
+            is_facebook_user=True,
+            facebook_id=user_info['id'],
+        )
+        user.save()
+        return user
+
 
 class MyUser(AbstractBaseUser, PermissionsMixin):
     email = models.EmailField(max_length=100, unique=True)
