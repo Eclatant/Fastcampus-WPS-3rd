@@ -89,6 +89,6 @@ def login_facebook(request):
         USER_ID = dict_debug['data']['user_id']
         print('USER_ID : %s' % USER_ID)
 
-        
+
 
 
