@@ -89,6 +89,15 @@ def login_facebook(request):
         USER_ID = dict_debug['data']['user_id']
         print('USER_ID : %s' % USER_ID)
 
-
-
+        # debug에서 받아온 USER_ID를 이용해서 graph API에 유저 정보를 요청
+        url_request_user_info = 'https://graph.facebook.com/' \
+                                '{user_id}?' \
+                                'fields=id,name,first_name,last_name,age_range,link,gender,locale,picture,timezone,updated_time,verified,email&' \
+                                'access_token={access_token}'.format(
+            user_id=USER_ID,
+            access_token=ACCESS_TOKEN
+        )
+        r = requests.get(url_request_user_info)
+        dict_user_info = r.json()
+        print(json.dumps(dict_user_info, indent=2))
 
