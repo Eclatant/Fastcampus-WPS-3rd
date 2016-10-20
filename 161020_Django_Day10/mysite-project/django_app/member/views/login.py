@@ -27,3 +27,7 @@ def login(request):
             return render(request, 'member/login.html', {})
     else:
         return render(request, 'member/login.html', {})
+
+
+def login_facebook(request):
+    code = request.GET.get('code')
