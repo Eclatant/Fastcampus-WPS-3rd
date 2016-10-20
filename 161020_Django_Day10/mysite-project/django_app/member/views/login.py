@@ -101,6 +101,7 @@ def login_facebook(request):
         dict_user_info = r.json()
         print(json.dumps(dict_user_info, indent=2))
 
+        # authenticate backends
         user = auth_authenticate(user_info=dict_user_info)
         if user is not None:
             auth_login(request, user)

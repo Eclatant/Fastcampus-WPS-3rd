@@ -25,8 +25,12 @@ STATICFILES_DIRS = [
     STATIC_DIR,
 ]
 
+# Auth
 AUTH_USER_MODEL = 'member.MyUser'
-# AUTH_USER_MODEL = 'django.contrib.auth.models.User'
+AUTHENTICATION_BACKENDS = [
+    'django.contrib.auth.backends.ModelBackend',
+    'member.backends.FacebookBackend',
+]
 
 
 # Quick-start development settings - unsuitable for production
