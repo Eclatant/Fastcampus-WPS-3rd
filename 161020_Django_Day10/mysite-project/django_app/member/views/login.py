@@ -74,6 +74,9 @@ def login_facebook(request):
         ACCESS_TOKEN = dict_access_token['access_token']
         print('ACCESS_TOKEN : %s' % ACCESS_TOKEN)
 
+        # 얻어낸 'access_token'의 유효성을 검사하며, 또한 user_id값을 얻어낸다
+        # 이때, input_token에는 위에서 얻은 'access_token'을 사용하며,
+        # access_token에는 {app_id}|{secret_code} 형태의 APP_ACCESS_TOKEN을 사용한다
         url_debug_token = 'https://graph.facebook.com/debug_token?' \
                           'input_token={it}&' \
                           'access_token={at}'.format(
