@@ -74,7 +74,12 @@ def login_facebook(request):
         ACCESS_TOKEN = dict_access_token['access_token']
         print('ACCESS_TOKEN : %s' % ACCESS_TOKEN)
 
-
+        url_request_user_id = 'https://graph.facebook.com/debug_token?' \
+                              'input_token={it}&' \
+                              'access_token={at}'.format(
+            it=ACCESS_TOKEN,
+            at=APP_ACCESS_TOKEN
+        )
 
 
 
