@@ -30,4 +30,11 @@ def login(request):
 
 
 def login_facebook(request):
-    code = request.GET.get('code')
+    if request.GET.get('error'):
+        messages.error(request, '사용자가 페이스북 로그인을 취소했습니다')
+        return redirect('member:login')
+
+    if request.GET.get('code'):
+        code = request.GET.get('code')
+        print('code : %s' % code)
+        
