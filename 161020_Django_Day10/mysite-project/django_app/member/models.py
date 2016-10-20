@@ -50,6 +50,11 @@ class MyUser(AbstractBaseUser, PermissionsMixin):
     date_joined = models.DateTimeField(auto_now_add=True)
     is_staff = models.BooleanField(default=False)
 
+    # Facebook User
+    is_facebook_user = models.BooleanField(default=False)
+    facebook_id = models.CharField(max_length=200, blank=True)
+    img_profile_url = models.URLField(blank=True)
+
     USERNAME_FIELD = 'email'
     REQUIRED_FIELDS = ('last_name', 'first_name', 'nickname', )
 
