@@ -52,11 +52,11 @@ def login_facebook(request):
         print('code : %s' % code)
 
         url_request_access_token = 'https://graph.facebook.com/v2.8/oauth/access_token?' \
-                                   'client_id={cliend_id}&' \
+                                   'client_id={client_id}&' \
                                    'redirect_uri={redirect_uri}&' \
                                    'client_secret={client_secret}&' \
                                    'code={code}'.format(
-            cliend_id=APP_ID,
+            client_id=APP_ID,
             redirect_uri=REDIRECT_URL,
             client_secret=SECRET_CODE,
             code=code
