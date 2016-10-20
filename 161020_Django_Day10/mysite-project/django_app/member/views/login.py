@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect
 from django.contrib import messages
 from django.http import HttpResponse
-from django.conf import settings
+
 from django.contrib.auth import authenticate as auth_authenticate
 from django.contrib.auth import login as auth_login
 
@@ -41,6 +41,9 @@ def login_facebook(request):
         return redirect('member:login')
 
     if request.GET.get('code'):
+        from django.conf import settings
+        APP_ID = settings.FACEBOOK_APP_ID
+        SECRET_CODE = settings.FACEBOOK_SECRET_CODE
 
         code = request.GET.get('code')
         print('code : %s' % code)
@@ -53,7 +56,7 @@ def login_facebook(request):
                                    'client_secret={client_secret}&' \
                                    'code={code}'.format(
             cliend_id=APP_ID,
-            redirect_uri=URL_LOGIN_FACEBOOK,
-            client_secret=SECRET_ID,
+            redirect_uri='abc',
+            client_secret=SECRET_CODE,
             code=code
         )
