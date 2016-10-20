@@ -9,6 +9,7 @@ __all__ = [
     'login_facebook',
 ]
 
+
 def login(request):
     next = request.GET.get('next')
     if request.method == 'POST':
