@@ -41,8 +41,12 @@ DEBUG = True
 ALLOWED_HOSTS = []
 
 
-# Application definition
+# Facebook
+FACEBOOK_APP_ID = '338774269808826'
+FACEBOOK_SECRET_CODE = 'b780a89551228b4c1015c529a7667722'
 
+
+# Application definition
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
