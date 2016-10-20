@@ -101,7 +101,7 @@ def login_facebook(request):
         dict_user_info = r.json()
         print(json.dumps(dict_user_info, indent=2))
 
-        # authenticate backends
+        # authenticate backends에 FacebookBackend추가해서 dict_user_info객체로 로그인 가능
         user = auth_authenticate(user_info=dict_user_info)
         if user is not None:
             auth_login(request, user)
