@@ -101,4 +101,3 @@ def login_facebook(request):
         dict_user_info = r.json()
         print(json.dumps(dict_user_info, indent=2))
 
-        
