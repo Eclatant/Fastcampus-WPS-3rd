@@ -63,4 +63,9 @@ def login_facebook(request):
                                     )
         r = requests.get(url_request_access_token)
         dict_access_token = r.json()
-        print(json.dumps(dict_access_token, indent=2))
+        # print(json.dumps(dict_access_token, indent=2))
+        ACCESS_TOKEN = dict_access_token['access_token']
+        print('ACCESS_TOKEN : %s' % ACCESS_TOKEN)
+        
+
+
