@@ -101,5 +101,12 @@ def login_facebook(request):
         dict_user_info = r.json()
         print(json.dumps(dict_user_info, indent=2))
 
-        user = 
+        user = auth_authenticate(user_info=dict_user_info)
+        if user is not None:
+            auth_login(request, user)
+            messages.success(request, '페이스북 유저로 로그인 되었습니다')
+            return redirect('blog:post_list')
+        else:
+            messages.error(request, '페이스북 로그인에 실패하였습니다')
+            return redirect('member:login')
 
