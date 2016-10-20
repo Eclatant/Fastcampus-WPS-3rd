@@ -55,9 +55,9 @@ class MyUserManager(BaseUserManager):
 
 class MyUser(AbstractBaseUser, PermissionsMixin):
     email = models.EmailField(max_length=100, unique=True)
-    last_name = models.CharField(max_length=20)
-    first_name = models.CharField(max_length=20)
-    nickname = models.CharField(max_length=24, unique=True)
+    last_name = models.CharField(max_length=20, blank=True)
+    first_name = models.CharField(max_length=20, blank=True)
+    nickname = models.CharField(max_length=24)
     date_joined = models.DateTimeField(auto_now_add=True)
     is_staff = models.BooleanField(default=False)
 
