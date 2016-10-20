@@ -94,9 +94,9 @@ def login_facebook(request):
                                 '{user_id}?' \
                                 'fields=id,name,first_name,last_name,age_range,link,gender,locale,picture,timezone,updated_time,verified,email&' \
                                 'access_token={access_token}'.format(
-            user_id=USER_ID,
-            access_token=ACCESS_TOKEN
-        )
+                                    user_id=USER_ID,
+                                    access_token=ACCESS_TOKEN
+                                )
         r = requests.get(url_request_user_info)
         dict_user_info = r.json()
         print(json.dumps(dict_user_info, indent=2))
