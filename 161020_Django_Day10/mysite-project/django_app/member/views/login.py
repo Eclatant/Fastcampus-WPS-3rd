@@ -56,11 +56,11 @@ def login_facebook(request):
                                    'redirect_uri={redirect_uri}&' \
                                    'client_secret={client_secret}&' \
                                    'code={code}'.format(
-            client_id=APP_ID,
-            redirect_uri=REDIRECT_URL,
-            client_secret=SECRET_CODE,
-            code=code
-        )
+                                        client_id=APP_ID,
+                                        redirect_uri=REDIRECT_URL,
+                                        client_secret=SECRET_CODE,
+                                        code=code
+                                    )
         r = requests.get(url_request_access_token)
         dict_access_token = r.json()
         print(json.dumps(dict_access_token, indent=2))
