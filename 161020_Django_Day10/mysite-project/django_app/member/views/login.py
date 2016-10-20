@@ -50,7 +50,6 @@ def login_facebook(request):
 
         code = request.GET.get('code')
         print('code : %s' % code)
-        # return HttpResponse
 
         url_request_access_token = 'https://graph.facebook.com/v2.8/oauth/access_token?' \
                                    'client_id={client_id}&' \
