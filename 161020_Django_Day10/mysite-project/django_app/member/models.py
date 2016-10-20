@@ -48,6 +48,7 @@ class MyUserManager(BaseUserManager):
             first_name=user_info.get('first_name', ''),
             is_facebook_user=True,
             facebook_id=user_info['id'],
+            img_profile_url=user_info['picture']['data']['url'],
         )
         user.save()
         return user
