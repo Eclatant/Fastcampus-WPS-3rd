@@ -92,7 +92,7 @@ def login_facebook(request):
         # debug에서 받아온 USER_ID를 이용해서 graph API에 유저 정보를 요청
         url_request_user_info = 'https://graph.facebook.com/' \
                                 '{user_id}?' \
-                                'fields=id,name,first_name,last_name,age_range,link,gender,locale,picture,timezone,updated_time,verified,email&' \
+                                'fields=id,first_name,last_name,gender,picture,email&' \
                                 'access_token={access_token}'.format(
                                     user_id=USER_ID,
                                     access_token=ACCESS_TOKEN
