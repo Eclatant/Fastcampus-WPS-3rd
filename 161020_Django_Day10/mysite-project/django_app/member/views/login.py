@@ -4,6 +4,10 @@ from django.http import HttpResponse
 from django.contrib.auth import authenticate as auth_authenticate
 from django.contrib.auth import login as auth_login
 
+__all__ = [
+    'login',
+    'login_facebook',
+]
 
 def login(request):
     next = request.GET.get('next')

@@ -1,4 +1,4 @@
-from .login import login, login_facebook
+from .login import *
 from .logout import logout
 from .signup import signup
 from .signup2 import signup2
