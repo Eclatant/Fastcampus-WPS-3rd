@@ -42,6 +42,8 @@ def login_facebook(request):
 
     if request.GET.get('code'):
         from django.conf import settings
+        import requests
+        import json
         APP_ID = settings.FACEBOOK_APP_ID
         SECRET_CODE = settings.FACEBOOK_SECRET_CODE
         REDIRECT_URL = 'http://127.0.0.1:8000/member/login/facebook/'
@@ -59,4 +61,6 @@ def login_facebook(request):
             client_secret=SECRET_CODE,
             code=code
         )
-
+        r = requests.get(url_request_access_token)
+        dict_access_token = r.json()
+        print(json.dumps(dict_access_token, indent=2))
