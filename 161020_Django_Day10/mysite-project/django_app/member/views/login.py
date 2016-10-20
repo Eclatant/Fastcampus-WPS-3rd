@@ -42,3 +42,5 @@ def login_facebook(request):
     if request.GET.get('code'):
         code = request.GET.get('code')
         print('code : %s' % code)
+        ret = 'Code receive success : %s' % code
+        return HttpResponse(ret)
