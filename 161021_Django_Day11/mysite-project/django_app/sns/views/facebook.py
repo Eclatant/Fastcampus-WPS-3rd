@@ -24,10 +24,11 @@ def friends_ranking(request):
         user_id = facebook.get_user_id_from_token(access_token)
 
         url_request_feed = 'https://graph.facebook.com/v2.8/{user_id}/feed?' \
+                           'fields=comments&' \
                            'access_token={access_token}'.format(
-            user_id=user_id,
-            access_token=access_token,
-        )
+                                user_id=user_id,
+                                access_token=access_token,
+                            )
         r = requests.get(url_request_feed)
         dict_feed_info = r.json()
         json_data = json.dumps(dict_feed_info, indent=2)
