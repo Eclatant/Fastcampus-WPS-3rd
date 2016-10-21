@@ -54,7 +54,7 @@ def debug_token(access_token):
     https://developers.facebook.com/docs/facebook-login/manually-build-a-login-flow#checktoken
 
     :param access_token:
-    :return:
+    :return: debug결과 dict
     """
     ACCESS_TOKEN = access_token
 
