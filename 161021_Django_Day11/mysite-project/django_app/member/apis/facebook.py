@@ -9,7 +9,11 @@ APP_ACCESS_TOKEN = '{app_id}|{secret_code}'.format(
     app_id=APP_ID,
     secret_code=SECRET_CODE
 )
-REDIRECT_URL = 'http://127.0.0.1:8000/member/login/facebook/'
+
+
+def login(code, request_url):
+
+
 
 # 사용자가 페이스북로그인 버튼을 눌러 페이스북에서 로그인에 성공했을 경우,
 # 페이스북에서 mysite로 access_token을 요청할 수 있는 'code'값을 보내준다

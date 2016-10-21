@@ -41,7 +41,7 @@ def login_facebook(request):
         return redirect('member:login')
 
     if request.GET.get('code'):
-
+        REDIRECT_URL = 'http://127.0.0.1:8000/member/login/facebook/'
         # authenticate backends에 FacebookBackend추가해서 dict_user_info객체로 로그인 가능
         user = auth_authenticate(user_info=dict_user_info)
         if user is not None:
