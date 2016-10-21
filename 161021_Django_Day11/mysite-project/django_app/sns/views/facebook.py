@@ -1,4 +1,5 @@
 import requests
+import json
 from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from django.urls import reverse
@@ -20,6 +21,16 @@ def friends_ranking(request):
         print('redirect_url : %s' % redirect_uri)
         code = request.GET.get('code')
         access_token = facebook.get_access_token(code, redirect_uri)
+        user_id = facebook.get_user_id_from_token(access_token)
 
-        url_request_feed = 'https://graph.facebook.com/'
+        url_request_feed = 'https://graph.facebook.com/v2.8/{user_id}/feed?' \
+                           'fields=comments&' \
+                           'access_token={access_token}'.format(
+            user_id=user_id,
+            access_token=access_token,
+        )
+        r = requests.get(url_request_feed)
+        dict_feed_info = r.json()
+        print(json.dumps(dict_feed_info, indent=2))
+
         return HttpResponse('%s<br>%s' % (redirect_uri, access_token))
