@@ -31,6 +31,7 @@ def friends_ranking(request):
         )
         r = requests.get(url_request_feed)
         dict_feed_info = r.json()
-        print(json.dumps(dict_feed_info, indent=2))
+        json_data = json.dumps(dict_feed_info, indent=2)
+        print(json_data)
 
-        return HttpResponse('%s<br>%s' % (redirect_uri, access_token))
+        return HttpResponse(json_data)
