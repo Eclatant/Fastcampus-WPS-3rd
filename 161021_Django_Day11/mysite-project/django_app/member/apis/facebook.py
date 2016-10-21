@@ -14,7 +14,7 @@ APP_ACCESS_TOKEN = '{app_id}|{secret_code}'.format(
 def get_access_token(code, redirect_url):
     """
     code와 redirect_url을 이용해서 access_token을 반환합니다
-    https://developers.facebook.com/docs/facebook-login/manually-build-a-login-flow
+    https://developers.facebook.com/docs/facebook-login/manually-build-a-login-flow#login 이후 작업입니다
 
     :param code: 페이스북 로그인 통해서 받아온 code
     :param redirect_url: 로그인 시 redirect_uri로 전달한 값
@@ -70,6 +70,12 @@ def debug_token(access_token):
 
 
 def get_user_info(user_id, access_token):
+    """
+    유저의 정보를 가져옵니다
+    :param user_id:
+    :param access_token:
+    :return:
+    """
     USER_ID = user_id
     ACCESS_TOKEN = access_token
 
