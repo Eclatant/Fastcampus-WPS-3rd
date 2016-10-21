@@ -5,7 +5,7 @@ from django.http import HttpResponse
 from django.contrib.auth import authenticate as auth_authenticate
 from django.contrib.auth import login as auth_login
 
-from member.apis.facebook import get_access_token, get_user_info, debug_token, get_user_id_from_token
+from member.apis import facebook
 
 __all__ = [
     'login',
@@ -47,10 +47,14 @@ def login_facebook(request):
         # 페이스북에서 mysite로 access_token을 요청할 수 있는 'code'값을 보내준다
 
         REDIRECT_URL = 'http://127.0.0.1:8000/member/login/facebook/'
+        code = request.GET.get('code')
 
+        access_token = facebook.get_access_token(code, REDIRECT_URL)
+        user_id = facebook.get_user_id_from_token(access_token)
+        user_info = facebook.get_user_info(user_id, access_token)
 
         # authenticate backends에 FacebookBackend추가해서 dict_user_info객체로 로그인 가능
-        user = auth_authenticate(user_info=dict_user_info)
+        user = auth_authenticate(user_info=user_info)
         if user is not None:
             auth_login(request, user)
             messages.success(request, '페이스북 유저로 로그인 되었습니다')
