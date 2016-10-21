@@ -44,8 +44,8 @@ def get_access_token(code, redirect_url):
 
 def debug_token(access_token):
     """
-    주어진 access_token을 다
-    https://developers.facebook.com/docs/facebook-login/manually-build-a-login-flow
+    주어진 access_token을 디버그합니다
+    https://developers.facebook.com/docs/facebook-login/manually-build-a-login-flow#checktoken
 
     :param access_token:
     :return:
