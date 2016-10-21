@@ -30,9 +30,6 @@ def friends_ranking(request):
                                 access_token=access_token,
                             )
 
-        user_id_list = []
-
-
         r = requests.get(url_request_feed)
         dict_feed_info = r.json()
         json_data = json.dumps(dict_feed_info, indent=2)
