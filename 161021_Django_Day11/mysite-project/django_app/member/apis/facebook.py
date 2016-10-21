@@ -10,8 +10,11 @@ APP_ACCESS_TOKEN = '{app_id}|{secret_code}'.format(
     secret_code=SECRET_CODE
 )
 
-def login(code, request_url):
+
+def get_access_token(code, redirect_url):
     print('code : %s' % code)
+    REDIRECT_URL = redirect_url
+
     # 받은 'code'값과 client_id, client_secret값을 사용해서 access_token을 얻는다
     url_request_access_token = 'https://graph.facebook.com/v2.8/oauth/access_token?' \
                                'client_id={client_id}&' \
@@ -29,6 +32,10 @@ def login(code, request_url):
     ACCESS_TOKEN = dict_access_token['access_token']
     print('ACCESS_TOKEN : %s' % ACCESS_TOKEN)
 
+
+def debug_token(access_token):
+    ACCESS_TOKEN = access_token
+
     # 얻어낸 'access_token'의 유효성을 검사하며, 또한 user_id값을 얻어낸다
     # 이때, input_token에는 위에서 얻은 'access_token'을 사용하며,
     # access_token에는 {app_id}|{secret_code} 형태의 APP_ACCESS_TOKEN을 사용한다
@@ -44,14 +51,19 @@ def login(code, request_url):
     USER_ID = dict_debug['data']['user_id']
     print('USER_ID : %s' % USER_ID)
 
+
+def get_user_info(user_id, access_token):
+    USER_ID = user_id
+    ACCESS_TOKEN = access_token
+    
     # debug에서 받아온 USER_ID를 이용해서 graph API에 유저 정보를 요청
     url_request_user_info = 'https://graph.facebook.com/' \
                             '{user_id}?' \
                             'fields=id,first_name,last_name,gender,picture,email&' \
                             'access_token={access_token}'.format(
-                                user_id=USER_ID,
-                                access_token=ACCESS_TOKEN
-                            )
+        user_id=USER_ID,
+        access_token=ACCESS_TOKEN
+    )
     r = requests.get(url_request_user_info)
     dict_user_info = r.json()
     print(json.dumps(dict_user_info, indent=2))
