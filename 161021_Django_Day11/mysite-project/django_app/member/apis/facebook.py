@@ -72,8 +72,10 @@ def debug_token(access_token):
 def get_user_info(user_id, access_token):
     """
     유저의 정보를 가져옵니다
-    :param user_id:
-    :param access_token:
+    https://developers.facebook.com/docs/graph-api/reference/user/
+
+    :param user_id: 사용자의 고유 페이스북 ID
+    :param access_token: 앱에서 사용가능한 액세스 토큰
     :return:
     """
     USER_ID = user_id
