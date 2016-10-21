@@ -31,7 +31,7 @@ def friends_ranking(request):
                             )
 
         user_id_list = []
-        
+
 
         r = requests.get(url_request_feed)
         dict_feed_info = r.json()
