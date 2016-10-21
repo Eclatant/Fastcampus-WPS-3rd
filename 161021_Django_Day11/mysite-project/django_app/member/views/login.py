@@ -46,6 +46,8 @@ def login_facebook(request):
         import json
         APP_ID = settings.FACEBOOK_APP_ID
         SECRET_CODE = settings.FACEBOOK_SECRET_CODE
+
+        # access_token과 app_access_token은 다릅니다
         APP_ACCESS_TOKEN = '{app_id}|{secret_code}'.format(
             app_id=APP_ID,
             secret_code=SECRET_CODE
