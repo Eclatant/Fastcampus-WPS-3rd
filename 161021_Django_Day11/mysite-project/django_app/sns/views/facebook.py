@@ -13,11 +13,11 @@ def friends_ranking(request):
     if request.GET.get('error'):
         return HttpResponse('사용자 로그인 거부')
     if request.GET.get('code'):
-        redirect_url = 'http://{host}{url}'.format(
+        redirect_uri = 'http://{host}{url}'.format(
             host=request.META['HTTP_HOST'],
             url=reverse('sns:friends_ranking')
         )
-        print('redirect_url : %s' % redirect_url)
+        print('redirect_url : %s' % redirect_uri)
         code = request.GET.get('code')
-        access_token = facebook.get_access_token(code, redirect_url)
-        return HttpResponse('%s<br>%s' % (redirect_url, access_token))
+        access_token = facebook.get_access_token(code, redirect_uri)
+        return HttpResponse('%s<br>%s' % (redirect_uri, access_token))
