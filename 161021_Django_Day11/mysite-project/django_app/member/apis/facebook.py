@@ -12,6 +12,13 @@ APP_ACCESS_TOKEN = '{app_id}|{secret_code}'.format(
 
 
 def get_access_token(code, redirect_url):
+    """
+    code와 redirect_url을 이용해서 access_token을 반환합니다
+
+    :param code: 페이스북 로그인 통해서 받아온 code
+    :param redirect_url: 로그인 시 redirect_uri로 전달한 값
+    :return: 액세스 토큰
+    """
     print('code : %s' % code)
     REDIRECT_URL = redirect_url
 
@@ -35,6 +42,11 @@ def get_access_token(code, redirect_url):
 
 
 def debug_token(access_token):
+    """
+    주어진 access_token을 디버그합니다
+    :param access_token:
+    :return:
+    """
     ACCESS_TOKEN = access_token
 
     # 얻어낸 'access_token'의 유효성을 검사하며, 또한 user_id값을 얻어낸다
