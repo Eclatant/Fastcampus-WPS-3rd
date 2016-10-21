@@ -13,11 +13,6 @@ APP_ACCESS_TOKEN = '{app_id}|{secret_code}'.format(
 
 def login(code, request_url):
 
-
-
-# 사용자가 페이스북로그인 버튼을 눌러 페이스북에서 로그인에 성공했을 경우,
-# 페이스북에서 mysite로 access_token을 요청할 수 있는 'code'값을 보내준다
-code = request.GET.get('code')
 print('code : %s' % code)
 
 # 받은 'code'값과 client_id, client_secret값을 사용해서 access_token을 얻는다
