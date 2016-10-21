@@ -31,6 +31,7 @@ def get_access_token(code, redirect_url):
     # print(json.dumps(dict_access_token, indent=2))
     ACCESS_TOKEN = dict_access_token['access_token']
     print('ACCESS_TOKEN : %s' % ACCESS_TOKEN)
+    return ACCESS_TOKEN
 
 
 def debug_token(access_token):
@@ -50,12 +51,13 @@ def debug_token(access_token):
     print(json.dumps(dict_debug, indent=2))
     USER_ID = dict_debug['data']['user_id']
     print('USER_ID : %s' % USER_ID)
+    return dict_debug
 
 
 def get_user_info(user_id, access_token):
     USER_ID = user_id
     ACCESS_TOKEN = access_token
-    
+
     # debug에서 받아온 USER_ID를 이용해서 graph API에 유저 정보를 요청
     url_request_user_info = 'https://graph.facebook.com/' \
                             '{user_id}?' \
@@ -67,3 +69,4 @@ def get_user_info(user_id, access_token):
     r = requests.get(url_request_user_info)
     dict_user_info = r.json()
     print(json.dumps(dict_user_info, indent=2))
+    return dict_user_info
