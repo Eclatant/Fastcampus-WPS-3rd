@@ -5,7 +5,7 @@ from django.http import HttpResponse
 from django.contrib.auth import authenticate as auth_authenticate
 from django.contrib.auth import login as auth_login
 
-from member.apis.facebook import get_access_token, get_user_info, debug_token
+from member.apis.facebook import get_access_token, get_user_info, debug_token, get_user_id_from_token
 
 __all__ = [
     'login',
