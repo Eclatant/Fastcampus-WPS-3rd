@@ -21,5 +21,5 @@ def friends_ranking(request):
         code = request.GET.get('code')
         access_token = facebook.get_access_token(code, redirect_uri)
 
-        url_request_feed = 
+        url_request_feed = 'https://graph.facebook.com/'
         return HttpResponse('%s<br>%s' % (redirect_uri, access_token))
