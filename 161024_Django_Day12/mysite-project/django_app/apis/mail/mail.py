@@ -6,4 +6,9 @@ __all__ = [
 
 
 def send_test():
-    send_mail('Subject', 'Message', 'fastcampus.2016@gmail.com', ['arcanelux@gmail.com'])
+    send_mail(
+        'Subject',
+        'Message',
+        'fastcampus.2016@gmail.com',
+        ['arcanelux@gmail.com']
+    )
