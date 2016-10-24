@@ -59,6 +59,7 @@ class MyUser(AbstractBaseUser, PermissionsMixin):
     last_name = models.CharField(max_length=20, blank=True)
     first_name = models.CharField(max_length=20, blank=True)
     nickname = models.CharField(max_length=24)
+    phone_number = models.CharField(max_length=15, blank=True)
     date_joined = models.DateTimeField(auto_now_add=True)
     is_staff = models.BooleanField(default=False)
 
