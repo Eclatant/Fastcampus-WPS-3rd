@@ -1,4 +1,6 @@
+from datetime import datetime
 from django.db import models
+from django.utils.dateparse import parse_datetime
 from django.utils import timezone
 from django.contrib.auth.models import User
 from django.conf import settings
@@ -29,4 +31,9 @@ class Comment(models.Model):
     def save(self, *args, **kwargs):
         super(Comment, self).save(*args, **kwargs)
         recipient_list = [self.post.author.email]
+        title = '{} 글에 댓글이 달렸습니다'.format(self.post.title)
+        content = '{}에 {}내용이 달렸네요'.format(
+            parse_datetime(self.created_date),
+            self.content
+        )
         send_mail('댓글이 달렸습니다', '확인해보세요')
