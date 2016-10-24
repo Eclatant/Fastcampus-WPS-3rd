@@ -2,7 +2,7 @@ from django.shortcuts import render, get_object_or_404
 from django.utils import timezone
 from django.db.models import Q
 from django.contrib import messages
-from .models import Post
+from .models import Post, Comment
 from django.contrib.auth.models import User
 
 # 같은 의미
@@ -36,9 +36,17 @@ def post_detail(request, pk):
 
     # Post객체가 존재하지 않을 경우에는 404Error를 리턴해준다
     post = get_object_or_404(Post, pk=pk)
+
+    # Post의 Comment목록 쿼리
+    # comments = Comment.objects.filter(post=post)
+    
+    # ForeignKey관계에서의 역참조
+    comments = post.comment_set.all()
+
     print('post_detail, post:%s' % post)
     context = {
         'post': post,
+
     }
     print('post_detail, context:%s' % context)
     return render(request, 'blog/post_detail.html', context)
