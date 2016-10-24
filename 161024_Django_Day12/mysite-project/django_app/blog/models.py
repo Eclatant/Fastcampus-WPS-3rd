@@ -36,5 +36,4 @@ class Comment(models.Model):
             self.created_date.strftime('%Y.%m.%d %H:%M'),
             self.content
         )
-        # send_mail('댓글이 달렸습니다', '확인해보세요')
         send_mail(title, content)
