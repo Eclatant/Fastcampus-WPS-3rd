@@ -103,6 +103,12 @@ def post_edit(request, pk):
 
 def comment_add(request, pk):
     """
+    기능을 새로 만들고싶다
+    1. 해당 기능의 처리결과를 저장할 수 있는 데이터베이스 model 생성
+    2. 기능을 처리하는 view구현
+    3. 해당 view에 요청을 하기위한 urls.py설정
+    4. view의 기능을 보여주는 template구현
+
     1. Comment model생성
     2. db migration
     3. post_detail.html에 form추가 (직접!) -> comment_add쪽으로 POST요청하는 form생성
