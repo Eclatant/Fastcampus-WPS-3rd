@@ -29,4 +29,4 @@ class Comment(models.Model):
     def save(self, *args, **kwargs):
         super(Comment, self).save(*args, **kwargs)
         recipient_list = [self.post.author.email]
-        send_mail('댓글이 달렸습니다', '확인해보세요', recipient_list)
+        send_mail('댓글이 달렸습니다', '확인해보세요')
