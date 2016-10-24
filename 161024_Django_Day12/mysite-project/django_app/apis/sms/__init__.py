@@ -41,7 +41,10 @@ def send_sms(message, receiver_number):
 
         if "error_list" in response:
             print("Error List : %s" % response['error_list'])
+            return False
+        return True
 
     except CoolsmsException as e:
         print("Error Code : %s" % e.code)
         print("Error Message : %s" % e.msg)
+        return False
