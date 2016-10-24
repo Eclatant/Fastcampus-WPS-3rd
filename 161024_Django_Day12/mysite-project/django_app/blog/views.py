@@ -101,7 +101,8 @@ def post_edit(request, pk):
     return render(request, 'blog/post_edit.html', {'form': form})
 
 
-def comment_add(request):
+def comment_add(request, pk):
     if request.method == 'POST':
+        post = Post.objects.get(pk=pk)
         # comment를 추가했던 view로 다시 redirect
         pass
