@@ -42,15 +42,5 @@ class Comment(models.Model):
         # send_mail(title, content)
 
 
-# 데코레이터를 쓰는방법
-@receiver(pre_save, sender=Comment)
-def send_comment_mail(sender, instance, **kwargs):
-    title = '{} 글에 댓글이 달렸습니다'.format(instance.post.title)
-    content = '{}에 {}내용이 달렸네요'.format(
-        instance.created_date.strftime('%Y.%m.%d %H:%M'),
-        instance.content
-    )
-    print('send_comment_mail')
-    send_mail(title, content)
 
 # post_save.connect(send_comment_mail, sender=Comment)
