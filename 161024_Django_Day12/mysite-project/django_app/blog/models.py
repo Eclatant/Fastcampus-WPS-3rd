@@ -48,5 +48,4 @@ def send_comment_mail(sender, instance, **kwargs):
         instance.content
     )
     send_mail(title, content)
-
 post_save.connect(send_comment_mail, sender=Comment)
