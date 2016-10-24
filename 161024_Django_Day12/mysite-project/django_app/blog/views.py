@@ -39,14 +39,14 @@ def post_detail(request, pk):
 
     # Post의 Comment목록 쿼리
     # comments = Comment.objects.filter(post=post)
-    
+
     # ForeignKey관계에서의 역참조
     comments = post.comment_set.all()
 
     print('post_detail, post:%s' % post)
     context = {
         'post': post,
-
+        'comments': comments,
     }
     print('post_detail, context:%s' % context)
     return render(request, 'blog/post_detail.html', context)
