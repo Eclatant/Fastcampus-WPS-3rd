@@ -80,6 +80,7 @@ class MyUser(AbstractBaseUser, PermissionsMixin):
         return self.first_name
 
     def save(self, *args, **kwargs):
+        # save시 전화번호에 '-'가 들어가있으면 없애준다
         if '-' in self.phone_number:
             self.phone_number = self.phone_number.replace('-', '')
         super().save(*args, **kwargs)
