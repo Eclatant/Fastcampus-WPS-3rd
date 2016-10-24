@@ -25,6 +25,8 @@ api_secret = 'A86DF83FB2F77AC52F0322A8B1B294A1'
 
 
 def send_sms(message, receiver_number):
+    if receiver_number is None or len(receiver_number) < 10:
+        return False
     params = dict()
     params['type'] = 'sms' # Message type ( sms, lms, mms, ata )
     params['to'] = receiver_number # Recipients Number '01000000000,01000000001'
