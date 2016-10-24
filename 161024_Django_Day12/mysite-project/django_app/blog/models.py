@@ -42,7 +42,7 @@ class Comment(models.Model):
         # send_mail(title, content)
 
 
-# @receiver(post_save, sender=Comment)
+@receiver(post_save, sender=Comment)
 def send_comment_mail(sender, instance, **kwargs):
     title = '{} 글에 댓글이 달렸습니다'.format(instance.post.title)
     content = '{}에 {}내용이 달렸네요'.format(
@@ -52,4 +52,4 @@ def send_comment_mail(sender, instance, **kwargs):
     print('send_comment_mail')
     send_mail(title, content)
 
-post_save.connect(send_comment_mail, sender=Comment)
+# post_save.connect(send_comment_mail, sender=Comment)
