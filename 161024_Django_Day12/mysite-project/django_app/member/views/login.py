@@ -1,11 +1,10 @@
-from django.shortcuts import render, redirect
 from django.contrib import messages
-from django.http import HttpResponse
-
 from django.contrib.auth import authenticate as auth_authenticate
 from django.contrib.auth import login as auth_login
+from django.http import HttpResponse
+from django.shortcuts import render, redirect
 
-from member.apis import facebook
+from apis import facebook
 
 __all__ = [
     'login',
