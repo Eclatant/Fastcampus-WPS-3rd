@@ -33,7 +33,8 @@ class Comment(models.Model):
         recipient_list = [self.post.author.email]
         title = '{} 글에 댓글이 달렸습니다'.format(self.post.title)
         content = '{}에 {}내용이 달렸네요'.format(
-            parse_datetime(self.created_date),
+            datetime.strftime(self.created_date),
             self.content
         )
-        send_mail('댓글이 달렸습니다', '확인해보세요')
+        # send_mail('댓글이 달렸습니다', '확인해보세요')
+        send_mail(title, content)
