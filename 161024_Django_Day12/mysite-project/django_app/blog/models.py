@@ -30,7 +30,8 @@ class Comment(models.Model):
     created_date = models.DateTimeField(auto_now_add=True)
 
     def save(self, *args, **kwargs):
-        super(Comment, self).save(*args, **kwargs)
+        # super(Comment, self).save(*args, **kwargs)
+        super()
         # recipient_list = [self.post.author.email]
         # title = '{} 글에 댓글이 달렸습니다'.format(self.post.title)
         # content = '{}에 {}내용이 달렸네요'.format(
@@ -38,7 +39,6 @@ class Comment(models.Model):
         #     self.content
         # )
         # send_mail(title, content)
-
 
 
 def send_comment_mail(sender, instance, **kwargs):
