@@ -18,7 +18,7 @@
   <p>{{ post.text|linebreaksbr }}</p>
 
 	<h5>댓글 목록</h5>
-	{% for comment in post.comment_set.all %}
+	{% for comment in comments %}
 	<div>
 		<p>{{ forloop.counter }} | {{ comment.content }}</p>
 	</div>
