@@ -79,5 +79,9 @@ class MyUser(AbstractBaseUser, PermissionsMixin):
     def get_short_name(self):
         return self.first_name
 
+    def save(self, *args, **kwargs):
+        if '-' in self.phone_number:
+            self.phone_number = self.phone_number.replace('-', '')
+        super().save(*args, **kwargs)
 
 
