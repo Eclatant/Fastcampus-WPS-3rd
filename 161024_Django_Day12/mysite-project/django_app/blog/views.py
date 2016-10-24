@@ -102,6 +102,15 @@ def post_edit(request, pk):
 
 
 def comment_add(request, pk):
+    """
+    1. Comment model생성
+    2. db migration
+    3. post_detail.html에 form추가 (직접!) -> comment_add쪽으로 POST요청하는 form생성
+    4. comment_add view생성 및 url과 연결 (pk값을 받아서 어떤 Post인스턴스에 Comment를 생성하는지 구분)
+    5. comment_add view에서 POST요청 받아서 Comment 인스턴스 생성
+    6. post_detail view로 redirect
+
+    """
     if request.method == 'POST':
         post = Post.objects.get(pk=pk)
         # comment를 추가했던 view로 다시 redirect
