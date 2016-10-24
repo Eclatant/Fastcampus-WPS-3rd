@@ -130,4 +130,4 @@ def comment_add(request, post_pk):
             content=content
         )
 
-        redirect('blog:post_detail', pk=post.pk)
+        return redirect('blog:post_detail', pk=post.pk)
