@@ -52,5 +52,6 @@ def send_comment_mail(sender, instance, **kwargs):
     )
     print('send_comment_mail')
     send_mail(title, content)
-    
+    raise Exception
+
 # post_save.connect(send_comment_mail, sender=Comment)
