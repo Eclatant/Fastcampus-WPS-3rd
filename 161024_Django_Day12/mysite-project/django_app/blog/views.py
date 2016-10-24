@@ -99,3 +99,9 @@ def post_edit(request, pk):
         form = PostForm(instance=post)
 
     return render(request, 'blog/post_edit.html', {'form': form})
+
+
+def comment_add(request):
+    if request.method == 'POST':
+        # comment를 추가했던 view로 다시 redirect
+        pass
