@@ -14,7 +14,7 @@
 				<p class="item-description">내 타임라인에 작성한 댓글 수 : <strong>{{ item.number }}</strong></p>
 			</div>
 		</li>
-		<input name="item" type="hidden" value="{{ item }}">
+		<input name="item" type="text" value="{{ item }}" style="width: 300px;">
 		{% endfor %}
 	</ul>
 	<button class="btn btn-primary">전송</button>
