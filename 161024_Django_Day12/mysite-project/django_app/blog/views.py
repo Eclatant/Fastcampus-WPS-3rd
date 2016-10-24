@@ -101,7 +101,7 @@ def post_edit(request, pk):
     return render(request, 'blog/post_edit.html', {'form': form})
 
 
-def comment_add(request, pk):
+def comment_add(request, post_pk):
     """
     기능을 새로 만들고싶다
     1. 해당 기능의 처리결과를 저장할 수 있는 데이터베이스 model 생성
@@ -117,6 +117,18 @@ def comment_add(request, pk):
     6. post_detail view로 redirect
     """
     if request.method == 'POST':
-        post = Post.objects.get(pk=pk)
-        # comment를 추가했던 view로 다시 redirect
-        pass
+        from blog.models import Comment
+        # Comment를 추가할 Post인스턴스 파악
+        post = Post.objects.get(pk=post_pk)
+
+        # POST요청에서 'content'라는 키값으로 전달된 내용을 content변수에 할당
+        content = request.POST['content']
+
+        # 위에서 정의한 Post인스턴스와 내용(content)로
+        comment = Comment.objects.create(
+            post=post,
+            content=content
+        )
+
+        redirect('blog:post_detail', pk=post.pk)
+        
