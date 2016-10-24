@@ -17,6 +17,7 @@
   <h1>{{ post.title }}</h1>
   <p>{{ post.text|linebreaksbr }}</p>
 
+	<h5>댓글 달기</h5>
   <form action="{% url 'blog:comment_add' pk=post.pk %}">
     <input name="content" type="text">
     <button type="submit">댓글달기</button>

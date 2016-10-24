@@ -131,4 +131,3 @@ def comment_add(request, post_pk):
         )
 
         redirect('blog:post_detail', pk=post.pk)
-        
