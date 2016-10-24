@@ -18,7 +18,7 @@ def friends_ranking(request):
             host=request.META['HTTP_HOST'],
             url=reverse('sns:friends_ranking')
         )
-        print('redirect_url : %s' % redirect_uri)
+        print('redirect_uri : %s' % redirect_uri)
         code = request.GET.get('code')
         access_token = facebook.get_access_token(code, redirect_uri)
         user_id = facebook.get_user_id_from_token(access_token)
@@ -29,7 +29,7 @@ def friends_ranking(request):
                                 user_id=user_id,
                                 access_token=access_token,
                             )
-        
+
         r = requests.get(url_request_feed)
         dict_feed_info = r.json()
         json_data = json.dumps(dict_feed_info, indent=2)
