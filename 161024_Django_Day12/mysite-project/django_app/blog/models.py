@@ -41,11 +41,11 @@ class Comment(models.Model):
 
 
 
-def send_comment_mail(sender, instance, ):
-    title = '{} 글에 댓글이 달렸습니다'.format(comment.post.title)
+def send_comment_mail(sender, instance, **kwargs):
+    title = '{} 글에 댓글이 달렸습니다'.format(instance.post.title)
     content = '{}에 {}내용이 달렸네요'.format(
-        comment.created_date.strftime('%Y.%m.%d %H:%M'),
-        comment.content
+        instance.created_date.strftime('%Y.%m.%d %H:%M'),
+        instance.content
     )
     send_mail(title, content)
 
