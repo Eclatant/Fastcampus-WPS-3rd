@@ -134,6 +134,9 @@ def comment_add(request, post_pk):
         content = request.POST['content']
 
         # 위에서 정의한 Post인스턴스와 내용(content)로
+        # post.comment_set.create(
+        #     content=content
+        # )
         comment = Comment.objects.create(
             post=post,
             content=content
