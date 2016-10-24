@@ -42,7 +42,7 @@ def post_detail(request, pk):
 
     # ForeignKey관계에서의 역참조
     comments = post.comment_set.order_by('-created_date')
-    
+
     print('post_detail, post:%s' % post)
     context = {
         'post': post,
