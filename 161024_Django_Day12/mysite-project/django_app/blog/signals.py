@@ -1,6 +1,7 @@
 from django.db.models.signals import post_save
 from django.dispatch import receiver
 from apis.mail import send_mail
+from apis.sms import send_sms
 from blog.models import Comment
 
 
@@ -13,3 +14,4 @@ def send_comment_mail(sender, instance, **kwargs):
     )
     print('send_comment_mail')
     send_mail(title, content)
+    send_sms(content, instance.post.author.phone_number)
