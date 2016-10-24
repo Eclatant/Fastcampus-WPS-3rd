@@ -4,7 +4,7 @@ from django.utils.dateparse import parse_datetime
 from django.utils import timezone
 from django.contrib.auth.models import User
 from django.conf import settings
-from django.db.models.signals import post_save
+from django.db.models.signals import post_save, pre_save
 from django.dispatch import receiver
 
 from apis.mail import send_mail
@@ -43,7 +43,7 @@ class Comment(models.Model):
 
 
 # 데코레이터를 쓰는방법
-@receiver(post_save, sender=Comment)
+@receiver(pre_save, sender=Comment)
 def send_comment_mail(sender, instance, **kwargs):
     title = '{} 글에 댓글이 달렸습니다'.format(instance.post.title)
     content = '{}에 {}내용이 달렸네요'.format(
