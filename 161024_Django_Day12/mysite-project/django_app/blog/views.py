@@ -109,7 +109,6 @@ def comment_add(request, pk):
     4. comment_add view생성 및 url과 연결 (pk값을 받아서 어떤 Post인스턴스에 Comment를 생성하는지 구분)
     5. comment_add view에서 POST요청 받아서 Comment 인스턴스 생성
     6. post_detail view로 redirect
-
     """
     if request.method == 'POST':
         post = Post.objects.get(pk=pk)
