@@ -1,6 +1,7 @@
 from django.shortcuts import render, get_object_or_404
 from django.utils import timezone
 from django.db.models import Q
+from django.contrib import messages
 from .models import Post
 from django.contrib.auth.models import User
 
@@ -129,5 +130,5 @@ def comment_add(request, post_pk):
             post=post,
             content=content
         )
-
+        messages.success(request, '댓글을 달았습니다!')
         return redirect('blog:post_detail', pk=post.pk)
