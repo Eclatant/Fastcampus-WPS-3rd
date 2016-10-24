@@ -4,6 +4,7 @@ from django.utils.dateparse import parse_datetime
 from django.utils import timezone
 from django.contrib.auth.models import User
 from django.conf import settings
+from django.db.models.signals import post_save
 from apis.mail import send_mail
 
 
@@ -30,10 +31,22 @@ class Comment(models.Model):
 
     def save(self, *args, **kwargs):
         super(Comment, self).save(*args, **kwargs)
-        recipient_list = [self.post.author.email]
-        title = '{} 글에 댓글이 달렸습니다'.format(self.post.title)
-        content = '{}에 {}내용이 달렸네요'.format(
-            self.created_date.strftime('%Y.%m.%d %H:%M'),
-            self.content
-        )
-        send_mail(title, content)
+        # recipient_list = [self.post.author.email]
+        # title = '{} 글에 댓글이 달렸습니다'.format(self.post.title)
+        # content = '{}에 {}내용이 달렸네요'.format(
+        #     self.created_date.strftime('%Y.%m.%d %H:%M'),
+        #     self.content
+        # )
+        # send_mail(title, content)
+
+
+
+def send_comment_mail(comment):
+    title = '{} 글에 댓글이 달렸습니다'.format(comment.post.title)
+    content = '{}에 {}내용이 달렸네요'.format(
+        comment.created_date.strftime('%Y.%m.%d %H:%M'),
+        comment.content
+    )
+    send_mail(title, content)
+
+post_save.connect(send_comment_mail, sender=Comment)
