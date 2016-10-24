@@ -11,4 +11,5 @@ def send_comment_mail(sender, instance, **kwargs):
         instance.created_date.strftime('%Y.%m.%d %H:%M'),
         instance.content
     )
+    print('send_comment_mail')
     send_mail(title, content)
