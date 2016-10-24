@@ -20,7 +20,7 @@
 	<h5>댓글 목록</h5>
 	{% for comment in comments %}
 	<div>
-		<p>{{ forloop.counter }} | {{ comment.content }}</p>
+		<p>{{ forloop.counter }} | {{ comment.content }} | {{ comment.created_date }}</p>
 	</div>
 	{% endfor %}
 
