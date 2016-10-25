@@ -12,3 +12,11 @@
 		- app2
 		- app3
 
+
+
+# Linux vim설정
+
+```
+sudo apt-get update
+sudo apt-get install vim
+vim ~/.
