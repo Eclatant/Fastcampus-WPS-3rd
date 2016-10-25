@@ -31,6 +31,12 @@ STATICFILES_DIRS = [
 ]
 STATIC_URL = '/static/'
 
+# Media files
+# 사용자 업로드 파일들이 저장되는 기본경로
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+# MEDIA_ROOT에 저장된 파일들에 접근할 때의 URL
+MEDIA_URL = '/media/'
+
 # Email
 email_config = config['email']
 EMAIL_HOST = email_config['EMAIL_HOST']

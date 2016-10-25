@@ -3,6 +3,7 @@ __dev*/
 .idea/
 *.sqlite3
 *.sqlite
+media/
 
 # Config folders
 .conf/
