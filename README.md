@@ -63,8 +63,8 @@
 		- [ ] Django admin사용 권한
 	- [x] 로그인 구현
 	- [x] 회원가입 구현
-	- [ ] OAuth2.0
-		- [ ] 페이스북 로그인/회원가입 구현
+	- [x] OAuth2.0
+		- [x] 페이스북 로그인/회원가입 구현
 - Admin
 	- [x] Django admin사이트 확인
 	- [ ] Custom user관련 커스터마이징
@@ -80,6 +80,7 @@
 - Message
 	- [x] request에 message전송
 - Email
+	- [x] SMTP설정 후 이메일 보내기
 - Pagination
 - Logging
 - Cache
@@ -89,9 +90,9 @@
 	- [ ] PBV -> CBV 리펙토링
 	- [ ] Generic View
 - Using API
-	- [ ] Youtube API (북마크 프로젝트)
-	- [ ] Facebook API (페이스북 앱 프로젝트)
-	- [ ] SMS API (문자메시지 연동 구현)
+	- [x] Youtube API (북마크 프로젝트)
+	- [x] Facebook API (페이스북 앱 프로젝트)
+	- [x] SMS API (문자메시지 연동 구현)
 	- [ ] crontab
 - Background tasks
 	- [ ] Celery
