@@ -31,3 +31,19 @@ class Photo(models.Model):
     title = models.CharField(max_length=30)
     description = models.CharField(max_length=80, blank=True)
     img = models.ImageField(upload_to='photo')
+    # M2M Field를 사용해서 좋아요 내용을 거치도록 합니다 (중간자 모델)
+    # https://docs.djangoproject.com/en/1.10/topics/db/models/#intermediary-manytomany
+    like_users = models.ManyToManyField(settings.AUTH_USER_MODEL, through='PhotoLike', related_name='photo_set_like_users')
+    dislike_users = models.ManyToManyField(settings.AUTH_USER_MODEL, through='PhotoDislike', related_name='photo_set_dislike_users')
+
+
+class PhotoLike(models.Model):
+    photo = models.ForeignKey(Photo)
+    user = models.ForeignKey(settings.AUTH_USER_MODEL)
+    created_date = models.DateTimeField(auto_now_add=True)
+
+
+class PhotoDislike(models.Model):
+    photo = models.ForeignKey(Photo)
+    user = models.ForeignKey(settings.AUTH_USER_MODEL)
+    created_date = models.DateTimeField(auto_now_add=True)
