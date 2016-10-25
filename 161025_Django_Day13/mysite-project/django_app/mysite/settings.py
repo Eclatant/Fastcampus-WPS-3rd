@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/1.10/ref/settings/
 """
 import json
 import os
+DEBUG = True
 
 # Directories
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -28,39 +29,20 @@ config_file.close()
 STATICFILES_DIRS = [
     STATIC_DIR,
 ]
-
-# Auth
-AUTH_USER_MODEL = 'member.MyUser'
-AUTHENTICATION_BACKENDS = [
-    'django.contrib.auth.backends.ModelBackend',
-    'member.backends.FacebookBackend',
-]
+STATIC_URL = '/static/'
 
 # Email
-EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_PORT = '587'
-EMAIL_HOST_USER = 'fastcampus.2016@gmail.com'
-EMAIL_HOST_PASSWORD = 'fastcampus'
-EMAIL_USE_TLS = True
+email_config = config['email']
+EMAIL_HOST = email_config['EMAIL_HOST']
+EMAIL_PORT = email_config['EMAIL_PORT']
+EMAIL_HOST_USER = email_config['EMAIL_HOST_USER']
+EMAIL_HOST_PASSWORD = email_config['EMAIL_HOST_PASSWORD']
+EMAIL_USE_TLS = email_config['EMAIL_USE_TLS']
 DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
 
-
-# Quick-start development settings - unsuitable for production
-# See https://docs.djangoproject.com/en/1.10/howto/deployment/checklist/
-
-# SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'r5smmf=5$8pihr+g3azx%)v+^%xh1zst1)8qi@v^n+^aga9*qo'
-
-# SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
-
-ALLOWED_HOSTS = []
-
-
 # Facebook
-FACEBOOK_APP_ID = '338774269808826'
-FACEBOOK_SECRET_CODE = 'b780a89551228b4c1015c529a7667722'
-
+FACEBOOK_APP_ID = config['facebook']['FACEBOOK_APP_ID']
+FACEBOOK_SECRET_CODE = config['facebook']['FACEBOOK_SECRET_CODE']
 
 # Application definition
 INSTALLED_APPS = [
@@ -77,17 +59,26 @@ INSTALLED_APPS = [
     'video',
 ]
 
-MIDDLEWARE = [
-    'django.middleware.security.SecurityMiddleware',
-    'django.contrib.sessions.middleware.SessionMiddleware',
-    'django.middleware.common.CommonMiddleware',
-    'django.middleware.csrf.CsrfViewMiddleware',
-    'django.contrib.auth.middleware.AuthenticationMiddleware',
-    'django.contrib.messages.middleware.MessageMiddleware',
-    'django.middleware.clickjacking.XFrameOptionsMiddleware',
+# Auth
+AUTH_USER_MODEL = 'member.MyUser'
+AUTHENTICATION_BACKENDS = [
+    'django.contrib.auth.backends.ModelBackend',
+    'member.backends.FacebookBackend',
 ]
-
-ROOT_URLCONF = 'mysite.urls'
+AUTH_PASSWORD_VALIDATORS = [
+    {
+        'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
+    },
+    {
+        'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator',
+    },
+    {
+        'NAME': 'django.contrib.auth.password_validation.CommonPasswordValidator',
+    },
+    {
+        'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
+    },
+]
 
 TEMPLATES = [
     {
@@ -107,12 +98,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'mysite.wsgi.application'
-
-
-# Database
-# https://docs.djangoproject.com/en/1.10/ref/settings/#databases
-
+# DB
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
@@ -120,41 +106,23 @@ DATABASES = {
     }
 }
 
-
-# Password validation
-# https://docs.djangoproject.com/en/1.10/ref/settings/#auth-password-validators
-
-AUTH_PASSWORD_VALIDATORS = [
-    {
-        'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
-    },
-    {
-        'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator',
-    },
-    {
-        'NAME': 'django.contrib.auth.password_validation.CommonPasswordValidator',
-    },
-    {
-        'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
-    },
+MIDDLEWARE = [
+    'django.middleware.security.SecurityMiddleware',
+    'django.contrib.sessions.middleware.SessionMiddleware',
+    'django.middleware.common.CommonMiddleware',
+    'django.middleware.csrf.CsrfViewMiddleware',
+    'django.contrib.auth.middleware.AuthenticationMiddleware',
+    'django.contrib.messages.middleware.MessageMiddleware',
+    'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-
-# Internationalization
-# https://docs.djangoproject.com/en/1.10/topics/i18n/
-
-LANGUAGE_CODE = 'en-us'
-
-TIME_ZONE = 'UTC'
-
+# Other settings
+ROOT_URLCONF = 'mysite.urls'
+LANGUAGE_CODE = 'ko-kr'
+TIME_ZONE = 'Asia/Seoul'
 USE_I18N = True
-
 USE_L10N = True
-
 USE_TZ = True
-
-
-# Static files (CSS, JavaScript, Images)
-# https://docs.djangoproject.com/en/1.10/howto/static-files/
-
-STATIC_URL = '/static/'
+SECRET_KEY = 'r5smmf=5$8pihr+g3azx%)v+^%xh1zst1)8qi@v^n+^aga9*qo'
+WSGI_APPLICATION = 'mysite.wsgi.application'
+ALLOWED_HOSTS = []
