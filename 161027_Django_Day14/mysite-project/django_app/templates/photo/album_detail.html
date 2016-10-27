@@ -30,6 +30,55 @@
 						<span>| {{ photo.description }}</span>
 						{% endif %}
 					</div>
+					<div class="like-container">
+						<form action="{% url 'photo:photo_like' pk=photo.pk like_type='like' %}" method="POST" class="like-form">{% csrf_token %}
+							<button
+								class="btn label
+									{% if user in photo.like_users.all %}label-info
+									{% else %}label-default
+									{% endif %}"
+							  type="submit"
+								data-toggle="tooltip"
+								data-placement="right"
+								title="
+									{% for user in photo.like_users.all|slice:'3' %}
+										{{ user.email }}{% if not forloop.last %},
+										{% endif %}
+
+										{% if photo.like_users.count > 3 %}
+										외 {{ photo.like_users.count|add:'-3' }}명
+										{% endif %}
+									{% endfor %}
+								">
+								<span class="glyphicon glyphicon-thumbs-up"></span>
+								<span> {{ photo.like_users.count }}</span>
+							</button>
+						</form>
+
+						<form action="{% url 'photo:photo_like' pk=photo.pk like_type='dislike' %}" method="POST" class="like-form">{% csrf_token %}
+							<button
+								class="btn label
+									{% if user in photo.dislike_users.all %}label-danger
+									{% else %}label-default
+									{% endif %}"
+							  type="submit"
+								data-toggle="tooltip"
+								data-placement="right"
+								title="
+									{% for user in photo.dislike_users.all|slice:'3' %}
+										{{ user.email }}{% if not forloop.last %},
+										{% endif %}
+
+										{% if photo.dislike_users.count > 3 %}
+										외 {{ photo.dislike_users.count|add:'-3' }}명
+										{% endif %}
+									{% endfor %}
+								">
+								<span class="glyphicon glyphicon-thumbs-down"></span>
+								<span> {{ photo.dislike_users.count }}</span>
+							</button>
+						</form>
+					</div>
 				</div>
 			</div>
 		</div>

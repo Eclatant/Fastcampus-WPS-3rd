@@ -7,14 +7,21 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>이한영의 홈페이지에 오신것을 환영합니다</title>
 
-  <!-- https://tutorial.djangogirls.org/ko/css/ -->
-  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap.min.css' %}">
+  <link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap-theme.min.css' %}">
+
+  <!-- jQuery -->
+  <script src="{% static 'js/jquery-3.1.1.min.js' %}"></script>
+
+  <!-- Bootstrap JS -->
+  <script src="{% static 'bootstrap/js/bootstrap.min.js' %}"></script>
 
   <!-- Custom CSS -->
   <link rel="stylesheet" href="{% static 'css/common.min.css' %}">
   <link rel="stylesheet" href="{% static 'css/blog.min.css' %}">
   <link rel="stylesheet" href="{% static 'css/photo.min.css' %}">
+
   {% block head %}
   {% endblock %}
 </head>
@@ -28,6 +35,11 @@
 	  js.src = "//connect.facebook.net/ko_KR/sdk.js#xfbml=1&version=v2.8";
 	  fjs.parentNode.insertBefore(js, fjs);
 	}(document, 'script', 'facebook-jssdk'));</script>
+  <script>
+    $(function () {
+      $('[data-toggle="tooltip"]').tooltip()
+    })
+  </script>
 
   <nav class="navbar navbar-default navbar-static-top">
     <div class="container">
