@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/1.10/ref/settings/
 import json
 import os
 DEBUG = True
+# DEBUG = False
 
 # Directories
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -136,4 +137,6 @@ USE_L10N = True
 USE_TZ = True
 SECRET_KEY = 'r5smmf=5$8pihr+g3azx%)v+^%xh1zst1)8qi@v^n+^aga9*qo'
 WSGI_APPLICATION = 'mysite.wsgi.application'
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    '*',
+]
