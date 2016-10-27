@@ -1,5 +1,6 @@
 from django.db import models
 from django.conf import settings
+from mysite.utils.models import BaseModel
 from member.models import MyUser as User
 """
 Album
@@ -19,13 +20,13 @@ Photo좋아요를 구현하고싶으면 어떻게해야될까요?
 """
 
 
-class Album(models.Model):
+class Album(BaseModel):
     title = models.CharField(max_length=30)
     owner = models.ForeignKey(settings.AUTH_USER_MODEL)
     description = models.CharField(max_length=80, blank=True)
 
 
-class Photo(models.Model):
+class Photo(BaseModel):
     album = models.ForeignKey(Album)
     owner = models.ForeignKey(settings.AUTH_USER_MODEL)
     title = models.CharField(max_length=30)
@@ -37,13 +38,11 @@ class Photo(models.Model):
     dislike_users = models.ManyToManyField(settings.AUTH_USER_MODEL, through='PhotoDislike', related_name='photo_set_dislike_users')
 
 
-class PhotoLike(models.Model):
+class PhotoLike(BaseModel):
     photo = models.ForeignKey(Photo)
     user = models.ForeignKey(settings.AUTH_USER_MODEL)
-    created_date = models.DateTimeField(auto_now_add=True)
 
 
-class PhotoDislike(models.Model):
+class PhotoDislike(BaseModel):
     photo = models.ForeignKey(Photo)
     user = models.ForeignKey(settings.AUTH_USER_MODEL)
-    created_date = models.DateTimeField(auto_now_add=True)
