@@ -1,0 +1,19 @@
+{% extends 'common/base.html' %}
+
+{% block content %}
+<div id="album_list">
+	<h4>Album list</h4>
+	<ul class="list-group">
+		{% for album in albums %}
+		<li class="list-group-item">
+			<span class="badge">{{ album.photo_set.count }}</span>
+			<div><strong>{{ album.title }}</strong></div>
+			<span>{{ album.owner.email }}</span>
+			{% if album.description %}
+			<span> | {{ album.description }}</span>
+			{% endif %}
+		</li>
+		{% endfor %}
+	</ul>
+</div>
+{% endblock %}
