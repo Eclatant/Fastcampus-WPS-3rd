@@ -9,7 +9,7 @@
 		<span>| {{ album.description }}</span>
 		{% endif %}
 	</div>
-	<a href="#" class="btn btn-primary btn-sm btn-top-right">
+	<a href="{% url 'photo:photo_add' album_pk=album.pk %}" class="btn btn-primary btn-sm btn-top-right">
 		<span class="glyphicon glyphicon-plus"></span>
 		Add Photo
 	</a>
