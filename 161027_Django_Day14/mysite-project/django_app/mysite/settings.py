@@ -71,7 +71,7 @@ AUTH_USER_MODEL = 'member.MyUser'
 
 # AUTH_BACKEND 변수로 지정 (login시 backend지정 위해)
 AUTH_BACKEND_DEFAULT = 'django.contrib.auth.backends.ModelBackend'
-AUTH_BACKEND_FACEBOOK = 'member.backends.FacebookBackend',
+AUTH_BACKEND_FACEBOOK = 'member.backends.FacebookBackend'
 AUTHENTICATION_BACKENDS = [
     AUTH_BACKEND_DEFAULT,
     AUTH_BACKEND_FACEBOOK
