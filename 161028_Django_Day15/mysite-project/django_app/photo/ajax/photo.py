@@ -1,6 +1,9 @@
 import json
 from django.http import HttpResponse
 from django.shortcuts import get_object_or_404
+from django.views.decorators.csrf import csrf_exempt
+from django.views.decorators.http import require_POST
+
 from ..models import Photo, PhotoLike, PhotoDislike
 
 __all__ = [
@@ -8,6 +11,8 @@ __all__ = [
 ]
 
 
+@require_POST
+@csrf_exempt
 def photo_like(request, pk, like_type='like'):
     photo = get_object_or_404(Photo, pk=pk)
     album = photo.album

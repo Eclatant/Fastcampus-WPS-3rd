@@ -17,6 +17,9 @@
   <!-- Bootstrap JS -->
   <script src="{% static 'bootstrap/js/bootstrap.min.js' %}"></script>
 
+  <!-- Custom JS -->
+  <script src="{% static 'js/base.js' %}"></script>
+
   <!-- Custom CSS -->
   <link rel="stylesheet" href="{% static 'css/common.min.css' %}">
   <link rel="stylesheet" href="{% static 'css/blog.min.css' %}">
@@ -108,5 +111,7 @@
       {% endblock %}
     </div>
   </div>
+  {% block script %}
+  {% endblock %}
 </body>
 </html>
