@@ -3,10 +3,11 @@ from django.contrib.auth.decorators import login_required
 from django.views.decorators.http import require_POST
 from django.urls import reverse
 from ..models import Album, Photo, PhotoLike, PhotoDislike
-from ..forms import PhotoForm
+from ..forms import PhotoForm, MultiPhotoForm
 
 __all__ = [
     'photo_add',
+    'photo_multi_add',
     'photo_detail',
     'photo_like',
 ]
@@ -36,6 +37,32 @@ def photo_add(request, album_pk):
         'form': form,
     }
     return render(request, 'photo/photo_add.html', context)
+
+
+@login_required
+def photo_multi_add(request, album_pk):
+    album = get_object_or_404(Album, pk=album_pk)
+    if request.method == 'POST':
+        form = MultiPhotoForm(request.POST, request.FILES)
+        if form.is_valid():
+            title = form.cleaned_data['title']
+            description = form.cleaned_data['description']
+            files = request.FILES.getlist('img')
+            for index, file in enumerate(files):
+                Photo.objects.create(
+                    album=album,
+                    owner=request.user,
+                    title='%s(%s)' % (title, index+1),
+                    description='%s(%s)' % (description, index+1),
+                    img=file,
+                )
+            return redirect('photo:album_detail', pk=album_pk)
+    else:
+        form = MultiPhotoForm()
+    context = {
+        'form': form,
+    }
+    return render(request, 'photo/photo_multi_add.html', context)
 
 
 def photo_detail(request, pk):
