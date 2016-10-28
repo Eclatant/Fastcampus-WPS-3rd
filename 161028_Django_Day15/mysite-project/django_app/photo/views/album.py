@@ -1,3 +1,4 @@
+from django.core.paginator import Paginator, PageNotAnInteger, EmptyPage
 from django.shortcuts import redirect, render, get_object_or_404
 from django.contrib.auth.decorators import login_required
 from ..models import Album
@@ -40,8 +41,20 @@ def album_add(request):
 
 def album_detail(request, pk):
     album = get_object_or_404(Album, pk=pk)
+    photo_list = album.photo_set.all()
+    paginator = Paginator(photo_list, 4)
+
+    page = request.GET.get('page')
+    try:
+        photos = paginator.page(page)
+    except PageNotAnInteger:
+        photos = paginator.page(1)
+    except EmptyPage:
+        photos = paginator.page(paginator.num_pages)
+
     context = {
         'album': album,
+        'photos': photos,
     }
     # template_file = 'photo/album_detail.html'
     template_file = 'photo/ajax_album_detail.html'
