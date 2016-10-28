@@ -1,3 +1,5 @@
+import json
+from django.http import HttpResponse
 from django.shortcuts import get_object_or_404
 from ..models import Photo, PhotoLike, PhotoDislike
 
@@ -20,7 +22,7 @@ def photo_like(request, pk, like_type='like'):
     # 요청한 유저가 이미 좋아요(또는 싫어요)를 했는가?
     if user_like_exist.exists():
         user_like_exist.delete()
-
+        msg = 'delete'
     # 이미 누르지 않은 경우, 좋아요 처리를 해준다
     else:
         like_model.objects.create(
@@ -33,3 +35,8 @@ def photo_like(request, pk, like_type='like'):
             user=request.user,
             photo=photo
         ).delete()
+        msg = 'created'
+    ret = {
+        'msg': msg
+    }
+    return HttpResponse(json.dumps(ret), content_type='application/json')
