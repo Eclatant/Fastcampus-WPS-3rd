@@ -70,7 +70,7 @@
 	- [x] Custom user관련 커스터마이징
 	- [x] list_filter
 	- [x] list_search
-	- [ ] search_fields
+	- [x] search_fields
 	- [ ] actions
 	- [x] fieldsets
 - Image, File
