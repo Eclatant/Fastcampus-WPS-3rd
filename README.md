@@ -60,28 +60,29 @@
 	- Custom user
 		- [x] AbstractBaseUser
 		- [x] BaseUserManager
-		- [ ] Django admin사용 권한
+		- [x] Django admin사용 권한
 	- [x] 로그인 구현
 	- [x] 회원가입 구현
 	- [x] OAuth2.0
 		- [x] 페이스북 로그인/회원가입 구현
 - Admin
 	- [x] Django admin사이트 확인
-	- [ ] Custom user관련 커스터마이징
-	- [ ] list_filter
-	- [ ] list_search
-	- [ ] search_fields
+	- [x] Custom user관련 커스터마이징
+	- [x] list_filter
+	- [x] list_search
+	- [x] search_fields
 	- [ ] actions
-	- [ ] fieldsets
+	- [x] fieldsets
 - Image, File
-	- [ ] MEDIA_ROOT, MEDIA_URL, staticfiles serve
-	- [ ] ImageField, FileField
-	- [ ] Pillow
+	- [x] MEDIA_ROOT, MEDIA_URL, staticfiles serve
+	- [x] ImageField, FileField
+	- [x] Pillow
 - Message
 	- [x] request에 message전송
 - Email
 	- [x] SMTP설정 후 이메일 보내기
 - Pagination
+	- [x] 긴 Queryset Pagination
 - Logging
 - Cache
 	- [ ] memcached설치
