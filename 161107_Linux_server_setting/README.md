@@ -315,3 +315,7 @@ Security Groups -> Inbound -> Edit -> HTTP
 sudo vi /etc/uwsgi/sites/mysite.ini
 chown-socket = nginx
 ```
+
+
+## Cloudflare
+
