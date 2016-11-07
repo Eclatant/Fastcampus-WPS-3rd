@@ -103,6 +103,8 @@ libreadline-dev libsqlite3-dev wget curl llvm libncurses5-dev libncursesw5-dev x
 
 #### Pillow 라이브러리 설치
 
+[공식문서](https://pillow.readthedocs.io/en/3.4.x/installation.html#basic-installation)
+
 ```
 sudo apt-get install libtiff5-dev libjpeg8-dev zlib1g-dev \
     libfreetype6-dev liblcms2-dev libwebp-dev tcl8.6-dev tk8.6-dev python-tk
