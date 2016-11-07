@@ -79,6 +79,15 @@ sudo curl -L http://install.ohmyz.sh | sh
 sudo chsh ubuntu -s /usr/bin/zsh
 ```
 
+#### pyenv requirements설치
+
+[공식문서](https://github.com/yyuu/pyenv/wiki/Common-build-problems)
+
+```
+sudo apt-get install -y make build-essential libssl-dev zlib1g-dev libbz2-dev \
+libreadline-dev libsqlite3-dev wget curl llvm libncurses5-dev libncursesw5-dev xz-utils
+```
+
 #### pyenv 설치
 
 ```
@@ -94,14 +103,6 @@ eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
 ```
 
-#### pyenv requirements설치
-
-[공식문서](https://github.com/yyuu/pyenv/wiki/Common-build-problems)
-
-```
-sudo apt-get install -y make build-essential libssl-dev zlib1g-dev libbz2-dev \
-libreadline-dev libsqlite3-dev wget curl llvm libncurses5-dev libncursesw5-dev xz-utils
-```
 
 #### Pillow 라이브러리 설치
 
