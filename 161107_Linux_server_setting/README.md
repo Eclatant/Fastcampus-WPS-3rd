@@ -26,6 +26,9 @@ Web Server Gateway Interface
 
 #### Key Pairs생성
 
+다운받은 .pem파일을 ~/.ssh폴더에 넣기
+
+
 #### 언어팩 설치
 
 ```
