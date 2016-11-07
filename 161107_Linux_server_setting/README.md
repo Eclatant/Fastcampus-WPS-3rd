@@ -164,6 +164,8 @@ Security Groups -> Inbound -> Edit -> Custom TCP Rule -> 8080
 vi mysite/settings.py
 ALLOWED_HOSTS = [
 	'<ec2 domain name'>,
+	또는
+	'.amazonaws.com',
 ]
 ```
 
