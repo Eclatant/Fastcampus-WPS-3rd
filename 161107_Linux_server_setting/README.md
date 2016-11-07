@@ -28,6 +28,21 @@ Web Server Gateway Interface
 
 다운받은 .pem파일을 ~/.ssh폴더에 넣기
 
+#### UNPROTECTED PRIVATE KEY FILE에러
+
+```
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@         WARNING: UNPROTECTED PRIVATE KEY FILE!          @
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+Permissions 0644 for '/Users/Arcanelux/.ssh/fastcampus.pem' are too open.
+It is required that your private key files are NOT accessible by others.
+This private key will be ignored.
+Load key "/Users/Arcanelux/.ssh/fastcampus.pem": bad permissions
+Permission denied (publickey).
+```
+
+위와같은 경우, chmod 400 <pem file>로 소유주만 읽을 수 있도록 권한설정을 해준다.
+
 
 #### 언어팩 설치
 
