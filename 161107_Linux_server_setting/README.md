@@ -196,6 +196,7 @@ ex) pyenv virtualenv이름이 mysite-env, django프로젝트가 /srv/mysite/djan
 ```
 uwsgi --http :8080 --home ~/.pyenv/versions/mysite-env --chdir /srv/mysite/django_app -w mysite.wsgi
 ```
+
 실행 후 <ec2도메인>:8080으로 접속하여 요청을 잘 받는지 확인
 
 #### uWSGI 사이트 파일 작성
@@ -217,6 +218,7 @@ gid = nginx
 
 socket = /tmp/mysite.sock
 chmod-socket = 666
+chown-socket = nginx
 
 enable-threads = true
 master = true
@@ -229,7 +231,15 @@ pidfile = /tmp/mysite.pid
 uwsgi --http :8080 -i /etc/uwsgi/sites/mysite.ini
 ```
 
-#### uWSGI init설정파일 작성
+nginx계정으로 동작시킬 때  
+(위 방법으로 실행할 경우, chown-socket에서 permission error로 인해 진행되지 않음)
+
+```
+sudo -u nginx bash -c '/home/ubuntu/.pyenv/versions/mysite/bin/uwsgi -i /etc/uwsgi/sites/mysite.ini'
+sudo -u 실행시킬 유저, bash 명령어로 '안의 내용'을 실행
+```
+
+#### uWSGI 서비스 설정파일 작성
 
 ```
 sudo vi /etc/systemd/system/uwsgi.service
@@ -280,7 +290,7 @@ sudo vi /etc/nginx/sites-available/mysite
 
 server {
     listen 80;
-    server_name <ec2 도메인>;
+    server_name localhost;
     charset utf-8;
     client_max_body_size 128M;
 
