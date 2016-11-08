@@ -108,5 +108,5 @@
 - Build
 	- [ ] Djano Sass컴파일
 - Deploy(배포)
-	- [ ] Ubuntu, Nginx, uWSGI를 이용한 배포
-	- [ ] AWS Elasticbeanstalk와 AWS RDS, AWS S3를 이용한 배포
+	- [x] Ubuntu, Nginx, uWSGI를 이용한 배포
+	- [x] AWS Elasticbeanstalk와 AWS RDS, AWS S3를 이용한 배포
