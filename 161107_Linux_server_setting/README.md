@@ -341,6 +341,7 @@ cat /var/log/nginx/error.log
 #### Nginx log파일에서 sock파일 접근 불가시
 
 **socket파일 권한 소유자 확인**
+
 ```
 cd /tmp
 ls -al
