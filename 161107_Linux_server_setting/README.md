@@ -310,6 +310,8 @@ sudo ln -s /etc/nginx/sites-available/mysite /etc/nginx/sites-enabled/mysite
 sudo rm /etc/nginx/sites-enabled/default
 ```
 
+> nginx.conf파일에 어떤 폴더에 있는 설정을 가져와서 실행할 지 적혀있음
+
 
 #### uWSGI, Nginx재시작
 
