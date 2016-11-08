@@ -319,6 +319,27 @@ sudo rm /etc/nginx/sites-enabled/default
 sudo systemctl restart uwsgi nginx
 ```
 
+-
+
+### 오류 발생 시
+
+#### systemctl restart시 오류 발생 시
+
+```
+(오류 발생한 서비스에 따라 아래 명령어 실행)
+sudo systemctl status uwsgi.service
+sudo systemctl status nginx.service
+```
+
+#### 502 Bad Gateway
+
+**Nginx log파일 확인**  
+```
+cat /var/log/nginx/error.log
+```
+
+-
+
 #### AWS Secutiriy Groups 80 Port추가
 
 Security Groups -> Inbound -> Edit -> HTTP
