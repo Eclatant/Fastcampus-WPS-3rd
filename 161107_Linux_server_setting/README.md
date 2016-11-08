@@ -359,14 +359,6 @@ sudo rm mysite.pid mysite.sock으로 삭제 후 서비스 재시작
 Security Groups -> Inbound -> Edit -> HTTP
 
 
-#### uWSGI 사이트파일에 필드 추가
-
-```
-sudo vi /etc/uwsgi/sites/mysite.ini
-chown-socket = nginx
-```
-
-
 ## Cloudflare
 
 Add site
