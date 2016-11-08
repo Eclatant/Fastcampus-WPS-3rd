@@ -304,6 +304,12 @@ server {
 sudo ln -s /etc/nginx/sites-available/mysite /etc/nginx/sites-enabled/mysite
 ```
 
+#### sites-enabled의 default파일 삭제
+
+```
+sudo rm /etc/nginx/sites-enabled/default
+```
+
 
 #### uWSGI, Nginx재시작
 
