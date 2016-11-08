@@ -237,6 +237,12 @@ sudo -u nginx bash -c '/home/ubuntu/.pyenv/versions/mysite/bin/uwsgi -i /etc/uws
 sudo -u 실행시킬 유저, bash 명령어로 '안의 내용'을 실행
 ```
 
+또는 sudo로 root권한으로 실행
+
+```
+sudo /home/ubuntu/.pyenv/versions/mysite/bin/uwsgi --http :8080 -i /etc/uwsgi/sites/mysite.ini
+```
+
 #### uWSGI 서비스 설정파일 작성
 
 ```
