@@ -276,7 +276,7 @@ nginx -v
 ```
 sudo vi /etc/nginx/nginx.conf
 
-user = nginx
+user nginx
 ```
 
 #### Nginx 가상서버 설정 파일 작성
