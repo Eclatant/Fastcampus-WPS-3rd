@@ -216,7 +216,7 @@ gid = nginx
 
 socket = /tmp/mysite.sock
 chmod-socket = 666
-chown-socket = nginx
+chown-socket = nginx:nginx
 
 enable-threads = true
 master = true
@@ -229,15 +229,7 @@ pidfile = /tmp/mysite.pid
 uwsgi --http :8080 -i /etc/uwsgi/sites/mysite.ini
 ```
 
-nginx계정으로 동작시킬 때  
-(위 방법으로 실행할 경우, chown-socket에서 permission error로 인해 진행되지 않음)
-
-```
-sudo -u nginx bash -c '/home/ubuntu/.pyenv/versions/mysite/bin/uwsgi -i /etc/uwsgi/sites/mysite.ini'
-sudo -u 실행시킬 유저, bash 명령어로 '안의 내용'을 실행
-```
-
-또는 sudo로 root권한으로 실행
+sudo로 root권한으로 실행
 
 ```
 sudo /home/ubuntu/.pyenv/versions/mysite/bin/uwsgi --http :8080 -i /etc/uwsgi/sites/mysite.ini
