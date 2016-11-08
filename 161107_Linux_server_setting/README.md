@@ -316,8 +316,7 @@ sudo rm /etc/nginx/sites-enabled/default
 #### uWSGI, Nginx재시작
 
 ```
-sudo systemctl restart uwsgi
-sudo systemctl restart nginx
+sudo systemctl restart uwsgi nginx
 ```
 
 #### AWS Secutiriy Groups 80 Port추가
