@@ -344,8 +344,13 @@ cat /var/log/nginx/error.log
 ```
 cd /tmp
 ls -al
+-rw-r--r--  1 nginx  nginx     6 Nov  8 06:58 mysite.pid
+srw-rw-rw-  1 nginx  nginx     0 Nov  8 06:58 mysite.sock
 
+nginx가 소유자가 아닐 경우, 
+sudo rm mysite.pid mysite.sock으로 삭제 후 서비스 재시작
 ```
+
 -
 
 #### AWS Secutiriy Groups 80 Port추가
