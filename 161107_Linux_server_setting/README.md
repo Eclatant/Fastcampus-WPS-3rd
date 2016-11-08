@@ -207,11 +207,9 @@ sudo mkdir /etc/uwsgi/sites
 sudo vi /etc/uwsgi/sites/mysite.ini
 
 [uwsgi]
-project = mysite
-base = /srv
-chdir = %(base)/%(project)/django_app
-module = %(project).wsgi:application
-home = /home/ubuntu/.pyenv/versions/mysite
+chdir = /srv/mysite/django_app # Django application folder
+module = mysite.wsgi:application # Django project name.wsgi
+home = /home/ubuntu/.pyenv/versions/mysite # VirtualEnv location
 
 uid = nginx
 gid = nginx
