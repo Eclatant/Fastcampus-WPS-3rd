@@ -361,5 +361,5 @@ Security Groups -> Inbound -> Edit -> HTTP
 
 ## Cloudflare
 
-Add site
+#### ALLOWED_HOSTS 추가
 
