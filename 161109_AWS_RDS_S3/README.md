@@ -149,6 +149,16 @@ else:
 pip install psycopg2
 ```
 
+#### 서버에서 psycopg2 패키지 실행을 위해 yum패키지 관리자에서 postgresql95-devel을 설치하도록 함
+
+`.ebextensions/packages.config`
+
+```
+packages:
+  yum:
+    postgresql95-devel: []
+```
+
 #### .ebextensions/django.config에 배포시 실행할 커맨드 추가
 
 ```
