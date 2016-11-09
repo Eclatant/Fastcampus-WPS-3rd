@@ -242,6 +242,16 @@ class Command(BaseCommand):
 
 ```
 
+#### django.config의 container_commands에 deploy시마다 createsu command를 실행하도록 설정
+
+`django.config`
+
+```
+03_createsu:
+    command: "source /opt/python/run/venv/bin/activate && python django_app/manage.py createsu --noinput"
+    leader_only: true
+```
+
 
 
 ## S3 Bucket 생성 및 연결
