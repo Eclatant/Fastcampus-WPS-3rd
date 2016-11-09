@@ -210,6 +210,8 @@ RDS SecurityGroup선택 -> Edit -> Add Rule -> PostgreSQL -> Source에 추가할
 
 #### member app추가, management모듈 추가
 
+settings.py의 INSTALLED_APPS에 추가
+
 ```
 python manage.py startapp member
 ```
