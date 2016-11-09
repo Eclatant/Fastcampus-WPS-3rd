@@ -1,3 +1,78 @@
+# Elasticbeanstalk 복습
+
+> eb deploy전에는 git commit하셔야 합니다.
+
+### Django 프로젝트 폴더 생성
+
+**전체 프로젝트 폴더**  
+eb-again-project/
+
+**Django 프로젝트 폴더**  
+eb-again-project/django_app/
+
+**Django 프로젝트 이름**  
+eb_again
+
+**구조**  
+
+- eb-again-project/
+	- .git/
+	- .gitignore
+	- .python-version
+	- requirements.txt
+	- .ebextensions/
+	- .elasticbeanstalk/
+	- django_app/
+		- manage.py
+		- eb_again/
+			- settings.py
+			- urls.py
+			- wsgi.py
+
+### AWS IAM User생성
+
+IAM -> Users -> Create New Users -> fastcampus -> credentials.cvs 다운로드
+
+### EB 및 env 생성
+
+```
+eb init
+eb create
+```
+
+### WSGI path 지정하는 설정파일 생성
+
+```
+mkdir .ebextensions
+vi .ebextensions/django.config
+
+option_settings:
+  aws:elasticbeanstalk:container:python:
+    WSGIPath: django_app/eb_again/wsgi.py
+    NumProcesses: 3
+    NumThreads: 20
+  aws:elasticbeanstalk:application:environment:
+    DJANGO_SETTINGS_MODULE: eb_again.settings
+    PYTHONPATH: /opt/python/current/app/django_app:$PYTHONPATH
+    LANG: "ko_KR.utf8"
+    LC_ALL: "ko_KR.UTF-8"
+    LC_LANG: "ko_KR.UTF-8"
+```
+
+### Commit후 deploy
+
+```
+git add -A
+git commit
+eb deploy
+```
+
+
+
+
+
+
+
 # AWS RDS, S3 연결
 
 ## AWS RDS 연결

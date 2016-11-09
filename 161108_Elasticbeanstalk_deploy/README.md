@@ -170,3 +170,9 @@ eb deploy
 ```
 eb open
 ```
+
+#### 로그 확인
+
+```
+eb logs
+```
