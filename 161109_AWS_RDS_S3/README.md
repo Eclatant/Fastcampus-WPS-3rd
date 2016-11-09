@@ -199,6 +199,11 @@ EC2 Security Group의 SecurityGroup for ElasticBeanstalk environment인 GroupID�
 
 RDS SecurityGroup선택 -> Edit -> Add Rule -> PostgreSQL -> Source에 추가할 GroupID로 자동완성되는지 확인 후 추가 -> Save
 
+#### superuser로 사용될 user/password를 settings_deploy.json에 추가
+
+```
+
+```
 
 #### member app추가, management모듈 추가
 
