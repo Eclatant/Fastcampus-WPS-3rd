@@ -111,6 +111,15 @@ vi settings_deploy.json
 DEBUG = (len(sys.argv) > 1 and sys.argv[1] == 'runserver')
 ```
 
+#### DIRS추가
+
+```
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+ROOT_DIR = os.path.dirname(BASE_DIR)
+CONF_DIR = os.path.join(ROOT_DIR, '.django-conf')
+STATIC_ROOT = os.path.join(ROOT_DIR, 'static_root')
+```
+
 #### DEBUG 여부에 따라 config 다르게 불러오기
 
 ```python
