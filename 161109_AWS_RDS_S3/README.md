@@ -134,6 +134,12 @@ else:
     DATABASES = config['databases']
 ```
 
+#### psycopg2 패키지 설치
+
+```
+pip install psycopg2
+```
+
 #### .ebextensions/django.config에 배포시 실행할 커맨드 추가
 
 ```
