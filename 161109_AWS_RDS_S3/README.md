@@ -150,6 +150,17 @@ container_commands:
     command: "source /opt/python/run/venv/bin/activate && python django_app/manage.py migrate --noinput"
 ```
 
+#### STATIC_ROOT 지정
+
+`settings.py`
+
+```
+
+STATIC_ROOT 지정해줍니다
+```
+
+
+
 ## S3 Bucket 생성 및 연결
 
 > <https://realpython.com/blog/python/deploying-a-django-app-to-aws-elastic-beanstalk/>  
