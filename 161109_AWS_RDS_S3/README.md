@@ -164,7 +164,7 @@ packages:
 `vi .ebignore`
 
 ```
-
+!.django-conf/
 ```
 
 #### .ebextensions/django.config에 배포시 실행할 커맨드 추가
