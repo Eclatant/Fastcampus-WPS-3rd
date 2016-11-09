@@ -202,7 +202,10 @@ RDS SecurityGroup선택 -> Edit -> Add Rule -> PostgreSQL -> Source에 추가할
 #### superuser로 사용될 user/password를 settings_deploy.json에 추가
 
 ```
-
+"defaultSuperuser": {
+	"username": "<username>",
+	"password": "<password>"
+}
 ```
 
 #### member app추가, management모듈 추가
