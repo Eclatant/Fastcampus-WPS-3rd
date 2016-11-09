@@ -193,6 +193,10 @@ container_commands:
     command: "source /opt/python/run/venv/bin/activate && python django_app/manage.py migrate --noinput"
 ```
 
+#### DB connection 에러 날 시
+
+
+
 
 
 
