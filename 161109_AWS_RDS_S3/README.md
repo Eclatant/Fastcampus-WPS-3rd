@@ -124,7 +124,7 @@ STATIC_ROOT = os.path.join(ROOT_DIR, 'static_root')
 
 ```
 vi .gitignore
-
+static_root/
 ```
 
 #### DEBUG 여부에 따라 config 다르게 불러오기
