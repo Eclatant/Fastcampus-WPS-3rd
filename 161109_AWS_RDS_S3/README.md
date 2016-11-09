@@ -120,6 +120,10 @@ CONF_DIR = os.path.join(ROOT_DIR, '.django-conf')
 STATIC_ROOT = os.path.join(ROOT_DIR, 'static_root')
 ```
 
+### static_root폴더는 .gitignore에 추가
+
+
+
 #### DEBUG 여부에 따라 config 다르게 불러오기
 
 ```python
