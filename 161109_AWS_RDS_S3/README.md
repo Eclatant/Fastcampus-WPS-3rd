@@ -167,6 +167,15 @@ packages:
 !.django-conf/
 ```
 
+#### /static/에서 찾을 경로 지정
+
+`django.config`
+
+```
+aws:elasticbeanstalk:container:python:staticfiles:
+    "/static/": "static_root/"
+```
+
 #### .ebextensions/django.config에 배포시 실행할 커맨드 추가
 
 ```
@@ -176,6 +185,7 @@ container_commands:
   02_migrate:
     command: "source /opt/python/run/venv/bin/activate && python django_app/manage.py migrate --noinput"
 ```
+
 
 
 
