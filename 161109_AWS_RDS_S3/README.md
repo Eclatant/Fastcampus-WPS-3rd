@@ -197,7 +197,7 @@ container_commands:
 
 EC2 Security Group의 SecurityGroup for ElasticBeanstalk environment인 GroupID를 RDS의 SecurityGroup의 Inbound에 추가해준다.
 
-
+RDS SecurityGroup선택 -> Edit -> Add Rule -> PostgreSQL -> Source에 추가할 GroupID로 자동완성되는지 확인 후 추가 -> Save
 
 
 
