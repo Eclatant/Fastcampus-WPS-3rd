@@ -248,7 +248,7 @@ class Command(BaseCommand):
 
 ```
 03_createsu:
-    command: "source /opt/python/run/venv/bin/activate && python django_app/manage.py createsu --noinput"
+    command: "source /opt/python/run/venv/bin/activate && python django_app/manage.py createsu"
     leader_only: true
 ```
 
