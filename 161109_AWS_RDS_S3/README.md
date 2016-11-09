@@ -200,6 +200,13 @@ EC2 Security Group의 SecurityGroup for ElasticBeanstalk environment인 GroupID�
 RDS SecurityGroup선택 -> Edit -> Add Rule -> PostgreSQL -> Source에 추가할 GroupID로 자동완성되는지 확인 후 추가 -> Save
 
 
+#### member app추가, management모듈 추가
+
+```
+python manage.py startapp member
+
+```
+
 
 
 ## S3 Bucket 생성 및 연결
