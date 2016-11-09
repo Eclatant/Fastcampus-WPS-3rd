@@ -159,6 +159,12 @@ packages:
     postgresql95-devel: []
 ```
 
+#### .ebignore파일을 이용해 configuration json파일은 eb deploy시 업로드 되도록 함
+
+```
+
+```
+
 #### .ebextensions/django.config에 배포시 실행할 커맨드 추가
 
 ```
