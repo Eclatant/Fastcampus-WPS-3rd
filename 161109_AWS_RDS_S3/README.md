@@ -161,6 +161,8 @@ packages:
 
 #### .ebignore파일을 이용해 configuration json파일은 eb deploy시 업로드 되도록 함
 
+`vi .ebignore`
+
 ```
 
 ```
