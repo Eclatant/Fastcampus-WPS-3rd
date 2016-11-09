@@ -99,7 +99,7 @@ vi settings_deploy.json
       "USER": "<db user>",
       "PASSWORD": "<db password>",
       "HOST": "<db endpoint>",
-      "POST": "5432"
+      "PORT": "5432"
     }
   }
 }
