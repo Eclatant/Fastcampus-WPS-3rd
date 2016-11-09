@@ -195,6 +195,8 @@ container_commands:
 
 #### DB connection 에러 날 시
 
+EC2 Security Group의 SecurityGroup for ElasticBeanstalk environment인 GroupID를 RDS의 SecurityGroup의 Inbound에 추가해준다.
+
 
 
 
