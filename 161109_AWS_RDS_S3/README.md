@@ -416,11 +416,11 @@ if not DEBUG or STATIC_S3:
 	
 	STATICFILES_LOCATION = 'static'
 	STATIC_URL = "https://%s/%s/" % (AWS_S3_CUSTOM_DOMAIN, STATICFILES_LOCATION)
-	STATICFILES_STORAGE = 'fastcampus.custom_storages.StaticStorage'
+	STATICFILES_STORAGE = 'mysite.custom_storages.StaticStorage'
 	
 	MEDIAFILES_LOCATION = 'media'
 	MEDIA_URL = "https://%s/%s/" % (AWS_S3_CUSTOM_DOMAIN, MEDIAFILES_LOCATION)
-	DEFAULT_FILE_STORAGE = 'fastcampus.custom_storages.MediaStorage'
+	DEFAULT_FILE_STORAGE = 'mysite.custom_storages.MediaStorage'
 else:
 	MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 	STATIC_URL = '/static/'
