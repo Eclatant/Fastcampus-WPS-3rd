@@ -11,11 +11,14 @@
 - last_name
 - first_name
 - img_profile
+- like_photos
+	- PhotoLike목록
 - follower, following, block (MTM Intermediate to self, symmetric False)
 	- 다른 MyUser와 Follower, Following, Block관계를 가져야 함
 	
 **사진 (photo.Photo)**
 
+- image
 - author
 - content
 - tags (MTM PhotoTag)
