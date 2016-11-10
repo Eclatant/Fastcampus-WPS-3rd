@@ -90,9 +90,8 @@ eb deploy
 #### 배포용 settings_deploy.json파일 생성
 
 ```
-cd django_app
-mkdir .conf
-cd .conf
+mkdir .django-conf
+cd .django-conf
 vi settings_deploy.json
 
 {
@@ -107,6 +106,15 @@ vi settings_deploy.json
     }
   }
 }
+```
+
+#### 설정 폴더들은 .gitignore에 추가
+
+```
+vi .gitignore
+
+.aws-conf/
+.django-conf/
 ```
 
 #### settings.py에 DEBUG판단 구문 추가
