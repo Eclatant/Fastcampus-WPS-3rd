@@ -67,6 +67,10 @@ git commit
 eb deploy
 ```
 
+### Elasticbeanstalk - RDS 연결 공식문서
+
+<http://docs.aws.amazon.com/ko_kr/elasticbeanstalk/latest/dg/AWSHowTo.RDS.html>
+
 
 
 
