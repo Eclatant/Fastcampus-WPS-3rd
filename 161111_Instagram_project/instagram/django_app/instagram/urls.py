@@ -26,4 +26,6 @@ apis_patterns = [
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^api/', include(apis_patterns)),
+
+    url(r'^photo/', include('photo.urls.views', namespace='photo')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
