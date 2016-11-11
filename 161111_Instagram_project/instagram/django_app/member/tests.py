@@ -58,6 +58,7 @@ class FollowTest(LiveServerTestCase):
         u3.follow(u2)
 
         print(u2.relation_set_follower.all())
+        print(Following.objects.filter(follower=u2))
 
         # 민아의 친구들 목록
         u1_friends = u1.following_users.filter(following_users=u1)
