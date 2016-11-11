@@ -59,7 +59,6 @@ class FollowTest(LiveServerTestCase):
         # 성환의 친구들 목록
         u3_friends = u3.following_users.filter(following_users=u3)
 
-
         print(u1_friends)
         print(u2_friends)
         print(u3_friends)
