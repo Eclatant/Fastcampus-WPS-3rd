@@ -24,11 +24,11 @@ class MyUser(AbstractUser):
         symmetrical=False,
         related_name='user_set_block'
     )
-    like_photos = models.ManyToManyField(
-        Photo,
-        through=PhotoLike,
-        related_name='user_set_like_photos'
-    )
+    # like_photos = models.ManyToManyField(
+    #     Photo,
+    #     through=PhotoLike,
+    #     related_name='user_set_like_photos'
+    # )
 
     def __str__(self):
         return self.get_full_name()
