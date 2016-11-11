@@ -6,7 +6,6 @@ from .models import Photo
 User = get_user_model()
 
 
-@csrf_exempt
 def photo_list(request):
     photos = Photo.objects.all()
     data = {
