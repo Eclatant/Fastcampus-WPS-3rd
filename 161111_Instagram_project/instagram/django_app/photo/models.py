@@ -4,7 +4,10 @@ from django.conf import settings
 
 class Photo(models.Model):
     image = models.ImageField(upload_to='photo', blank=True)
-    author = models.ForeignKey(settings.AUTH_USER_MODEL)
+    author = models.ForeignKey(
+        settings.AUTH_USER_MODEL,
+        related_name='photo_set_author',
+    )
     content = models.TextField(blank=True)
     tags = models.ManyToManyField('PhotoTag')
     like_users = models.ManyToManyField(
