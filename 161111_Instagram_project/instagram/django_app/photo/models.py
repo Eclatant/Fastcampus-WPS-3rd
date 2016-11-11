@@ -50,6 +50,15 @@ class PhotoComment(models.Model):
     author = models.ForeignKey(settings.AUTH_USER_MODEL)
     content = models.TextField()
 
+    def to_dict(self):
+        ret = {
+            'id': self.id,
+            'photo': self.photo.id,
+            'author': self.author.id,
+            'content': self.content,
+        }
+        return ret
+
 
 class PhotoLike(models.Model):
     photo = models.ForeignKey(Photo)
