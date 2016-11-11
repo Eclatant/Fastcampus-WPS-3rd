@@ -15,6 +15,7 @@ Including another URLconf
 """
 from django.conf.urls import url, include
 from django.contrib import admin
+from photo.urls.apis import abcd
 
 apis_patterns = [
     url(r'^photo/', include('photo.urls.apis')),
