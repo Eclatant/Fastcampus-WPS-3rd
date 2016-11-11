@@ -2,7 +2,7 @@ import json
 from django.contrib.auth import get_user_model
 from django.http import HttpResponse
 from django.views.decorators.csrf import csrf_exempt
-from .models import Photo
+from .models import Photo, PhotoComment
 User = get_user_model()
 
 
@@ -35,4 +35,19 @@ def photo_add(request):
     return HttpResponse(
         json.dumps(photo.to_dict()),
         content_type='application/json'
+    )
+
+
+@csrf_exempt
+def comment_add(request, photo_pk):
+    data = request.POST
+
+    user_id = data['user_id']
+    content = data['content']
+
+    author = User.objects.get(id=user_id)
+    photo = Photo.objects.get(id=photo_pk)
+
+    photo_comment = PhotoComment.objects.create(
+        
     )
