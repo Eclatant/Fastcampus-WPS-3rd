@@ -33,7 +33,8 @@ class MyUser(AbstractUser):
         return self.following_users.filter(following_users=self)
 
     def follow(self, user):
-        instance, created = Following.objects.get_or_create(
+        instance, created = Following.objects.create(
+        # instance, created = Following.objects.get_or_create(
             follower=self,
             followee=user
         )

@@ -34,6 +34,13 @@ class FollowTest(LiveServerTestCase):
         #
         # print(u1.follower_users.all())
 
+    def test_follow_unique(self):
+        u1 = self.create_user('u1', '방', '민아')
+        u2 = self.create_user('u2', '이', '한영')
+
+        u1.follow(u2)
+        u1.follow(u2)
+
     def test_friends(self):
         u1 = self.create_user('u1', '방', '민아')
         u2 = self.create_user('u2', '이', '한영')
