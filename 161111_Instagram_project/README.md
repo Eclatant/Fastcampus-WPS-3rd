@@ -60,3 +60,10 @@ unblock(user): 해당 유저의 block을 해제한다
 **API**  
 > https://ko.wikipedia.org/wiki/API
 
+어떠한 기능을 사용할 수 있도록 호출할 수 있게 정의된 형태
+
+
+**RESTful**
+> https://ko.wikipedia.org/wiki/REST
+
+URL(URI)형태만으로 이 API가 어떤 동작을 하는지 유추할 수 있도록 하는 구조
