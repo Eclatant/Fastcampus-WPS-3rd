@@ -13,7 +13,7 @@ class MyUserAdmin(UserAdmin):
                 'last_name',
                 'first_name',
             )
-        })
+        }),
     )
 
 
