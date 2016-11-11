@@ -81,7 +81,7 @@ class Relationship(models.Model):
         unique_together = ('follower', 'followee')
 
     def __str__(self):
-        return 'Follower(%s), Followee(%s)' % (
+        return 'Relation(Follower(%s), Followee(%s))' % (
             self.follower.get_full_name(),
             self.followee.get_full_name(),
         )

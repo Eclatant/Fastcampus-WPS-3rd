@@ -57,7 +57,7 @@ class FollowTest(LiveServerTestCase):
         # 성환은 한영과 민아를 팔로우
         u3.follow(u2)
 
-        print(u2.relation_set_follower.all())
+        print(u2.relationship_set_follower.all())
         print(Relationship.objects.filter(follower=u2))
 
         # 민아의 친구들 목록
