@@ -20,6 +20,9 @@ class Photo(models.Model):
         related_name='photo_set_like_users'
     )
 
+    class Meta:
+        ordering = ('-pk', )
+
     def __str__(self):
         return '%s (author:%s)' % (
             self.content,
