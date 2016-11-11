@@ -57,6 +57,7 @@ class MyUser(AbstractUser):
         Following.objects\
             .filter(follower=self, followee=user)\
             .filter(followee=user, follower=self)
+
         if Following.objects.filter(
                         Q(follower=self, followee=user) &
                         Q(followee=user, follower=self)
