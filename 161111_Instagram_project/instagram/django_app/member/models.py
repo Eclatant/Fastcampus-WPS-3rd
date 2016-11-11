@@ -1,4 +1,5 @@
 from django.db import models
+from django.db.models import Q
 from django.contrib.auth.models import AbstractUser, UserManager
 
 
@@ -51,6 +52,9 @@ class MyUser(AbstractUser):
 
     def unblock(self, user):
         self.block_users.remove(user)
+
+    def is_friends(self, user):
+        Following.objects.filter(follower=self, followee=user)
 
 
 class Following(models.Model):
