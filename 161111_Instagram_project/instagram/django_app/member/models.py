@@ -33,7 +33,7 @@ class MyUser(AbstractUser):
         return self.following_users.filter(following_users=self)
 
     def follow(self, user):
-        instance, created = Following.objects.create(
+        instance = Following.objects.create(
         # instance, created = Following.objects.get_or_create(
             follower=self,
             followee=user
@@ -59,4 +59,4 @@ class Following(models.Model):
     created_date = models.DateTimeField(auto_now_add=True)
 
     class Meta:
-        unique_together = (('follower', 'followee'), )
+        unique_together = ('follower', 'followee')
