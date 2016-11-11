@@ -1,3 +1,4 @@
+import json
 from django.contrib.auth import get_user_model
 from django.http import HttpResponse
 from django.views.decorators.csrf import csrf_exempt
@@ -20,4 +21,4 @@ def photo_add(request):
         author=author,
         content=content
     )
-    return HttpResponse(photo.id)
+    return HttpResponse(json.dumps(photo.to_dict()), content_type='application/json')
