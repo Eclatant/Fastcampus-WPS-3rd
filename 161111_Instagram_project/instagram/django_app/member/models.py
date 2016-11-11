@@ -60,7 +60,7 @@ class MyUser(AbstractUser):
 
         if Following.objects.filter(
                         Q(follower=self, followee=user) &
-                        Q(followee=user, follower=self)
+                        Q(follower=user, followee=self)
         ).exists():
             return True
         else:
