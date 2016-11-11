@@ -13,8 +13,6 @@
 - last_name
 - first_name
 - img_profile
-- like_photos
-	- PhotoLike목록
 - following_users (MTM Intermediate to self, symmetric False)
 - block_users (MTM Intermediate to self, symmetric False)
 	- 다른 MyUser와 Follower, Following, Block관계를 가져야 함
@@ -34,6 +32,7 @@ unblock(user): 해당 유저의 block을 해제한다
 - author (올린사람)
 - content (포스트의 내용)
 - tags (MTM PhotoTag) (태그 목록)
+- like_users (MTM, intermediate model PhotoLike)
 
 **사진 태그 (photo.PhotoTag)**
 
