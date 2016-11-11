@@ -6,6 +6,8 @@
 
 **사용자 계정 (member.MyUser)**  
 
+**Fields**
+
 - username
 - password
 - last_name
@@ -16,6 +18,10 @@
 - following_users (MTM Intermediate to self, symmetric False)
 - block_users (MTM Intermediate to self, symmetric False)
 	- 다른 MyUser와 Follower, Following, Block관계를 가져야 함
+
+**Method**
+
+
 	
 **사진 (photo.Photo)**
 
