@@ -21,7 +21,7 @@
 
 **Method**
 
-
+friends : 해당 유저와 서로 following한 user의 목록 리턴
 	
 **사진 (photo.Photo)**
 
