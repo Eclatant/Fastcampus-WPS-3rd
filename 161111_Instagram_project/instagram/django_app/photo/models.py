@@ -26,6 +26,15 @@ class Photo(models.Model):
             self.author.get_full_name()
         )
 
+    def to_dict(self):
+        ret = {
+            'id': self.id,
+            'image': self.image.url,
+            'author': self.author.id,
+            'content': self.content,
+        }
+        return ret
+
 
 class PhotoTag(models.Model):
     title = models.CharField(max_length=200)
