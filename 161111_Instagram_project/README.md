@@ -25,29 +25,29 @@
 	
 **사진 (photo.Photo)**
 
-- image
-- author
-- content
-- tags (MTM PhotoTag)
+- image (포스트 1개의 이미지파일)
+- author (올린사람)
+- content (포스트의 내용)
+- tags (MTM PhotoTag) (태그 목록)
 
 **사진 태그 (photo.PhotoTag)**
 
 > 해시태그 형태로 동작
 
-- title
+- title (태그명)
 
 
 **사진 댓글 (photo.PhotoComment)**
 
-- author
-- content
+- author (작성자)
+- content (댓글내용)
 
 
 **사진 좋아요 (photo.PhotoLike)**
 
-- photo
-- user
-- created_date
+- photo (해당 사진)
+- user (좋아요 누른 유저)
+- created_date (자동)
 
 
 ## API
