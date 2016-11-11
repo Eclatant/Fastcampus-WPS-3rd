@@ -6,7 +6,7 @@ class Photo(models.Model):
     image = models.ImageField(upload_to='photo', blank=True)
     author = models.ForeignKey(settings.AUTH_USER_MODEL)
     content = models.TextField(blank=True)
-    # tags = models.
+    tags = models.ManyToManyField(PhotoTag)
 
 
 class PhotoTag(models.Model):
