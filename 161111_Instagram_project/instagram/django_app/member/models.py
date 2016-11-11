@@ -29,6 +29,9 @@ class MyUser(AbstractUser):
     def get_full_name(self):
         return '%s%s' % (self.last_name, self.first_name)
 
+    def friends(self):
+        self.following_users.filter(following_users=self)
+
     def follow(self, user):
         instance, created = Following.objects.get_or_create(
             follower=self,
@@ -41,6 +44,7 @@ class MyUser(AbstractUser):
             follower=self,
             followee=user
         ).delete()
+
 
 
 class Following(models.Model):
