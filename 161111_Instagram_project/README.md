@@ -57,4 +57,4 @@ unblock(user): 해당 유저의 block을 해제한다
 
 ## API
 
-설계해봅시다
+**API**
