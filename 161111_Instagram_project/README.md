@@ -44,6 +44,7 @@ unblock(user): 해당 유저의 block을 해제한다
 
 **사진 댓글 (photo.PhotoComment)**
 
+- photo (해당 Photo)
 - author (작성자)
 - content (댓글내용)
 
