@@ -10,7 +10,7 @@ User = get_user_model()
 def photo_list(request):
     photos = Photo.objects.all()
     data = {
-        'photos': photos,
+        'photos': [photo.to_dict() for photo in photos],
     }
     return HttpResponse(
         json.dumps(data),
