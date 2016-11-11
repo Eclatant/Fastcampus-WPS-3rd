@@ -4,7 +4,17 @@ from .models import MyUser
 
 
 class MyUserAdmin(UserAdmin):
-    pass
+    add_fieldsets = (
+        (None, {
+            'fields': (
+                'username',
+                'password1',
+                'password2',
+                'last_name',
+                'first_name',
+            )
+        })
+    )
 
 
 admin.site.register(MyUser, MyUserAdmin)
