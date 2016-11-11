@@ -24,6 +24,8 @@
 friends() : 해당 유저와 서로 following한 user의 목록 리턴  
 follow(user) : 해당 유저를 following하도록 함  
 unfollow(user) : 해당 유저로의 following을 해제  
+block(user): 해당 유저를 block하도록 함  
+unblock(user): 해당 유저의 block을 해제한다  
 
 	
 **사진 (photo.Photo)**
