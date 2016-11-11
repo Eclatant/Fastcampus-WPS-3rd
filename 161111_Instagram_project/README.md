@@ -80,3 +80,8 @@ URL(URI)형태만으로 이 API가 어떤 동작을 하는지 유추할 수 있�
 6. templates폴더 생성, settings.py에서 TEMPLATE_DIRS에 해당 경로 등록
 7. photo_list뷰를 보여주는 template파일 작성
 8. 완성!
+
+
+## JavaScript 결제 라이브러리
+
+<http://iamport.kr/>
