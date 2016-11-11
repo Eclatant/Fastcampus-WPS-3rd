@@ -8,4 +8,3 @@ class MyUserAdmin(UserAdmin):
 
 
 admin.site.register(MyUser, MyUserAdmin)
-# admin.site.register(MyUser)
