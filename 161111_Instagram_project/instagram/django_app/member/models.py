@@ -73,8 +73,8 @@ class MyUser(AbstractUser):
 
 
 class Following(models.Model):
-    follower = models.ForeignKey(MyUser, related_name='follower')
-    followee = models.ForeignKey(MyUser, related_name='followee')
+    follower = models.ForeignKey(MyUser, related_name='relation_set_follower')
+    followee = models.ForeignKey(MyUser, related_name='realtion_set_followee')
     created_date = models.DateTimeField(auto_now_add=True)
 
     class Meta:
