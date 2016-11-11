@@ -26,6 +26,9 @@ class MyUser(AbstractUser):
     def __str__(self):
         return self.get_full_name()
 
+    def get_full_name(self):
+        return '%s%s' % (self.last_name, self.first_name)
+
     def follow(self, user):
         instance, created = Following.objects.get_or_create(
             follower=self,
