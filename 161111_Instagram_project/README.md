@@ -67,3 +67,15 @@ unblock(user): 해당 유저의 block을 해제한다
 > https://ko.wikipedia.org/wiki/REST
 
 URL(URI)형태만으로 이 API가 어떤 동작을 하는지 유추할 수 있도록 하는 구조
+
+
+## Photo List View
+
+1. MEDIA_URL을 settings.py에 등록
+2. 메인 urls.py에 static 함수 이용해서 MEDIA_ROOT의 경로를 참조하도록 추가
+3. photo앱의 views.py에 photo_list(request) 뷰 작성
+4. photo앱의 urls.py에 photo_list를 연결
+5. 메인 urls.py에 photo앱의 urls.py를 include로 연결
+6. templates폴더 생성, settings.py에서 TEMPLATE_DIRS에 해당 경로 등록
+7. photo_list뷰를 보여주는 template파일 작성
+8. 완성!
