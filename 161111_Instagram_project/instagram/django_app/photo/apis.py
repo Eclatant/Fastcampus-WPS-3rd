@@ -7,6 +7,17 @@ User = get_user_model()
 
 
 @csrf_exempt
+def photo_list(request):
+    photos = Photo.objects.all()
+    data = {
+        'photos': photos,
+    }
+    return HttpResponse(
+        json.dumps(data),
+        content_type='application/json'
+    )
+
+@csrf_exempt
 def photo_add(request):
     data = request.POST
     files = request.FILES
