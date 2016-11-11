@@ -49,5 +49,11 @@ def comment_add(request, photo_pk):
     photo = Photo.objects.get(id=photo_pk)
 
     photo_comment = PhotoComment.objects.create(
-        
+        photo=photo,
+        author=author,
+        content=content
+    )
+    return HttpResponse(
+        json.dumps(photo_comment.to_dict()),
+        content_type='application/json'
     )
