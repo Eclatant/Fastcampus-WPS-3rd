@@ -9,7 +9,7 @@ class Photo(models.Model):
     tags = models.ManyToManyField(PhotoTag)
     like_users = models.ManyToManyField(
         settings.AUTH_USER_MODEL,
-        through=PhotoLike,
+        through='PhotoLike',
         # related_name='photo_set_like_users'
     )
 
