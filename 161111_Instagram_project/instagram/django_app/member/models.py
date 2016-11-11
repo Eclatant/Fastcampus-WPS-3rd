@@ -1,6 +1,7 @@
 from django.db import models
 from django.db.models import Q
 from django.contrib.auth.models import AbstractUser, UserManager
+from photo.models import Photo, PhotoLike
 
 
 class MyUserManager(UserManager):
@@ -22,6 +23,11 @@ class MyUser(AbstractUser):
         'self',
         symmetrical=False,
         related_name='user_set_block'
+    )
+    like_photos = models.ManyToManyField(
+        Photo,
+        through=PhotoLike,
+        related_name='user_set_like_photos'
     )
 
     def __str__(self):
