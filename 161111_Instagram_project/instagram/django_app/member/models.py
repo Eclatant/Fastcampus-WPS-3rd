@@ -52,8 +52,10 @@ class MyUser(AbstractUser):
         self.block_users.remove(user)
 
 
-
 class Following(models.Model):
     follower = models.ForeignKey(MyUser, related_name='follower')
     followee = models.ForeignKey(MyUser, related_name='followee')
     created_date = models.DateTimeField(auto_now_add=True)
+
+    class Meta:
+        unique_together = ()
