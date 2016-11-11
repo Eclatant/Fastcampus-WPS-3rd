@@ -36,6 +36,7 @@ class Photo(models.Model):
             'image': self.image.url,
             'author': self.author.id,
             'content': self.content,
+            'commentList': [comment.to_dict() for comment in self.photocomment_set.all()],
         }
         return ret
 
