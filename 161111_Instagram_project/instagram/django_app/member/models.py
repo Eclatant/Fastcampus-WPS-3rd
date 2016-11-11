@@ -15,7 +15,7 @@ class MyUser(AbstractUser):
     following_users = models.ManyToManyField(
         'self',
         symmetrical=False,
-        through='Following',
+        through='Relationship',
         related_name='follower_users'
     )
     block_users = models.ManyToManyField(
