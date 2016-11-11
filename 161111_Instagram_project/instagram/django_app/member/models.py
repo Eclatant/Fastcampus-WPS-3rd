@@ -54,15 +54,8 @@ class MyUser(AbstractUser):
         self.block_users.remove(user)
 
     def is_friends(self, user):
-        user.following_users.filter()
-        Following.objects\
-            .filter(follower=self, followee=user)\
-            .filter(followee=user, follower=self)
-
-        if Following.objects.filter(
-                        Q(follower=self, followee=user) &
-                        Q(follower=user, followee=self)
-        ).exists():
+        if Following.objects.filter(follower=self, followee=user).exists() and \
+                Following.objects.filter(follower=user, followee=self).exists():
             return True
         else:
             return False
