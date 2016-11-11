@@ -8,7 +8,8 @@ class Photo(models.Model):
     content = models.TextField(blank=True)
     tags = models.ManyToManyField('PhotoTag')
     like_users = models.ManyToManyField(
-        settings.AUTH_USER_MODEL,
+        # settings.AUTH_USER_MODEL,
+        # 'member.MyUser',
         through='PhotoLike',
         # related_name='photo_set_like_users'
     )
