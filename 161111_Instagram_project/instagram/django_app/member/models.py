@@ -45,6 +45,12 @@ class MyUser(AbstractUser):
             followee=user
         ).delete()
 
+    def block(self, user):
+        self.block_users.add(user)
+
+    def unblock(self, user):
+        self.block_users.remove(user)
+
 
 
 class Following(models.Model):
