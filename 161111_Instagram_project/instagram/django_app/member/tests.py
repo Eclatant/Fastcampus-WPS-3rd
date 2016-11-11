@@ -1,5 +1,6 @@
+from django.db.models import Q
 from django.test import TestCase, LiveServerTestCase
-from .models import MyUser
+from .models import MyUser, Following
 
 
 class FollowTest(LiveServerTestCase):
@@ -64,6 +65,11 @@ class FollowTest(LiveServerTestCase):
 
         # 성환의 친구들 목록
         u3_friends = u3.following_users.filter(following_users=u3)
+        is_f = Following.objects.filter(
+            Q(follower=u1, followee=u2) &
+            Q(followee=u2, follower=u1)
+        ).exists()
+        print(is_f)
 
         print(u1_friends)
         print(u2_friends)
