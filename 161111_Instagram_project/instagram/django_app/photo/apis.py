@@ -1,4 +1,5 @@
 from django.contrib.auth import get_user_model
+from django.http import HttpResponse
 from django.views.decorators.csrf import csrf_exempt
 from .models import Photo
 User = get_user_model()
@@ -19,3 +20,4 @@ def photo_add(request):
         author=author,
         content=content
     )
+    return HttpResponse(photo.id)
