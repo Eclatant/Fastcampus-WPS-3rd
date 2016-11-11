@@ -19,6 +19,7 @@ class Photo(models.Model):
         through='PhotoLike',
         related_name='photo_set_like_users'
     )
+    created_date = models.DateTimeField(auto_now_add=True)
 
     class Meta:
         ordering = ('-pk', )
