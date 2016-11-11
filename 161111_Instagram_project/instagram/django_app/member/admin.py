@@ -7,4 +7,5 @@ class MyUserAdmin(UserAdmin):
     pass
 
 
-admin.site.register(MyUser, MyUserAdmin)
+# admin.site.register(MyUser, MyUserAdmin)
+admin.site.register(MyUser)
