@@ -16,6 +16,7 @@ def photo_list(request):
         content_type='application/json'
     )
 
+
 @csrf_exempt
 def photo_add(request):
     data = request.POST
