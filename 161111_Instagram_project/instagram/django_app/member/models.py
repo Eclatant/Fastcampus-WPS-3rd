@@ -42,7 +42,7 @@ class MyUser(AbstractUser):
         주어진 User Instance를 이용해서 Following관계를 만들어준다
         이 때 get_or_create함수를 이용해서 중복이 발생하지 않도록 한다
         """
-        instance, created = Following.objects.get_or_create(
+        instance, created = Relationship.objects.get_or_create(
             follower=self,
             followee=user
         )
@@ -52,7 +52,7 @@ class MyUser(AbstractUser):
         """
         주어진 User Instance를 자신의 following_users에서 제거한다
         """
-        Following.objects.filter(
+        Relationship.objects.filter(
             follower=self,
             followee=user
         ).delete()
@@ -72,9 +72,9 @@ class MyUser(AbstractUser):
         return False
 
 
-class Following(models.Model):
-    follower = models.ForeignKey(MyUser, related_name='relation_set_follower')
-    followee = models.ForeignKey(MyUser, related_name='realtion_set_followee')
+class Relationship(models.Model):
+    follower = models.ForeignKey(MyUser, related_name='relationship_set_follower')
+    followee = models.ForeignKey(MyUser, related_name='relationship_set_followee')
     created_date = models.DateTimeField(auto_now_add=True)
 
     class Meta:
