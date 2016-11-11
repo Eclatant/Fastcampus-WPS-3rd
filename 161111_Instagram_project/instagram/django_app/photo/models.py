@@ -13,7 +13,7 @@ class Photo(models.Model):
     image = models.ImageField(upload_to='photo', blank=True)
     author = models.ForeignKey(settings.AUTH_USER_MODEL)
     content = models.TextField(blank=True)
-    tags = models.ManyToManyField('PhotoTag')
+    tags = models.ManyToManyField('PhotoTag', blank=True)
     like_users = models.ManyToManyField(
         settings.AUTH_USER_MODEL,
         through='PhotoLike',
