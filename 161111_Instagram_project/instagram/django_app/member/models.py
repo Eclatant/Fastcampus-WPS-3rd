@@ -56,7 +56,7 @@ class MyUser(AbstractUser):
     def is_friends(self, user):
         Following.objects\
             .filter(follower=self, followee=user)\
-            .filter(followee=user, follower=user)
+            .filter(followee=user, follower=self)
         if Following.objects.filter(
                         Q(follower=self, followee=user) &
                         Q(followee=user, follower=self)
