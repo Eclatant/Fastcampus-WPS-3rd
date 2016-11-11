@@ -21,4 +21,7 @@ def photo_add(request):
         author=author,
         content=content
     )
-    return HttpResponse(json.dumps(photo.to_dict()), content_type='application/json')
+    return HttpResponse(
+        json.dumps(photo.to_dict()),
+        content_type='application/json'
+    )
