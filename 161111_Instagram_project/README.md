@@ -69,6 +69,14 @@ unblock(user): 해당 유저의 block을 해제한다
 URL(URI)형태만으로 이 API가 어떤 동작을 하는지 유추할 수 있도록 하는 구조
 
 
+
+## API List
+
+- Photo List
+- Photo add
+- Comment add
+
+
 ## Photo List View
 
 1. MEDIA_URL을 settings.py에 등록
