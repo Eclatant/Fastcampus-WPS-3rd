@@ -1,6 +1,13 @@
 from django.db import models
 from django.conf import settings
 
+__all__ = [
+    'Photo',
+    'PhotoTag',
+    'PhotoComment',
+    'PhotoLike',
+]
+
 
 class Photo(models.Model):
     image = models.ImageField(upload_to='photo', blank=True)
