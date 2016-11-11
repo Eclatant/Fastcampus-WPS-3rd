@@ -33,3 +33,17 @@ class FollowTest(LiveServerTestCase):
         print(u3.following_users.all())
 
         print(u1.follower_users.all())
+
+    def test_friends(self):
+        u1 = self.create_user('u1', '방', '민아')
+        u2 = self.create_user('u2', '이', '한영')
+        u3 = self.create_user('u3', '박', '성환')
+
+        u1.follow(u2)
+
+        u2.follow(u1)
+        u3.follow(u2)
+        u3.follow(u1)
+
+        u1_friends = u1.following_users.filter(following_users=u1)
+        print(u1_friends)
