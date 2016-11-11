@@ -34,7 +34,10 @@ class MyUser(AbstractUser):
         return instance
 
     def unfollow(self, user):
-        Following.objects.filter(follower=self, followee=user).delete()
+        Following.objects.filter(
+            follower=self,
+            followee=user
+        ).delete()
 
 
 class Following(models.Model):
