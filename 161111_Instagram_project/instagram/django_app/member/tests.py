@@ -70,13 +70,6 @@ class FollowTest(LiveServerTestCase):
         # print(u2_friends)
         # print(u3_friends)
 
-        u1_u2 = Following.objects.filter(follower=u1, followee=u2).filter(follower=u2, followee=u1)
-        u1_u2_q = Following.objects.filter(
-            Q(follower=u1, followee=u2) &
-            Q(follower=u2, followee=u1)
-        )
-        print(u1_u2)
-        print(u1_u2_q)
         print(u1.is_friends(u2))
         print(u2.is_friends(u1))
         print(u1.is_friends(u3))
