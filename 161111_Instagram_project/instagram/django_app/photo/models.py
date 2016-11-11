@@ -20,6 +20,12 @@ class Photo(models.Model):
         related_name='photo_set_like_users'
     )
 
+    def __str__(self):
+        return '%s (author:%s)' % (
+            self.content,
+            self.author.get_full_name()
+        )
+
 
 class PhotoTag(models.Model):
     title = models.CharField(max_length=200)
