@@ -63,7 +63,12 @@ class PhotoCommentFormView(SingleObjectMixin, FormView):
 
     def form_valid(self, form):
         content = form.cleaned_data['content']
-        print(content)
+        PhotoComment.objects.create(
+            photo=self.object,
+            author=self.request.user,
+            content=content
+        )
+        return super().form_valid(form)
 
     def get_success_url(self):
         return reverse('photo:photo_detail', kwargs={'pk': self.object.pk})
