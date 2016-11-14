@@ -24,3 +24,5 @@ class PhotoAdd(CreateView):
     model = Photo
     fields = ['image', 'content']
 
+    def form_valid(self, form):
+        object = 
