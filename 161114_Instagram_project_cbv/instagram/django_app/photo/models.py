@@ -41,9 +41,12 @@ class Photo(models.Model):
             'author': self.author.id,
             'content': self.content,
             'commentList': [comment.to_dict() for comment in self.photocomment_set.all()],
+            'isLike': True if self.
         }
         return ret
 
+    def is_like(self, user):
+        return PhotoLike.objects.filter(photo=self, user=user).exists()
 
 class PhotoTag(models.Model):
     title = models.CharField(max_length=200)
