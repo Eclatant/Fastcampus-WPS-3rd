@@ -1,6 +1,7 @@
 from django.contrib.auth.decorators import login_required
 from django.shortcuts import render
 from django.utils.decorators import method_decorator
+from django.views import View
 from django.views.generic import CreateView
 from django.views.generic import ListView
 from django.urls import reverse_lazy
@@ -23,8 +24,12 @@ class PhotoList(ListView):
     # queryset = Photo.objects.filter(created_date__year__gt=2015)
 
 
-class PhotoDetail(DetailView):
-    
+class PhotoDetail(View):
+    def get(self, request, *args, **kwargs):
+        pass
+
+    def post(self, request, *args, **kwargs):
+        pass
 
 
 @method_decorator(login_required, name='dispatch')
