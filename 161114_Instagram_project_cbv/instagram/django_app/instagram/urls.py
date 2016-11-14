@@ -29,4 +29,6 @@ urlpatterns = [
     url(r'^api/', include(apis_patterns)),
 
     url(r'^photo/', include('photo.urls.views', namespace='photo')),
+
+    url(r'^login/', login, name='login', kwargs={'template_name': 'login.html'}),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
