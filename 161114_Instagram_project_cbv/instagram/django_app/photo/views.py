@@ -23,7 +23,7 @@ class PhotoList(ListView):
     # queryset = Photo.objects.filter(created_date__year__gt=2015)
 
 
-# @method_decorator(login_required, name='dispatch')
+@method_decorator(login_required, name='dispatch')
 class PhotoAdd(CreateView):
     model = Photo
     fields = ['image', 'content']
