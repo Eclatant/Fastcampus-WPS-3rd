@@ -27,16 +27,16 @@ class PhotoList(ListView):
     # queryset = Photo.objects.filter(created_date__year__gt=2015)
 
 
-class PhotoCommentAdd(CreateView):
-    model = PhotoComment
-    fields = ['content']
-
-    def form_valid(self, form):
-        photo_pk = self.kwargs.get('photo_pk')
-        photo = get_object_or_404(Photo, photo_pk)
-        form.instance.photo = photo
-        form.instance.author = self.request.user
-        return super(PhotoCommentAdd, self).form_valid(form)
+# class PhotoCommentAdd(CreateView):
+#     model = PhotoComment
+#     fields = ['content']
+#
+#     def form_valid(self, form):
+#         photo_pk = self.kwargs.get('photo_pk')
+#         photo = get_object_or_404(Photo, photo_pk)
+#         form.instance.photo = photo
+#         form.instance.author = self.request.user
+#         return super(PhotoCommentAdd, self).form_valid(form)
 
 
 class PhotoDisplayView(DetailView):
