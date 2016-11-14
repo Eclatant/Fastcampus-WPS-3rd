@@ -31,5 +31,5 @@ urlpatterns = [
     url(r'^photo/', include('photo.urls.views', namespace='photo')),
 
     # url(r'^login/', login, name='login', kwargs={'template_name': 'login.html'}),
-    url(r'^auth/', include('django.contrib.auth.urls', namespace='member')),
+    url(r'^auth/', include('django.contrib.auth.urls', namespace='auth')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
