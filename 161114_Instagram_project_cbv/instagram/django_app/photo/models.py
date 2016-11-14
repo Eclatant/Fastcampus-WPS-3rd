@@ -34,15 +34,16 @@ class Photo(models.Model):
     # def get_absolute_url(self):
     #     return reverse('photo:photo_list')
 
-    def to_dict(self):
+    def to_dict(self, **kwargs):
         ret = {
             'id': self.id,
             'image': self.image.url,
             'author': self.author.id,
             'content': self.content,
             'commentList': [comment.to_dict() for comment in self.photocomment_set.all()],
-            'isLike': True if self.
         }
+        if 'user' in kwargs:
+            ret['isLike'] = self.is_like(kwargs.get('user'))
         return ret
 
     def is_like(self, user):
