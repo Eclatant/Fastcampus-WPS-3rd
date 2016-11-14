@@ -22,8 +22,8 @@ class PhotoList(ListView):
 
 class PhotoAdd(CreateView):
     model = Photo
-    fields = ['image', 'content']
+    fields = ['image', 'author', 'content']
 
     def form_valid(self, form):
-        form.instance.author = self.request.user
+        # form.instance.author = self.request.user
         return super(PhotoAdd, self).form_valid(form)
