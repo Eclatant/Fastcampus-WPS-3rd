@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django.views.generic import CreateView
 from django.views.generic import ListView
+from django.urls import reverse
 
 from .models import Photo
 
@@ -23,6 +24,7 @@ class PhotoList(ListView):
 class PhotoAdd(CreateView):
     model = Photo
     fields = ['image', 'content']
+    success_url = reverse('photo:photo_list')
 
     def form_valid(self, form):
         form.instance.author = self.request.user
