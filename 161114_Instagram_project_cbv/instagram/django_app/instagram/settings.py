@@ -89,7 +89,7 @@ DATABASES = {
 }
 
 # Auth
-
+LOGIN_URL = 'login'
 AUTH_USER_MODEL = 'member.MyUser'
 AUTH_PASSWORD_VALIDATORS = [
     {
