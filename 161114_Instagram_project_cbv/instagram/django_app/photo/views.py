@@ -73,10 +73,12 @@ class PhotoDetail(View):
     4. PhotoDetail의 post에 연결
     """
     def get(self, request, *args, **kwargs):
-        
+        view = PhotoDisplayView.as_view()
+        return view(request, *args, **kwargs)
 
     def post(self, request, *args, **kwargs):
-        pass
+        view = PhotoCommentFormView.as_view()
+        return view(request, *args, **kwargs)
 
 
 @method_decorator(login_required, name='dispatch')
