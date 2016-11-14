@@ -31,8 +31,8 @@ class Photo(models.Model):
             self.author.get_full_name()
         )
 
-    def get_absolute_url(self):
-        return reverse('photo:photo_list')
+    # def get_absolute_url(self):
+    #     return reverse('photo:photo_list')
 
     def to_dict(self):
         ret = {
