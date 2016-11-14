@@ -11,11 +11,13 @@
 	<!--<div>{{ object_list }}</div>-->
 	<!--<div>{{ photos }}</div>-->
 	<!--<div>{{ page_obj }}</div>-->
+	<a href="{% url 'photo:photo_add' %}">
+		<h2>사진추가</h2>
+	</a>
+
 	<h3>Photo list</h3>
 
-	<a href="{% url 'photo:photo_add' %}">
-		<h3>사진추가</h3>
-	</a>
+
 
 	{% for photo in page_obj %}
 	<div>
