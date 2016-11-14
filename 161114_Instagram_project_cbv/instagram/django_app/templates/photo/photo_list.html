@@ -19,7 +19,7 @@
 
 
 
-	{% for photo in page_obj %}
+	{% for photo in object_list %}
 	<div>
 		<img src="{{ photo.image.url }}" alt="">
 		<h5>{{ photo.content }}</h5>
