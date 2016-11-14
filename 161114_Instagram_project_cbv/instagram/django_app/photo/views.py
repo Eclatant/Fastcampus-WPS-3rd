@@ -89,6 +89,14 @@ class PhotoDetail(View):
         return view(request, *args, **kwargs)
 
 
+class PhotoLikeView(SingleObjectMixin):
+    """
+    SingleObjectMixin으로 Photo instance를 확정
+    Template에서 action을 이 뷰로 지정하며, Like상태를 toggle시켜준다.
+    """
+    pass
+
+
 @method_decorator(login_required, name='dispatch')
 class PhotoAdd(CreateView):
     model = Photo
