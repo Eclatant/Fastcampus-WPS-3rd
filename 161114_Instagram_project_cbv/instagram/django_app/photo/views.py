@@ -61,16 +61,12 @@ class PhotoCommentForm(forms.Form):
 
 
 class PhotoCommentFormView(SingleObjectMixin, FormView):
-    
     template_name = 'photo/photo_detail.html'
     form_class = PhotoCommentForm
     model = Photo
 
-    def post(self, request, *args, **kwargs):
-        self.object = self.get_object()
-        return super(PhotoCommentFormView, self).post(request, *args, **kwargs)
-
     def form_valid(self, form):
+        self.object = self.get_object()
         content = form.cleaned_data['content']
         PhotoComment.objects.create(
             photo=self.object,
