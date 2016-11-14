@@ -2,7 +2,15 @@
 {{ photo.title }}
 {{ photo.created_date }}
 
-<form action="" method="POST">
+<div>
+	<ul>
+		{% for comment in photo.photocomment_set.all %}
+		<li>{{ comment }}</li>
+		{% endfor %}
+	</ul>
+</div>
+
+<form action="" method="POST">{% csrf_token %}
 	{{ form.as_p }}
 	<button type="submit">댓글달기</button>
 </form>
