@@ -28,7 +28,10 @@ class PhotoCommentAdd(CreateView):
     model = PhotoComment
     fields = ['content']
 
-    
+    def form_valid(self, form):
+        self.kwargs.get('photo_pk')
+
+
 
 class PhotoDetail(View):
     """
