@@ -23,7 +23,8 @@ class PhotoList(ListView):
     # queryset = Photo.objects.filter(created_date__year__gt=2015)
 
 
-
+class PhotoDetail(DetailView):
+    
 
 
 @method_decorator(login_required, name='dispatch')
