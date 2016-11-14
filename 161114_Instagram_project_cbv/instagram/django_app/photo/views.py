@@ -73,7 +73,7 @@ class PhotoDetail(View):
     4. PhotoDetail의 post에 연결
     """
     def get(self, request, *args, **kwargs):
-        pass
+        
 
     def post(self, request, *args, **kwargs):
         pass
