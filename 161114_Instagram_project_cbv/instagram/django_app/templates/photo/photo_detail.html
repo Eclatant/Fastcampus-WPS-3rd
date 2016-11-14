@@ -2,6 +2,7 @@
 {{ photo.title }}
 {{ photo.created_date }}
 
+{{ photo.photocomment_set.all }}
 <div>
 	<ul>
 		{% for comment in photo.photocomment_set.all %}
