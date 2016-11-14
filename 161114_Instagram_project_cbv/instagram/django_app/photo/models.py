@@ -1,5 +1,6 @@
 from django.db import models
 from django.conf import settings
+from django.urls import reverse
 
 __all__ = [
     'Photo',
@@ -29,6 +30,9 @@ class Photo(models.Model):
             self.content,
             self.author.get_full_name()
         )
+
+    def get_absolute_url(self):
+        return reverse('photo:photo_list')
 
     def to_dict(self):
         ret = {
