@@ -61,6 +61,7 @@ class PhotoCommentForm(forms.Form):
 
 
 class PhotoCommentFormView(SingleObjectMixin, FormView):
+    
     template_name = 'photo/photo_detail.html'
     form_class = PhotoCommentForm
     model = Photo
