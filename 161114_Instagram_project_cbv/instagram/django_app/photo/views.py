@@ -75,12 +75,6 @@ class PhotoCommentFormView(SingleObjectMixin, FormView):
 
 
 class PhotoDetail(View):
-    """
-    1. PhotoDisplay(DetailView)를 구현
-    2. PhotoDetail의 get에 연결
-    3. PhotoCommentAdd(CreateView) 구현
-    4. PhotoDetail의 post에 연결
-    """
     def get(self, request, *args, **kwargs):
         view = PhotoDisplayView.as_view()
         return view(request, *args, **kwargs)
