@@ -6,7 +6,7 @@ from django.views.generic import CreateView
 from django.views.generic import ListView
 from django.urls import reverse_lazy
 
-from .models import Photo
+from .models import Photo, PhotoComment
 
 
 def photo_list(request):
@@ -25,6 +25,9 @@ class PhotoList(ListView):
 
 
 class PhotoCommentAdd(CreateView):
+    model = PhotoComment
+    fields = ['content']
+
     
 
 class PhotoDetail(View):
