@@ -1,5 +1,5 @@
 from django.contrib.auth.decorators import login_required
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 from django.utils.decorators import method_decorator
 from django.views import View
 from django.views.generic import CreateView
@@ -29,8 +29,11 @@ class PhotoCommentAdd(CreateView):
     fields = ['content']
 
     def form_valid(self, form):
-        self.kwargs.get('photo_pk')
-
+        photo_pk = self.kwargs.get('photo_pk')
+        photo = get_object_or_404(Photo, photo_pk)
+        form.instance.photo = photo
+        form.instance.author = self.request.user
+        return super(PhotoCommentAdd, self).form_valid(form)
 
 
 class PhotoDetail(View):
