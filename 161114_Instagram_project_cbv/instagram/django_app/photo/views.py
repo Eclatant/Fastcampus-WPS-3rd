@@ -15,5 +15,5 @@ def photo_list(request):
 class PhotoList(ListView):
     model = Photo
     paginate_by = 3
-    # context_object_name = 'photos'
+    context_object_name = 'photos'
     # queryset = Photo.objects.filter(created_date__year__gt=2015)
