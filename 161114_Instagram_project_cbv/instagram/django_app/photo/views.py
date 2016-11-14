@@ -4,8 +4,10 @@ from django.shortcuts import render, get_object_or_404
 from django.utils.decorators import method_decorator
 from django.views import View
 from django.views.generic import CreateView
+from django.views.generic import FormView
 from django.views.generic import ListView
-from django.urls import reverse_lazy
+from django.urls import reverse_lazy, reverse
+from django.views.generic.detail import SingleObjectMixin
 
 from .models import Photo, PhotoComment
 
@@ -39,6 +41,19 @@ class PhotoCommentAdd(CreateView):
 
 class PhotoCommentForm(forms.Form):
     content = forms.CharField()
+
+
+class PhotoCommentFormView(SingleObjectMixin, FormView):
+    template_name = 'photo/photo_detail.html'
+    form_class = PhotoCommentForm
+    model = Photo
+
+    def post(self, request, *args, **kwargs):
+        self.object = self.get_object()
+        return super(PhotoCommentFormView, self).post(request, *args, **kwargs)
+
+    def get_success_url(self):
+        return reverse('photo:photo_detail', kwargs={'pk': self.object.pk})
 
 
 class PhotoDetail(View):
