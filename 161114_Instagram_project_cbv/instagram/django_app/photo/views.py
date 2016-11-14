@@ -25,5 +25,5 @@ class PhotoAdd(CreateView):
     fields = ['image', 'content']
 
     def form_valid(self, form):
-        form.author = self.request.user
+        form.instance.author = self.request.user
         return super(PhotoAdd, self).form_valid(form)
