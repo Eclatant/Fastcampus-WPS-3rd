@@ -49,7 +49,7 @@ class PhotoDisplayView(DetailView):
 
 
 class PhotoCommentForm(forms.Form):
-    content = forms.CharField()
+    content = forms.CharField(widget=forms.Textarea)
 
 
 class PhotoCommentFormView(SingleObjectMixin, FormView):

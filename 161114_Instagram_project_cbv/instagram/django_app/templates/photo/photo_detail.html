@@ -3,13 +3,13 @@
 <div>{{ photo.created_date }}</div>
 
 
-<div>
-	<ul>
-		{% for comment in photo.photocomment_set.all %}
-		<li>{{ comment.content }}</li>
-		{% endfor %}
-	</ul>
-</div>
+<!--<div>-->
+	<!--<ul>-->
+		<!--{% for comment in photo.photocomment_set.all %}-->
+		<!--<li>{{ comment.content }}</li>-->
+		<!--{% endfor %}-->
+	<!--</ul>-->
+<!--</div>-->
 
 <form action="" method="POST">{% csrf_token %}
 	{{ form.as_p }}
