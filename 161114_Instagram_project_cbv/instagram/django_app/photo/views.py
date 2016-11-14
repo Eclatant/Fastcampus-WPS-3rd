@@ -57,7 +57,7 @@ class PhotoCommentForm(forms.Form):
     PhotoComment 인스턴스를 만들기 위한 Form
     content만 받으며, is_valid를 통과후에 photo와 author필드를 채워줘야 한다
     """
-    content = forms.CharField(widget=forms.Textarea)
+    content = forms.CharField(widget=forms.Textarea, required=False)
 
 
 class PhotoCommentFormView(SingleObjectMixin, FormView):
