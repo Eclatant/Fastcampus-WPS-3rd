@@ -41,8 +41,8 @@ class PhotoList(ListView):
 
 class PhotoDisplayView(DetailView):
     """
-    Photo 인스턴스의 Detail View
-    get요청에만 응답한다
+    PhotoDetail에서 get요청이 온 경우, 이 뷰를 사용
+    Photo인스턴스의 Detail View
     """
     model = Photo
 
