@@ -7,7 +7,7 @@ from django.views.generic import CreateView
 from django.views.generic import FormView
 from django.views.generic import ListView
 from django.urls import reverse_lazy, reverse
-from django.views.generic.detail import SingleObjectMixin
+from django.views.generic.detail import SingleObjectMixin, DetailView
 
 from .models import Photo, PhotoComment
 
@@ -37,6 +37,15 @@ class PhotoCommentAdd(CreateView):
         form.instance.photo = photo
         form.instance.author = self.request.user
         return super(PhotoCommentAdd, self).form_valid(form)
+
+
+class PhotoDisplayView(DetailView):
+    model = Photo
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['form'] = PhotoCommentForm()
+        return context
 
 
 class PhotoCommentForm(forms.Form):
