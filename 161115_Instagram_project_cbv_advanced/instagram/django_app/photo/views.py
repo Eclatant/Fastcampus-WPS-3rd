@@ -22,7 +22,7 @@ def photo_list(request):
 
 class PhotoList(ListView):
     model = Photo
-    paginate_by = 8
+    paginate_by = 5
     context_object_name = 'photos'
 
 
