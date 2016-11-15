@@ -24,13 +24,19 @@ class LoginFormView(FormView) 로  작성해주세요
 ## 순서
 
 - 1명이 dev branch생성 후 push
-- git push 
+	- git push origin dev
+- 다른사람들은 dev branch를 추적
+	- `git checkout --track origin/dev`
+- dev branch로 checkout
+	- `git checkout dev`
+- dev branch를 기준으로 새 branch 생성
+	- `git branch <new branch name>`
+- 새 branch로 checkout
+	- `git checkout <new branch name>`
 
 ## dev branch 추적
 
-```
-git checkout --track origin/dev
-```
+
 
 
 ## 협업을 위한 새로운 기능들
