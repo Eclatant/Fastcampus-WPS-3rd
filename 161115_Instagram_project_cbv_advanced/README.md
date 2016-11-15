@@ -49,7 +49,11 @@ class LoginFormView(FormView) 로  작성해주세요
 git fetch origin
 ```
 
-이후 git checkout 
+이후
+
+```
+ git checkout --track origin/<new branch name>
+```
 
 ## 협업을 위한 새로운 기능들
 
