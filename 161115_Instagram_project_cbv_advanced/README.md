@@ -41,6 +41,16 @@ class LoginFormView(FormView) 로  작성해주세요
 	- `git push origin --delete <new branch name>`
 
 
+## 다른사람의 branch 테스트
+
+아래 명령어로 origin저장소의 변경점을 로컬에 적용
+
+```
+git fetch origin
+```
+
+이후 git checkout 
+
 ## 협업을 위한 새로운 기능들
 
 아래 기능을 각자 branch나눠서 만든 후, branch를 push 후 pull request생성
