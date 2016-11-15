@@ -19,6 +19,9 @@
 	{% endfor %}
 
 	<div class="pagination" style="text-align: center; width: 100%;">
+		<ul class="pager">
+			<li><a href=""></a></li>
+		</ul>
 	    <span class="step-links">
 	        {% if page_obj.has_previous %}
 	            <a href="?page={{ page_obj.previous_page_number }}">previous</a>
