@@ -14,7 +14,7 @@
 </head>
 <body>
 <div id="wrap" class="container">
-	<h1>Instagram!</h1>
+	<h1><a href="{% url 'photo:photo_list' %}">Instagram!</a></h1>
 	<h4 style="margin-bottom: 20px">{% block wrap_title %}{% endblock %}</h4>
 	<div style="position: absolute; right: 10px; top: 10px;">{% block btn_right %}{% endblock %}</div>
 	<div id="content-container">
