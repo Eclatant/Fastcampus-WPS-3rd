@@ -12,3 +12,4 @@ def login_fbv(request) 로 작성해주세요
 	- urls/views.py
 - View와 urls연결
 - Template작성
+	- member/ 폴더에 작성
