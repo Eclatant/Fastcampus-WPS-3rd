@@ -1,4 +1,5 @@
 from django.contrib.auth import authenticate, login
+from django.http import HttpResponse
 from django.shortcuts import render, redirect
 from .forms import LoginForm
 
@@ -14,6 +15,8 @@ def login_fbv(request):
             if user is not None:
                 login(request, user)
                 return redirect('photo:photo_list')
+            else:
+                return HttpResponse('ID or PW incorrect')
     else:
         form = LoginForm()
 
