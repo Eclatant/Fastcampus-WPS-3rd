@@ -38,10 +38,6 @@ class LoginFormView(FormView) 로  작성해주세요
 	- `git push origin <new branch name>`
 - 해당 branch를 pull request처리
 
-## dev branch 추적
-
-
-
 
 ## 협업을 위한 새로운 기능들
 
