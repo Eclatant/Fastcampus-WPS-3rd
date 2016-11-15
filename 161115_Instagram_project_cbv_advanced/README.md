@@ -16,3 +16,6 @@ def login_fbv(request) 로 작성해주세요
 - View와 urls연결
 - Template작성
 	- member/login.html에 작성
+
+	
+**CBV**  
