@@ -29,6 +29,7 @@ urlpatterns = [
     url(r'^api/', include(apis_patterns)),
 
     url(r'', include('photo.urls.views', namespace='photo')),
+    url(r'^member/', include('member.urls.views', namespace='member')),
 
     # url(r'^login/', login, name='login', kwargs={'template_name': 'login.html'}),
     # url(r'^auth/', include('django.contrib.auth.urls', namespace='auth')),
