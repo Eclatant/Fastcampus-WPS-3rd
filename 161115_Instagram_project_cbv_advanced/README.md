@@ -37,6 +37,8 @@ class LoginFormView(FormView) 로  작성해주세요
 - 새 branch에서 작업 완료 후, 저장소에 push
 	- `git push origin <new branch name>`
 - 해당 branch를 pull request처리
+- pull request완료되면, 리모트에서 자신의 branch 삭제
+	- `git push 
 
 
 ## 협업을 위한 새로운 기능들
