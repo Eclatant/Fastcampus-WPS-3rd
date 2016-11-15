@@ -5,3 +5,8 @@
 **FBV**  
 def login_fbv(request) 로 작성해주세요
 
+- views.py에 View작성
+- urls모듈 생성, views모듈을 하위요소로 둠
+	- urls/views.py
+- View와 urls연결
+- Template작성
