@@ -19,3 +19,4 @@ def login_fbv(request) 로 작성해주세요
 
 	
 **CBV**  
+class LoginFormView(FormView) 로  작성해주세요
