@@ -1,5 +1,5 @@
 from django.contrib.auth import authenticate, login
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from .forms import LoginForm
 
 
@@ -13,9 +13,10 @@ def login_fbv(request):
             user = authenticate(username=username, password=password)
             if user is not None:
                 login(request, user)
+                return redirect('photo:photo_list')
     else:
         form = LoginForm()
-        
+
     context = {
         'form': form,
     }
