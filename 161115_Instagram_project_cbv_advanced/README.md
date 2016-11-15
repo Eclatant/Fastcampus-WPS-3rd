@@ -33,6 +33,7 @@ class LoginFormView(FormView) 로  작성해주세요
 	- `git branch <new branch name>`
 - 새 branch로 checkout
 	- `git checkout <new branch name>`
+		- 위 2명령어는 `git checkout -b <new branch name>`로 사용가능
 
 ## dev branch 추적
 
