@@ -24,7 +24,7 @@ class LoginFormView(FormView) 로  작성해주세요
 
 ## 협업을 위한 새로운 기능들
 
-아래 기능을 각자 branch나눠서 만든 후 
+아래 기능을 각자 branch나눠서 만든 후, branch를 push 후 pull request생성
 
 1. Signup
 2. Photo delete
