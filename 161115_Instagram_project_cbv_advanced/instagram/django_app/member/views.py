@@ -14,7 +14,9 @@ def login_fbv(request):
             if user is not None:
                 login(request, user)
     else:
-        context = {
-            'form': LoginForm(),
-        }
+        form = LoginForm()
+        
+    context = {
+        'form': form,
+    }
     return render(request, 'member/login.html', context)
