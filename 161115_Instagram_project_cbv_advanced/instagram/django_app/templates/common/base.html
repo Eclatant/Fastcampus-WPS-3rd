@@ -1,3 +1,4 @@
+{% load staticfiles %}
 <!doctype html>
 <html lang="ko">
 <head>
@@ -12,9 +13,11 @@
   <link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap-theme.min.css' %}">
 </head>
 <body>
-<div id="content-container">
-	{% block content %}
-	{% endblock %}
+<div id="wrap" class="container">
+	<div id="content-container">
+		{% block content %}
+		{% endblock %}
+</div>
 </div>
 </body>
 </html>
