@@ -5,15 +5,13 @@
 {% block content %}
 <a href="{% url 'photo:photo_add' %}" class="btn btn-primary pull-right">사진추가</a>
 
-<div class="row">
-	{% for photo in object_list %}
-	<div class="col-md-3 thumbnail">
-		<img src="{{ photo.image.url }}" alt="">
-		<h5>{{ photo.content }}</h5>
-		<p>{{ photo.created_date }}</p>
-	</div>
-	{% endfor %}
+{% for photo in object_list %}
+<div class="col-md-3 thumbnail">
+	<img src="{{ photo.image.url }}" alt="">
+	<h5>{{ photo.content }}</h5>
+	<p>{{ photo.created_date }}</p>
 </div>
+{% endfor %}
 
 
 <div class="pagination">
