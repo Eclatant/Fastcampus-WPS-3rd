@@ -2,6 +2,7 @@ from django.contrib.auth import authenticate, login
 from django.http import HttpResponse
 from django.shortcuts import render, redirect
 from django.views.generic import FormView
+from django.urls import reverse
 
 from .forms import LoginForm
 
@@ -31,7 +32,7 @@ def login_fbv(request):
 class LoginFormView(FormView):
     template_name = 'member/login.html'
     form_class = LoginForm
-    success_url = 'photo:photo_list'
+    success_url = reverse('photo:photo_list')
 
     def form_valid(self, form):
         username = form.cleaned_data['username']
