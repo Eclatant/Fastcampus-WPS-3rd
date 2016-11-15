@@ -21,6 +21,11 @@ def login_fbv(request) 로 작성해주세요
 **CBV**  
 class LoginFormView(FormView) 로  작성해주세요
 
+## 순서
+
+- 1명이 dev branch생성 후 push
+- git push 
+
 ## dev branch 추적
 
 ```
