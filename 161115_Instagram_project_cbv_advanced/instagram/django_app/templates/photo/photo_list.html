@@ -3,13 +3,7 @@
 {% block wrap_title %}Photo list{% endblock %}
 
 {% block content %}
-<a href="{% url 'photo:photo_add' %}">
-	<h2>사진추가</h2>
-</a>
-
-<h3>Photo list</h3>
-
-
+<a href="{% url 'photo:photo_add' %}" class="btn btn-primary pull-right">사진추가</a>
 
 {% for photo in object_list %}
 <div>
