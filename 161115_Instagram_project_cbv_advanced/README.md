@@ -23,7 +23,9 @@ class LoginFormView(FormView) 로  작성해주세요
 
 ## dev branch 추적
 
-
+```
+git checkout --track origin/dev
+```
 
 
 ## 협업을 위한 새로운 기능들
