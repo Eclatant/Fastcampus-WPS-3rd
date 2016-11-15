@@ -1,10 +1,20 @@
+from django.contrib.auth import authenticate, login
 from django.shortcuts import render
 from .forms import LoginForm
 
 
 def login_fbv(request):
-    
-    context = {
-        'form': LoginForm(),
-    }
+    if request.method == 'POST':
+        form = LoginForm(request.POST)
+        if form.is_valid():
+            username = form.cleaned_data['username']
+            password = form.cleaned_data['password']
+
+            user = authenticate(username=username, password=password)
+            if user is not None:
+                login(request, user)
+    else:
+        context = {
+            'form': LoginForm(),
+        }
     return render(request, 'member/login.html', context)
