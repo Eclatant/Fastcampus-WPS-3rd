@@ -14,10 +14,11 @@
 </head>
 <body>
 <div id="wrap" class="container">
+	<h4>{% block wrap_title %}{% endblock %}</h4>
 	<div id="content-container">
 		{% block content %}
 		{% endblock %}
-</div>
+	</div>
 </div>
 </body>
 </html>
