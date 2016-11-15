@@ -89,7 +89,7 @@ DATABASES = {
 }
 
 # Auth
-LOGIN_URL = 'auth:login'
+LOGIN_URL = 'member:login'
 LOGIN_REDIRECT_URL = 'photo:photo_list'
 AUTH_USER_MODEL = 'member.MyUser'
 AUTH_PASSWORD_VALIDATORS = [
