@@ -32,6 +32,23 @@ def login_fbv(request):
 class LoginFormView(FormView):
     template_name = 'member/login.html'
     form_class = LoginForm
+
+    def form_valid(self, form):
+        username = form.cleaned_data['username']
+        password = form.cleaned_data['password']
+
+        user = authenticate(username=username, password=password)
+        if user is not None:
+            login(self.request, user)
+            # return redirect('photo:photo_list')
+        else:
+            return HttpResponse('ID or PW incorrect')
+        return super().form_valid(form)
+
+
+class LoginFormView(FormView):
+    template_name = 'member/login.html'
+    form_class = LoginForm
     success_url = reverse_lazy('photo:photo_list')
 
     def form_valid(self, form):
