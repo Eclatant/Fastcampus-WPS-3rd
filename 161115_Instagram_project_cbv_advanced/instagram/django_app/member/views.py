@@ -1,6 +1,8 @@
 from django.contrib.auth import authenticate, login
 from django.http import HttpResponse
 from django.shortcuts import render, redirect
+from django.views.generic import FormView
+
 from .forms import LoginForm
 
 
@@ -24,3 +26,11 @@ def login_fbv(request):
         'form': form,
     }
     return render(request, 'member/login.html', context)
+
+
+class LoginFormView(FormView):
+    template_name = 'member/login.html'
+    form_class = LoginForm
+
+    def form_valid(self, form):
+        return super().form_valid(form)
