@@ -21,7 +21,7 @@ def login_fbv(request) 로 작성해주세요
 **CBV**  
 class LoginFormView(FormView) 로  작성해주세요
 
-## 순서
+## Git 협업을 위한 브랜치 관리
 
 - 1명이 dev branch생성 후 push
 	- git push origin dev
