@@ -2,6 +2,7 @@ import json
 
 from django.contrib.auth import get_user_model
 from django.http import HttpResponse
+from django.utils.decorators import method_decorator
 from django.views.decorators.csrf import csrf_exempt
 from rest_framework import status
 from rest_framework.response import Response
@@ -19,6 +20,7 @@ class PhotoList(APIView):
         serializer = PhotoSerializer(photos, many=True)
         return Response(serializer.data)
 
+    @method_decorator(csrf_exempt)
     def post(self, request):
         serializer = PhotoSerializer(data=request.data)
         if serializer.is_valid():
