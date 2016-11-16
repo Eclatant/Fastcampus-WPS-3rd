@@ -18,7 +18,7 @@ class PhotoSerializer(serializers.ModelSerializer):
     comment_list = PhotoCommentSerializer(
         many=True,
         read_only=True,
-        source='photocomment_set',
+        source=
     )
 
     class Meta:
