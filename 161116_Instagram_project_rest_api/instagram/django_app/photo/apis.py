@@ -74,15 +74,17 @@ Comment add API만들어보기
 
 
 class PhotoCommentView(APIView):
-    def get(self, request, *args, **kwargs):
-        print(kwargs)
-        if 'photo_pk' in kwargs:
-            photo = get_object_or_404(Photo, pk=kwargs.get('photo_pk'))
-            comments = PhotoComment.objects.filter(photo=photo)
-        else:
-            comments = PhotoComment.objects.all()
-        serializer = PhotoCommentSerializer(comments, many=True)
-        return Response(serializer.data)
+    # def get(self, request, *args, **kwargs):
+    #     print(kwargs)
+    #     if 'photo_pk' in kwargs:
+    #         photo = get_object_or_404(Photo, pk=kwargs.get('photo_pk'))
+    #         comments = PhotoComment.objects.filter(photo=photo)
+    #     else:
+    #         comments = PhotoComment.objects.all()
+    #     serializer = PhotoCommentSerializer(comments, many=True)
+    #     return Response(serializer.data)
+    def post(self, request):
+
 
 
 @csrf_exempt
