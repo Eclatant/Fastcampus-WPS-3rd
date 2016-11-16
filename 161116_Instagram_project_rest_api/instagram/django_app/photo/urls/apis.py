@@ -26,5 +26,9 @@ urlpatterns = [
     url(r'^photo/$', photo_list, name='photo_list'),
     url(r'^photo/(?P<pk>[0-9]+)/$', photo_detail, name='photo_detail'),
 
+    ### PhotoComment
+    # APIView 사용
+    url(r'^photo/(?P<pk>[0-9]+)/comment/$', apis.PhotoCommentView.as_view(), name='photo_comment_list'),
+
     url(r'^(?P<photo_pk>[0-9]+)/comment/add/$', apis.comment_add, name='comment_add'),
 ]
