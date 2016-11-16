@@ -28,7 +28,8 @@ urlpatterns = [
 
     ### PhotoComment
     # APIView 사용
-    url(r'^photo/(?P<pk>[0-9]+)/comment/$', apis.PhotoCommentView.as_view(), name='photo_comment_list'),
+    url(r'^photo/comment/$', apis.PhotoCommentView.as_view(), name='photo_comment_list_default'),
+    url(r'^photo/(?P<photo_pk>[0-9]+)/comment/$', apis.PhotoCommentView.as_view(), name='photo_comment_list'),
 
     url(r'^(?P<photo_pk>[0-9]+)/comment/add/$', apis.comment_add, name='comment_add'),
 ]
