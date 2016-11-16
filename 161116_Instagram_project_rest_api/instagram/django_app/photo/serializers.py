@@ -3,8 +3,13 @@ from rest_framework import serializers
 from .models import Photo, PhotoComment
 
 
+class PhotoCommentSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = PhotoComment
+        fields = '__all__'
+
 class PhotoSerializer(serializers.ModelSerializer):
-    photocomment_set = PhotoCommentSerializer(many=True)
+    photocomment_set = PhotoCommentSerializer(many=True, read_only=True)
     class Meta:
         model = Photo
         fields = (
@@ -23,7 +28,3 @@ class PhotoSerializer(serializers.ModelSerializer):
         return ret
 
 
-class PhotoCommentSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = PhotoComment
-        fields = '__all__'
