@@ -14,7 +14,6 @@ User = get_user_model()
 
 
 class PhotoList(APIView):
-    csrf_exempt = False
 
     def get(self, request):
         photos = Photo.objects.all()
