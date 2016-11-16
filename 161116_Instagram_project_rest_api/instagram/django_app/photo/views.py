@@ -8,12 +8,11 @@ from django.views.generic import FormView
 from django.views.generic import ListView
 from django.urls import reverse_lazy, reverse
 from django.views.generic.detail import SingleObjectMixin, DetailView
+from rest_framework.response import Response
+from rest_framework.views import APIView
 
 from .models import Photo, PhotoComment, PhotoLike
 from .serializers import PhotoSerializer
-
-
-class 
 
 
 def photo_list(request):
