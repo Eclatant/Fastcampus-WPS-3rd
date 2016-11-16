@@ -28,7 +28,7 @@ class PhotoSerializer(serializers.ModelSerializer):
             'author',
             'content',
             'image',
-            'photocomment_set',
+            'comment_list',
         )
 
     def to_representation(self, instance):
