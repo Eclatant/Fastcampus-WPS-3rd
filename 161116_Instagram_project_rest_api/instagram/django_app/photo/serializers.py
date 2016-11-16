@@ -4,6 +4,7 @@ from .models import Photo, PhotoComment
 
 
 class PhotoSerializer(serializers.ModelSerializer):
+    photocomment_set = PhotoCommentSerializer(many=True)
     class Meta:
         model = Photo
         fields = (
@@ -11,7 +12,7 @@ class PhotoSerializer(serializers.ModelSerializer):
             'author',
             'content',
             'image',
-            'comment_set',
+            'photocomment_set',
         )
 
     def to_representation(self, instance):
