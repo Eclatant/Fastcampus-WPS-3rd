@@ -10,6 +10,10 @@ from django.urls import reverse_lazy, reverse
 from django.views.generic.detail import SingleObjectMixin, DetailView
 
 from .models import Photo, PhotoComment, PhotoLike
+from .serializers import PhotoSerializer
+
+
+class 
 
 
 def photo_list(request):
