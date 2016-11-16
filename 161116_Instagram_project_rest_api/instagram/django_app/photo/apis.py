@@ -36,6 +36,7 @@ class PhotoListMixinView(mixins.ListModelMixin,
                          generics.GenericAPIView):
     queryset = Photo.objects.all()
     serializer_class = PhotoSerializer
+    permission_classes = 
 
     def get(self, request, *args, **kwargs):
         return self.list(request, *args, **kwargs)
