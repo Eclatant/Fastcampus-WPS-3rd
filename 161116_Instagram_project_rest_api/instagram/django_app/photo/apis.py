@@ -65,6 +65,7 @@ def photo_list(request):
 
 """
 Comment add API만들어보기
+0. CommentSerializer 구현
 1. APIView상속받아 post에 구현
 2. mixins를 사용해서 create에 구현
 3. ViewSet을 사용
