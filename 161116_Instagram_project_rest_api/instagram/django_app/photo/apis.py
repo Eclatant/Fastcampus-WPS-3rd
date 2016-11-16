@@ -12,7 +12,7 @@ from rest_framework import viewsets
 from rest_framework.response import Response
 from rest_framework.views import APIView
 
-from photo.serializers import PhotoSerializer
+from photo.serializers import PhotoSerializer, PhotoCommentSerializer
 from .models import Photo, PhotoComment
 
 User = get_user_model()
@@ -70,6 +70,13 @@ Comment add API만들어보기
 2. mixins를 사용해서 create에 구현
 3. ViewSet을 사용
 """
+
+
+class PhotoCommentView(APIView):
+    def get(self, request, *args, **kwargs):
+        comments = PhotoComment.objects.all()
+        serializer = PhotoCommentSerializer(comments, many=True)
+        return Response(serializer.data)
 
 
 @csrf_exempt
