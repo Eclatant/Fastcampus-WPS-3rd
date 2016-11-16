@@ -10,9 +10,9 @@ class PhotoSerializer(serializers.ModelSerializer):
 
     def to_representation(self, instance):
         ret = super().to_representation(instance)
-        ret['comment_list'] = PhotoCommentSerializer(
-            instance.photocomment_set.all(),
-            many=True).data
+        # ret['comment_list'] = PhotoCommentSerializer(
+        #     instance.photocomment_set.all(),
+        #     many=True).data
         return ret
 
 
