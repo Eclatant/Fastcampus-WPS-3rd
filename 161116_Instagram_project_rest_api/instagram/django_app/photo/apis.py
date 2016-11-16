@@ -64,7 +64,7 @@ def photo_list(request):
 
 
 """
-Comment API만들어보기
+Comment add API만들어보기
 1. APIView상속받아 get, post에 구현
 2. mixins를 사용해서 list, create에 구현
 3. ViewSet을 사용
