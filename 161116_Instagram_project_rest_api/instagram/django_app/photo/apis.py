@@ -3,6 +3,7 @@ import json
 from django.contrib.auth import get_user_model
 from django.http import HttpResponse
 from django.utils.decorators import method_decorator
+from django.views.decorators.csrf import csrf_exempt
 from rest_framework import status
 from rest_framework.response import Response
 from rest_framework.views import APIView
@@ -14,7 +15,6 @@ User = get_user_model()
 
 
 class PhotoList(APIView):
-
     def get(self, request):
         photos = Photo.objects.all()
         serializer = PhotoSerializer(photos, many=True)
