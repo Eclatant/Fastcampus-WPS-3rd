@@ -8,10 +8,16 @@ class PhotoCommentSerializer(serializers.ModelSerializer):
     UserSerializer를 구현하고, author field를 Nested relation으로 나타냄
     author필드에서 UserSerializer를 사용하도록 설정
     """
+    author = UserSerializer(read_only=True)
 
     class Meta:
         model = PhotoComment
-        fields = '__all__'
+        fields = (
+            'id',
+            'photo',
+            'author',
+            'content',
+        )
 
 
 class PhotoSerializer(serializers.ModelSerializer):
