@@ -2,6 +2,7 @@ import json
 
 from django.contrib.auth import get_user_model
 from django.http import HttpResponse
+from django.shortcuts import get_object_or_404
 from django.utils.decorators import method_decorator
 from django.views.decorators.csrf import csrf_exempt
 from rest_framework import generics
@@ -74,7 +75,11 @@ Comment add API만들어보기
 
 class PhotoCommentView(APIView):
     def get(self, request, *args, **kwargs):
-        comments = PhotoComment.objects.all()
+        if 'photo_pk' in kwargs:
+            photo = get_object_or_404(Photo, kwargs.get('photo_pk'))
+            comments = PhotoComment.objects.filter(photo=photo)
+        else:
+            comments = PhotoComment.objects.all()
         serializer = PhotoCommentSerializer(comments, many=True)
         return Response(serializer.data)
 
