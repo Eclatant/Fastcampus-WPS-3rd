@@ -2,6 +2,9 @@
 
 ## Djang-rest-framework
 
+```
+pip install djangorestframework
+```
 
 
 ## API문서 구성
