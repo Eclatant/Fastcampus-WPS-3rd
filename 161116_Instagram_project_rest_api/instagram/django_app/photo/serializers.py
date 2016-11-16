@@ -1,5 +1,6 @@
 from rest_framework import serializers
 
+from member.serializers import UserSerializer
 from .models import Photo, PhotoComment
 
 
