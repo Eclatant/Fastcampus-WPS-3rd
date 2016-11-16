@@ -47,7 +47,7 @@ class PhotoListMixinView(mixins.ListModelMixin,
 class PhotoViewSet(viewsets.ModelViewSet):
     queryset = Photo.objects.all()
     serializer_class = PhotoSerializer
-    
+
 
 
 def photo_list(request):
