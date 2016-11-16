@@ -16,7 +16,15 @@ photo_detail = PhotoViewSet.as_view({
 
 
 urlpatterns = [
+    # APIView 사용
     # url(r'^photo/$', apis.PhotoList.as_view(), name='photo_list'),
-    url(r'^photo/$', apis.PhotoListMixinView.as_view(), name='photo_list'),
+
+    # Mixin 사용
+    # url(r'^photo/$', apis.PhotoListMixinView.as_view(), name='photo_list'),
+
+    # ViewSet사용
+    url(r'^photo/$', photo_list, name='photo_list'),
+    url(r'^photo/(?P<pk>[0-9]+)/$', photo_detail, name='photo_detail'),
+
     url(r'^(?P<photo_pk>[0-9]+)/comment/add/$', apis.comment_add, name='comment_add'),
 ]
