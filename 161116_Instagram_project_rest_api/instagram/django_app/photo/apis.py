@@ -77,7 +77,7 @@ class PhotoCommentView(APIView):
     def get(self, request, *args, **kwargs):
         print(kwargs)
         if 'photo_pk' in kwargs:
-            photo = get_object_or_404(Photo, pk=kwargs.get('photo'))
+            photo = get_object_or_404(Photo, pk=kwargs.get('photo_pk'))
             comments = PhotoComment.objects.filter(photo=photo)
         else:
             comments = PhotoComment.objects.all()
