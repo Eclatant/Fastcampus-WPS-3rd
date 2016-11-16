@@ -6,6 +6,7 @@ from .models import Photo, PhotoComment
 class PhotoCommentSerializer(serializers.ModelSerializer):
     """
     UserSerializer를 구현하고, author field를 Nested relation으로 나타냄
+    author필드에서 UserSerializer를 사용하도록 설정
     """
 
     class Meta:
