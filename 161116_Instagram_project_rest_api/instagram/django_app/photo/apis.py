@@ -52,7 +52,6 @@ class PhotoViewSet(viewsets.ModelViewSet):
     permission_classes = (permissions.IsAuthenticatedOrReadOnly,)
 
 
-
 def photo_list(request):
     photos = Photo.objects.all()
     data = {
