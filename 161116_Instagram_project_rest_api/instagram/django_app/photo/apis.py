@@ -18,6 +18,9 @@ class PhotoList(APIView):
         serializer = PhotoSerializer(photos, many=True)
         return Response(serializer.data)
 
+    def post(self, request):
+        
+
 
 def photo_list(request):
     photos = Photo.objects.all()
