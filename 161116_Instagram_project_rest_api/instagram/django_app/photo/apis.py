@@ -15,12 +15,13 @@ User = get_user_model()
 
 
 class PhotoList(APIView):
+    csrf_exempt = True
+    
     def get(self, request):
         photos = Photo.objects.all()
         serializer = PhotoSerializer(photos, many=True)
         return Response(serializer.data)
 
-    @method_decorator(csrf_exempt)
     def post(self, request):
         serializer = PhotoSerializer(data=request.data)
         if serializer.is_valid():
