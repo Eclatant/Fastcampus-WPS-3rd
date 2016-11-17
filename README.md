@@ -88,8 +88,8 @@
 	- [ ] memcached설치
 	- [ ] Cache사용 예제
 - Class-Based View
-	- [ ] PBV -> CBV 리펙토링
-	- [ ] Generic View
+	- [x] PBV -> CBV 리펙토링
+	- [x] Generic View
 - Using API
 	- [x] Youtube API (북마크 프로젝트)
 	- [x] Facebook API (페이스북 앱 프로젝트)
@@ -101,10 +101,10 @@
 	- [ ] Django test
 	- [ ] Selenium
 - RESTful API Framework
-	- [ ] Django-rest-framework (DRF)
+	- [x] Django-rest-framework (DRF)
 - 협업 (Collaboration)
-	- [ ] 코드리뷰
-	- [ ] Git commit과 branch관리
+	- [x] 코드리뷰
+	- [x] Git commit과 branch관리
 - Build
 	- [ ] Djano Sass컴파일
 - Deploy(배포)
