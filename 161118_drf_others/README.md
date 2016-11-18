@@ -103,7 +103,9 @@ flower -A <django_project_name>
 
 ```
 sudo apt-get install memcached
-sudo apt-get install libmemcached
+
+sudo apt-get install -y \
+libmemcached-dev zlib1g-dev libssl-dev python-dev build-essential
 ```
 
 
