@@ -10,16 +10,27 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/1.10/ref/settings/
 """
 
-import os
+import os, sys
+import json
+
+DEBUG = (len(sys.argv) > 1 and sys.argv[1] == 'runserver')
+if 'USER' in os.environ and os.environ['USER'] == 'Arcanelux':
+    DEBUG = True
+print('DEBUG : %s' % DEBUG)
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
+CONF_DIR = os.path.join(BASE_DIR, '.conf')
 STATIC_DIR = os.path.join(BASE_DIR, 'static')
 STATIC_ROOT = os.path.join(BASE_DIR, 'static_root')
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
-
 MEDIA_URL = '/media/'
+
+if DEBUG:
+    config = json.loads(open(os.path.join(CONF_DIR, 'settings_debug.json')).read())
+else:
+    config = json.loads(open(os.path.join(CONF_DIR, 'settings_deploy.json')).read())
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.10/howto/deployment/checklist/
