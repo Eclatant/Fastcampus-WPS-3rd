@@ -9,13 +9,13 @@
 {% block content %}
 <div class="col-md-6 col-md-offset-3 col-xs-12">
 	{% for photo in object_list %}
-	<div class="thumbnail">
+	<a class="thumbnail">
 		<img src="{{ photo.image.url }}" alt="" style="width: 100%;">
 		<div class="caption">
 			<h5>{{ photo.content }}</h5>
 			<p>{{ photo.created_date }}</p>
 		</div>
-	</div>
+	</a>
 	{% endfor %}
 	<nav>
 		<ul class="pager">
