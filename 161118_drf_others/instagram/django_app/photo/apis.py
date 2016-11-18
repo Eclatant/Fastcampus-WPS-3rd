@@ -52,6 +52,7 @@ class PhotoViewSet(viewsets.ModelViewSet):
     queryset = Photo.objects.all()
     serializer_class = PhotoSerializer
     permission_classes = (permissions.IsAuthenticatedOrReadOnly,)
+    filter_fields = ('author', )
 
 
 
