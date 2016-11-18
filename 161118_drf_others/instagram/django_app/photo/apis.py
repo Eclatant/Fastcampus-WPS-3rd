@@ -69,8 +69,14 @@ class PhotoViewSet(viewsets.ModelViewSet):
                 cache.set(cache_key, return_data)
             return self.get_paginated_response(return_data)
 
-        serializer = self.get_serializer(queryset, many=True)
-        return Response(serializer.data)
+        cache_key = 'photo_list'
+        cached_data = cache.get(cache_key)
+        if cached_data:
+            return Response(cached_data)
+        else:
+            serializer = self.get_serializer(queryset, many=True)
+            cache.set(cache_key, serializer.data)
+            return Response(serializer.data)
 
 
 def photo_list(request):
