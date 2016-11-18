@@ -34,7 +34,7 @@ class Photo(models.Model):
 
     def save(self, *args, **kwargs):
         super().save(*args, **kwargs)
-        cache.set()
+        cache.clear()
 
     # def get_absolute_url(self):
     #     return reverse('photo:photo_list')
