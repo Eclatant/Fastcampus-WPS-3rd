@@ -17,3 +17,4 @@ class Command(BaseCommand):
             author=User.objects.first(),
             content=content
         )
+        logger.error('PhotoComment Add Command')
