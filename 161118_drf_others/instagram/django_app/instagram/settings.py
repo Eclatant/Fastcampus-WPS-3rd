@@ -156,4 +156,4 @@ STATIC_URL = '/static/'
 
 # Sass
 SASS_OUTPUT_STYLE = 'compressed'
-
+SASS_PROCESSOR_ROOT = os.path.join(STATIC_ROOT, 'css')
