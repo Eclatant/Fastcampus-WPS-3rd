@@ -153,3 +153,7 @@ STATICFILES_FINDERS = [
     'compressor.finders.CompressorFinder',
 ]
 STATIC_URL = '/static/'
+
+
+# django-compressor
+COMPRESS_ENABLED = True
