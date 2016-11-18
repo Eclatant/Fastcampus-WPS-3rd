@@ -3,6 +3,11 @@
 > <https://github.com/jrief/django-sass-processor>
 
 
+# django-compressor
+
+> <https://github.com/django-compressor/django-compressor>
+
+
 # Celery
 
 > <http://www.celeryproject.org>
