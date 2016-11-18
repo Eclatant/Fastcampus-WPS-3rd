@@ -108,6 +108,11 @@ sudo apt-get install -y \
 libmemcached-dev zlib1g-dev libssl-dev python-dev build-essential
 ```
 
+```
+프로세스 돌고있는지 확인
+ps -ax | grep memcached
+```
+
 
 # Crontab (리눅스 반복 예약작업)
 
