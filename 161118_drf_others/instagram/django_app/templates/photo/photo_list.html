@@ -9,7 +9,7 @@
 {% block content %}
 <div class="col-md-6 col-md-offset-3 col-xs-12">
 	{% for photo in object_list %}
-	<a class="thumbnail">
+	<a href="{% url 'photo:photo_detail' pk=photo.pk %}" class="thumbnail">
 		<img src="{{ photo.image.url }}" alt="" style="width: 100%;">
 		<div class="caption">
 			<h5>{{ photo.content }}</h5>
