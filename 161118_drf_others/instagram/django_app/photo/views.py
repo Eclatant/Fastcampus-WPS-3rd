@@ -13,6 +13,7 @@ from rest_framework.views import APIView
 
 from .models import Photo, PhotoComment, PhotoLike
 from .serializers import PhotoSerializer
+from .tasks import photo_add_after
 
 
 def photo_list(request):
@@ -106,4 +107,6 @@ class PhotoAdd(CreateView):
 
     def form_valid(self, form):
         form.instance.author = self.request.user
-        return super(PhotoAdd, self).form_valid(form)
+        ret = super(PhotoAdd, self).form_valid(form)
+        photo_add_after(self.object)
+        return ret
