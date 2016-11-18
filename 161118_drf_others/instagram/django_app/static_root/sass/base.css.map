@@ -4,6 +4,6 @@
 	"sources": [
 		"../../Users/Arcanelux/Projects/fastcampus/lecture/161118_drf_others/instagram/django_app/static/sass/base.sass"
 	],
-	"mappings": "AAAA,AAAA,IAAI,CAAE,AAAA,IAAI,AAAC,CACT,SAAS,CAAE,IAAK,CAChB,KAAK,CAAE,IAAK,CAAG",
+	"mappings": "AAAA,AAAA,IAAI,CAAE,AAAA,IAAI,AAAC,CACT,SAAS,CAAE,IAAK,CAChB,KAAK,CAAE,IAAK,CACZ,WAAW,CAAE,IAAK,CAAG",
 	"names": []
 }
