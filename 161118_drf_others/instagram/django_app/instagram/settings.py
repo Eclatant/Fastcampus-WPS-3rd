@@ -160,3 +160,13 @@ COMPRESS_ENABLED = True
 COMPRESS_PRECOMPILERS = (
     ('text/x-sass', 'django_libsass.SassCompiler'),
 )
+
+
+# mail
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = config['email']['EMAIL_HOST']
+EMAIL_PORT = config['email']['EMAIL_PORT']
+EMAIL_HOST_USER = config['email']['EMAIL_HOST_USER']
+EMAIL_HOST_PASSWORD = config['email']['EMAIL_HOST_PASSWORD']
+EMAIL_USE_TLS = config['email']['EMAIL_USE_TLS']
+DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
