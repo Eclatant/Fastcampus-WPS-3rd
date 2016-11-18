@@ -1,5 +1,5 @@
 {% load staticfiles %}
-{% load sass_tags %}
+{% load compress %}
 <!doctype html>
 <html lang="ko">
 <head>
@@ -9,12 +9,14 @@
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title>Instagram</title>
 
+	{% compress css %}
 	<!-- Bootstrap CSS -->
   <link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap.min.css' %}">
   <link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap-theme.min.css' %}">
 
 	<!-- Custom CSS -->
 	<link rel="stylesheet" href="{% sass_src 'sass/base.sass' %}">
+	{% endcompress %}
 </head>
 <body>
 <div id="wrap" class="container">
