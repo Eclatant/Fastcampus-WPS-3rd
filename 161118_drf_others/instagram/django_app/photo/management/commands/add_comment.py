@@ -1,5 +1,5 @@
 import logging
-logger = logging.getLogger(__name__)
+logger = logging.getLogger('django')
 from django.utils import timezone
 from django.core.management.base import BaseCommand, CommandError
 from photo.models import Photo, PhotoComment
@@ -17,4 +17,4 @@ class Command(BaseCommand):
             author=User.objects.first(),
             content=content
         )
-        logger.debug('PhotoComment Add Command')
+        logger.info('PhotoComment Add Command')
