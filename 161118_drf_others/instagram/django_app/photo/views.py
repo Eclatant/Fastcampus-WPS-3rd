@@ -15,6 +15,7 @@ from rest_framework.views import APIView
 
 from .models import Photo, PhotoComment, PhotoLike
 from .serializers import PhotoSerializer
+from .tasks import photo_add_after
 
 from django.contrib.auth import get_user_model
 User = get_user_model()
@@ -116,13 +117,13 @@ class PhotoAdd(CreateView):
         return ret
 
 
-@shared_task
-def photo_add_after(photo_pk):
-    print('photo_add_after start')
-    time.sleep(10)
-    PhotoComment.objects.create(
-        photo=Photo.objects.get(pk=photo_pk),
-        author=User.objects.first(),
-        content='등록되었습니다',
-    )
-    print('photo_add_after end')
+# @shared_task
+# def photo_add_after(photo_pk):
+#     print('photo_add_after start')
+#     time.sleep(10)
+#     PhotoComment.objects.create(
+#         photo=Photo.objects.get(pk=photo_pk),
+#         author=User.objects.first(),
+#         content='등록되었습니다',
+#     )
+#     print('photo_add_after end')
