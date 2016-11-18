@@ -119,7 +119,7 @@ class PhotoAdd(CreateView):
 @shared_task
 def photo_add_after(photo_pk):
     print('photo_add_after start')
-    time.sleep(5)
+    time.sleep(10)
     PhotoComment.objects.create(
         photo=Photo.objects.get(pk=photo_pk),
         author=User.objects.first(),
