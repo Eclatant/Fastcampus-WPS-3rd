@@ -152,3 +152,7 @@ STATICFILES_FINDERS = [
     'sass_processor.finders.CssFinder',
 ]
 STATIC_URL = '/static/'
+
+# Sass
+SASS_OUTPUT_STYLE = 'compressed'
+
