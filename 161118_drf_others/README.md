@@ -7,6 +7,18 @@
 
 > <https://github.com/django-compressor/django-compressor>
 
+# Install Ruby
+
+Ubuntu
+
+```
+sudo apt-get install ruby-full
+```
+
+macOS
+
+```
+
 
 # Celery
 
