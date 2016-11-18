@@ -65,6 +65,14 @@ send_email.delay(...)
 
 > delay를 붙이지 않으면 일반 함수로 실행
 
+## Celery Worker 프로세스 구동
+
+`django`루트 디렉토리에서 아래 명령어 실행
+
+```
+celery worker -A <django_project_name>
+```
+
 ## Celery Flower를 통한 모니터링
 
 작업 성공여부 모니터링
