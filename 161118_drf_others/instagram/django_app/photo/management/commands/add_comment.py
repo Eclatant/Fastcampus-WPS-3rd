@@ -1,3 +1,5 @@
+import logging
+logger = logging.getLogger(__name__)
 from django.utils import timezone
 from django.core.management.base import BaseCommand, CommandError
 from photo.models import Photo, PhotoComment
