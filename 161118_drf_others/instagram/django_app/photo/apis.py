@@ -54,9 +54,13 @@ class PhotoViewSet(viewsets.ModelViewSet):
     permission_classes = (permissions.IsAuthenticatedOrReadOnly,)
 
     def list(self, request, *args, **kwargs):
-        ret = super().list(request, *args, **kwargs)
-
-        return ret
+        cached_data = cache.get('photo_list')
+        if cached_data:
+            return cached_data
+        else:
+            ret = super().list(request, *args, **kwargs)
+            cache.set(ret)
+            return ret
 
 
 def photo_list(request):
