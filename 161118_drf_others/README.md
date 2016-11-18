@@ -23,11 +23,11 @@ Celery에서 작업을 처리하는 프로세스. 워커에 직접 작업을 추
 
 ### macOS
 
-> https://www.rabbitmq.com/install-standalone-mac.html
+> <https://www.rabbitmq.com/install-standalone-mac.html>
 
 ### Ubuntu
 
-> https://www.rabbitmq.com/install-debian.html
+> <https://www.rabbitmq.com/install-debian.html>
 
 
 
@@ -37,7 +37,7 @@ Celery에서 작업을 처리하는 프로세스. 워커에 직접 작업을 추
 pip install celery
 ```
 
-> http://docs.celeryproject.org/en/latest/django/first-steps-with-django.html#using-celery-with-django
+> <http://docs.celeryproject.org/en/latest/django/first-steps-with-django.html#using-celery-with-django>
 
 ## Celery Task 작성
 
@@ -75,16 +75,16 @@ flower -A <django_project_name>
 
 ## Daemonization
 
-> http://docs.celeryproject.org/en/latest/userguide/daemonizing.html#daemonizing
+> <http://docs.celeryproject.org/en/latest/userguide/daemonizing.html#daemonizing>
 
 
 
 # Cache
 
-> https://docs.djangoproject.com/en/1.10/topics/cache/
+> <https://docs.djangoproject.com/en/1.10/topics/cache/>
 
 
 # Crontab (리눅스 반복 예약작업)
 
-> http://zetawiki.com/wiki/%EB%A6%AC%EB%88%85%EC%8A%A4_%EB%B0%98%EB%B3%B5_%EC%98%88%EC%95%BD%EC%9E%91%EC%97%85_cron,_crond,_crontab
+> <http://zetawiki.com/wiki/%EB%A6%AC%EB%88%85%EC%8A%A4_%EB%B0%98%EB%B3%B5_%EC%98%88%EC%95%BD%EC%9E%91%EC%97%85_cron,_crond,_crontab>
 
