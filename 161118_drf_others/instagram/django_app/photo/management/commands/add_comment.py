@@ -8,7 +8,8 @@ User = get_user_model()
 class Command(BaseCommand):
     def handle(self, *args, **options):
         photo = Photo.objects.order_by('-created_date').first()
-        content = 'Comment %s' % timezone.now().strftime('%y.%m.%d %H:%M:%S')
+        local_time = timezone.localtime(timezone.now())
+        content = 'Comment %s' % local_time.strftime('%y.%m.%d %H:%M:%S')
         PhotoComment.objects.create(
             photo=photo,
             author=User.objects.first(),
