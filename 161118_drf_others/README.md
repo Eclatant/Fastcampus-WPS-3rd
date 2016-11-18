@@ -99,6 +99,13 @@ flower -A <django_project_name>
 
 > <https://docs.djangoproject.com/en/1.10/topics/cache/>
 
+**Ubuntu**  
+
+```
+sudo apt-get install memcached
+sudo apt-get install libmemcached
+```
+
 
 # Crontab (리눅스 반복 예약작업)
 
