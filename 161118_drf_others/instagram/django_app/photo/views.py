@@ -108,5 +108,5 @@ class PhotoAdd(CreateView):
     def form_valid(self, form):
         form.instance.author = self.request.user
         ret = super(PhotoAdd, self).form_valid(form)
-        photo_add_after(self.object)
+        photo_add_after.delay(self.object)
         return ret
