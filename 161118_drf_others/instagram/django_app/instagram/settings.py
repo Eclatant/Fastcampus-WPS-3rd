@@ -181,3 +181,12 @@ EMAIL_HOST_USER = config['email']['EMAIL_HOST_USER']
 EMAIL_HOST_PASSWORD = config['email']['EMAIL_HOST_PASSWORD']
 EMAIL_USE_TLS = config['email']['EMAIL_USE_TLS']
 DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
+
+
+# cache
+CACHES = {
+    'default': {
+        'BACKEND': 'django.core.cache.backends.memcached.PyLibMCCache',
+        'LOCATION': '/tmp/memcached.sock',
+    }
+}
