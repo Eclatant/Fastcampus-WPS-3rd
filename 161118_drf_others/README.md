@@ -7,23 +7,9 @@
 
 > <https://github.com/django-compressor/django-compressor>
 
-# Install Ruby
+# django-libsass
 
-Ubuntu
-
-```
-sudo apt-get install ruby-full
-```
-
-macOS
-
-```
-brew install ruby
-```
-
-# Install Sass
-
-> <http://sass-lang.com/install>
+> <https://github.com/torchbox/django-libsass>
 
 # Celery
 
