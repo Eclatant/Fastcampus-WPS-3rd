@@ -118,3 +118,17 @@ ps -ax | grep memcached
 
 > <http://zetawiki.com/wiki/%EB%A6%AC%EB%88%85%EC%8A%A4_%EB%B0%98%EB%B3%B5_%EC%98%88%EC%95%BD%EC%9E%91%EC%97%85_cron,_crond,_crontab>
 
+
+## EB에서 사용
+
+
+```
+<anyname>.config
+
+container_commands:
+  01_remove_old_cron_jobs:
+    command: "crontab -r || exit 0"
+  02_cronjobs:
+    command: "cat .ebextensions/cron.txt | crontab"
+    leader_only: true
+```
