@@ -132,3 +132,5 @@ container_commands:
     command: "cat .ebextensions/cron.txt | crontab"
     leader_only: true
 ```
+
+> cron.txt파일 마지막줄에 newline이 있어야합니다.
