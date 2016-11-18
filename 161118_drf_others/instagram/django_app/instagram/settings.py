@@ -146,4 +146,7 @@ USE_TZ = True
 STATICFILES_DIRS = [
     STATIC_DIR,
 ]
+STATICFILES_FINDERS = [
+    
+]
 STATIC_URL = '/static/'
