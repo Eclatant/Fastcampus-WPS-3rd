@@ -18,7 +18,12 @@ sudo apt-get install ruby-full
 macOS
 
 ```
+brew install ruby
+```
 
+# Install Sass
+
+> <http://sass-lang.com/install>
 
 # Celery
 
