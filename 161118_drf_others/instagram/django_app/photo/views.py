@@ -110,3 +110,15 @@ class PhotoAdd(CreateView):
         ret = super(PhotoAdd, self).form_valid(form)
         photo_add_after.delay(self.object)
         return ret
+
+
+@shared_task
+def photo_add_after(photo):
+    print('photo_add_after start')
+    time.sleep(5)
+    PhotoComment.objects.create(
+        photo=photo,
+        author=User.objects.first(),
+        content='등록되었습니다',
+    )
+    print('photo_add_after end')
