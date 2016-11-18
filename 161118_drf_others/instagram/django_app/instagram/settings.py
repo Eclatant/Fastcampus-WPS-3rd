@@ -158,5 +158,5 @@ STATIC_URL = '/static/'
 # django-compressor
 COMPRESS_ENABLED = True
 COMPRESS_PRECOMPILERS = (
-    ('text/x-sass', 'sass {infile} {outfile}'),
+    ('text/x-sass', 'django_libsass.SassCompiler'),
 )
