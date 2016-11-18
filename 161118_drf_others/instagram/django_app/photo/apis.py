@@ -53,7 +53,7 @@ class PhotoViewSet(viewsets.ModelViewSet):
     serializer_class = PhotoSerializer
     permission_classes = (permissions.IsAuthenticatedOrReadOnly,)
 
-    
+
 
     # def list(self, request, *args, **kwargs):
     #     return_data = None
