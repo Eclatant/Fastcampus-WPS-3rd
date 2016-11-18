@@ -53,31 +53,33 @@ class PhotoViewSet(viewsets.ModelViewSet):
     serializer_class = PhotoSerializer
     permission_classes = (permissions.IsAuthenticatedOrReadOnly,)
 
-    def list(self, request, *args, **kwargs):
-        return_data = None
-        queryset = self.filter_queryset(self.get_queryset())
+    
 
-        page = self.paginate_queryset(queryset)
-        if page is not None:
-            cache_key = 'photo_list_%s' % page
-            cached_data = cache.get(cache_key)
-            if cached_data:
-                return_data = cached_data
-            else:
-                serializer = self.get_serializer(page, many=True)
-                return_data = serializer.data
-                cache.set(cache_key, return_data)
-            return self.get_paginated_response(return_data)
-
-        cache_key = 'photo_list'
-        cached_data = cache.get(cache_key)
-        if cached_data:
-            return Response(cached_data)
-        else:
-            serializer = self.get_serializer(queryset, many=True)
-            cache.set(cache_key, serializer.data)
-            return Response(serializer.data)
-
+    # def list(self, request, *args, **kwargs):
+    #     return_data = None
+    #     queryset = self.filter_queryset(self.get_queryset())
+    #
+    #     page = self.paginate_queryset(queryset)
+    #     if page is not None:
+    #         cache_key = 'photo_list_%s' % page
+    #         cached_data = cache.get(cache_key)
+    #         if cached_data:
+    #             return_data = cached_data
+    #         else:
+    #             serializer = self.get_serializer(page, many=True)
+    #             return_data = serializer.data
+    #             cache.set(cache_key, return_data)
+    #         return self.get_paginated_response(return_data)
+    #
+    #     cache_key = 'photo_list'
+    #     cached_data = cache.get(cache_key)
+    #     if cached_data:
+    #         return Response(cached_data)
+    #     else:
+    #         serializer = self.get_serializer(queryset, many=True)
+    #         cache.set(cache_key, serializer.data)
+    #         return Response(serializer.data)
+    #
 
 def photo_list(request):
     photos = Photo.objects.all()
