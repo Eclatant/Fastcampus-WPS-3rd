@@ -187,6 +187,6 @@ DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
 CACHES = {
     'default': {
         'BACKEND': 'django.core.cache.backends.memcached.PyLibMCCache',
-        'LOCATION': '/tmp/memcached.sock',
+        'LOCATION': '127.0.0.1:11211',
     }
 }
