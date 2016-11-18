@@ -8,7 +8,7 @@ User = get_user_model()
 @shared_task
 def photo_add_after(photo):
     print('photo_add_after start')
-    time.sleep(10)
+    time.sleep(5)
     PhotoComment.objects.create(
         photo=photo,
         author=User.objects.first(),
