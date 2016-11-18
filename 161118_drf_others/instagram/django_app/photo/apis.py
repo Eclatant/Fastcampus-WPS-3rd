@@ -52,6 +52,11 @@ class PhotoViewSet(viewsets.ModelViewSet):
     serializer_class = PhotoSerializer
     permission_classes = (permissions.IsAuthenticatedOrReadOnly,)
 
+    def list(self, request, *args, **kwargs):
+        ret = super().list(request, *args, **kwargs)
+        
+        return ret
+
 
 def photo_list(request):
     photos = Photo.objects.all()
