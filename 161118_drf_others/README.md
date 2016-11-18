@@ -1,8 +1,11 @@
-# 
+# django-sass-processor
+
+> <https://github.com/jrief/django-sass-processor>
+
 
 # Celery
 
-> http://www.celeryproject.org
+> <http://www.celeryproject.org>
 
 메시지 전달을 기반으로 하는 비동기 작업 대기열 (Queue).
 
