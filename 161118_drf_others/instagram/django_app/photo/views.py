@@ -1,3 +1,5 @@
+import time
+from celery import shared_task
 from django import forms
 from django.contrib.auth.decorators import login_required
 from django.shortcuts import render, get_object_or_404, redirect
@@ -13,7 +15,9 @@ from rest_framework.views import APIView
 
 from .models import Photo, PhotoComment, PhotoLike
 from .serializers import PhotoSerializer
-from .tasks import photo_add_after
+
+from django.contrib.auth import get_user_model
+User = get_user_model()
 
 
 def photo_list(request):
