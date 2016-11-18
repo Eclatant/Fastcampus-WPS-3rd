@@ -54,13 +54,23 @@ class PhotoViewSet(viewsets.ModelViewSet):
     permission_classes = (permissions.IsAuthenticatedOrReadOnly,)
 
     def list(self, request, *args, **kwargs):
-        cached_data = cache.get('photo_list')
-        if cached_data:
-            return cached_data
-        else:
-            ret = super().list(request, *args, **kwargs)
-            cache.set('photo_list', ret)
-            return ret
+        return_data = None
+        queryset = self.filter_queryset(self.get_queryset())
+
+        page = self.paginate_queryset(queryset)
+        if page is not None:
+            cache_key = 'photo_list_%s' % page
+            cached_data = cache.get(cache_key)
+            if cached_data:
+                return_data = cached_data
+            else:
+                serializer = self.get_serializer(page, many=True)
+                return_data = serializer.data
+                cache.set(cache_key, return_data)
+            return self.get_paginated_response(return_data)
+
+        serializer = self.get_serializer(queryset, many=True)
+        return Response(serializer.data)
 
 
 def photo_list(request):
