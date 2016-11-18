@@ -1,4 +1,5 @@
 {% load staticfiles %}
+{% load sass_tags %}
 <!doctype html>
 <html lang="ko">
 <head>
@@ -11,6 +12,9 @@
 	<!-- Bootstrap CSS -->
   <link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap.min.css' %}">
   <link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap-theme.min.css' %}">
+
+	<!-- Custom CSS -->
+	<link rel="stylesheet" href="{% sass_src 'sass/base.sass' %}">
 </head>
 <body>
 <div id="wrap" class="container">
