@@ -59,7 +59,7 @@ class PhotoViewSet(viewsets.ModelViewSet):
             return cached_data
         else:
             ret = super().list(request, *args, **kwargs)
-            cache.set(ret)
+            cache.set('photo_list', ret)
             return ret
 
 
