@@ -19,3 +19,24 @@ container_commands:
 ### DRF에서 DateTimeField localtime으로 보내기
 
 <http://stackoverflow.com/questions/34275588/djangorestframework-modelserializer-datetimefield-only-converting-to-current-tim>
+
+
+### RDS (PostgreSQL) Database삭제 후 Create
+
+**삭제시**
+
+```
+psql -h <DB host> -p 5432 -U <DB username> -d postgres -c "DROP DATABASE \"<DB name>\";"
+```
+
+**생성시**
+
+```
+psql -h <DB host> -p 5432 -U <DB username> -d postgres -c "CREATE DATABASE \"<DB name>\";"
+```
+
+**ex)**  
+
+```
+psql -h fastcampus.cryfbwalveyh.ap-northeast-2.rds.amazonaws.com -p 5432 -U lhy -d postgres -c "DROP DATABASE \"fastcampus\";"
+```
