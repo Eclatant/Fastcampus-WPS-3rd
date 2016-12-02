@@ -40,3 +40,8 @@ psql -h <DB host> -p 5432 -U <DB username> -d postgres -c "CREATE DATABASE \"<DB
 ```
 psql -h fastcampus.cryfbwalveyh.ap-northeast-2.rds.amazonaws.com -p 5432 -U lhy -d postgres -c "DROP DATABASE \"fastcampus\";"
 ```
+
+
+### 협업시 Fork사용
+
+<http://dogfeet.github.io/articles/2012/how-to-github.html>
