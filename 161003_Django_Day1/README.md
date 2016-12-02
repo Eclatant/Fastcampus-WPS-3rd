@@ -262,3 +262,6 @@ print(BASE_DIR)
 
 `settings.py`
 
+#### Markdown
+
+<https://guides.github.com/features/mastering-markdown/>

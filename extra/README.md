@@ -16,3 +16,6 @@ container_commands:
 ```
 
 
+### DRF에서 DateTimeField localtime으로 보내기
+
+<http://stackoverflow.com/questions/34275588/djangorestframework-modelserializer-datetimefield-only-converting-to-current-tim>
