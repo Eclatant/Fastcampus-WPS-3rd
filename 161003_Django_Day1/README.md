@@ -49,6 +49,10 @@ eval "$(pyenv virtualenv-init -)"
 pyenv 기본 루트폴더는 `~/.pyenv`  
 !!pyenv설정을 shell의 설정파일에 기록 후, 터미널을 재시작하거나 `source ~/.bashrc` 또는 `source ~/.bash_profile`을 실행
 
+#### 파이썬 설치 전 필요 패키지 설치
+
+<https://github.com/yyuu/pyenv/wiki/Common-build-problems>
+
 
 #### 파이썬 3.4.3버전 설치  
 
