@@ -15,10 +15,14 @@ container_commands:
     command: 'echo "WSGIPassAuthorization On" >> ../wsgi.conf'
 ```
 
+-
+
 
 ### DRF에서 DateTimeField localtime으로 보내기
 
 <http://stackoverflow.com/questions/34275588/djangorestframework-modelserializer-datetimefield-only-converting-to-current-tim>
+
+-
 
 
 ### RDS (PostgreSQL) Database삭제 후 Create
@@ -41,7 +45,22 @@ psql -h <DB host> -p 5432 -U <DB username> -d postgres -c "CREATE DATABASE \"<DB
 psql -h fastcampus.cryfbwalveyh.ap-northeast-2.rds.amazonaws.com -p 5432 -U lhy -d postgres -c "DROP DATABASE \"fastcampus\";"
 ```
 
+-
+
 
 ### 협업시 Fork사용
 
 <http://dogfeet.github.io/articles/2012/how-to-github.html>
+
+-
+
+
+### CORS문제 해결
+
+**공식문서**  
+<http://www.django-rest-framework.org/topics/ajax-csrf-cors/>
+
+**django-cors-headers**  
+<https://github.com/ottoyiu/django-cors-headers/>
+
+문서에서 `INSTALLED_APPS`, `MIDDLEWARE`, `CORS_ORIGIN_WHITELIST` 세부분만 설정해주시면 됩니다.
